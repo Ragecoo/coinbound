@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" orientation="orthogonal" renderorder="right-down" width="3" height="3" tilewidth="32" tileheight="32" infinite="0"><tileset firstgid="1" source="../indigo-crypt.tsx"/><layer id="1" name="object.exit.open" width="3" height="3"><data encoding="csv">72,73,74,75,76,77,78,79,80</data></layer></map>

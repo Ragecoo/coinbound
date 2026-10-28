@@ -1,0 +1,5 @@
+{
+  "name": "Coinbound.Generation",
+  "rootNamespace": "ProceduralGeneration",
+  "noEngineReferences": true
+}

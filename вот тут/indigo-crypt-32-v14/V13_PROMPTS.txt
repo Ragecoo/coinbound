@@ -1,0 +1,55 @@
+Mode: built-in imagegen. Accepted source prompt chains.
+
+Ascending exit: camera change
+Use case: precise-object-edit. Reproject the EXISTING FREESTANDING ASCENDING SPIRAL STAIRCASE in reference 1 from a new camera. Reference 2 supplies the dark stone palette and surrounding top-down game style.
+The new camera looks DOWN at approximately 80 DEGREES above the ground plane: almost bird's-eye, only 10 degrees off a perfectly vertical top view. This is a very substantial viewpoint change from the old side view. Horizontal circular tread footprints should appear almost circular, not a vertically stretched tower. The tall central pillar remains structurally tall, but is strongly foreshortened in the image: show its circular top and only a SHORT visible shaft, roughly 10-14 logical pixels. Most visible area consists of the TOP FACES of the wedge steps.
+
+CRITICAL: this is the SAME free-standing staircase going UP to the next storey. Keep the central round stone column, thick cantilevered wedge-shaped steps spiraling UP around it, lowest tread entering from the lower-right, and the highest broad landing toward the upper-left. The upper steps visibly overlap and cast small shadows onto the lower steps. Use visible narrow risers under the steps to show they RISE ABOVE the floor. It must NOT look like a spiral hole or stairs descending into a pit. No outer circular retaining wall, no basin, no sunken well, no dark hole, no enclosed round stairwell, no parapet added. The stone staircase is raised and freestanding on transparent ground.
+
+Top-down orthographic RPG projection, north up, no isometric diamond. About 8-10 wedge treads making a readable ascending spiral around the short projected shaft. Circular top faces in a nearly round horizontal footprint. Preserve dark indigo-blue cut stone and muted slate edges from the original: near-black navy outlines, deep blue shadows, small cool gray highlights. No pale stone, gold, runes or glow.
+
+One isolated sprite on actual transparent background, native logical 96x96 pixel art shown enlarged with crisp square nearest-neighbor pixels; centered within a roughly 78x78 region so the barrier can surround it. 3x3 tiles of 32px. No surrounding floor square, no text, no labels, no grid, no barrier in this OPEN version. Keep the original design identity; change the CAMERA, not the kind of staircase.
+
+Ascending exit: higher camera
+This is an intermediate camera angle. Raise the camera MUCH closer to directly overhead: approximately 80–85 degrees downward from the horizontal ground. The current image still exposes too much vertical shaft and too much step side face.
+Reproject this SAME ascending freestanding stone spiral. Nearly all visible stone area should be the broad TOP faces of the wedge treads. At native 96px scale, each vertical tread riser is just 1–2 pixels deep and the central shaft visible below its circular top is only 6–8 pixels long. The pillar's top is round, not a narrow ellipse. The staircase footprint is compact and nearly circular like an overhead fan of wedge treads around a central round post. Do not arrange the whole staircase as a long diagonal side profile.
+Keep the ascending sequence: lowest broad entry step at lower-right, wedge steps wind UP around the column, highest landing at upper-left visibly OVERLAPS lower treads. A few dark risers and overlap shadows demonstrate ascent above the floor. It is not a descending pit: no dark hole, basin, surrounding circular wall or rim. Retain freestanding treads, the original stone material and indigo palette.
+Camera change only; no ornament, no new floor. Transparent background. Crisp pixel art enlarged from a logical 96x96 sprite with an approximately 78px nearly round footprint.
+
+Ascending exit: final palette
+Color-only edit of reference 1. Preserve its current near-overhead ascending staircase geometry, all tread positions, silhouette, short projected central shaft, camera angle, transparency and framing exactly.
+Make the stone substantially darker and less lavender so it matches the actual dark dungeon in reference 2. Main tread surfaces should be muted indigo-gray #293248 to #35415A, dark crevices and risers #101728 to #1B2438, restrained narrow edges #46536B. Remove the broad pale blue-white edging; highlights should remain readable but subdued. Keep the visible rise and overlap of the wedge steps. No geometry changes, no outer wall, no pit, no floor, no added glow.
+Strict crisp pixel art on actual transparent background.
+
+Entrance camera
+Reproject the entrance BUILDING from reference 1 to a genuinely near-overhead RPG camera: looking DOWN at approximately 80 degrees above the horizontal floor, only 10 degrees off vertical. Reference 2 is the actual dungeon map for palette and top-down context.
+Keep the same building identity: rectangular flat stone roof with parapet, two columns framing the south doorway, dark rectangular entrance, threshold and dark masonry side walls. Change the projection so it belongs in the overhead dungeon rather than looking like a front-view elevation.
+The ROOF TOP occupies roughly 70–75 percent of the visible object height. It is a broad rectangle with parallel edges, no trapezoidal narrowing toward the back, no isometric yaw. The front facade and columns become strongly vertically foreshortened, only about 14–18 logical pixels high in a 96px sprite. The column capitals/top surfaces are clearly visible, shafts very short in projection. At the southern edge retain a legible recessed dark doorway and the top faces of two threshold steps, so the object still reads as a building entrance.
+Both outer side wall faces are visible as modest dark masonry strips 3–5 logical pixels wide beneath the roof edges, matching the dungeon wall height effect. No separate wing walls or tall side fins. The same solid building seen from almost above, not a new design.
+Native 96x96 pixel sprite, 3x3 tiles of 32px, complete object within approximately 84x84 pixels with transparent margins. Restrained DARK indigo-gray stone matching reference 2: main stone #242D43 and #303B53, near-black shadows #101628, limited narrow edge highlights #46526B. Do not brighten or introduce pale lavender. Crisp hand-placed flat pixel clusters, hard nearest-neighbor enlargement.
+Actual transparent background, only the building, no floor tile, no characters, no text, no labels, no glow, no blur.
+
+Entrance: stronger foreshortening
+This entrance still shows too much front elevation. Make a strong elevation-camera correction while keeping the same building and materials.
+
+Use this explicit screen layout for the final 96x96 logical sprite:
+- Rectangular stone ROOF, including parapet: roughly x=12..83, y=7..65. This roof rectangle is the dominant visible part, about 70 percent of the building's height.
+- FRONT FACADE below the roof: only y=66..81, about FIFTEEN logical pixels tall. Strongly foreshorten/compress the two columns, door jambs and doorway vertically into this low strip. The column capitals are seen mostly from above. Do not leave long vertical pillar shafts.
+- Two threshold steps at y=82..88.
+- Side faces: narrow dark bands at x=6..11 and x=84..89, with visible masonry under the roof, not projecting wing walls.
+
+This corresponds to looking nearly straight DOWN, at 80 degrees from the horizontal, NOT the current 45-degree front/side view. Keep the top roof left and right edges straight and parallel. Do not enlarge the facade again. The visible doorway is a short dark opening under the south eave, recognizable through its shadow and threshold. Preserve the same columns and flat roof design, just their much higher camera projection.
+
+Keep the whole asset DARK and muted: main stone indigo-gray #242D43/#303B53, very dark crevices, narrow edge highlights #46526B. Preserve pixel-art construction. Real transparent background. No surrounding floor, no text or layout guides in the output.
+
+Accepted barrier source
+Create a clean pixel-art game effect: an upright blue cylindrical force field seen almost directly from overhead (80 degrees above the ground). Render ONLY the energy sleeve, empty center, transparent background.
+
+Use this explicit two-dimensional design, centered on a square canvas:
+Two identical NEARLY PERFECT CIRCLES, width 86 percent of canvas, height 84 percent of canvas. Their centers are at (50%,46%) and (50%,53%). They overlap almost completely. The lower circle is shifted only SEVEN percent of the canvas downward. This small offset is the projected height of the cylinder. Tiny connecting side segments at far left and far right, faint blue surface between corresponding arcs only. No tall side-view tube. No flattened ellipses.
+
+Both full circular rims must be COMPLETE UNBROKEN continuous rings, each with a bold crisp thickness of approximately TWO PERCENT OF THE CANVAS WIDTH so they survive reduction to 96x96 pixels. Solid cobalt outline plus restrained cyan inner highlight. Far arcs medium blue and clearly visible, near arcs moderately brighter cyan. No fading out or dissolving at the back, no dotted lines, no particles, no decorative sparks. No excessive white bloom.
+
+The large central opening is FULLY TRANSPARENT. Do not fill the circles with blue discs. Only the thin rims and the narrow translucent sleeve between the shifted arcs exist. Crisp uniform square-pixel clusters, flat blue/cyan shades, designed for a native 96x96 pixel sprite then enlarged with nearest-neighbor. Transparent outside as well. No objects, stairs, floor, text or labels.
+
+Mechanical pipeline: nearest-neighbor native export; circular fit for the ascending stair within the cylinder footprint; projection of sampled generated energy material onto far and near sleeve surfaces at 80 degrees; rear -> stairs -> front alpha composition; nine 32x32 slices for each object and each barrier half. Terrain and fountain PNGs retained byte-for-byte.

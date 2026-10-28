@@ -1,0 +1,26 @@
+Mode: built-in imagegen.
+
+EXPOSE SIDE-WALL PLANES
+Edit this dungeon entrance so BOTH SIDE WALLS are visibly exposed as substantial surfaces, matching the raised walls in reference 2.
+
+Reference 1 is the building to edit. The previous version looks like a flat front facade because the side surfaces are practically absent. This needs a CLEAR GEOMETRIC CHANGE, not another outline or bevel highlight.
+
+Keep the central doorway, two columns, front facade design, flat rectangular stone roof, dark indigo pixel art, and 3x3-tile size. Make the top roof block narrower than the wall footprint by about 8 logical pixels on EACH side, leaving actual side-wall planes visible along its outside edges. The roof remains a rectangle with parallel straight edges; do not make the roof trapezoidal.
+
+On each side, draw a distinct dark stone WALL FACE approximately 7–9 pixels WIDE at native 96x96 resolution, extending along the building's depth and height. These must contain visible staggered brick courses and dark mortar joints, not a thin strip of outlining. The upper roof edge and lower wall foot are offset slightly sideways, with short diagonal corner returns, just as the side walls in reference 2 show a raised upper lip and a darker face extending down toward the floor. This is a stylized overhead RPG projection allowing both side faces to be readable. Straight flat side-wall planes, small outward slope from the roof to the base. No global isometric rotation.
+
+Clearly separate three materials by value: existing medium-dark indigo roof surface, DARKER broad masonry side faces, and very narrow muted slate highlights on the upper rim. The side faces must be unmistakable even when the whole sprite is 96x96. Leave enough contrast to see their brick joints. The facade columns and doorway stay centered and recognizably the same. Allow the front facade to become slightly narrower to reserve room for the visible side-wall surfaces, while retaining the total 96x96 canvas.
+
+Actual transparent background, one isolated sprite, hard square pixel art enlarged from a logical 96x96 image. No extra props, no text, no floor square, no blur.
+
+REFINE ATTACHMENT TO BUILDING
+Correct the geometry of this entrance sprite while KEEPING the newly visible dark brick side surfaces.
+The left/right surfaces currently look like freestanding wing walls attached beside the building. They must instead be the actual OUTSIDE WALL FACES OF ONE SOLID BUILDING, directly beneath the roof, with no separate wings, fins, extra corner towers or detached wall caps.
+
+Use a stylized top-down RPG projection with a rectangular roof and a slightly wider footprint at ground level. Exact approximate logical 96px geometry: roof top plane corners (14,8),(82,8),(82,44),(14,44). Front facade below it spans upper corners (14,44),(82,44) and lower corners (88,88),(8,88). LEFT SIDE WALL is the continuous dark masonry plane connecting the left roof side x14 to the left ground side x8, extending behind the front facade; RIGHT SIDE WALL mirrors it from roof x82 to ground x88. This exposes roughly SIX PIXELS of real brickwork on each side. Keep the roof side edges vertical and parallel; do NOT make the roof a trapezoid. The subtle outward slope is from the raised roof down to the floor, matching raised dungeon tiles.
+
+The side walls must tuck UNDER the roof edges, not rise beside or above the roof. Remove the large diagonal top caps sticking out left/right. Make each side face visibly darker than the roof and front, with several clear staggered mortar courses and a slim upper lip. The front doorway, two existing columns, lintel, roof blocks and threshold remain the same dark indigo stone design. No structural additions. The result should look like the existing little building with visible thickness along both sides, not a building between two extra walls.
+
+Preserve pixel art, dark palette, genuine transparent background. Native logical 96x96 sprite enlarged with hard square pixels. No surrounding floor, labels or text.
+
+Export: transparent crop and nearest-neighbor fit into 96x96, nine 32x32 slices. Only entrance atlas cells and its footprint in the two maze previews were replaced. Other sprites and effects retained byte-for-byte from V11.

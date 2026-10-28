@@ -1,0 +1,54 @@
+INDIGO CRYPT 32 — V3
+Built-in image_gen, followed by native-size export, tile assembly and border normalization.
+The approved fountain and open spiral staircase were preserved from V2.
+User constraint: every wall occupies exactly one 32x32 cell.
+
+v3_entrance_prompt
+Use case: precise-object-edit.
+Image 1 is the entrance to correct. Image 2 is the APPROVED fountain and is ONLY the CAMERA/PALETTE reference. Do not return or alter the fountain.
+Redesign the entrance camera so it matches the high overhead three-quarter orthographic view of the fountain. We look DOWN at the architecture from roughly 55 degrees above horizontal. The current entrance is WRONG because its pointed arch is tall and viewed straight-on. Replace this frontal appearance with a low, foreshortened gothic stone stairwell viewed clearly FROM ABOVE. The asset remains a 3x3 tile footprint, native 96x96 pixels.
+Design: a rectangular sunken stone staircase descending toward a shadowy small low-vaulted opening at the FAR/NORTH side. A thick, low gothic stone portal at the far end, its TOP surface and depth plainly visible. The portal is foreshortened and occupies only the back third of the sprite, not a tall vertical facade. Wide step TREADS dominate the image from the near SOUTH entrance down toward the north opening; risers are narrow. Two thick side parapets, their broad top surfaces clearly visible, run from near to far along the steps. Strong depth from north to south, equal left/right geometry, world horizontal edges horizontal. This must read like a sunken dungeon entrance in a top-down RPG, not a front-facing building illustration or an isometric diamond.
+Use EXACTLY the muted indigo stone and dark fantasy pixel style of the approved fountain, same scale of stone chips. 96x96 logical pixels, sharp square clusters; no anti-aliasing, no glow, no text.
+Return ONLY the whole entrance, on true transparent background with a 3 native pixel margin on all sides. Square canvas. No ground square outside the staircase. It will be cut into nine 32x32 tiles.
+
+v3_barrier_prompt
+Use case: precise-object-edit.
+Correct ONLY the energy barrier geometry around this spiral staircase. The old barrier looks like a rectangular cage. It must be a perfectly regular ROUND CYLINDER viewed from ABOVE at the same angle as the approved fountain, not a square box and not a cage with posts.
+Return ONLY the BLUE CYLINDER EFFECT as a transparent OVERLAY sprite, WITHOUT the stone staircase or ground. The matching staircase will be placed underneath afterward. The staircase reference provides the centre and size only.
+Native size exactly 32x32. The final barrier is one cell. Design the geometry on this native pixel coordinate guide:
+- top circular rim projects to a WIDE clearly curved symmetric ellipse, bounding x=2..29 and y=1..15;
+- bottom circular rim projects to the SAME ellipse, bounding x=2..29 and y=16..30;
+- both ellipses have the exact same centre X and width, the bottom is directly beneath the top;
+- left and right side silhouettes are straight VERTICAL tangents at x=2 and x=29 between the ellipse centres;
+- smooth rounded quarter-arcs at the four shoulders, no square corners;
+- the cylinder's top is clearly seen as an oval opening, like looking down at a round glass.
+Thin cool-blue rim highlights, a continuous transparent cobalt/indigo magical cylindrical sheet connecting the rims. No vertical bars, supports, cage lines, box, polygonal corners, sparks or plume. Mostly transparent interior so the stone stair underneath remains fully legible. Thin darker back semicircle and brighter curved front semicircle communicate ROUNDNESS. No massive glow, just a one-native-pixel soft blue fringe contained inside the 32x32 cell. Transparent outside.
+Strict crisp pixel art, 32x32 logical pixels displayed enlarged nearest neighbor. Output a square image. NO stone stair at all in the output: only a rounded cylindrical energy barrier overlay.
+
+v3_floor_prompt
+Use case: precise-object-edit.
+Refine this dungeon floor into a truly SEAMLESS repeating 32x32 native pixel-art FLOOR texture. Preserve its dark muted blue-indigo slate palette and modest contrast. Top-down flat walkable floor.
+Four broad worn square-ish stone flags in the tile, laid as a continuous masonry pattern. Stones connect naturally with the adjacent copies in BOTH axes. The left and right tile edges match EXACTLY; top and bottom match EXACTLY, including shading and joint thickness. No surrounding frame, no doubled dark line at tile borders, no vignette, no edge shadow. The tile boundary is not a separate paving border. The four border strips must have the same average brightness as the interior; never darken all four edges.
+Plain floor with NO cracks, water, ornaments or loose rocks. Sparse quiet chips and specks only. Clear native pixel clusters rather than noisy high resolution detail. Every pixel belongs to the repeating surface; fully opaque square.
+Return ONLY one square tile, native32x32 enlarged to 1024x1024 nearest neighbor. It must look like a continuous flat floor when repeated 8x8.
+
+v3_cracked_prompt
+Use case: precise-object-edit.
+Edit the supplied plain indigo floor tile by adding ONLY two small thin dark hairline cracks on stone faces within the central area. Keep every stone, joint, texture, color, shading, framing and size EXACTLY unchanged. Native32x32 tile, cracks must stay at least 6 native pixels away from ALL outer boundaries and must not connect to the edges. Crack pixels sparse and no wider than 1 native pixel with one subtle neighboring highlight. No big broken holes or displaced stones. Fully opaque square. Same crisp pixel art as input. This is variation 1 of a seamless game floor; the outer 6-pixel frame must be identical to the original. Return only the tile.
+
+v3_water_prompt
+Use case: precise-object-edit.
+Edit the supplied plain indigo floor tile by adding ONLY a small shallow dark-blue puddle centered slightly below/right of center. Keep every stone, joint, texture, color, shading, framing and size EXACTLY unchanged outside the puddle. Native32x32 tile. Water shape about 12x9 native pixels, with irregular gently rounded outline, no bigger than x=11..24,y=12..24, so it stays at least 6 native pixels from every outer boundary. Subtle dark indigo water and three small muted cool-blue reflection pixels, no bright neon, no splash, no hole. Do not add cracks. Fully opaque square. Same crisp pixel art as input. This is variation 2 of a seamless game floor; the entire outer 6-pixel frame remains identical to original. Return only the tile.
+
+v3_wall_reference_prompt
+Use case: precise-object-edit.
+Reference 1 defines the requested CAMERA and WALL HEIGHT appearance: elevated dungeon walls with a narrow top/crown and a tall visible front face above the floor. Reference 2 defines only the APPROVED DARK INDIGO STONE palette and pixel art style. Do not reproduce the warm green/yellow palette, decorations or scene from reference1. Do not return the fountain.
+Create ONE SINGLE straight dungeon wall tile, native 32x32 pixels, filling the entire square. This tile will have WALKABLE FLOOR immediately BELOW its bottom edge, outside the image. Everything fits within its 32x32 cell, NO overflow.
+Camera high angle top-down/side orthographic, like reference 1. Native y=0..5 is a narrow visible top/coping surface; y=6..8 a continuous indigo stone crown; y=9..29 a TALL VERTICAL dark stone wall face; y=30..31 dark base/contact shadow. The vertical face occupies most of the cell and has clear depth: subdued blue-indigo light near the top fading through hand-pixelled color bands into very dark navy at the base. Broad worn masonry with a few horizontal staggered joints. Keep the face readable, quiet and understated, no speckled bright noise.
+Left and right sides are CONTINUATIONS of the wall, not end caps. Perfectly horizontally tileable. All horizontal bands remain at exactly the same pixel row across the complete width. No wall-edge border on left or right, no additional floor, black canvas, vignette or gutters. No door, columns, torches, symbols or ornaments.
+Native32x32 hand pixel art rendered enlarged. Very dark blue-indigo slate palette, muted violet tint. Hard square pixels, low color count, no smooth rendering, no text. Return only the full opaque square wall texture.
+
+v3_wall_top_prompt
+Use case: precise-object-edit.
+Use the supplied approved dark-indigo fountain image for STONE MATERIAL AND PALETTE ONLY. Return ONLY one seamless texture of the flat TOP surface of a thick dungeon wall, native32x32 enlarged, fully opaque square.
+Very dark indigo-blue slate stone, nearly black navy, quiet low-contrast hand-pixelled chips. One broad flat slab surface continuing seamlessly in both axes. The surface should look horizontal and subdued, NOT like a vertical brick wall and NOT like walkable paving. No brick courses, no 2x2 paving grid, no explicit decorative motif, no crack reaching an edge. No lighting gradients, no vignette, no frame or bevel around the image. Exact same darkness at all edges and center. Restrained large pixel clusters, sparse dark-blue flecks, low detail at 32px. No characters, objects, text, water, glow, inset panels or border. This material will fill the top planes of orthogonal dungeon walls; separate sprites provide bevels and faces.

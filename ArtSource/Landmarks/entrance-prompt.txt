@@ -1,0 +1,9 @@
+Mode: built-in image_gen; edit; transparent background.
+Use case: precise-object-edit.
+Asset type: production pixel-art dungeon entrance sprite for a Unity 2D game.
+Image 1 is the edit target: the existing 96 x 96 entrance. Redraw it by hand as a native 144 x 144 logical-pixel sprite with finer one-pixel masonry detail, NOT a blurred or interpolated enlargement.
+Preserve the exact object identity, axis-aligned top-down/near-top-down perspective, proportions, symmetry and silhouette of Image 1: wide rectangular indigo stone stairwell entrance, short stone pillars at the upper corners, horizontal recessed courses/steps, two short side supports near the lower edge. No tall arch, doorway, gate, roof or new ornaments.
+Preserve the original raw sprite's muted blue-gray stone palette: representative stone midtone RGB 66,74,99; subtly lighter edges; dark indigo seams. The game already applies the final wall-color correction. No warm colors, colored light, glow, dramatic highlights or cast shadow.
+The drawing occupies the same normalized region as the original: roughly x=12..132 and y=21..123 in a 144 x 144 logical canvas, with completely transparent margins. Centered full object; nothing cropped. Do not fill the background with a checkerboard or any color.
+Pixel craft: crisp square pixels, stair-stepped edges, short one-pixel highlights and cracks, careful manual pixel clusters, more real detail at the higher resolution, no antialiasing, no soft gradients, no smoothing, no painterly texture.
+Delivery: preferably a true 144 x 144 transparent PNG. If a larger output canvas is needed, deliver an exact 8x nearest-neighbor display of that 144 x 144 logical pixel artwork on a 1152 x 1152 canvas. Every logical pixel is a flat 8 x 8 square, with no detail smaller than a logical pixel. No text, grid lines, labels, watermark, additional objects or floor tiles.

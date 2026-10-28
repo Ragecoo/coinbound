@@ -1,0 +1,6 @@
+{
+  "name": "Coinbound.PlayModeTests",
+  "references": ["Coinbound.Runtime", "Coinbound.Generation", "Unity.ugui", "Unity.InputSystem"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"]
+}

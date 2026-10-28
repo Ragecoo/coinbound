@@ -1,0 +1,5 @@
+{
+  "name": "Coinbound.Runtime",
+  "rootNamespace": "Coinbound",
+  "references": ["Coinbound.Generation", "Unity.InputSystem", "Unity.ugui"]
+}

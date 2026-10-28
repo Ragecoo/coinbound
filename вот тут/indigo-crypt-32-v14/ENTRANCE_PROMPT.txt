@@ -1,0 +1,17 @@
+Mode: built-in image_gen.
+Only the entrance was edited. Export: nearest-neighbor to 96x96, split into nine 32x32 tiles, replacement of the same atlas cells.
+
+Use case: precise-object-edit.
+IMAGE 1 is the existing dark-indigo entrance sprite to replace. IMAGE 2 is the user's explicit CAMERA AND STRUCTURE reference. Only change the entrance, matching image 2's much higher top-down RPG view while retaining the indigo stone palette and pixel style of image 1.
+
+The key correction is ORTHOGRAPHIC HIGH OVERHEAD perspective, about 70 degrees above the ground: we see mostly TOP surfaces of stonework and broad stair treads, with very short vertical faces. The old sprite is still too frontal and tapers dramatically toward a tall arched doorway; remove that frontal facade/ramp impression.
+Use image 2's parallel side piers and short recessed dark opening. Build a compact square temple/dungeon stair entrance:
+- two thick, parallel, straight stone side piers/low parapets, with substantial visible flat TOP faces;
+- side rails stay PARALLEL on screen with the same separation from front to back, NOT a trapezoid narrowing toward a vanishing point;
+- at the far NORTH side, a low, foreshortened horizontal stone lintel/header above a dark recessed doorway; no towering upright pointed arch;
+- a short centered run of 5 broad rectangular steps descending northward into that dark opening, seen mainly as horizontal TREADS; risers are just one or two native pixels;
+- a small clear threshold at the near SOUTH edge;
+- symmetrical orthogonal alignment: horizontal crosspieces horizontal, side piers vertical in the image. No isometric rotation and no visible horizon.
+Most of the object must be seen FROM ABOVE, like the attached user's example. Keep the tops wider/more prominent than vertical faces. A dark rectangular opening is acceptable; preserve the dark-fantasy character through worn heavy slate and restrained carved grooves, not a big front-facing arch.
+
+Output ONE complete entrance prefab, native exactly 96x96 pixels, to be sliced into a 3x3 grid of 32x32 tiles. Entire object inside x=5..90, y=5..90. Crisp native pixel clusters, no details smaller than one logical pixel. No grid drawn. Same muted dark indigo/navy/blue-grey stone palette as the existing entrance, no green, brown, red or gold from the camera reference. Sparse chips, hard pixel shading, no antialiasing, no smooth gradients, no glow or vignette. True transparent background around the object; no floor-square backing. Return only the entrance on a square canvas, enlarged with nearest-neighbor.

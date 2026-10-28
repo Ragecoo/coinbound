@@ -1,0 +1,22 @@
+{
+  "chests": 3,
+  "chestDistance": null,
+  "safeRadius": 15,
+  "roomMin": 5,
+  "roomMax": 6,
+  "corridorMin": 2,
+  "corridorMax": 4,
+  "roomPacks": 1,
+  "largeRoomPacks": 2,
+  "largestRoomPacks": 3,
+  "largeRoomArea": 15,
+  "largestRoomArea": 25,
+  "corridorPacks": 6,
+  "singles": 3,
+  "packRadius": 5,
+  "packDistance": 9,
+  "weight001": 1,
+  "weight002": 1,
+  "weight003": 1,
+  "weight004": 1
+}

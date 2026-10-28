@@ -1,0 +1,1 @@
+Historical note: the separately generated V5 void texture was replaced in V6. The current background.void.png is an exact copy of the existing wall.00.png. No image generation was used for this correction.
