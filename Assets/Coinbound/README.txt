@@ -1,14 +1,38 @@
-COINBOUND — первоначальная игровая сцена
+COINBOUND — игровая сцена и интерфейс
 
-Откройте Assets/Scenes/SampleScene.unity, нажмите Play и «Начать игру».
-Перед генерацией выберите одну из двух карточек героя и нажмите «Создать подземелье».
-Пока доступны «Герой 1» (голубой) и «Герой 2» (сиреневый), с одинаковыми характеристиками.
+Откройте Assets/Scenes/SampleScene.unity, нажмите Play и «Новая игра».
+Перед генерацией выберите мечника или лучника и нажмите «Начать игру».
+Доступны мечник из «тута/01» и лучник из «тута/02»; выбранный герой появляется в игре.
 «Назад» / Esc возвращает в меню; если данж уже есть, его можно продолжить прежним героем.
-«Новое подземелье» снова открывает выбор; генерация начинается только после подтверждения.
+«Новая игра» открывает выбор; при живом герое сначала появляется подтверждение.
+Главный экран, выбор персонажа (две половины с авторскими портретами), загрузка,
+пауза, смерть, настройки и подтверждения оформлены в тёмной палитре.
+Главный экран: цельная сцена крипты, адаптированный логотип пользователя, текстовое меню.
+Выбор: две половины экрана с упрощёнными пиксельными портретами и характеристиками.
+Загрузка: анимированный игровой спрайт идёт по коридору по мере создания карты.
+HUD: здоровье и мана слева сверху, очки формата 000000000 справа сверху.
+Мана пока только шкала (100/100), без расходования — по указанию пользователя.
+Враг даёт 100 очков один раз; счётчик плавно увеличивается. Новый забег сбрасывает очки.
+Умения обозначены небольшими значками в ромбах. Лозунги и выдуманные описания удалены.
+Переходы раскрываются из центра; анимация UI работает при остановленном игровом времени.
+Настройки: громкость интерфейса, яркость подземелья, полный экран, VSync,
+уменьшение анимации, подсказки и индикация урона. Сохраняются в PlayerPrefs.
+Пауза останавливает Time.timeScale; Esc из настроек возвращает в паузу.
+Возврат на главный экран сохраняет текущий забег до закрытия приложения.
+После смерти можно повторить спуск тем же героем или выбрать другого.
+Постоянного сохранения забега между запусками нет.
 WASD / стрелки — движение; левый стик геймпада также поддерживается.
+ЛКМ — удар мечом / стрела по направлению к курсору; можно удерживать для повторных атак.
+Атаки направляются под любым углом. Удар мечом ближний, стрела летит до цели или стены.
+Левый Shift — перекат по направлению движения, без движения — по последнему направлению.
+Перекат длится 0.30 с, даёт неуязвимость на первые 0.24 с; откат 1 с от начала переката.
+ПКМ — удерживать направленный блок мечника в сторону курсора. Первый заблокированный
+удар запускает откат 2 с и оглушает ударившего врага на 0.6 с. Со спины блок не защищает.
+Лучник не блокирует. На геймпаде: правый стик — прицел, правый триггер — атака,
+нижняя лицевая кнопка — перекат; блок пока привязан к ПКМ.
 Ctrl + колёсико — плавное приближение/отдаление. Вверх — ближе, вниз — дальше.
 Начальный размер камеры 6.5 вместо 8.5, диапазон масштаба 3.5–12.
-Esc / «Меню» — приостановить движение, продолжить или создать новый данж.
+Esc / «Меню» — приостановить движение, бой, стрелы и врагов; продолжить или создать новый данж.
 Во время загрузки «Отмена» / Esc возвращает на стартовый экран.
 Камера ограничивает весь видимый прямоугольник границами карты, в том числе
 при изменении пропорций окна. На очень широком/высоком экране масштаб уменьшается.
@@ -29,13 +53,74 @@ Runtime/DungeonGame.cs — запуск, исходные статусы ген�
 вместо 5–6, в коридорах 2–3 вместо 2–4; коридорных пачек 5 вместо 6,
 одиночных врагов 2 вместо 3. Это примерно на 20–25% меньше, точное число зависит
 от карты и доступных мест. Исходный SpawnPlanner и TestingUtil не менялись.
-Runtime/DungeonScreen.cs — временный интерфейс на Unity UI, отдельно от логики.
-Runtime/DungeonView.cs — Tilemap, коллизии, объекты и плейсхолдеры.
-Runtime/DungeonPlayer.cs — движение через Input System и Rigidbody2D.
-Runtime/DungeonHero.cs — имена, цвета и постоянные идентификаторы двух героев.
+Runtime/DungeonScreen*.cs — интерфейс Unity UI, макеты, настройки и переходы.
+Runtime/DungeonSettings.cs — сохраняемые настройки; исходный DungeonEffects не изменяется.
+Runtime/DungeonUiDecoration.cs — рамки, узоры, частицы и анимация монеты.
+Runtime/DungeonView.cs — Tilemap, коллизии, объекты и создание персонажей.
+Runtime/DungeonPlayer.cs — движение через Input System и Rigidbody2D, атаки, перекат и блок.
+Runtime/DungeonHero.cs — имена, постоянные идентификаторы, папки рисунков и класс героя.
 Выбор хранится в DungeonGame.SelectedHero и передаётся в DungeonPlayer.Hero при спавне.
-Runtime/DungeonPlaceholderArt.cs создаёт одинаковые пиксельные портреты для выбора и игры;
-существующие плейсхолдеры врагов и сундуков используют тот же код рисования.
+Runtime/DungeonHeroAnimator.cs — покадровые idle, бег, атака, перекат и блок по четырём
+направлениям. Кадры 32 x 64, 32 PPU, Point sampling; плащи анимированы в самих рисунках.
+Рисунок привязан к стопам, квадратный BoxCollider2D 0.36 x 0.36 тайла находится только снизу.
+Герои уменьшены на 20% внутри общего кэша кадров; каждый пиксель по-прежнему равен 1/32 тайла.
+Исходные PNG не изменяются. Производные текстуры используют Point, без сглаживания и mipmaps.
+VisualScale, PaletteSaturation, PaletteBrightness и PaletteTint в DungeonHeroAnimator.cs задают
+размер и холодную приглушённую палитру игровых спрайтов. В интерфейсе используются
+крупные авторские портреты из Resources/InterfaceArt, предоставленные пользователем.
+HandHeight следует размеру героя, чтобы стрела, след меча и блок оставались у рук.
+
+DungeonCombatFx.cs: белый след меча с нейтральной кромкой и затухающим хвостом,
+тёплые металлические искры при ударе, блоке и попадании стрелы в стену.
+DungeonCombatMesh.cs рисует эффекты на мировой сетке 32 px одним динамическим мешем;
+картинка следа меча больше не обрезается стенами. Урон по-прежнему проверяет препятствия.
+Development-сборка с -coinbound-fx-capture <каталог> записывает клипы выбранных эффектов;
+Tools/Review-CombatCapture.ps1 собирает из них GIF и контактные листы.
+
+Настройки выбранных эффектов: Assets/Coinbound/Resources/DungeonEffects.asset в Inspector.
+- Sword trail: Slash Color — белый цвет рисунка; Slash Emission — его собственное свечение.
+  Slash Light Color/Radius/Intensity/Duration — цвет, радиус в тайлах, сила и время подсветки.
+  По умолчанию тёплый свет радиусом 0.9 тайла, сила 0.75, время 0.18 с.
+- Sparks: Spark Color/Hot Color — янтарные искры и светлое ядро; Spark Emission — свечение.
+  Spark Light Color/Radius/Intensity/Duration — свет на окружающих поверхностях:
+  радиус 0.75 тайла, сила 1 (100%), время 0.16 с.
+- Dynamic Lights/Effect Light Strength — общий переключатель и множитель локального света.
+- Arrows: Arrow North Wall Inset = 0.85 тайла — глубина наконечника в верхней стене;
+  Arrow Other Wall Inset = 0.25 — в остальных стенах; Arrow Stuck Lifetime = 1.1 с.
+Положение картинки застрявшей стрелы учитывает сторону стены. Физическое попадание,
+свет и коллизия остаются на стороне пола; после попадания стрела больше не наносит урон.
+Параметры эффекта применяются при следующем его появлении. Изменения самого asset сохраняются.
+Свет героя: объект Coinbound в SampleScene, раздел Player torch, поля Torch Intensity и Torch Color.
+Torch Intensity = 1.12 (80% от прежних 1.4), Torch Color = (1, 0.95, 0.88), радиус прежний — 8.
+Изменения света героя применяются при создании подземелья.
+Декор, атмосфера и синтезированный звук из последнего набора не создаются в игре.
+Кровь, пыль, сколы, отдача, hit-stop, дополнительные реакции/тени, вспышки интерфейса отключены.
+Их старые исходники и исходные рисунки оставлены в проекте; генератор и TestingUtil не менялись.
+
+Runtime/DungeonDepthSort.cs сортирует персонажей и объекты по ногам/основанию;
+высокий рисунок героя получает свет в точке ног и не обрезается картой стен на уровне головы.
+Runtime/DungeonCursor.cs отображает игровой прицел и направление атаки.
+Runtime/DungeonEnemy.cs — обнаружение, преследование, заметный замах, удар, стан и смерть.
+Runtime/DungeonCombatNavigation.cs — общий маршрутный поиск по карте и основаниям объектов.
+Runtime/DungeonArrow.cs — летящая стрела; DungeonCombatPhysics.cs проверяет цели и стены
+по пути полёта, чтобы быстрый снаряд не пролетал через тонкие препятствия.
+DungeonCombatFx.cs / DungeonCombatPixels.cs — пиксельный слэш, блок, искры и сигнал замаха.
+Стрела и оружейные эффекты визуально подняты на 0.68 тайла к рукам; попадания остаются
+на плоскости ног, поэтому высокая картинка не увеличивает коллизию персонажа.
+DungeonPlaceholderArt.cs по-прежнему создаёт плейсхолдеры врагов и сундуков.
+
+Настройка боя: постоянные исходные значения находятся в Runtime/DungeonPlayer.cs.
+Поля speed (5), maximumHealth (6), rollCooldown (1) и blockCooldown (2) доступны
+на созданном объекте Player во время Play; изменения в Play не сохраняются для нового запуска.
+SwordDuration = 0.42 с; урон мечом 2, радиус 1.65 тайла; контакт на 0.16 с замаха.
+BowDuration = 0.38 с; выпуск стрелы на 0.14 с. Скорость стрелы 16 тайлов/с,
+урон 1 и время полёта 1.5 с задаются в DungeonArrow.cs.
+DungeonEnemy.cs: здоровье 3, скорость 2.25 тайла/с, начало замаха с 1.05 тайла,
+WindupDuration = 0.42 с, урон 1. Враг атакует только видимую цель и не бьёт через стены.
+Полученный урон даёт герою 0.65 с защиты от следующих попаданий, чтобы группа не убивала
+его за один кадр. Успешный блок не включает эту защиту: следующий удар во время КД опасен.
+При потере фокуса окна и в меню таймеры боя, движение врагов и снаряды останавливаются.
+После потери всего здоровья игра предлагает создать новое подземелье.
 Runtime/DungeonTorch.cs и Shaders/TorchlitSprite.shader — приглушённый свет от героя
 с лёгким тёплым оттенком, сохраняющим исходную индиго-палитру. Яркого ореола нет.
 Мягкое затухание, лёгкое мерцание и рассеянные края теней.
@@ -123,16 +208,90 @@ Wall Light Multiplier. Вода фонтана сохраняет синий ц�
 object.exit сопоставлен с object.exit.open; закрытый вариант тоже импортирован.
 Выход пока только отображается: правила открытия и переходы между этажами не заданы.
 
-Голубой или сиреневый круг — выбранный управляемый персонаж. Цветные круги — враги 001–004.
+Цветные круги — временные рисунки врагов 001–004; они преследуют героя и атакуют вблизи.
 Золотые сундуки ориентированы по Facing генератора и остаются проходимыми.
-Плейсхолдеры врагов пока неподвижны; бой, содержимое сундуков и взаимодействия не реализованы.
+Содержимое сундуков и взаимодействия с фонтаном/выходом пока не реализованы.
 
 Window > General > Test Runner > PlayMode: Coinbound.Tests.
 Проверяются загрузка, статусы/прогресс, отображение объектов, спавн, коллизии,
 границы камеры при разных пропорциях окна, отмена и повторная генерация,
 блокировка лучей стенами и Ctrl + колёсико с ограничениями масштаба.
+DungeonCombatTests: направление меча/стрелы, стены, однократный блок и стан, откаты,
+неуязвимость и коллизия переката, остановка боя/врагов/стрел при открытом меню.
 python Tools/check_generation_port.py сравнивает оригинал и копию на 68 конфигурациях
 (нужны Python и .NET 10): все шаги, тексты, прогресс, карта, тайлы, спрайты и спавн.
-Coinbound > Build Windows preview создаёт Builds/Coinbound/Coinbound.exe.
-В development-сборке флаг -coinbound-capture <папка> сохраняет восемь кадров
+Сборка Windows:
+1. Открыть корень проекта в Unity 6000.6.6f1 через Unity Hub.
+2. Выйти из Play Mode и дождаться компиляции скриптов без красных ошибок.
+3. Нажать Coinbound > Build Windows preview в верхнем меню Unity.
+   Команда сама включает Assets/Scenes/SampleScene.unity и собирает Windows x64.
+4. Запустить Builds/Coinbound/Coinbound.exe. Передавать всю папку Builds/Coinbound,
+   включая Coinbound_Data, UnityPlayer.dll и остальные файлы, а не один exe.
+Это development-сборка для проверки. Для релизной сборки открыть File > Build Profiles,
+выбрать Windows, проверить SampleScene в Scene List, выключить Development Build
+и нажать Build, указав отдельную папку результата.
+Меню создаётся при запуске: в редакторе оно видно в Game после нажатия Play.
+
+В development-сборке флаг -coinbound-capture <папка> сохраняет набор кадров
 интерфейса/данжа с seed 42 и закрывает игру; обычный запуск не включает эту проверку.
+
+
+Actor attributes
+----------------
+DungeonStats.cs defines immutable CombatStats, PlayerStats and EnemyStats. Hero definitions
+own player attributes; enemies accept an EnemyStats definition at initialization. Current
+HP/MP and score belong to the actor, not the shared definition. No upgrades or runtime
+attribute mutation are implemented yet.
+Player defaults: HP 100, MP 100, critical chance 5%, luck 5 percentage points.
+Movement: swordsman 3 units/s, archer 3.5 units/s. Roll cooldown: 1.5 seconds.
+Swordsman: damage 2, attack rate 1/0.42 attacks/s; archer: damage 1, rate 1/0.38.
+A critical roll is sampled once per sword swing or launched arrow and multiplies damage
+by exactly 1.5. Enemy HP is fractional to preserve archer critical damage.
+Enemy defaults: HP 3, defense 0, damage 10 (temporary testing value), movement 2.25 units/s, score drop 100.
+Defense is flat reduction after critical damage: max(0, incoming - defense).
+Luck adds percentage points to a favorable coin outcome, capped at 100%; the default
+fair coin would have a 55% good-drop chance. PlayerStats.RollGoodDrop exposes the rule;
+coin tossing/drop interaction does not exist in the current game and is not added here.
+The five compact HUD rows (damage, movement, attack rate, critical chance, luck) sit below
+the vitals on the left, with icons and values only. HP/MP remain in their resource bars.
+Pause is available through Esc; the HUD has no pause button. Tools/Import-StatIcons.ps1
+copies hand-sliced PNGs unchanged from ура/icons and ура/gui. GUI panels/buttons use 14px
+nine-slice borders; the divider preserves its 61px center ornament. Hover, pressed and disabled
+buttons use their supplied sprites. Point filtering, no mipmaps and integer source-pixel scaling
+keep the original art crisp. Stat icons retain their source aspect ratio.
+
+Authored HUD: InterfaceArt/Hud is copied unchanged from the supplied hud folder.
+DungeonScreen.Hud composes the base, angled resource fills, slot states and cooldown masks
+using the source README coordinates. The 165x57 group scales in whole physical pixels.
+HP/MP display actual player resources, with no changes to the combat balance.
+Swordsman has sword/block/dash; archer has bow/empty/dash. Sound is a non-interactive placeholder.
+Cooldown masks drain vertically; HP/MP right edges move by whole source pixels.
+The mana track remains visible at zero. The stats list sits below the authored group.
+
+HUD tuning: score text is 13 units. Stat numbers sit 2 units above row centers and
+reserve 70 units of width for signed values. Critical chance and luck display as fractions
+(e.g. 0.05); luck's stored percentage-point convention remains unchanged.
+Resource fills interpolate at four full bars per second, quantized to whole source pixels.
+Binding a new player snaps bars to initial values. Loading/death menu particles are removed.
+
+UI font: Cozette Regular 1.30.0 (CozetteVector.ttf), thin monospace with Cyrillic.
+All normal labels use 13-unit text; headings use 26/39/52. Raster rendering and point
+filtering remain enabled. Source and MIT license are included beside the font.
+Resource HUD now shows only HP/MP bars, without numeric labels or an MP prefix.
+
+Pixel particles: footsteps now emit small dust puffs, and rolls leave a short dust trail.
+Player damage adds directional red fragments in the existing 32px world combat canvas.
+HUD resource loss emits from the animated fill edge: falling HP droplets and rising,
+breaking mana fragments. A 128-particle buffer limits HUD cost; private random sequences
+leave combat RNG untouched. Binding/reset and healing do not emit loss particles.
+Reduced Motion suppresses HUD resource particles. Existing rollDust/footDust settings
+remain available and are enabled in DungeonEffects.asset.
+
+Chests: authored 32x40 sprites at 32 PPU, shared pivot (16,34) from top-left.
+Tools/Import-ChestArt.ps1 copies the four directional sets unchanged. ChestArtImporter
+sets point filtering and the shared pivot. Frames 00..08 play once at 65ms/frame.
+E opens the nearest closed chest within 1.4 tiles in the player's forward cone.
+While moving, facing follows movement like the hero sprite; at rest it follows aim.
+Walls block interaction. Rolling, attacking, guarding, hit stop and pause prevent opening.
+No loot has been added: the final open-empty frame is held. Opened fires once for future loot.
+Chests have a feet collider and projected player-light shadow, including animated lid silhouettes.

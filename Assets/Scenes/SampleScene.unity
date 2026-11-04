@@ -420,8 +420,8 @@ MonoBehaviour:
   landmarkShadowOpacity: 0.35
   landmarkShadowSoftness: 0.08
   torchRadius: 8
-  torchIntensity: 1.4
-  torchColor: {r: 1, g: 0.97, b: 0.94, a: 1}
+  torchIntensity: 1.12
+  torchColor: {r: 1, g: 0.95, b: 0.88, a: 1}
   shadowSoftness: 0.289
   wallLightMultiplier: 5
   upperWallLightMultiplier: 1

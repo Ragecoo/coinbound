@@ -45,6 +45,10 @@ namespace Coinbound.Tests
             Assert.That(game.Spawns.Enemies.Count, Is.GreaterThan(0));
             Assert.That(game.Spawns.Chests.Count, Is.EqualTo(3));
             Assert.That(GameObject.Find("Game HUD"), Is.Not.Null);
+            Assert.That(Object.FindAnyObjectByType<DungeonAtmosphere>(), Is.Null,
+                "The rejected atmosphere/decor bundle must not be created when a dungeon starts.");
+            Assert.That(Object.FindAnyObjectByType<DungeonAudio>(), Is.Null,
+                "The removed generated audio must not remain active invisibly.");
 
             var actor = Object.FindAnyObjectByType<DungeonPlayer>();
             Vector3 playerStart = actor.transform.position;
@@ -56,11 +60,11 @@ namespace Coinbound.Tests
             var fountainCollider = GameObject.Find("object.fountain").GetComponent<PolygonCollider2D>();
             Assert.That(entranceCollider, Is.Not.Null);
             Assert.That(fountainCollider, Is.Not.Null);
-            var playerCollider = actor.GetComponent<CircleCollider2D>();
+            var playerCollider = actor.GetComponent<BoxCollider2D>();
             Assert.That(entranceCollider.Distance(playerCollider).isOverlapped, Is.False);
             Assert.That(fountainCollider.Distance(playerCollider).isOverlapped, Is.False);
             int renderedEnemies = Object.FindObjectsByType<SpriteRenderer>()
-                .Count(renderer => renderer.name.StartsWith("Enemy "));
+                .Count(renderer => renderer.enabled && renderer.sprite != null && renderer.sprite.name.StartsWith("Enemy "));
             Assert.That(renderedEnemies, Is.EqualTo(game.Spawns.Enemies.Count));
 
             // The player must stop at the entrance room's left wall, not cross solid tiles.
@@ -74,7 +78,7 @@ namespace Coinbound.Tests
                 yield return new WaitForFixedUpdate();
             }
             body.linearVelocity = Vector2.zero;
-            Assert.That(body.position.x, Is.InRange(3.20f, 3.40f));
+            Assert.That(body.position.x, Is.InRange(3.15f, 3.25f));
 
             // Test every edge and both extreme portrait and ultrawide viewports.
             body.simulated = false;
@@ -98,7 +102,8 @@ namespace Coinbound.Tests
             body.simulated = true;
             actor.enabled = true;
             game.ShowMenu();
-            Assert.That(GameObject.Find("Start screen"), Is.Not.Null);
+            Assert.That(GameObject.Find("Pause screen"), Is.Not.Null);
+            Assert.That(Time.timeScale, Is.EqualTo(0));
             game.Resume();
             Assert.That(GameObject.Find("Game HUD"), Is.Not.Null);
 

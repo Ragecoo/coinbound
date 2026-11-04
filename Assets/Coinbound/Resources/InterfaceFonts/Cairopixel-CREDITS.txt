@@ -1,0 +1,5 @@
+Cairopixel by GGBotNet.
+Source: https://www.fontspace.com/cairopixel-font-f155783
+Author: https://ggbot.itch.io/cairopixel-font
+License: SIL Open Font License 1.1 (see Cairopixel-LICENSE.txt).
+Native pixel size: 16 px. Original font file, unmodified.

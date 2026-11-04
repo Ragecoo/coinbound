@@ -46,7 +46,8 @@ namespace Coinbound.Tests
         {
             yield return SceneManager.LoadSceneAsync("SampleScene");
             var game = Object.FindAnyObjectByType<DungeonGame>();
-            JsonUtility.FromJsonOverwrite("{\"randomSeed\":false,\"seed\":42,\"minimumStatusSeconds\":0}", game);
+            // Exercise a known zoom range without depending on the designer's scene overrides.
+            JsonUtility.FromJsonOverwrite("{\"randomSeed\":false,\"seed\":42,\"minimumStatusSeconds\":0,\"minimumCameraSize\":3.5,\"maximumCameraSize\":12}", game);
             game.StartNewDungeon();
             float timeout = Time.realtimeSinceStartup + 30;
             while (!game.IsReady && Time.realtimeSinceStartup < timeout) yield return null;
@@ -56,7 +57,8 @@ namespace Coinbound.Tests
             Assert.That(torch.ShadowMap.width, Is.EqualTo(2048));
             Assert.That(torch.Radius, Is.EqualTo(8));
             Camera camera = Camera.main;
-            Assert.That(camera.orthographicSize, Is.EqualTo(6.5f).Within(0.001));
+            float initialSize = camera.orthographicSize;
+            Assert.That(initialSize, Is.InRange(3.5f, 12));
             // Batchmode has no focused Game View. Route these synthetic devices to the game.
             var previousBackground = InputSystem.settings.backgroundBehavior;
             var previousEditorInput = InputSystem.settings.editorInputBehaviorInPlayMode;
@@ -68,12 +70,12 @@ namespace Coinbound.Tests
             {
                 InputSystem.QueueStateEvent(mouse, new MouseState { scroll = new Vector2(0, -120) });
                 yield return new WaitForSecondsRealtime(0.25f);
-                Assert.That(camera.orthographicSize, Is.EqualTo(6.5f).Within(0.001), "Wheel alone must not zoom.");
+                Assert.That(camera.orthographicSize, Is.EqualTo(initialSize).Within(0.001), "Wheel alone must not zoom.");
                 InputSystem.QueueStateEvent(keys, new KeyboardState(Key.LeftCtrl));
                 InputSystem.QueueStateEvent(mouse, new MouseState { scroll = new Vector2(0, -120) });
                 yield return new WaitForSecondsRealtime(0.35f);
                 float zoomedOut = camera.orthographicSize;
-                Assert.That(zoomedOut, Is.GreaterThan(6.5f));
+                Assert.That(zoomedOut, Is.GreaterThan(initialSize));
                 InputSystem.QueueStateEvent(mouse, new MouseState { scroll = new Vector2(0, 240) });
                 yield return new WaitForSecondsRealtime(0.35f);
                 Assert.That(camera.orthographicSize, Is.LessThan(zoomedOut));

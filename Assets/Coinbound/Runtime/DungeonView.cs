@@ -10,12 +10,25 @@ namespace Coinbound
     /// <summary>Turns the generator's sprite IDs into Unity art without changing its map.</summary>
     public sealed class DungeonView : MonoBehaviour
     {
+        public const float PlayerFootSize = 0.36f;
         private static readonly int StoneTintId = Shader.PropertyToID("_StoneTint");
         private readonly Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>(StringComparer.Ordinal);
         private readonly Dictionary<string, Tile> terrainTiles = new Dictionary<string, Tile>(StringComparer.Ordinal);
         private readonly List<UnityEngine.Object> ownedAssets = new List<UnityEngine.Object>();
         private readonly List<SpriteRenderer> solidLandmarks = new List<SpriteRenderer>();
+        private readonly List<DungeonEnemy> enemies = new List<DungeonEnemy>();
         private Material material;
+
+        public int AliveEnemyCount
+        {
+            get
+            {
+                int count = 0;
+                foreach (DungeonEnemy enemy in enemies)
+                    if (enemy != null && !enemy.IsDead) count++;
+                return count;
+            }
+        }
 
         public static Vector3 WorldPosition(TilePosition tile) => new Vector3(tile.X + 0.5f, 0.5f - tile.Y, 0);
 
@@ -68,6 +81,12 @@ namespace Coinbound
                         DungeonSpriteGrid.Apply(renderer, properties);
                         solidLandmarks.Add(renderer);
                     }
+                    SpriteRenderer landmarkVisual = landmark.GetComponent<SpriteRenderer>();
+                    // Use the stone base, excluding the transparent margin around the large prop art.
+                    float baseOffset = objectId == "object.entrance" || objectId == "object.fountain"
+                        ? -1.0625f * landmark.transform.lossyScale.y
+                        : landmarkVisual.bounds.min.y - landmark.transform.position.y;
+                    landmark.AddComponent<DungeonDepthSort>().Initialize(landmarkVisual, landmark.transform, baseOffset);
                 }
                 count++;
                 if (count % 256 != 0) continue;
@@ -98,12 +117,13 @@ namespace Coinbound
 
         public IEnumerator<object> PlaceSpawns(SpawnPlan plan)
         {
-            Sprite chest = CreatePlaceholder("Chest placeholder", new Color32(234, 181, 65, 255), true);
             foreach (ChestSpawn spawn in plan.Chests)
             {
-                var item = CreateSprite(spawn.SpriteId, chest, WorldPosition(spawn.Position), 20);
-                float rotation = spawn.Facing switch { "n" => 180, "e" => 90, "w" => -90, _ => 0 };
-                item.transform.rotation = Quaternion.Euler(0, 0, rotation);
+                var item = CreateSprite(spawn.SpriteId, null, WorldPosition(spawn.Position), 20);
+                item.AddComponent<DungeonChest>().Initialize(spawn.Facing);
+                var visual = item.GetComponent<SpriteRenderer>();
+                item.AddComponent<DungeonDepthSort>().Initialize(visual, item.transform, 0, true);
+                solidLandmarks.Add(visual);
             }
             Color32[] colors = {
                 new Color32(239, 106, 106, 255), new Color32(236, 148, 81, 255),
@@ -116,7 +136,9 @@ namespace Coinbound
             foreach (EnemySpawn spawn in plan.Enemies)
             {
                 int type = int.Parse(spawn.EnemyId) - 1;
-                CreateSprite($"Enemy {spawn.EnemyId} / group {spawn.GroupId}", enemySprites[type], WorldPosition(spawn.Position), 30);
+                var enemy = CreateSprite($"Enemy {spawn.EnemyId} / group {spawn.GroupId}", enemySprites[type], WorldPosition(spawn.Position), 30);
+                enemy.AddComponent<DungeonDepthSort>().Initialize(enemy.GetComponent<SpriteRenderer>(), enemy.transform, 0, true);
+                enemies.Add(enemy.AddComponent<DungeonEnemy>());
                 if (++count % 24 == 0) yield return null;
             }
         }
@@ -124,22 +146,41 @@ namespace Coinbound
         public DungeonPlayer CreatePlayer(TilePosition position, DungeonHero hero = null)
         {
             hero = hero ?? DungeonHero.First;
-            Sprite sprite = CreatePlaceholder(hero.DisplayName + " placeholder", hero.Color, false);
-            var actor = CreateSprite("Player", sprite, WorldPosition(position), 40);
+            var actor = new GameObject("Player");
+            actor.transform.SetParent(transform, false);
+            actor.transform.position = WorldPosition(position);
             actor.tag = "Player";
             var body = actor.AddComponent<Rigidbody2D>();
             body.gravityScale = 0;
             body.constraints = RigidbodyConstraints2D.FreezeRotation;
             body.interpolation = RigidbodyInterpolation2D.Interpolate;
             body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            var collider = actor.AddComponent<CircleCollider2D>();
-            collider.radius = 0.28f;
+            var collider = actor.AddComponent<BoxCollider2D>();
+            collider.size = Vector2.one * PlayerFootSize;
             var physicsMaterial = new PhysicsMaterial2D("Player slide") { friction = 0, bounciness = 0 };
             collider.sharedMaterial = physicsMaterial;
             ownedAssets.Add(physicsMaterial);
             var player = actor.AddComponent<DungeonPlayer>();
             player.Initialize(hero);
+            var visualObject = new GameObject("Hero visual", typeof(SpriteRenderer));
+            visualObject.transform.SetParent(actor.transform, false);
+            var visual = visualObject.GetComponent<SpriteRenderer>();
+            visual.sharedMaterial = material;
+            visual.sprite = DungeonHeroAnimator.GetPortrait(hero);
+            actor.AddComponent<DungeonHeroAnimator>().Initialize(player, visual);
+            actor.AddComponent<DungeonDepthSort>().Initialize(visual, actor.transform, 0, true);
             return player;
+        }
+
+        public void ActivateEnemies(DungeonPlayer target, DungeonMap map)
+        {
+            foreach (DungeonEnemy enemy in enemies)
+                if (enemy != null) enemy.Initialize(target, map);
+        }
+
+        public void AddEffectLights(DungeonMap map, DungeonPlayer player)
+        {
+            DungeonEffectLights.Create(map, player, material);
         }
 
         private static void MatchWallStone(GameObject landmark, string objectId)
@@ -171,11 +212,9 @@ namespace Coinbound
         private static void MakeSolidLandmark(GameObject landmark, float scale, bool fountain)
         {
             landmark.transform.localScale = new Vector3(scale, scale, 1);
-            var collider = landmark.AddComponent<PolygonCollider2D>();
-            collider.pathCount = 1;
             // A single filled octagon follows the fountain rim; the water is also solid.
             // Both outlines exclude transparent margins; redraws retain the same 3 x 3 tile base size.
-            collider.SetPath(0, fountain ? new[]
+            Vector2[] outline = fountain ? new[]
             {
                 new Vector2(-0.625f, 1.0625f), new Vector2(0.625f, 1.0625f),
                 new Vector2(1.25f, 0.4375f), new Vector2(1.25f, -0.4375f),
@@ -187,7 +226,20 @@ namespace Coinbound
                 new Vector2(1.25f, 0.75f), new Vector2(1.25f, -0.625f),
                 new Vector2(1.0625f, -1.0625f), new Vector2(-1.0625f, -1.0625f),
                 new Vector2(-1.25f, -0.625f), new Vector2(-1.25f, 0.75f)
-            });
+            };
+            // Adding a polygon beside a sprite asks Unity to trace its unreadable texture first.
+            // The collision outline is authored here, so suppress that unused automatic trace.
+            SpriteRenderer renderer = landmark.GetComponent<SpriteRenderer>();
+            Sprite sprite = renderer.sprite;
+            try
+            {
+                renderer.sprite = null;
+                var collider = landmark.AddComponent<PolygonCollider2D>();
+                collider.autoTiling = false;
+                collider.pathCount = 1;
+                collider.SetPath(0, outline);
+            }
+            finally { renderer.sprite = sprite; }
         }
 
         public TilePosition FindPlayerSpawn(DungeonMap map)
@@ -203,7 +255,7 @@ namespace Coinbound
             while (queue.Count > 0)
             {
                 TilePosition tile = queue.Dequeue();
-                if (Physics2D.OverlapCircle(WorldPosition(tile), 0.32f) == null) return tile;
+                if (Physics2D.OverlapBox(WorldPosition(tile), Vector2.one * (PlayerFootSize + 0.04f), 0) == null) return tile;
                 foreach (Vector2Int direction in directions)
                 {
                     var next = new TilePosition(tile.X + direction.x, tile.Y + direction.y);
@@ -224,8 +276,10 @@ namespace Coinbound
                 var shadow = new GameObject(landmark.name + " shadow").AddComponent<DungeonLandmarkShadow>();
                 shadow.transform.SetParent(transform, false);
                 // Let nearby shadows extend visibly past the sprite; the configured length still caps them.
-                float heightRatio = landmark.name == "object.fountain" ? 0.2f : 0.24f;
+                float heightRatio = landmark.GetComponent<DungeonChest>() != null ? .16f : landmark.name == "object.fountain" ? 0.2f : 0.24f;
                 shadow.Initialize(landmark, player, heightRatio, landmarkShadowLength, landmarkShadowOpacity, landmarkShadowSoftness);
+                // Projected shadows stay on the ground even when their caster sorts in front of an actor.
+                shadow.GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
         }
 

@@ -1,0 +1,6 @@
+Pixellari Cyrillic
+Original font: Zacchary Dempsey-Plante (zedseven).
+Cyrillic extension: YuRaNnNzZZ.
+Source: https://github.com/YuRaNnNzZZ/PixellariCyrillic
+License: SIL Open Font License 1.1, included in Pixellari-LICENSE.txt.
+The TTF is distributed unchanged.

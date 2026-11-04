@@ -38,6 +38,11 @@ namespace Coinbound
             yield return Capture("01-menu");
             yield return new WaitForSecondsRealtime(0.2f);
             GameObject.Find("Start").GetComponent<Button>().onClick.Invoke();
+            yield return new WaitForSecondsRealtime(0.6f);
+            yield return Capture("02-heroes");
+            GameObject.Find("Hero 1").GetComponent<Button>().onClick.Invoke();
+            yield return Capture("02-heroes-archer");
+            GameObject.Find("Create dungeon").GetComponent<Button>().onClick.Invoke();
             bool capturedLoading = false;
             float timeout = Time.realtimeSinceStartup + 30;
             while (!game.IsReady && Time.realtimeSinceStartup < timeout)
@@ -53,6 +58,24 @@ namespace Coinbound
             if (!game.IsReady) { Debug.LogError("Preview generation timed out."); Application.Quit(1); yield break; }
             yield return new WaitForSecondsRealtime(0.3f);
             yield return Capture("03-entrance");
+            var screen = FindAnyObjectByType<DungeonScreen>();
+            game.ShowMenu();
+            yield return new WaitForSecondsRealtime(0.6f);
+            yield return Capture("04-pause");
+            screen.ShowSettings();
+            yield return Capture("05-settings");
+            screen.CloseSettings();
+            game.ReturnToTitle();
+            yield return new WaitForSecondsRealtime(0.6f);
+            yield return Capture("06-resumable-menu");
+            game.Resume();
+            yield return new WaitForSecondsRealtime(0.6f);
+            screen.ShowDeath();
+            yield return new WaitForSecondsRealtime(0.6f);
+            yield return Capture("07-death");
+            game.ShowMenu();
+            game.Resume();
+            yield return new WaitForSecondsRealtime(0.6f);
             yield return new WaitForSecondsRealtime(0.2f);
             var player = FindAnyObjectByType<DungeonPlayer>();
             var body = player.GetComponent<Rigidbody2D>();
@@ -111,8 +134,9 @@ namespace Coinbound
             RenderTexture previousActive = RenderTexture.active;
             int previousSorting = canvas.sortingOrder;
             bool previousOverride = canvas.overrideSorting;
-            var target = new RenderTexture(1280, 720, 24, RenderTextureFormat.ARGB32);
-            var pixels = new Texture2D(1280, 720, TextureFormat.RGB24, false);
+            int width = Screen.width, height = Screen.height;
+            var target = new RenderTexture(width, height, 24, RenderTextureFormat.ARGB32);
+            var pixels = new Texture2D(width, height, TextureFormat.RGB24, false);
             try
             {
                 target.Create();
@@ -129,7 +153,7 @@ namespace Coinbound
                 Canvas.ForceUpdateCanvases();
                 RenderPipeline.SubmitRenderRequest(camera, new RenderPipeline.StandardRequest { destination = target });
                 RenderTexture.active = target;
-                pixels.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0);
+                pixels.ReadPixels(new Rect(0, 0, width, height), 0, 0);
                 pixels.Apply();
                 File.WriteAllBytes(Path.Combine(output, name + ".png"), pixels.EncodeToPNG());
             }

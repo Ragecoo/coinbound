@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,7 +9,7 @@ using Debug = UnityEngine.Debug;
 
 namespace Coinbound
 {
-    /// <summary>Temporary start screen and the runtime generation lifecycle.</summary>
+    /// <summary>Front-end navigation, pause state and the runtime generation lifecycle.</summary>
     public sealed class DungeonGame : MonoBehaviour
     {
         [Header("Original generator settings (sections of 3 x 3 tiles)")]
@@ -18,7 +18,7 @@ namespace Coinbound
         [SerializeField] private bool randomSeed = true;
         [SerializeField] private int seed = 42;
         [SerializeField, Range(0, 1)] private double loopChance = 0.08;
-        [Header("Placeholder presentation")]
+        [Header("Presentation")]
         [SerializeField, Min(0)] private float minimumStatusSeconds = 0.12f;
         [SerializeField, Min(1)] private float cameraSize = 6.5f;
         [SerializeField, Min(1)] private float minimumCameraSize = 3.5f;
@@ -40,9 +40,9 @@ namespace Coinbound
         [Tooltip("Радиус освещения в тайлах. На дальность слабой видимости не влияет.")]
         [SerializeField, Min(1)] private float torchRadius = 8;
         [Tooltip("Яркость света возле персонажа.")]
-        [SerializeField, Min(0)] private float torchIntensity = 1.15f;
+        [SerializeField, Min(0)] private float torchIntensity = 1.12f;
         [Tooltip("Оттенок света; близкий к белому сохраняет исходную палитру текстур.")]
-        [SerializeField] private Color torchColor = new Color(1, 0.97f, 0.94f, 1);
+        [SerializeField] private Color torchColor = new Color(1, 0.95f, 0.88f, 1);
         [Tooltip("Мягкость краёв теней в тайлах. Освещение остаётся на пиксельной сетке текстур.")]
         [SerializeField, Range(0.05f, 1)] private float shadowSoftness = 0.35f;
         [Tooltip("Усиление падающего на стены света относительно пола.")]
@@ -61,6 +61,8 @@ namespace Coinbound
         private Camera gameCamera;
         private DungeonView dungeon;
         private DungeonPlayer player;
+        private DungeonCursor gameplayCursor;
+        private DungeonVoiceInput voiceInput;
         private Coroutine loading;
         private bool menuOpen = true;
         private bool choosingHero;
@@ -72,10 +74,12 @@ namespace Coinbound
         public SpawnPlan Spawns { get; private set; }
         public int CurrentSeed { get; private set; }
         public DungeonHero SelectedHero { get; private set; } = DungeonHero.First;
-        public bool IsReady => player != null && !generating;
+        public bool IsReady => player != null && !player.IsDead && !generating;
 
         private void Awake()
         {
+            Time.timeScale = 1;
+            DungeonSettings.Apply();
             targetCameraSize = displayedCameraSize = Mathf.Clamp(cameraSize, minimumCameraSize, maximumCameraSize);
             gameCamera = Camera.main;
             if (gameCamera == null)
@@ -89,10 +93,12 @@ namespace Coinbound
             gameCamera.clearFlags = CameraClearFlags.SolidColor;
             gameCamera.backgroundColor = darknessColor;
             gameCamera.transform.position = new Vector3(0, 0, -10);
-            screen = new GameObject("Placeholder UI").AddComponent<DungeonScreen>();
+            screen = new GameObject("Coinbound UI").AddComponent<DungeonScreen>();
             screen.transform.SetParent(transform, false);
-            screen.Initialize(ShowHeroSelection, Resume, ShowMenu, CancelGeneration, StartWithHero);
+            screen.Initialize(ShowHeroSelection, Resume, ShowMenu, CancelGeneration, StartWithHero, ReturnToTitle);
             screen.ShowMenu(false);
+            gameplayCursor = gameObject.AddComponent<DungeonCursor>();
+            voiceInput = gameObject.AddComponent<DungeonVoiceInput>();
         }
 
         private void Update()
@@ -106,9 +112,12 @@ namespace Coinbound
                 targetCameraSize = Mathf.Clamp(targetCameraSize * Mathf.Exp(-Mathf.Clamp(ticks, -4, 4) * 0.12f),
                     minimumCameraSize, maximumCameraSize);
             }
-            if (Keyboard.current?.escapeKey.wasPressedThisFrame != true) return;
+            if (Keyboard.current?.escapeKey.wasPressedThisFrame != true &&
+                Gamepad.current?.startButton.wasPressedThisFrame != true &&
+                Gamepad.current?.buttonEast.wasPressedThisFrame != true) return;
+            if (screen.HandleBack()) return;
             if (generating) CancelGeneration();
-            else if (choosingHero) ShowMenu();
+            else if (choosingHero) ReturnToTitle();
             else if (menuOpen && IsReady) Resume();
             else ShowMenu();
         }
@@ -133,13 +142,14 @@ namespace Coinbound
             if (generating) return;
             choosingHero = true;
             menuOpen = true;
+            Time.timeScale = 0;
             if (player != null) player.SetInputEnabled(false);
             screen.ShowHeroSelection(SelectedHero);
         }
 
         private void StartWithHero(DungeonHero hero)
         {
-            if (!choosingHero || generating) return;
+            if (generating) return;
             SelectedHero = hero ?? DungeonHero.First;
             StartNewDungeon();
         }
@@ -148,6 +158,7 @@ namespace Coinbound
         public void StartNewDungeon()
         {
             if (generating) return;
+            Time.timeScale = 1;
             ClearDungeon();
             CurrentSeed = randomSeed ? Guid.NewGuid().GetHashCode() : seed;
             menuOpen = false;
@@ -181,10 +192,11 @@ namespace Coinbound
                 }
                 yield return next;
             }
+            screen.ShowGame(CurrentSeed, Spawns.Enemies.Count, Spawns.Chests.Count);
+            while (screen.IsTransitioning) yield return null;
             generating = false;
             loading = null;
             player.SetInputEnabled(true);
-            screen.ShowGame(CurrentSeed, Spawns.Enemies.Count, Spawns.Chests.Count);
         }
 
         private IEnumerator<object> GenerateDungeon()
@@ -237,9 +249,16 @@ namespace Coinbound
             screen.SetProgress(0.98f, "Размещение персонажа...");
             player = dungeon.CreatePlayer(dungeon.FindPlayerSpawn(Map), SelectedHero);
             player.SetInputEnabled(false);
+            player.Spells.SetMap(Map);
+            voiceInput.Bind(player.Spells);
+            player.Died += OnPlayerDied;
+            screen.BindPlayer(player, () => dungeon.AliveEnemyCount);
+            gameplayCursor.Bind(player);
+            dungeon.ActivateEnemies(player, Map);
             dungeon.AddPlayerLight(Map, player.transform, torchRadius, torchIntensity, torchColor,
                 darknessColor, unlitVisibility, shadowSoftness, wallLightMultiplier, upperWallLightMultiplier, wallLightDepth,
                 landmarkShadowLength, landmarkShadowOpacity, landmarkShadowSoftness);
+            dungeon.AddEffectLights(Map, player);
             Physics2D.SyncTransforms();
             foreach (string note in Spawns.Notes) Debug.Log(note);
             screen.SetProgress(1, "Подземелье готово!");
@@ -251,6 +270,19 @@ namespace Coinbound
             if (generating) return;
             choosingHero = false;
             menuOpen = true;
+            Time.timeScale = 0;
+            if (player != null) player.SetInputEnabled(false);
+            if (player != null && player.IsDead) screen.ShowDeath();
+            else if (IsReady) screen.ShowPause();
+            else screen.ShowMenu(false);
+        }
+
+        public void ReturnToTitle()
+        {
+            if (generating) return;
+            choosingHero = false;
+            menuOpen = true;
+            Time.timeScale = 0;
             if (player != null) player.SetInputEnabled(false);
             screen.ShowMenu(IsReady);
         }
@@ -260,8 +292,18 @@ namespace Coinbound
             if (!IsReady) return;
             choosingHero = false;
             menuOpen = false;
-            player.SetInputEnabled(true);
             screen.ShowGame(CurrentSeed, Spawns.Enemies.Count, Spawns.Chests.Count);
+            StartCoroutine(ResumeAfterReveal());
+        }
+
+        private IEnumerator ResumeAfterReveal()
+        {
+            while (screen.IsTransitioning) yield return null;
+            if (!menuOpen && !generating && player != null && !player.IsDead)
+            {
+                Time.timeScale = 1;
+                player.SetInputEnabled(true);
+            }
         }
 
         public void CancelGeneration()
@@ -273,8 +315,24 @@ namespace Coinbound
             ShowMenu();
         }
 
+        private void OnPlayerDied()
+        {
+            choosingHero = false;
+            menuOpen = true;
+            Time.timeScale = 0;
+            if (player != null) player.SetInputEnabled(false);
+            screen.ShowDeath();
+        }
+
         private void ClearDungeon()
         {
+            if (player != null)
+            {
+                player.Died -= OnPlayerDied;
+                player.SetInputEnabled(false);
+            }
+            if (gameplayCursor != null) gameplayCursor.Bind(null);
+            if (screen != null) screen.BindPlayer(null);
             if (dungeon != null)
             {
                 dungeon.gameObject.SetActive(false);
@@ -285,6 +343,17 @@ namespace Coinbound
             Map = null;
             Spawns = null;
             choosingHero = false;
+        }
+
+        private void OnDestroy()
+        {
+            Time.timeScale = 1;
+            if (player != null) player.Died -= OnPlayerDied;
+        }
+
+        private void OnApplicationFocus(bool focused)
+        {
+            if (!focused && IsReady && !menuOpen) ShowMenu();
         }
     }
 }

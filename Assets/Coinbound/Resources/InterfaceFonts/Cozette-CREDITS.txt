@@ -1,0 +1,4 @@
+Cozette Regular, version 1.30.0.
+Source: https://github.com/the-moonwitch/Cozette
+License: MIT, included in Cozette-LICENSE.txt.
+CozetteVector.ttf is distributed unchanged.

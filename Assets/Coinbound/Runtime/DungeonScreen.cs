@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,44 +8,64 @@ using UnityEngine.UI;
 
 namespace Coinbound
 {
-    /// <summary>Disposable UI placeholder; no generation or gameplay rules live here.</summary>
-    public sealed class DungeonScreen : MonoBehaviour
+    /// <summary>Coinbound's front end and in-game interface. Gameplay remains in DungeonGame.</summary>
+    public sealed partial class DungeonScreen : MonoBehaviour
     {
-        private readonly Color background = new Color32(15, 19, 33, 250);
-        private readonly Color muted = new Color32(155, 166, 188, 255);
-        private readonly Color accent = new Color32(112, 213, 222, 255);
-        private Font font;
+        private static readonly Color Ink = new Color32(9, 10, 15, 255);
+        private static readonly Color Panel = new Color32(21, 21, 27, 255);
+        private static readonly Color Gold = new Color32(181, 153, 111, 255);
+        private static readonly Color Pale = new Color32(229, 218, 194, 255);
+        private static readonly Color Muted = new Color32(140, 136, 132, 255);
+        private static readonly Color Red = new Color32(155, 66, 78, 255);
+        private static readonly Color Green = new Color32(105, 128, 106, 255);
+        private Font font, displayFont;
         private Canvas uiCanvas;
-        private GameObject menu;
-        private GameObject heroSelection;
-        private GameObject loading;
-        private GameObject hud;
-        private Button resumeButton;
-        private Button startButton;
-        private Text menuNote;
-        private Text status;
-        private Text percent;
-        private Text seedLabel;
-        private Text hudLabel;
+        private GameObject menu, heroSelection, loading, hud, pause, death, settings, confirmation, current;
+        private Action startAction, resumeAction, menuAction, cancelAction, titleAction;
+        private Action<DungeonHero> heroAction;
+        private Button startButton, resumeButton, createDungeonButton, heroBackButton;
+        private Button pauseResumeButton, deathRetryButton;
+        private readonly List<Button> heroButtons = new List<Button>();
+        private readonly List<DungeonUiDivider> heroFrames = new List<DungeonUiDivider>();
+        private readonly List<Text> heroMarkers = new List<Text>();
+        private Text menuNote, status, percent, hudLabel, controlLegend, deathStats, pauseStats;
+        private Text interactionPrompt;
         private RectTransform progressFill;
-        private DungeonHero selectedHero;
-        private Button[] heroButtons;
-        private Outline[] heroSelectionOutlines;
-        private Text[] heroSelectionLabels;
-        private Button createDungeonButton;
-        private Button heroBackButton;
-        private readonly List<Sprite> heroPortraits = new List<Sprite>();
-        private readonly List<RectTransform> heroPortraitRects = new List<RectTransform>();
-        private float portraitCanvasScale = -1;
+        private Image loadingActor;
+        private float displayedScore;
+        private DungeonHero selectedHero = DungeonHero.First;
+        private DungeonPlayer gameplayPlayer;
+        private Func<int> aliveEnemies;
+        private int hudSeed, hudChests, initialEnemies, previousHealth;
+        private float runSeconds, loadingProgress, targetProgress;
+        private DungeonDamageBorder damageBorder;
+        private Text voiceStatus;
+        private Image curtainLeft, curtainRight;
+        private CanvasGroup curtain;
+        private Coroutine transition;
+        private Selectable settingsReturnFocus, confirmReturnFocus;
+        private Action confirmAction;
+        private Text confirmTitle, confirmMessage;
+        private Button confirmButton, confirmCancel;
+        private AudioSource uiAudio;
+        private AudioClip uiClick;
 
-        public void Initialize(Action start, Action resume, Action openMenu, Action cancel, Action<DungeonHero> startHero)
+        public string CurrentPage => settings != null && settings.activeSelf ? "Settings" : current != null ? current.name : "None";
+        public bool IsTransitioning => transition != null;
+        public bool IsModalOpen => settings != null && settings.activeSelf || confirmation != null && confirmation.activeSelf;
+
+        public void Initialize(Action start, Action resume, Action openMenu, Action cancel, Action<DungeonHero> startHero, Action title = null)
         {
-            font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            var canvas = gameObject.AddComponent<Canvas>();
-            uiCanvas = canvas;
-            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            canvas.pixelPerfect = true;
-            canvas.sortingOrder = 100;
+            startAction = start; resumeAction = resume; menuAction = openMenu; cancelAction = cancel;
+            heroAction = startHero; titleAction = title ?? (() => ShowMenu(gameplayPlayer != null && !gameplayPlayer.IsDead));
+            font = Resources.Load<Font>("InterfaceFonts/OpirusOpik");
+            if (font == null) font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            displayFont = font;
+            Font.textureRebuilt += KeepFontPixels;
+            KeepFontPixels(font);
+            uiCanvas = gameObject.AddComponent<Canvas>();
+            uiCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            uiCanvas.pixelPerfect = true; uiCanvas.sortingOrder = 100;
             var scaler = gameObject.AddComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1280, 720);
@@ -56,305 +77,198 @@ namespace Coinbound
                 events.transform.SetParent(transform, false);
                 events.GetComponent<InputSystemUIInputModule>().AssignDefaultActions();
             }
-
-            menu = Overlay("Start screen");
-            RectTransform menuCard = Center("Menu", menu.transform, new Vector2(560, 390));
-            Label("Title", menuCard, "COINBOUND", 48, Vector2.zero, new Vector2(540, 65), new Vector2(0, 135), Color.white);
-            Label("Subtitle", menuCard, "ПОДЗЕМЕЛЬЕ", 16, Vector2.zero, new Vector2(540, 30), new Vector2(0, 85), accent);
-            startButton = MakeButton("Start", menuCard, "Начать игру", new Vector2(0, 12), new Vector2(300, 50), start);
-            resumeButton = MakeButton("Resume", menuCard, "Продолжить", new Vector2(0, -50), new Vector2(300, 50), resume);
-            menuNote = Label("Note", menuCard, "Временный стартовый экран", 16, Vector2.zero,
-                new Vector2(540, 50), new Vector2(0, -120), muted);
-            Label("Controls", menuCard, "WASD — движение  •  Ctrl + колёсико — масштаб  •  Esc — меню", 16, Vector2.zero,
-                new Vector2(560, 36), new Vector2(0, -175), muted);
-
-            heroSelection = Overlay("Hero selection screen");
-            RectTransform heroCard = Center("Hero selection", heroSelection.transform, new Vector2(660, 500));
-            Label("Title", heroCard, "ВЫБЕРИ ПЕРСОНАЖА", 30, Vector2.zero,
-                new Vector2(640, 45), new Vector2(0, 205), Color.white);
-            Label("Subtitle", heroCard, "Выбери героя и создай подземелье", 17, Vector2.zero,
-                new Vector2(640, 30), new Vector2(0, 163), muted);
-            heroButtons = new Button[DungeonHero.All.Count];
-            heroSelectionOutlines = new Outline[heroButtons.Length];
-            heroSelectionLabels = new Text[heroButtons.Length];
-            for (int i = 0; i < heroButtons.Length; i++)
-            {
-                DungeonHero hero = DungeonHero.All[i];
-                float x = (i - (heroButtons.Length - 1) * 0.5f) * 260;
-                Button card = MakeButton("Hero " + i, heroCard, "", new Vector2(x, 15), new Vector2(220, 240),
-                    () => ChooseHero(hero));
-                heroButtons[i] = card;
-                Outline selectedOutline = card.gameObject.AddComponent<Outline>();
-                selectedOutline.effectColor = accent;
-                selectedOutline.effectDistance = new Vector2(2, -2);
-                selectedOutline.enabled = false;
-                heroSelectionOutlines[i] = selectedOutline;
-
-                Sprite sprite = DungeonPlaceholderArt.Create(hero.DisplayName + " portrait", hero.Color, false);
-                heroPortraits.Add(sprite);
-                RectTransform portrait = Center("Portrait", card.transform, new Vector2(96, 96));
-                portrait.anchoredPosition = new Vector2(0, 32);
-                heroPortraitRects.Add(portrait);
-                Image portraitImage = portrait.gameObject.AddComponent<Image>();
-                portraitImage.sprite = sprite;
-                portraitImage.preserveAspect = true;
-                portraitImage.raycastTarget = false;
-                Label("Name", card.transform, hero.DisplayName, 23, Vector2.zero,
-                    new Vector2(200, 36), new Vector2(0, -44), Color.white);
-                heroSelectionLabels[i] = Label("Selection", card.transform, "", 16, Vector2.zero,
-                    new Vector2(200, 30), new Vector2(0, -88), muted);
-            }
-            createDungeonButton = MakeButton("Create dungeon", heroCard, "Создать подземелье", new Vector2(0, -155),
-                new Vector2(330, 50), () => startHero(selectedHero));
-            heroBackButton = MakeButton("Back", heroCard, "Назад", new Vector2(0, -216), new Vector2(180, 42), openMenu);
-            ConfigureHeroNavigation();
-            ChooseHero(DungeonHero.First);
-            heroSelection.SetActive(false);
-
-            loading = Overlay("Loading screen");
-            RectTransform loadingCard = Center("Loading", loading.transform, new Vector2(620, 280));
-            Label("Title", loadingCard, "СОЗДАНИЕ ПОДЗЕМЕЛЬЯ", 25, Vector2.zero,
-                new Vector2(620, 45), new Vector2(0, 105), Color.white);
-            seedLabel = Label("Seed", loadingCard, "", 15, Vector2.zero,
-                new Vector2(620, 30), new Vector2(0, 64), muted);
-            var bar = Center("Progress track", loadingCard, new Vector2(520, 12));
-            bar.anchoredPosition = new Vector2(0, 16);
-            bar.gameObject.AddComponent<Image>().color = new Color32(43, 51, 72, 255);
-            progressFill = Center("Progress fill", bar, Vector2.zero);
-            progressFill.anchorMin = Vector2.zero;
-            progressFill.anchorMax = Vector2.one;
-            progressFill.offsetMin = progressFill.offsetMax = Vector2.zero;
-            progressFill.gameObject.AddComponent<Image>().color = accent;
-            percent = Label("Percentage", loadingCard, "0%", 16, Vector2.zero,
-                new Vector2(80, 30), new Vector2(285, 16), Color.white);
-            status = Label("Status", loadingCard, "", 20, Vector2.zero,
-                new Vector2(620, 60), new Vector2(0, -35), Color.white);
-            MakeButton("Cancel", loadingCard, "Отмена", new Vector2(0, -110), new Vector2(180, 42), cancel);
-
-            hud = new GameObject("Game HUD", typeof(RectTransform));
-            Stretch((RectTransform)hud.transform, transform);
-            hudLabel = Label("Dungeon info", hud.transform, "", 16, new Vector2(0, 1),
-                new Vector2(700, 40), new Vector2(24, -20), Color.white);
-            hudLabel.alignment = TextAnchor.UpperLeft;
-            var hudBackground = hudLabel.gameObject.AddComponent<Outline>();
-            hudBackground.effectColor = new Color32(10, 12, 22, 230);
-            hudBackground.effectDistance = new Vector2(1, -1);
-            var help = Label("Controls", hud.transform, "WASD / стрелки — движение    •    Ctrl + колёсико — масштаб    •    Esc — меню", 16,
-                new Vector2(0.5f, 0), new Vector2(900, 35), new Vector2(0, 14), Color.white);
-            help.gameObject.AddComponent<Outline>().effectColor = Color.black;
-            Button menuButton = MakeButton("Menu", hud.transform, "Меню", Vector2.zero, new Vector2(110, 38), openMenu);
-            var menuRect = (RectTransform)menuButton.transform;
-            menuRect.anchorMin = menuRect.anchorMax = menuRect.pivot = Vector2.one;
-            menuRect.anchoredPosition = new Vector2(-20, -18);
+            BuildMenu(); BuildHeroes(); BuildLoading(); BuildHud(); BuildPause(); BuildDeath(); BuildSettings(); BuildConfirmation();
+            var cover = Layer("Transition", Color.clear);
+            cover.SetActive(true);
+            curtain = cover.AddComponent<CanvasGroup>();
+            curtainLeft = Solid("Left curtain", cover.transform, Vector2.zero, Vector2.zero, Ink);
+            curtainRight = Solid("Right curtain", cover.transform, Vector2.zero, Vector2.zero, Ink);
+            curtain.alpha = 0; curtain.blocksRaycasts = false;
+            SetupSound();
+            DungeonSettings.Changed += ApplyPreferences;
+            ApplyPreferences();
         }
 
         public void ShowMenu(bool canResume)
         {
-            menu.SetActive(true);
-            heroSelection.SetActive(false);
-            loading.SetActive(false);
-            hud.SetActive(false);
             resumeButton.gameObject.SetActive(canResume);
-            startButton.GetComponentInChildren<Text>().text = canResume ? "Новое подземелье" : "Начать игру";
-            menuNote.text = "Временный стартовый экран";
-            Select(canResume ? resumeButton : startButton);
+            startButton.GetComponentInChildren<Text>().text = "НОВАЯ ИГРА";
+            menuNote.text = "";
+            Switch(menu, canResume ? resumeButton : startButton);
         }
-
-        public void ShowHeroSelection(DungeonHero selected)
+        public void ShowPause()
         {
-            menu.SetActive(false);
-            loading.SetActive(false);
-            hud.SetActive(false);
-            heroSelection.SetActive(true);
-            ChooseHero(selected ?? DungeonHero.First);
-            RefreshPortraitScale();
-            Select(heroButtons[SelectedHeroIndex()]);
+            pauseStats.text = $"{selectedHero.DisplayName}   ·   {TimeText(runSeconds)}\nОчки: {(gameplayPlayer != null ? gameplayPlayer.Score : 0):D9}";
+            Switch(pause, pauseResumeButton);
         }
-
+        public void ShowHeroSelection(DungeonHero hero)
+        {
+            ChooseHero(hero ?? DungeonHero.First);
+            Switch(heroSelection, heroButtons[selectedHero.IsArcher ? 1 : 0]);
+        }
         public void ShowLoading(int seed)
         {
-            menu.SetActive(false);
-            heroSelection.SetActive(false);
-            hud.SetActive(false);
-            loading.SetActive(true);
-            seedLabel.text = $"Seed: {seed}";
+            hudSeed = seed;
+            loadingActor.sprite = DungeonHeroAnimator.GetLoadingFrame(selectedHero, 0);
+            loadingProgress = targetProgress = 0;
+            progressFill.anchorMax = new Vector2(0, 1);
+            percent.text = "0%";
             SetProgress(0, "Возведение стен подземелья...");
-            EventSystem.current?.SetSelectedGameObject(null);
+            Switch(loading, null);
         }
-
         public void SetProgress(float value, string message)
         {
-            value = Mathf.Clamp01(value);
-            progressFill.anchorMax = new Vector2(value, 1);
-            percent.text = $"{Mathf.FloorToInt(value * 100)}%";
+            targetProgress = Mathf.Max(targetProgress, Mathf.Clamp01(value));
             status.text = message;
         }
-
         public void ShowGame(int seed, int enemies, int chests)
         {
-            menu.SetActive(false);
-            heroSelection.SetActive(false);
-            loading.SetActive(false);
-            hud.SetActive(true);
-            hudLabel.text = $"COINBOUND    ·    Seed: {seed}    ·    Враги: {enemies}    ·    Сундуки: {chests}";
-            EventSystem.current?.SetSelectedGameObject(null);
+            hudSeed = seed; hudChests = chests;
+            Switch(hud, null);
+            RefreshHud();
         }
-
-        public void ShowError(string message)
+        public void BindPlayer(DungeonPlayer player, Func<int> enemyCount = null)
         {
-            ShowMenu(false);
-            menuNote.text = message;
+            gameplayPlayer = player; aliveEnemies = enemyCount;
+            previousHealth = player != null ? player.Health : 0;
+            runSeconds = 0;
+            displayedScore = 0;
+            initialEnemies = aliveEnemies != null ? aliveEnemies() : 0;
+            damageBorder?.Clear();
+            if (player == null) return;
+            resourceParticles.Clear();
+            hpArt.SetFraction(player.Health / (float)player.MaxHealth);
+            mpArt.SetFraction(player.MaxMana > 0 ? player.Mana / (float)player.MaxMana : 0);
+            RefreshStats(player.Stats);
+            selectedHero = player.Hero;
+            controlLegend.text = "WASD";
+            RefreshHud();
         }
-
-        private int SelectedHeroIndex()
+        public void ShowDeath()
         {
-            for (int i = 0; i < DungeonHero.All.Count; i++)
-                if (DungeonHero.All[i] == selectedHero) return i;
-            return 0;
+            deathStats.text = $"Время: {TimeText(runSeconds)}\n\nОчки: {(gameplayPlayer != null ? gameplayPlayer.Score : 0):D9}";
+            Switch(death, deathRetryButton);
+        }
+        public void ShowError(string message) { ShowMenu(false); menuNote.text = message; }
+        public void RequestNewJourney()
+        {
+            if (gameplayPlayer != null && !gameplayPlayer.IsDead)
+                Confirm("НАЧАТЬ ЗАНОВО?", "Текущее подземелье будет потеряно при новом спуске.", startAction, "Выбрать героя");
+            else startAction();
+        }
+        public bool HandleBack()
+        {
+            if (confirmation.activeSelf) { CloseConfirmation(); return true; }
+            if (settings.activeSelf) { CloseSettings(); return true; }
+            return false;
         }
 
+        private void Switch(GameObject target, Selectable focus)
+        {
+            CloseSettings(false); CloseConfirmation(false);
+            foreach (GameObject page in new[] { menu, heroSelection, loading, hud, pause, death }) page.SetActive(page == target);
+            bool wasVisible = current != null;
+            current = target;
+            Select(focus);
+            if (transition != null) StopCoroutine(transition);
+            transition = null;
+            curtain.alpha = 0; curtain.blocksRaycasts = false;
+            if (wasVisible && !DungeonSettings.ReducedMotion) transition = StartCoroutine(Reveal());
+        }
+        private IEnumerator Reveal()
+        {
+            curtain.alpha = 1; curtain.blocksRaycasts = true;
+            float elapsed = 0;
+            const float duration = .42f;
+            while (elapsed < duration)
+            {
+                float t = Mathf.SmoothStep(0, 1, elapsed / duration);
+                RectTransform left = curtainLeft.rectTransform, right = curtainRight.rectTransform;
+                left.anchorMin = Vector2.zero; left.anchorMax = new Vector2(.5f * (1 - t), 1);
+                right.anchorMin = new Vector2(1 - .5f * (1 - t), 0); right.anchorMax = Vector2.one;
+                left.offsetMin = left.offsetMax = right.offsetMin = right.offsetMax = Vector2.zero;
+                curtain.alpha = 1 - t * .4f;
+                elapsed += Time.unscaledDeltaTime;
+                yield return null;
+            }
+            curtain.alpha = 0; curtain.blocksRaycasts = false; transition = null;
+        }
         private void ChooseHero(DungeonHero hero)
         {
             selectedHero = hero;
-            int selectedIndex = SelectedHeroIndex();
-            selectedHero = DungeonHero.All[selectedIndex];
-            for (int i = 0; i < heroButtons.Length; i++)
+            for (int i = 0; i < heroButtons.Count; i++)
             {
-                bool chosen = i == selectedIndex;
-                heroSelectionOutlines[i].enabled = chosen;
-                heroSelectionLabels[i].text = chosen ? "Выбран" : "Выбрать";
-                heroSelectionLabels[i].color = chosen ? accent : muted;
+                bool chosen = DungeonHero.All[i] == hero;
+                heroFrames[i].color = i == 0 ? new Color(.6f, .21f, .25f, chosen ? .8f : .15f) : new Color(.22f, .38f, .55f, chosen ? .8f : .15f);
+                heroMarkers[i].text = chosen ? "ВЫБРАН" : "";
+                heroMarkers[i].color = chosen ? Pale : Muted;
             }
-            Navigation confirmNavigation = createDungeonButton.navigation;
-            confirmNavigation.selectOnUp = heroButtons[selectedIndex];
-            createDungeonButton.navigation = confirmNavigation;
-            Navigation backNavigation = heroBackButton.navigation;
-            backNavigation.selectOnDown = heroButtons[selectedIndex];
-            heroBackButton.navigation = backNavigation;
+            if (createDungeonButton != null) createDungeonButton.GetComponentInChildren<Text>().text = "НАЧАТЬ ИГРУ";
         }
-
-        private void ConfigureHeroNavigation()
-        {
-            for (int i = 0; i < heroButtons.Length; i++)
-            {
-                heroButtons[i].navigation = new Navigation
-                {
-                    mode = Navigation.Mode.Explicit,
-                    selectOnLeft = heroButtons[(i + heroButtons.Length - 1) % heroButtons.Length],
-                    selectOnRight = heroButtons[(i + 1) % heroButtons.Length],
-                    selectOnUp = heroBackButton,
-                    selectOnDown = createDungeonButton
-                };
-            }
-            createDungeonButton.navigation = new Navigation
-            {
-                mode = Navigation.Mode.Explicit,
-                selectOnUp = heroButtons[0],
-                selectOnDown = heroBackButton
-            };
-            heroBackButton.navigation = new Navigation
-            {
-                mode = Navigation.Mode.Explicit,
-                selectOnUp = createDungeonButton,
-                selectOnDown = heroButtons[0]
-            };
-        }
-
+        private int Defeated => Mathf.Max(0, initialEnemies - (aliveEnemies != null ? aliveEnemies() : initialEnemies));
+        private static string TimeText(float value) => $"{(int)value / 60:00}:{(int)value % 60:00}";
         private void LateUpdate()
         {
-            if (heroSelection != null && heroSelection.activeSelf) RefreshPortraitScale();
-        }
-
-        private void RefreshPortraitScale()
-        {
-            float scale = Mathf.Max(0.01f, uiCanvas.scaleFactor);
-            if (Mathf.Approximately(scale, portraitCanvasScale)) return;
-            portraitCanvasScale = scale;
-            // CanvasScaler can use fractional scaling; keep the 32px portrait at a whole screen-pixel multiple.
-            int pixelScale = Mathf.Max(1, Mathf.FloorToInt(3 * scale));
-            Vector2 size = Vector2.one * (32 * pixelScale / scale);
-            foreach (RectTransform portrait in heroPortraitRects) portrait.sizeDelta = size;
-        }
-
-        private void OnDestroy()
-        {
-            foreach (Sprite portrait in heroPortraits)
+            if (gameplayPlayer != null && gameplayPlayer.CanAct) runSeconds += Time.deltaTime;
+            if (hud.activeSelf) RefreshHud();
+            if (loading.activeSelf)
             {
-                if (portrait == null) continue;
-                Destroy(portrait.texture);
-                Destroy(portrait);
+                loadingProgress = Mathf.MoveTowards(loadingProgress, targetProgress, Time.unscaledDeltaTime * 1.2f);
+                progressFill.anchorMax = new Vector2(loadingProgress, 1);
+                percent.text = Mathf.FloorToInt(loadingProgress * 100) + "%";
+                if (!DungeonSettings.ReducedMotion) loadingActor.sprite = DungeonHeroAnimator.GetLoadingFrame(selectedHero, Mathf.FloorToInt(Time.unscaledTime * 10));
+                loadingActor.rectTransform.anchoredPosition = new Vector2(Mathf.Round(Mathf.Lerp(-160, 160, loadingProgress)), 45);
             }
         }
+        private void RefreshHud()
+        {
+            if (gameplayPlayer == null) return;
+            interactionPrompt.gameObject.SetActive(gameplayPlayer.InteractionTarget != null);
+            RefreshAuthoredHud();
+            displayedScore = Mathf.MoveTowards(displayedScore, gameplayPlayer.Score,
+                Mathf.Max(30, (gameplayPlayer.Score - displayedScore) * 5) * Time.unscaledDeltaTime);
+            hudLabel.text = Mathf.FloorToInt(displayedScore).ToString("D9");
+            if (gameplayPlayer.Health < previousHealth && DungeonSettings.DamageFlash) damageBorder.Pulse();
+            if (gameplayPlayer.Health > previousHealth && DungeonSettings.DamageFlash) damageBorder.Heal();
+            previousHealth = gameplayPlayer.Health;
 
-        private void Select(Button button)
+        }
+        private void ApplyPreferences()
+        {
+            if (controlLegend != null) controlLegend.gameObject.SetActive(DungeonSettings.ShowHints);
+            if (!DungeonSettings.DamageFlash) damageBorder?.Clear();
+        }
+        private void SetupSound()
+        {
+            uiAudio = gameObject.AddComponent<AudioSource>(); uiAudio.playOnAwake = false; uiAudio.ignoreListenerPause = true;
+            const int count = 2205;
+            var samples = new float[count];
+            for (int i = 0; i < count; i++)
+            {
+                float t = i / 22050f;
+                samples[i] = (Mathf.Sin(t * 1130 * Mathf.PI * 2) + .25f * Mathf.Sin(t * 1700 * Mathf.PI * 2)) * Mathf.Exp(-t * 65) * .09f;
+            }
+            uiClick = AudioClip.Create("Bronze UI tick", count, 1, 22050, false); uiClick.SetData(samples, 0);
+        }
+        private void Click() { if (uiAudio != null) uiAudio.PlayOneShot(uiClick); }
+        private static void Select(Selectable control)
         {
             EventSystem.current?.SetSelectedGameObject(null);
-            button.Select();
+            if (control != null && control.gameObject.activeInHierarchy) control.Select();
+        }
+        private void OnDestroy()
+        {
+            Font.textureRebuilt -= KeepFontPixels;
+            DungeonSettings.Changed -= ApplyPreferences;
+            DungeonSettings.Save();
+            if (uiClick != null) Destroy(uiClick);
+            if (displayFont != null && displayFont != font) Destroy(displayFont);
         }
 
-        private GameObject Overlay(string label)
+        private void KeepFontPixels(Font rebuilt)
         {
-            var panel = new GameObject(label, typeof(RectTransform), typeof(Image));
-            Stretch((RectTransform)panel.transform, transform);
-            panel.GetComponent<Image>().color = background;
-            return panel;
-        }
-
-        private static void Stretch(RectTransform rect, Transform parent)
-        {
-            rect.SetParent(parent, false);
-            rect.anchorMin = Vector2.zero;
-            rect.anchorMax = Vector2.one;
-            rect.offsetMin = rect.offsetMax = Vector2.zero;
-        }
-
-        private static RectTransform Center(string label, Transform parent, Vector2 size)
-        {
-            var rect = new GameObject(label, typeof(RectTransform)).GetComponent<RectTransform>();
-            rect.SetParent(parent, false);
-            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0.5f, 0.5f);
-            rect.sizeDelta = size;
-            return rect;
-        }
-
-        private Text Label(string label, Transform parent, string text, int size, Vector2 anchor,
-            Vector2 dimensions, Vector2 position, Color color)
-        {
-            RectTransform rect = Center(label, parent, dimensions);
-            if (anchor != Vector2.zero)
-            {
-                rect.anchorMin = rect.anchorMax = rect.pivot = anchor;
-            }
-            rect.anchoredPosition = position;
-            var caption = rect.gameObject.AddComponent<Text>();
-            caption.font = font;
-            caption.text = text;
-            caption.fontSize = size;
-            caption.color = color;
-            caption.alignment = TextAnchor.MiddleCenter;
-            caption.raycastTarget = false;
-            caption.horizontalOverflow = HorizontalWrapMode.Wrap;
-            caption.verticalOverflow = VerticalWrapMode.Truncate;
-            return caption;
-        }
-
-        private Button MakeButton(string label, Transform parent, string caption, Vector2 position, Vector2 size, Action action)
-        {
-            RectTransform rect = Center(label, parent, size);
-            rect.anchoredPosition = position;
-            var image = rect.gameObject.AddComponent<Image>();
-            image.color = Color.white;
-            var button = rect.gameObject.AddComponent<Button>();
-            button.targetGraphic = image;
-            ColorBlock colors = button.colors;
-            colors.normalColor = new Color32(44, 65, 83, 255);
-            colors.highlightedColor = new Color32(61, 97, 113, 255);
-            colors.selectedColor = colors.highlightedColor;
-            colors.pressedColor = new Color32(40, 120, 133, 255);
-            button.colors = colors;
-            button.onClick.AddListener(() => action());
-            Label("Label", rect, caption, 20, Vector2.zero, size, Vector2.zero, Color.white);
-            return button;
+            if (rebuilt == font && rebuilt.material != null && rebuilt.material.mainTexture != null)
+                rebuilt.material.mainTexture.filterMode = FilterMode.Point;
         }
     }
 }

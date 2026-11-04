@@ -1,0 +1,1 @@
+17 x 17 RGBA. Hotspots (x,y) from top left: crosshair and pressed (8,8), arrow (1,1), button_hover (1,1). Use nearest/point filtering.

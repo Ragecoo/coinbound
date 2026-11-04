@@ -4,6 +4,12 @@ Shader "Coinbound/Torchlit Sprite"
     {
         [PerRendererData] _MainTex ("Sprite", 2D) = "white" {}
         [PerRendererData] _StoneTint ("Stone color correction / enabled", Vector) = (1,1,1,0)
+        [PerRendererData] _GroundLightPosition ("Actor feet XY / unused / enabled", Vector) = (0,0,0,0)
+        [PerRendererData] _CombatMesh ("Pixel combat mesh", Float) = 0
+        [PerRendererData] _EffectUnlit ("Unlit effect color", Float) = 0
+        [PerRendererData] _GhostWhite ("White sprite silhouette", Float) = 0
+        [PerRendererData] _EffectEmission ("Local effect glow", Float) = 0
+        [PerRendererData] _EffectIgnoreOcclusion ("Uncut sword trail", Float) = 0
         [PerRendererData] _PixelWorldRect ("World bounds for pixel grid", Vector) = (0,0,0,0)
         [PerRendererData] _PixelUVRect ("Sprite UV rectangle", Vector) = (0,0,1,1)
         [PerRendererData] _PixelTexelSize ("Source texture texel size", Vector) = (1,1,1,1)
@@ -18,6 +24,8 @@ Shader "Coinbound/Torchlit Sprite"
         [HideInInspector] _LightTuning ("Unlit visibility / shadow softness / wall boost / upper wall boost", Vector) = (0.035,0.35,2.5,1.5)
         [HideInInspector] _DungeonSize ("Map size", Vector) = (117,57,0.008547,0.01754)
         [HideInInspector] _TorchFlicker ("Flicker", Float) = 1
+        [HideInInspector] _EffectLightCount ("Active local effect lights", Int) = 0
+        [HideInInspector] _EffectLightShadows ("Local effect wall distances", 2D) = "black" {}
     }
     SubShader
     {
@@ -38,9 +46,20 @@ Shader "Coinbound/Torchlit Sprite"
             TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
             TEXTURE2D(_TorchShadowMap); SAMPLER(sampler_TorchShadowMap);
             TEXTURE2D(_TorchWallMap); SAMPLER(sampler_TorchWallMap);
+            TEXTURE2D(_EffectLightShadows); SAMPLER(sampler_EffectLightShadows);
+            int _EffectLightCount;
+            float4 _EffectLightPositions[8];
+            half4 _EffectLightColors[8];
+            float _CoinboundBrightness;
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
                 half4 _StoneTint;
+                float4 _GroundLightPosition;
+                float _CombatMesh;
+                float _EffectEmission;
+                float _EffectUnlit;
+                float _GhostWhite;
+                float _EffectIgnoreOcclusion;
                 float4 _PixelWorldRect;
                 float4 _PixelUVRect;
                 float4 _PixelTexelSize;
@@ -73,13 +92,15 @@ Shader "Coinbound/Torchlit Sprite"
             {
                 UNITY_SETUP_INSTANCE_ID(input);
                 SetUpSpriteInstanceProperties();
-                input.positionOS = UnityFlipSprite(input.positionOS, unity_SpriteProps.xy);
+                if (_CombatMesh < 0.5)
+                    input.positionOS = UnityFlipSprite(input.positionOS, unity_SpriteProps.xy);
                 Varyings output = (Varyings)0;
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
                 output.positionCS = TransformObjectToHClip(input.positionOS);
                 output.world = TransformObjectToWorld(input.positionOS).xy;
                 output.uv = input.uv;
-                output.color = input.color * _Color * unity_SpriteColor;
+                output.color = input.color * _Color;
+                if (_CombatMesh < 0.5) output.color *= unity_SpriteColor;
                 return output;
             }
             float VisibilityAtDepth(float blocker, float distance, float wall)
@@ -124,6 +145,30 @@ Shader "Coinbound/Torchlit Sprite"
                 return _PixelUVRect.xy + localUV * _PixelUVRect.zw;
             }
 
+            half3 EffectLighting(float2 world, float wall)
+            {
+                half3 light = 0;
+                [loop]
+                for (int i = 0; i < min(_EffectLightCount, 8); i++)
+                {
+                    float4 source = _EffectLightPositions[i];
+                    float2 delta = world - source.xy;
+                    float distance = length(delta);
+                    float falloff = saturate(1 - distance * distance / max(source.z * source.z, 0.01));
+                    if (falloff <= 0) continue;
+                    float angle = frac(atan2(delta.y, delta.x) * 0.15915494309);
+                    float sampleIndex = angle * 64 - 0.5;
+                    float first = (floor(sampleIndex) + 0.5) / 64;
+                    float row = (i + 0.5) / 8;
+                    float a = SAMPLE_TEXTURE2D(_EffectLightShadows, sampler_EffectLightShadows, float2(frac(first), row)).r;
+                    float b = SAMPLE_TEXTURE2D(_EffectLightShadows, sampler_EffectLightShadows, float2(frac(first + 1.0 / 64), row)).r;
+                    float block = min(a, b) + wall * 0.65;
+                    float clear = 1 - smoothstep(block - 0.07, block + 0.02, distance);
+                    light += _EffectLightColors[i].rgb * (source.w * falloff * falloff * clear);
+                }
+                return light;
+            }
+
             float SampleShadowMask(float2 uv)
             {
                 // Interpolation is only for soft projected shadows, never for visible sprite colors.
@@ -161,12 +206,19 @@ Shader "Coinbound/Torchlit Sprite"
                 // Evaluate light once per art pixel (32 pixels per tile). Shadow edges must not cut texels diagonally.
                 float2 lightWorld = (floor(input.world * 32) + 0.5) / 32;
                 float2 uv = SpriteUV(input.uv, lightWorld);
-                float2 offset = lightWorld - _TorchPosition.xy;
+                // Tall actors occupy one ground location. Their heads must not be treated as wall tiles
+                // or cut off by the wall visibility sample above their feet.
+                float2 groundWorld = _GroundLightPosition.w > 0
+                    ? (floor(_GroundLightPosition.xy * 32) + 0.5) / 32 : lightWorld;
+                float2 offset = groundWorld - _TorchPosition.xy;
                 float distance = length(offset);
                 float angle = atan2(offset.y, offset.x) * 0.15915494309 + 0.5;
-                float2 mapUV = float2(lightWorld.x, 1 - lightWorld.y) * _DungeonSize.zw;
-                float wall = SAMPLE_TEXTURE2D(_TorchWallMap, sampler_TorchWallMap, mapUV).r;
+                float2 mapUV = float2(groundWorld.x, 1 - groundWorld.y) * _DungeonSize.zw;
+                float wall = _GroundLightPosition.w > 0 ? 0 : SAMPLE_TEXTURE2D(_TorchWallMap, sampler_TorchWallMap, mapUV).r;
                 float visibility = SoftSight(angle, distance, wall) * _TorchPosition.w;
+                // Only the sword's visual arc bypasses sight masking. Hits and all other light
+                // still use the actual wall geometry.
+                visibility = lerp(visibility, _TorchPosition.w, saturate(_EffectIgnoreOcclusion));
                 float radial = saturate(1 - distance * distance / (_TorchSettings.x * _TorchSettings.x));
                 radial *= radial;
 
@@ -188,6 +240,9 @@ Shader "Coinbound/Torchlit Sprite"
                 }
 
                 half4 surface = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv) * input.color;
+                surface.rgb = lerp(surface.rgb, half3(1,1,1), _GhostWhite);
+                // Dust retains its authored white while still respecting walls and visibility.
+                if (_EffectUnlit > 0.5) { surface.a *= visibility; return surface; }
                 // Stone shares the wall palette and light response; blue water keeps its original color.
                 float redToBlue = surface.r / max(surface.b, 0.0001);
                 #if defined(UNITY_COLORSPACE_GAMMA)
@@ -204,9 +259,14 @@ Shader "Coinbound/Torchlit Sprite"
                 float wallBoost = lerp(1, _LightTuning.z, max(wall, stone)) * lerp(1, _LightTuning.w, upperWall);
                 half3 lighting = _TorchColor.rgb * (_TorchSettings.y * _TorchFlicker * textureVariation
                     * wallBoost * radial * visibility);
+                lighting += EffectLighting(groundWorld, wall) * visibility * min(wallBoost, 2.3);
+                // A white slash stays white even though its light on the dungeon is amber.
+                if (_EffectIgnoreOcclusion > 0.5)
+                    lighting = dot(lighting, half3(0.2126, 0.7152, 0.0722)).xxx;
                 // Dim texture detail has unlimited range along sight lines; the torch still fades out at its radius.
                 float ambient = _LightTuning.x * visibility;
-                surface.rgb = _DarknessColor.rgb + surface.rgb * (ambient + lighting);
+                surface.rgb = _DarknessColor.rgb + surface.rgb * (ambient + lighting + _EffectEmission * visibility);
+                surface.rgb *= _CoinboundBrightness > 0 ? _CoinboundBrightness : 1;
                 return surface;
             }
             ENDHLSL

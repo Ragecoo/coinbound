@@ -1,0 +1,8 @@
+Vosk API 0.3.45 and small speech models by Alpha Cephei. Apache License 2.0.
+https://github.com/alphacep/vosk-api
+https://alphacephei.com/vosk/models
+English: vosk-model-small-en-us-0.15
+Russian: vosk-model-small-ru-0.22
+Model configuration changed: trailing silence 0.20 / 0.35 / 0.60 seconds.
+Audio is processed locally, never saved or sent over a network.
+Native Windows runtime includes MinGW runtime dependencies distributed with upstream Vosk.

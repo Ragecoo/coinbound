@@ -40,6 +40,10 @@ namespace Coinbound
             bool visible = caster != null && lightSource != null && caster.enabled && caster.gameObject.activeInHierarchy;
             shadowRenderer.enabled = visible && maximumLength > 0;
             if (!visible || maximumLength <= 0) return;
+            // Animated casters (chest lids) must update their projected silhouette too.
+            shadowRenderer.sprite = caster.sprite;
+            shadowRenderer.flipX = caster.flipX;
+            shadowRenderer.flipY = caster.flipY;
 
             Vector2 awayFromLight = (Vector2)caster.transform.position - (Vector2)lightSource.position;
             // A low object's top projects away from the torch and widens slightly with distance.

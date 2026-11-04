@@ -1,0 +1,1 @@
+32x40 px. Rows: south, west, north, east. Columns: 00 closed, 01-07 opening, 08 open empty. Play once, hold 08. Frame duration 65 ms. Shared pivot (16,34). Point filtering.

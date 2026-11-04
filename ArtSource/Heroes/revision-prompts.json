@@ -1,0 +1,29 @@
+{
+  "mode": "built-in image_gen edits",
+  "revisions": [
+    {
+      "hero": "02",
+      "direction": "left",
+      "prompt": "Use case: precise-object-edit. Edit target image 1 is the archer LEFT animation sheet. Supporting reference image 2 is the same archer RIGHT sheet for matching character proportions and height. Keep image1 exact EIGHT equal columns by FIVE equal rows, transparent background, 40 complete poses: idle, running, bow shooting, compact dodge roll, bow ready. Keep LEFT facing direction, all outfit details, original green cape/red lining/hood/leather armor/quiver identity. Fix ONLY the too-short character proportions and clipping: standing head-to-feet height should be 47-48 logical pixels per 32x64 cell, matching reference2, instead of the current 41-42. Standing foot groundpoint (16,56) and head top y8. Increase BODY height naturally about14%, keeping legs/torso correct; width stays withincell. Running same body scale and lively trailing cloak; roll stays compact but same person. Every bow/sword tip, cape hem and boot must fit entirely inside itsowncell with at least1logicalpixeltransparentmargin. No weapon crosses a cellboundary. No independent scaling amongframes. Preserve feetbaseline, subtle idlebreathing, alternatingrunsteps, draw/releasebowsequence, realtuckedrollposes, capefollowthrough. Strict crisp pixelart inoriginalpalette, no blur, labels, gridlines, groundshadows, antialiasingorbackground. Logicalsheet256x320, render as exact integer enlargement1280x1600 ifneeded.",
+      "source": "C:\\Users\\aldik\\.codex\\generated_images\\01a17d2a-7bc4-7f31-8897-38e0ed7f5328\\exec-4dc7b383-56da-4145-ac87-c2b13420b685.png"
+    },
+    {
+      "hero": "01",
+      "direction": "down",
+      "prompt": "Use case: precise-object-edit. Input image is an existing animation sheet of a burgundy hooded swordsman, front view facing DOWN. Preserve character identity, original palette, scale, proportions, all poses and all cape animation. Keep STRICT8equalcolumns x5equalrows, no margins/gutters/labels. Eachcell logical32x64, whole256x320 or exactintegerenlargement. Correct weapon clearance only: thirdrow ATTACK frames2and3 have weapon raised too high. Repose just raised arm and silver sword so topmosttip is at least8logicalpixels below thatcelltop, and fully withincellwidth; use a more diagonal compact anticipation at shoulderheight rather than overhead. Also keep fifthrowguardweapon insidecellswithsameclearance. Do NOT shorten weapons, shrink character or change foot positions. Standing footgroundline56, bodyheight47pixels, hoodtop8. Allopaquecontent fullyinsideeachowncell, absolutely no weaponextendinginto previousrow orneighborcolumn. Everytipcompleteandvisible. Otherfourrowsunchanged. Preserve lively flowingcloak and runninglegs, compactshouldertuckedroll, eightframesperrow. Crisp pixelart, genuine transparentbackground, no castshadow, noblur, no gradients, no scenery.",
+      "source": "C:\\Users\\aldik\\.codex\\generated_images\\01a17d2a-7bc4-7f31-8897-38e0ed7f5328\\exec-a0413835-f181-411b-a3ef-55d4b864861f.png"
+    },
+    {
+      "hero": "01",
+      "direction": "up",
+      "prompt": "Use case: precise-object-edit. Input image is an existing animation sheet of a burgundy hooded swordsman, back view facing UP. Preserve character identity, original palette, scale, proportions, all poses and all cape animation. Keep STRICT8equalcolumns x5equalrows, no margins/gutters/labels. Eachcell logical32x64, whole256x320 or exactintegerenlargement. Correct weapon clearance only: thirdrow ATTACK frames2and3 have weapon raised too high. Repose just raised arm and silver sword so topmosttip is at least8logicalpixels below thatcelltop, and fully withincellwidth; use a more diagonal compact anticipation at shoulderheight rather than overhead. Also keep fifthrowguardweapon insidecellswithsameclearance. Do NOT shorten weapons, shrink character or change foot positions. Standing footgroundline56, bodyheight47pixels, hoodtop8. Allopaquecontent fullyinsideeachowncell, absolutely no weaponextendinginto previousrow orneighborcolumn. Everytipcompleteandvisible. Otherfourrowsunchanged. Preserve lively flowingcloak and runninglegs, compactshouldertuckedroll, eightframesperrow. Crisp pixelart, genuine transparentbackground, no castshadow, noblur, no gradients, no scenery.",
+      "source": "C:\\Users\\aldik\\.codex\\generated_images\\01a17d2a-7bc4-7f31-8897-38e0ed7f5328\\exec-cc5c8783-a7d9-449c-af23-de791e7477a3.png"
+    },
+    {
+      "hero": "02",
+      "direction": "up",
+      "prompt": "Use case: precise-object-edit. Input image is an existing animation sheet of a green hooded archer, back view facing UP. Preserve character identity, original palette, scale, proportions, all poses and all cape animation. Keep STRICT8equalcolumns x5equalrows, no margins/gutters/labels. Eachcell logical32x64, whole256x320 or exactintegerenlargement. Correct weapon clearance only: thirdrow ATTACK frames2and3 have weapon raised too high. Repose just raised arm and bow so topmosttip is at least8logicalpixels below thatcelltop, and fully withincellwidth; use a more diagonal compact anticipation at shoulderheight rather than overhead. Also keep fifthrowguardweapon insidecellswithsameclearance. Do NOT shorten weapons, shrink character or change foot positions. Standing footgroundline56, bodyheight47pixels, hoodtop8. Allopaquecontent fullyinsideeachowncell, absolutely no weaponextendinginto previousrow orneighborcolumn. Everytipcompleteandvisible. Otherfourrowsunchanged. Preserve lively flowingcloak and runninglegs, compactshouldertuckedroll, eightframesperrow. Crisp pixelart, genuine transparentbackground, no castshadow, noblur, no gradients, no scenery.",
+      "source": "C:\\Users\\aldik\\.codex\\generated_images\\01a17d2a-7bc4-7f31-8897-38e0ed7f5328\\exec-a80cae65-bf22-4162-82e3-67db736d2082.png"
+    }
+  ]
+}
