@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "pixel_size": 32,
+  "palette_luminance_anchors": [
+    15,
+    30,
+    55
+  ],
+  "normalized_rgb_from_imagegen": [
+    [
+      1.003623079316332,
+      1.0000000000000002,
+      0.9627805101132069
+    ],
+    [
+      1.0114552262486516,
+      1.0104217789197147,
+      0.8584116713465999
+    ],
+    [
+      1.0231799310965406,
+      1.009235978968698,
+      0.8458473426799465
+    ]
+  ],
+  "brightness_preserved": true,
+  "stone_geometry_preserved": true,
+  "floor_unchanged": true,
+  "optional_flower_tiles": 15,
+  "applies_to": "wall revision v3 only; floor subsequently updated by floor_palette_revision.json"
+}

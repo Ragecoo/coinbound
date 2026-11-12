@@ -1,0 +1,1906 @@
+{
+  "revision": 4,
+  "theme": "crypt",
+  "file_paths_relative_to": "decorations/",
+  "assets": [
+    {
+      "id": "crypt_01",
+      "label_ru": "Надгробие",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_01.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        3
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        6,
+        7,
+        28,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            19,
+            18,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            3,
+            18,
+            10
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "8a793f67ee4c31e281133058fff336339efde25861804855a5d8d79a2e8c571b",
+      "atlas_rect_top_left": [
+        138,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        138,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_02",
+      "label_ru": "Каменный саркофаг",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_02.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        3
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        7,
+        4,
+        27,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            9,
+            10,
+            16,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            9,
+            3,
+            16,
+            19
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "7a900d1ee25b1f6d435417e7951c873a5a56891242ebedc366f1921ebc72a575",
+      "atlas_rect_top_left": [
+        174,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        174,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_03",
+      "label_ru": "Погребальная урна",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_03.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        27,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            18,
+            18,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            3,
+            18,
+            11
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          18,
+          18,
+          11
+        ]
+      ],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "ceramic",
+        "debris_ids": [
+          "crypt_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "2a8c50ae3bd4d8f8f1f9643e466b79e6692d8b66fae168619bbcddd0ad7dcd67",
+      "atlas_rect_top_left": [
+        210,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        210,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_04",
+      "label_ru": "Разбитая урна",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_04.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        2
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.0625
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        27,
+        31
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            5,
+            14,
+            20,
+            16
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            5,
+            2,
+            20,
+            16
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          5,
+          14,
+          20,
+          16
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "ceramic",
+        "debris_ids": [
+          "crypt_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "c6eaf7ed459c276b21786cf49455435798449c03e9ff26b66b50ae1e596722ab",
+      "atlas_rect_top_left": [
+        246,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        246,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_05",
+      "label_ru": "Свечи на камне",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_05.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        5,
+        4,
+        28,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            16,
+            19,
+            12
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            4,
+            19,
+            12
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "118f8d88b3360c8f4571b32d5aa6d7f07b87fd51829fbdfb5cdfe91f82ce4078",
+      "atlas_rect_top_left": [
+        282,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        282,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_06",
+      "label_ru": "Цветущие корни",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_06.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a96162fea8d5b41fa54f466a3d4f0fbc8d93e9384c2ea2f61977e470a1bbdf00",
+      "atlas_rect_top_left": [
+        318,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        318,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_07",
+      "label_ru": "Чаша с водой",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_07.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            17,
+            18,
+            9
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            6,
+            18,
+            9
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 10,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9347841d69b9f2690b3ba2b6690ac2c84d0733814106c43d4d0be2b0e6851fa2",
+      "atlas_rect_top_left": [
+        354,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        354,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_08",
+      "label_ru": "Кости во мху",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_08.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        27,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a11724af84942a1991e5438ff59de85aa1bd962558cacea21ba34d309cc5bf60",
+      "atlas_rect_top_left": [
+        390,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        390,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_09",
+      "label_ru": "Сломанный гроб",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_09.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            9,
+            21,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            4,
+            21,
+            19
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          9,
+          21,
+          19
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "rotten_wood",
+        "debris_ids": [
+          "crypt_16"
+        ],
+        "survivor_ids": [
+          "crypt_08"
+        ],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "8c12777a49a9ee654e21af8ab2930974dbde5c5d654436ab615b6ffcd8817231",
+      "atlas_rect_top_left": [
+        426,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        426,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_10",
+      "label_ru": "Ящик молитвенников",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_10.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        5
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        28,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            12,
+            20,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            5,
+            20,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          12,
+          20,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1.5,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "rotten_wood",
+        "debris_ids": [
+          "crypt_16"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "f618082a1b91cd362dfe4394257f2a8b9a257eed21d10ab65519b125eea8c765",
+      "atlas_rect_top_left": [
+        462,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        462,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_11",
+      "label_ru": "Обломок статуи",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_11.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        5
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        2,
+        4,
+        27,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            4,
+            10,
+            21,
+            17
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            4,
+            5,
+            21,
+            17
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "ad6a4c5271fab62fe4631d7dae68cf068270f5e5c37227c13b597383187b800c",
+      "atlas_rect_top_left": [
+        2,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_12",
+      "label_ru": "Угловые руины",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_12.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        4
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        0,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            2,
+            9,
+            25,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            2,
+            4,
+            25,
+            19
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a488f52f0daf5423182289b0bd05062feb5897f504280d705f362165d77f51dd",
+      "atlas_rect_top_left": [
+        38,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_13",
+      "label_ru": "Грибы",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_13.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "082b0cb477b9d67eef36daa5a761894f552ee640444d29a162c4c7eb417aab5c",
+      "atlas_rect_top_left": [
+        74,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_14",
+      "label_ru": "Корзина подношений",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_14.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        27,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            11,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            6,
+            19,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          11,
+          19,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 5,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "dry_leaves",
+        "debris_ids": [],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "77550d05207cc4550be470efd4404805e1c43660bc7cca2e2bfdfe327b55a851",
+      "atlas_rect_top_left": [
+        110,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_15",
+      "label_ru": "Черепки и мох",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "debris",
+      "file": "crypt/debris/crypt_15.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        27,
+        24
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "1e8f814a1d484d47c065ecfdbb5fa5bd03e0280f587829f92cebf8546ef86215",
+      "atlas_rect_top_left": [
+        146,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_16",
+      "label_ru": "Гнилые доски",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "debris",
+      "file": "crypt/debris/crypt_16.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        26,
+        24
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "6deb6f8e45718cf501d529fb907ab77f29d816f74af2afd17a8c178068b36ec4",
+      "atlas_rect_top_left": [
+        182,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_17",
+      "label_ru": "Надгробие и корни",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_17.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        33,
+        3
+      ],
+      "pivot_normalized": [
+        0.515625,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        61,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            19,
+            18,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            3,
+            18,
+            10
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_01",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "crypt_06",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "c57d6d2ba953101bf7001adb55bd360ae6d520aa38ea9daf110a989b7044b95a",
+      "atlas_rect_top_left": [
+        138,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        138,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_18",
+      "label_ru": "Две погребальные урны",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_18.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        30,
+        3
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        55,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            18,
+            18,
+            11
+          ],
+          [
+            35,
+            18,
+            18,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            3,
+            18,
+            11
+          ],
+          [
+            35,
+            3,
+            18,
+            11
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          18,
+          18,
+          11
+        ],
+        [
+          35,
+          18,
+          18,
+          11
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_03",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "crypt_03",
+          "offset_px_top_left": [
+            28,
+            0
+          ],
+          "own_health": true
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "156178bd2fd380d56d011affcf26be98bd4ac0f2d228202edad13c4dbb80bc90",
+      "atlas_rect_top_left": [
+        206,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        206,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_19",
+      "label_ru": "Гроб и кости",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_19.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        4
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        59,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            9,
+            21,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            4,
+            21,
+            19
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          9,
+          21,
+          19
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_09",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "crypt_08",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "72d7d48d94ad046dcb9e11438ed0e958d6926e071fb8e9cb63808a8a848c0a24",
+      "atlas_rect_top_left": [
+        274,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        274,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_20",
+      "label_ru": "Молитвенники и свечи",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_20.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        4,
+        60,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            12,
+            20,
+            15
+          ],
+          [
+            39,
+            16,
+            19,
+            12
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            5,
+            20,
+            15
+          ],
+          [
+            39,
+            4,
+            19,
+            12
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          12,
+          20,
+          15
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_10",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "crypt_05",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "2a4d413dd3bbec004a2f550e1ba42e5ba34c147ad8b9d221da3a455bbd7179b2",
+      "atlas_rect_top_left": [
+        342,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        342,
+        478,
+        64,
+        32
+      ]
+    }
+  ]
+}

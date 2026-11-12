@@ -17,6 +17,7 @@ namespace Coinbound
         public float DisplayedFraction { get; private set; } = 1;
         public event System.Action<Vector2, int> PixelsLost;
         public event System.Action<Vector2, Color32> PixelDetached;
+        public event System.Action<Vector2, Color32> PixelRestored;
         public override Texture mainTexture => texture != null ? texture : base.mainTexture;
 
         public void Initialize(Texture2D source)
@@ -45,9 +46,20 @@ namespace Coinbound
         {
             if (DisplayedFraction == targetFraction) return;
             int previousShift = shift;
+            bool wasEmpty = empty;
             // Full-width changes finish in 0.25 seconds; mesh edges still advance in whole source pixels.
             DisplayedFraction = Mathf.MoveTowards(DisplayedFraction, targetFraction, Time.deltaTime * 4);
             ApplyFraction(DisplayedFraction);
+            if (!empty && texture != null && (shift < previousShift || wasEmpty))
+            {
+                // A single mote at the advancing edge, rather than a burst for every restored texel.
+                Rect rect = rectTransform.rect;
+                int y = texture.height / 2;
+                int x = Mathf.Clamp(rightEdges[y] - shift - 1, 0, texture.width - 1);
+                Color32 tint = sourcePixels[y * texture.width + x];
+                if (tint.a > 0) PixelRestored?.Invoke(new Vector2(rect.xMin + x * rect.width / texture.width,
+                    rect.yMin + y * rect.height / texture.height), tint);
+            }
             if (shift > previousShift && texture != null)
             {
                 // Emit each texel removed by this exact clipping step, preserving its color.

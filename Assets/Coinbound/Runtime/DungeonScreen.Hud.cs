@@ -6,6 +6,7 @@ namespace Coinbound
     public sealed partial class DungeonScreen
     {
         private RectTransform authoredHud;
+        private DungeonSpellHud spellHud;
         private DungeonHudFill hpArt, mpArt;
         private DungeonHudParticles resourceParticles;
         private RawImage attackArt, blockArt, dashArt;
@@ -48,6 +49,10 @@ namespace Coinbound
 
         private void BuildAuthoredHud()
         {
+            var spellRoot = Rect("Spell HUD", hud.transform, Vector2.zero, new Vector2(265, 65));
+            spellRoot.anchorMin = spellRoot.anchorMax = new Vector2(.5f, 0);
+            spellRoot.anchoredPosition = new Vector2(0, 76);
+            spellHud = spellRoot.gameObject.AddComponent<DungeonSpellHud>();
             authoredHud = Rect("Authored HUD", hud.transform, Vector2.zero, new Vector2(165, 57));
             Anchor(authoredHud, new Vector2(0, 1), new Vector2(20, -20));
             authoredHud.localScale = Vector3.one * 2;
@@ -69,6 +74,10 @@ namespace Coinbound
                 resourceParticles.rectTransform.InverseTransformPoint(hpArt.rectTransform.TransformPoint(point)), tint, false);
             mpArt.PixelDetached += (point, tint) => resourceParticles.Detach(
                 resourceParticles.rectTransform.InverseTransformPoint(mpArt.rectTransform.TransformPoint(point)), tint, true);
+            hpArt.PixelRestored += (point, tint) => resourceParticles.GatherHealth(
+                resourceParticles.rectTransform.InverseTransformPoint(hpArt.rectTransform.TransformPoint(point)));
+            mpArt.PixelRestored += (point, tint) => resourceParticles.Gather(
+                resourceParticles.rectTransform.InverseTransformPoint(mpArt.rectTransform.TransformPoint(point)), tint);
             swordNormal = HudTexture("sword_normal"); swordPressed = HudTexture("sword_pressed");
             bowNormal = HudTexture("bow_normal"); bowPressed = HudTexture("bow_pressed");
             blockNormal = HudTexture("block_normal"); blockPressed = HudTexture("block_pressed");
@@ -90,8 +99,10 @@ namespace Coinbound
             float canvasScale = Mathf.Max(.01f, uiCanvas.scaleFactor);
             float scale = Mathf.Max(1, Mathf.Round(2 * canvasScale)) / canvasScale;
             authoredHud.localScale = new Vector3(scale, scale, 1);
+            spellHud.transform.localScale = new Vector3(scale, scale, 1);
+            ((RectTransform)spellHud.transform).anchoredPosition = new Vector2(0, 16 + 30 * scale);
             if (statsPanel != null) statsPanel.anchoredPosition = new Vector2(24, -20 - 57 * scale - 12);
-            if (voiceStatus != null) voiceStatus.text = DungeonSettings.VoiceInput ? DungeonVoiceInput.Status : "";
+            if (voiceStatus != null) voiceStatus.gameObject.SetActive(false);
             DungeonPlayer player = gameplayPlayer;
             hpArt.AnimateTo(player.Health / (float)player.MaxHealth);
             mpArt.AnimateTo(player.MaxMana > 0 ? player.Mana / (float)player.MaxMana : 0);

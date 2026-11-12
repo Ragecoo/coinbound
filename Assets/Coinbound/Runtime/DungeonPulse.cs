@@ -8,7 +8,7 @@ namespace Coinbound
         private DungeonCombatMesh pixels;
         private Vector2 position, direction;
         private float damage, age, explosion;
-        private bool impacted;
+        private bool impacted, hitWall;
         public static DungeonPulse Launch(DungeonPlayer owner, Vector2 target)
         {
             var obj = new GameObject("Pulse projectile"); obj.transform.SetParent(owner.transform.parent, false);
@@ -18,6 +18,7 @@ namespace Coinbound
             if (pulse.direction.sqrMagnitude < .01f) pulse.direction = owner.AimDirection;
             pulse.damage = owner.Stats.Damage * 2;
             pulse.pixels = DungeonCombatMesh.Create(obj.transform, "Pulse pixels", owner.EffectMaterial);
+            owner.Spells.Track(obj);
             return pulse;
         }
         private void Update()
@@ -32,6 +33,9 @@ namespace Coinbound
                 {
                     position = hit.point + hit.normal * .09f;
                     impacted = true;
+                    hitWall = hit.collider.GetComponentInParent<DungeonEnemy>() == null;
+                    DungeonSpellFlash.Create(owner.Spells, position, new Color(.2f,.7f,1), hitWall ? .16f : .3f);
+                    DungeonProps.Current?.AreaHit(position,2,damage);
                     // Death can disable/remove an enemy synchronously during ReceiveHit.
                     foreach (DungeonEnemy enemy in new System.Collections.Generic.List<DungeonEnemy>(DungeonEnemy.Active))
                     {
@@ -43,19 +47,20 @@ namespace Coinbound
                 }
                 else position = next;
             }
-            else { explosion += dt; if (explosion >= .3f) { Destroy(gameObject); return; } }
+            else { explosion += dt; if (explosion >= (hitWall ? .16f : .3f)) { gameObject.SetActive(false); Destroy(gameObject); return; } }
             Vector2 center = position + Vector2.up * .4f;
-            pixels.Begin(center, position, false, 0, false, true);
+            pixels.Begin(center, position, false, .9f, false, true);
             if (!impacted)
             {
+                DungeonEffectLights.Glow(this, position, 1.8f, 1.15f, new Color(.18f,.65f,1));
                 pixels.Glint(center, new Color(.5f, .9f, 1), 3);
-                for (int i = 1; i < 10; i++) pixels.Pixel(center - direction * (i / 16f), new Color(.25f, .7f, 1, 1-i/10f), 2, 2);
-            }
-            else for (int i = 0; i < 40; i++)
-            {
-                float angle = i * Mathf.PI * 2 / 40;
-                Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Mathf.Min(1.85f, explosion * 7);
-                if (DungeonCombatPhysics.ClearLine(position, position + offset)) pixels.Pixel(center + offset, new Color(.4f, .85f, 1, 1-explosion/.3f), 2, 2);
+                Vector2 side = new Vector2(-direction.y, direction.x);
+                for (int i = 1; i < 12; i++)
+                {
+                    Vector2 tail = center - direction * (i / 16f) + side * (Mathf.Round(Mathf.Sin(age * 24 - i) * i * .18f) / 32);
+                    if (DungeonCombatPhysics.ClearLine(position, tail - Vector2.up * .4f))
+                        pixels.Pixel(tail, new Color(.15f,.65f,1,1-i/12f), i < 4 ? 2 : 1, i < 4 ? 2 : 1);
+                }
             }
             pixels.End();
         }

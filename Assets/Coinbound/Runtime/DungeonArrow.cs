@@ -8,6 +8,7 @@ namespace Coinbound
     {
         private DungeonPlayer owner;
         private float damage;
+        private bool critical;
         private Vector2 direction;
         private Vector2 position;
         private float remaining = 1.5f;
@@ -29,6 +30,7 @@ namespace Coinbound
             var arrow = obj.AddComponent<DungeonArrow>();
             arrow.owner = player;
             arrow.damage = player.Stats.RollDamage(Random.value);
+            arrow.critical = arrow.damage > player.Stats.Damage;
             arrow.direction = direction.normalized;
             // Start at the feet, so an adjacent obstacle can never be skipped at spawn.
             arrow.position = player.transform.position;
@@ -57,9 +59,11 @@ namespace Coinbound
                 DungeonEnemy enemy = hit.collider.GetComponentInParent<DungeonEnemy>();
                 if (enemy != null)
                 {
-                    enemy.ReceiveHit(damage, direction, 2.7f);
+                    enemy.ReceiveHit(damage, direction, 2.7f, true, critical);
                     Destroy(gameObject);
                 }
+                else if(hit.collider.TryGetComponent<DungeonProp>(out var prop))
+                {prop.ReceiveHit(damage,DungeonProps.NewAttackId());Destroy(gameObject);}
                 else
                 {
                     Vector2 contactTip = ProjectContact(hit);

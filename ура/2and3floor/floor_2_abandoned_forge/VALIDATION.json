@@ -1,0 +1,16 @@
+{
+  "floor": 2,
+  "all_64_ids_present": true,
+  "all_47_normalized_wall_masks_present": true,
+  "native_sizes_and_alpha_preserved": true,
+  "all_floor_variant_border_pixels_identical": true,
+  "all_terrain_outer_2px_follow_one_consistent_palette_mapping": true,
+  "void_matches_wall00": true,
+  "shared_landmarks_byte_identical": true,
+  "new_unique_unity_guids": true,
+  "test_layout_all_masks_resolved": true,
+  "not_run": [
+    "Unity import/playtest",
+    "runtime lighting tuning"
+  ]
+}

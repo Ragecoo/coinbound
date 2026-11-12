@@ -1,0 +1,14 @@
+{
+  "all_native_grid_and_binary_alpha": true,
+  "base_sprites_max_24_opaque_colors": true,
+  "all_16_compositions_pixel_exact": true,
+  "all_colliders_inside_native_sprite_bounds": true,
+  "atlas_roundtrip_pixel_exact": true,
+  "new_sprite_meta_count": 80,
+  "pixel_filter_and_no_compression": true,
+  "not_run": [
+    "Unity import/playtest",
+    "runtime destruction",
+    "FPS profiling"
+  ]
+}

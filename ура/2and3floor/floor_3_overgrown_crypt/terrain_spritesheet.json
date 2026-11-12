@@ -1,0 +1,912 @@
+{
+  "size": [
+    320,
+    192
+  ],
+  "tile_size": 32,
+  "ppu": 32,
+  "columns": 10,
+  "rows": 6,
+  "sprites": [
+    {
+      "id": "background.void",
+      "rect_top_left": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.corridor.0",
+      "rect_top_left": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.corridor.1",
+      "rect_top_left": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.corridor.2",
+      "rect_top_left": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.extra.0",
+      "rect_top_left": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.extra.1",
+      "rect_top_left": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        160,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.extra.2",
+      "rect_top_left": [
+        192,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        192,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.extra.3",
+      "rect_top_left": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        224,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.extra.4",
+      "rect_top_left": [
+        256,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        256,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.extra.5",
+      "rect_top_left": [
+        288,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        288,
+        160,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.room.0",
+      "rect_top_left": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.room.1",
+      "rect_top_left": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "floor.room.2",
+      "rect_top_left": [
+        64,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.00",
+      "rect_top_left": [
+        96,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.01",
+      "rect_top_left": [
+        128,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.02",
+      "rect_top_left": [
+        160,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        160,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.03",
+      "rect_top_left": [
+        192,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        192,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.04",
+      "rect_top_left": [
+        224,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        224,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.05",
+      "rect_top_left": [
+        256,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        256,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.06",
+      "rect_top_left": [
+        288,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        288,
+        128,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.07",
+      "rect_top_left": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.08",
+      "rect_top_left": [
+        32,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.09",
+      "rect_top_left": [
+        64,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0A",
+      "rect_top_left": [
+        96,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0B",
+      "rect_top_left": [
+        128,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0C",
+      "rect_top_left": [
+        160,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        160,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0D",
+      "rect_top_left": [
+        192,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        192,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0E",
+      "rect_top_left": [
+        224,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        224,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0F",
+      "rect_top_left": [
+        256,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        256,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.10",
+      "rect_top_left": [
+        288,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        288,
+        96,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.14",
+      "rect_top_left": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.18",
+      "rect_top_left": [
+        32,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.1C",
+      "rect_top_left": [
+        64,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.20",
+      "rect_top_left": [
+        96,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.21",
+      "rect_top_left": [
+        128,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.28",
+      "rect_top_left": [
+        160,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        160,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.29",
+      "rect_top_left": [
+        192,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        192,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.30",
+      "rect_top_left": [
+        224,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        224,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.38",
+      "rect_top_left": [
+        256,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        256,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.40",
+      "rect_top_left": [
+        288,
+        96,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        288,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.41",
+      "rect_top_left": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.42",
+      "rect_top_left": [
+        32,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.43",
+      "rect_top_left": [
+        64,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.50",
+      "rect_top_left": [
+        96,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.60",
+      "rect_top_left": [
+        128,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.61",
+      "rect_top_left": [
+        160,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        160,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.70",
+      "rect_top_left": [
+        192,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        192,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.80",
+      "rect_top_left": [
+        224,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        224,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.82",
+      "rect_top_left": [
+        256,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        256,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.84",
+      "rect_top_left": [
+        288,
+        128,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        288,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.86",
+      "rect_top_left": [
+        0,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.90",
+      "rect_top_left": [
+        32,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.94",
+      "rect_top_left": [
+        64,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.A0",
+      "rect_top_left": [
+        96,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.B0",
+      "rect_top_left": [
+        128,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.C0",
+      "rect_top_left": [
+        160,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        160,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.C2",
+      "rect_top_left": [
+        192,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        192,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.D0",
+      "rect_top_left": [
+        224,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        224,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.E0",
+      "rect_top_left": [
+        256,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        256,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.F0",
+      "rect_top_left": [
+        288,
+        160,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        288,
+        0,
+        32,
+        32
+      ]
+    }
+  ]
+}

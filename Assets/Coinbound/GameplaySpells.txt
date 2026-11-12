@@ -1,4 +1,4 @@
-VOICE SPELLS
+﻿VOICE SPELLS
 
 Pulse: 20 mana, 3 s cooldown. Nearest partly visible enemy within 8 tiles.
 Projectile deals 2x base damage in a 2-tile splash; stone blocks splash damage.
@@ -9,10 +9,21 @@ Ward: 40 mana, 10 s cooldown, 3 s immunity. Gold pixel shield;
 nearby enemies are repelled about 1.5 tiles on a shield impact.
 Decoy: 25 mana, 12 s cooldown, 5 s duration. Frozen white translucent hero pose;
 enemies within 8 tiles pursue the decoy, then return to the player.
-All spells can be spent without targets. There is no automatic mana regeneration.
+Recall: 25 mana to place a purple rune for 4 seconds; free return on a second cast.
+Blocked destinations use the nearest free tile in the surrounding 3x3 area. If none is free, the rune remains.
+Recall cooldown: 10 seconds after returning or expiry. Trace, Ward and Decoy also start cooldown after their duration.
+Pulse starts cooldown immediately. Other active spells cannot be recast.
+All spells can be spent without targets. Mana regenerates at 2.5 MP per second during gameplay, up to maximum mana.
+
+HUD: last successful cast is centered; side slots retain definition order. Active art reflects only a live effect.
+Pulse is active during its cast flash or while any Pulse projectile/impact remains, independently of its immediate cooldown.
+MP glyphs use top-left (29,31) for small slots and (29,33) for the large slot, above the cooldown mask.
+Recall shows 0MP while its rune is available. Rejected casts flash the mask or MP glyphs without moving slots.
+Changing maps clears old world effects and ends their active timers; cooldowns and last successful cast remain in gameplay state.
+Spell VFX use pixel sparks and occluded colored lights: blue Pulse, red/blue Trace, gold Ward, white Decoy, violet Recall.
 
 Recognition: local Vosk 0.3.45, English and Russian small models, Windows x64.
-Commands: pulse / trace / ward / decoy and their spoken Russian equivalents.
+Commands: pulse / trace / ward / decoy / recall and their spoken Russian equivalents.
 Two models run on a worker thread. Microphone capture uses 16 kHz mono, 30 ms blocks.
 Utterance end silence tuned to 0.20 / 0.35 / 0.60 s, minimum word confidence 0.90.
 Unknown speech is allowed in the grammar and ignored; duplicates are suppressed.
@@ -29,3 +40,4 @@ produces deterministic screenshots without opening the microphone.
 F1 voice debug: separate bounded text box with live EN/RU hypotheses and finished phrases.
 Uses full-vocabulary decoders only while visible; command words are green.
 Old text is removed when the box fills. No transcripts are saved to disk.
+

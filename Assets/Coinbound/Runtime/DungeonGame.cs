@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,7 +10,7 @@ using Debug = UnityEngine.Debug;
 namespace Coinbound
 {
     /// <summary>Front-end navigation, pause state and the runtime generation lifecycle.</summary>
-    public sealed class DungeonGame : MonoBehaviour
+    public sealed partial class DungeonGame : MonoBehaviour
     {
         [Header("Original generator settings (sections of 3 x 3 tiles)")]
         [SerializeField] private int width = 39;
@@ -74,7 +74,7 @@ namespace Coinbound
         public SpawnPlan Spawns { get; private set; }
         public int CurrentSeed { get; private set; }
         public DungeonHero SelectedHero { get; private set; } = DungeonHero.First;
-        public bool IsReady => player != null && !player.IsDead && !generating;
+        public bool IsReady => player != null && !player.IsDead && !generating && !RunCompleted;
 
         private void Awake()
         {
@@ -96,13 +96,16 @@ namespace Coinbound
             screen = new GameObject("Coinbound UI").AddComponent<DungeonScreen>();
             screen.transform.SetParent(transform, false);
             screen.Initialize(ShowHeroSelection, Resume, ShowMenu, CancelGeneration, StartWithHero, ReturnToTitle);
-            screen.ShowMenu(false);
+            screen.ShowMenu(DungeonRunSave.Load()!=null);
             gameplayCursor = gameObject.AddComponent<DungeonCursor>();
             voiceInput = gameObject.AddComponent<DungeonVoiceInput>();
         }
 
         private void Update()
         {
+            if(IsReady&&!menuOpen&&player.CanAct)RunSeconds+=Time.deltaTime;
+            if(Keyboard.current?.f9Key.wasPressedThisFrame==true)DebugTravelFloor(FloorIndex-1);
+            if(Keyboard.current?.f10Key.wasPressedThisFrame==true)DebugTravelFloor(FloorIndex+1);
             if (IsReady && !menuOpen && Keyboard.current != null && Mouse.current != null &&
                 (Keyboard.current.leftCtrlKey.isPressed || Keyboard.current.rightCtrlKey.isPressed))
             {
@@ -116,6 +119,7 @@ namespace Coinbound
                 Gamepad.current?.startButton.wasPressedThisFrame != true &&
                 Gamepad.current?.buttonEast.wasPressedThisFrame != true) return;
             if (screen.HandleBack()) return;
+            if (RunCompleted) return;
             if (generating) CancelGeneration();
             else if (choosingHero) ReturnToTitle();
             else if (menuOpen && IsReady) Resume();
@@ -144,7 +148,7 @@ namespace Coinbound
             menuOpen = true;
             Time.timeScale = 0;
             if (player != null) player.SetInputEnabled(false);
-            screen.ShowHeroSelection(SelectedHero);
+            screen.ShowIntro(SelectedHero);
         }
 
         private void StartWithHero(DungeonHero hero)
@@ -160,7 +164,9 @@ namespace Coinbound
             if (generating) return;
             Time.timeScale = 1;
             ClearDungeon();
+            restoring=null;legacyLayout=false;FloorIndex=0;RunSeconds=0;
             CurrentSeed = randomSeed ? Guid.NewGuid().GetHashCode() : seed;
+            runSeed=CurrentSeed;
             menuOpen = false;
             generating = true;
             screen.ShowLoading(CurrentSeed);
@@ -199,10 +205,10 @@ namespace Coinbound
             player.SetInputEnabled(true);
         }
 
-        private IEnumerator<object> GenerateDungeon()
+        private IEnumerator<object> GenerateFloor(int floorIndex)
         {
             yield return null; // Present the loading screen before doing any work.
-            var generator = new DungeonGenerator(new GenerationSettings(width, height, CurrentSeed,
+            var generator = new DungeonGenerator(new GenerationSettings(FloorSize(floorIndex).x, FloorSize(floorIndex).y, CurrentSeed,
                 LoopChance: loopChance));
             string previousStatus = null;
             var budget = Stopwatch.StartNew();
@@ -210,7 +216,7 @@ namespace Coinbound
             {
                 if (step.Stage == GenerationStage.Complete) break;
                 // Reserve the final 18% for rendering and the separate SpawnPlanner.
-                screen.SetProgress(step.Progress * 0.0082f, step.Status);
+                screen.SetProgress((floorIndex+step.Progress*.0082f)/3f,step.Status);
                 if (step.Status != previousStatus)
                 {
                     previousStatus = step.Status;
@@ -225,16 +231,16 @@ namespace Coinbound
             }
 
             Map = generator.Map;
-            screen.SetProgress(0.82f, "Подготовка тайлов подземелья...");
+            screen.SetProgress((floorIndex+.82f)/3f, "Подготовка тайлов подземелья...");
             yield return null;
             TileSpriteMap tiles = TileSpriteMap.Create(Map, CurrentSeed);
             dungeon = new GameObject("Generated Dungeon").AddComponent<DungeonView>();
             dungeon.transform.SetParent(transform, false);
             using (var render = dungeon.Build(Map, tiles, CurrentSeed, entranceScale, fountainScale, entranceLift,
-                       fraction => screen.SetProgress(0.82f + fraction * 0.1f, "Подготовка тайлов подземелья...")))
+                       fraction => screen.SetProgress((floorIndex + .82f + fraction * .1f)/3f, "Подготовка подземелья..."), floorIndex+1))
                 while (render.MoveNext()) yield return render.Current;
 
-            screen.SetProgress(0.92f, "Планирование спавна врагов и предметов...");
+            screen.SetProgress((floorIndex+.92f)/3f, "Планирование спавна врагов и предметов...");
             yield return new WaitForSecondsRealtime(minimumStatusSeconds);
             // Smaller packs and fewer corridor encounters; keep the original planner unchanged.
             var spawnSettings = new SpawnSettings
@@ -246,7 +252,7 @@ namespace Coinbound
             Spawns = new SpawnPlanner(Map, spawnSettings, CurrentSeed).Generate();
             using (var spawn = dungeon.PlaceSpawns(Spawns))
                 while (spawn.MoveNext()) yield return spawn.Current;
-            screen.SetProgress(0.98f, "Размещение персонажа...");
+            screen.SetProgress((floorIndex+.98f)/3f, "Размещение персонажа...");
             player = dungeon.CreatePlayer(dungeon.FindPlayerSpawn(Map), SelectedHero);
             player.SetInputEnabled(false);
             player.Spells.SetMap(Map);
@@ -254,14 +260,20 @@ namespace Coinbound
             player.Died += OnPlayerDied;
             screen.BindPlayer(player, () => dungeon.AliveEnemyCount);
             gameplayCursor.Bind(player);
-            dungeon.ActivateEnemies(player, Map);
+            DungeonProps.Create(Map,Spawns,player,CurrentSeed,floorIndex+1);
+            dungeon.ActivateEnemies(player, Map,Mathf.Pow(1.2f,floorIndex));
+            var saveEnemies=dungeon.GetComponentsInChildren<DungeonEnemy>();
+            for(int i=0;i<saveEnemies.Length;i++)saveEnemies[i].SaveId=i;
+            foreach(var visual in dungeon.GetComponentsInChildren<SpriteRenderer>())
+                if(visual.name=="object.fountain")visual.gameObject.AddComponent<DungeonFountain>().Initialize(this,screen);
+
             dungeon.AddPlayerLight(Map, player.transform, torchRadius, torchIntensity, torchColor,
                 darknessColor, unlitVisibility, shadowSoftness, wallLightMultiplier, upperWallLightMultiplier, wallLightDepth,
                 landmarkShadowLength, landmarkShadowOpacity, landmarkShadowSoftness);
             dungeon.AddEffectLights(Map, player);
             Physics2D.SyncTransforms();
             foreach (string note in Spawns.Notes) Debug.Log(note);
-            screen.SetProgress(1, "Подземелье готово!");
+            screen.SetProgress((floorIndex+1)/3f, "Подземелье готово");
             yield return new WaitForSecondsRealtime(0.25f);
         }
 
@@ -274,7 +286,7 @@ namespace Coinbound
             if (player != null) player.SetInputEnabled(false);
             if (player != null && player.IsDead) screen.ShowDeath();
             else if (IsReady) screen.ShowPause();
-            else screen.ShowMenu(false);
+            else screen.ShowMenu(DungeonRunSave.Load()!=null);
         }
 
         public void ReturnToTitle()
@@ -284,12 +296,14 @@ namespace Coinbound
             menuOpen = true;
             Time.timeScale = 0;
             if (player != null) player.SetInputEnabled(false);
-            screen.ShowMenu(IsReady);
+            // Leaving the run discards its live state. Only the fountain snapshot can resume.
+            ClearDungeon();
+            screen.ShowMenu(DungeonRunSave.Load()!=null);
         }
 
         public void Resume()
         {
-            if (!IsReady) return;
+            if (!IsReady) { LoadCheckpoint(); return; }
             choosingHero = false;
             menuOpen = false;
             screen.ShowGame(CurrentSeed, Spawns.Enemies.Count, Spawns.Chests.Count);
@@ -333,6 +347,8 @@ namespace Coinbound
             }
             if (gameplayCursor != null) gameplayCursor.Bind(null);
             if (screen != null) screen.BindPlayer(null);
+            foreach(var floor in floors)if(floor!=null&&floor.view!=null&&floor.view!=dungeon){floor.view.gameObject.SetActive(false);Destroy(floor.view.gameObject);}
+            Array.Clear(floors,0,floors.Length);RunCompleted=false;
             if (dungeon != null)
             {
                 dungeon.gameObject.SetActive(false);

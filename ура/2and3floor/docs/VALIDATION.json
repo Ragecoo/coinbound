@@ -1,0 +1,70 @@
+{
+  "revision": 4,
+  "terrain_floor3": {
+    "floor": 3,
+    "version": 4,
+    "core_png_count": 64,
+    "all_47_wall_masks_present": true,
+    "optional_flower_png_count": 15,
+    "distinct_base_wall_shapes_with_flowers": 12,
+    "native_png_32x32": true,
+    "binary_alpha_no_translucent_edge_pixels": true,
+    "point_filter_no_mipmaps_no_compression": true,
+    "existing_wall_pixel_geometry_preserved": true,
+    "original_moss_pixels_preserved": true,
+    "stone_pixels_recolored": 43383,
+    "max_stone_luminance_error": 1.5,
+    "no_blue_hue_in_recolored_stone": true,
+    "floor_and_shared_objects_byte_identical_to_v2": false,
+    "void_matches_wall00_and_new_stone_palette": true,
+    "forge_core_byte_identical_to_v2": true,
+    "flower_variants_outer_2px_and_alpha_match_base": true,
+    "flower_walls_in_preview": 20,
+    "unique_meta_guids_across_both_themes": 143,
+    "existing_guid_values_preserved": true,
+    "not_run": [
+      "Unity import/playtest",
+      "runtime lighting tuning",
+      "runtime FPS profiling"
+    ],
+    "all_12_floor_variants_recolored_to_match_stone": true,
+    "floor_moss_pixels_preserved": true,
+    "all_floor_variant_outer_2px_identical": true,
+    "walls_and_objects_byte_identical_to_v3": true,
+    "new_decor_colliders_all_on_floor_in_preview": true,
+    "runtime_not_tested": true
+  },
+  "decorations": {
+    "all_native_grid_and_binary_alpha": true,
+    "base_sprites_max_24_opaque_colors": true,
+    "all_16_compositions_pixel_exact": true,
+    "all_colliders_inside_native_sprite_bounds": true,
+    "atlas_roundtrip_pixel_exact": true,
+    "new_sprite_meta_count": 80,
+    "pixel_filter_and_no_compression": true,
+    "not_run": [
+      "Unity import/playtest",
+      "runtime destruction",
+      "FPS profiling"
+    ]
+  },
+  "preview_placements": {
+    "2": {
+      "count": 14,
+      "plants": 0,
+      "all_ground_colliders_on_floor": true
+    },
+    "3": {
+      "count": 56,
+      "plants": 43,
+      "all_ground_colliders_on_floor": true
+    }
+  },
+  "full_bundle": {
+    "runtime_png": 223,
+    "unique_meta_guids": 223,
+    "all_runtime_png_present": true,
+    "all_pixel_filter_no_mipmaps_no_compression": true,
+    "standalone_plant_pack_self_contained": true
+  }
+}

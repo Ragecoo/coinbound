@@ -1,0 +1,573 @@
+[
+  {
+    "id": "forge_17",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "forge_02",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "forge_03",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": true
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "forge_18",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "forge_01",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "forge_14",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "forge_19",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "forge_10",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": true
+      },
+      {
+        "index": 1,
+        "asset": "forge_04",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": true
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "forge_20",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "forge_13",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": true
+      },
+      {
+        "index": 1,
+        "asset": "forge_06",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "crypt_17",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "crypt_01",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "crypt_06",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "crypt_18",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "crypt_03",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": true
+      },
+      {
+        "index": 1,
+        "asset": "crypt_03",
+        "offset_px_top_left": [
+          28,
+          0
+        ],
+        "own_health": true
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "crypt_19",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "crypt_09",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": true
+      },
+      {
+        "index": 1,
+        "asset": "crypt_08",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "crypt_20",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "crypt_10",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": true
+      },
+      {
+        "index": 1,
+        "asset": "crypt_05",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_33",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_03",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_04",
+        "offset_px_top_left": [
+          26,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_34",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_10",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_12",
+        "offset_px_top_left": [
+          26,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_35",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_17",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_18",
+        "offset_px_top_left": [
+          26,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_36",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_19",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_20",
+        "offset_px_top_left": [
+          26,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_37",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_14",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_24",
+        "offset_px_top_left": [
+          26,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_38",
+    "canvas": [
+      64,
+      32
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_01",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_03",
+        "offset_px_top_left": [
+          18,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 2,
+        "asset": "plants_17",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_39",
+    "canvas": [
+      64,
+      64
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_16",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_14",
+        "offset_px_top_left": [
+          0,
+          24
+        ],
+        "own_health": false
+      },
+      {
+        "index": 2,
+        "asset": "plants_17",
+        "offset_px_top_left": [
+          24,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  },
+  {
+    "id": "plants_40",
+    "canvas": [
+      64,
+      64
+    ],
+    "components": [
+      {
+        "index": 0,
+        "asset": "plants_18",
+        "offset_px_top_left": [
+          0,
+          0
+        ],
+        "own_health": false
+      },
+      {
+        "index": 1,
+        "asset": "plants_10",
+        "offset_px_top_left": [
+          32,
+          24
+        ],
+        "own_health": false
+      },
+      {
+        "index": 2,
+        "asset": "plants_30",
+        "offset_px_top_left": [
+          32,
+          0
+        ],
+        "own_health": false
+      }
+    ],
+    "operations": [
+      "integer translation",
+      "source RGBA alpha composition"
+    ],
+    "resize": false,
+    "redraw": false,
+    "recolor": false
+  }
+]

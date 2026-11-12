@@ -1,0 +1,1956 @@
+[
+  {
+    "name": "sword-swing",
+    "use": "Взмах меча",
+    "category": "Действия",
+    "duration": 0.844,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "knifeSlice2",
+      "beltHandle2"
+    ]
+  },
+  {
+    "name": "enemy-hit",
+    "use": "Попадание по врагу",
+    "category": "Действия",
+    "duration": 1.084,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "player-hurt",
+    "use": "Получение урона",
+    "category": "Действия",
+    "duration": 1.077,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "enemy-death",
+    "use": "Смерть монстра",
+    "category": "Действия",
+    "duration": 1.597,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "chest-open",
+    "use": "Открытие деревянного сундука",
+    "category": "Действия",
+    "duration": 1.455,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak2",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "loot-gold",
+    "use": "Подбор золота",
+    "category": "Действия",
+    "duration": 0.885,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleCoins2",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "potion-drink",
+    "use": "Питьё лечебного зелья",
+    "category": "Действия",
+    "duration": 1.982,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather2"
+    ]
+  },
+  {
+    "name": "trap-spikes",
+    "use": "Срабатывание шипов",
+    "category": "Действия",
+    "duration": 1.146,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot1",
+      "metalLatch",
+      "metalLatch",
+      "drawKnife3",
+      "metalPot3"
+    ]
+  },
+  {
+    "name": "stairs-descend",
+    "use": "Переход на следующий этаж",
+    "category": "Действия",
+    "duration": 2.07,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "footstep00",
+      "footstep01",
+      "footstep02",
+      "footstep03",
+      "footstep04"
+    ]
+  },
+  {
+    "name": "level-up",
+    "use": "Повышение уровня",
+    "category": "Действия",
+    "duration": 2.564,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather"
+    ]
+  },
+  {
+    "name": "death-sting",
+    "use": "Экран поражения",
+    "category": "Действия",
+    "duration": 2.842,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather"
+    ]
+  },
+  {
+    "name": "spell-pulse-cast",
+    "use": "PULSE: применение",
+    "category": "Заклинания",
+    "duration": 0.931,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "cloth2",
+      "chop"
+    ]
+  },
+  {
+    "name": "spell-pulse-travel",
+    "use": "PULSE: полёт",
+    "category": "Заклинания",
+    "duration": 0.915,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "cloth2",
+      "chop"
+    ]
+  },
+  {
+    "name": "spell-pulse-impact",
+    "use": "PULSE: попадание",
+    "category": "Заклинания",
+    "duration": 0.936,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "cloth2",
+      "chop"
+    ]
+  },
+  {
+    "name": "spell-trace-cast",
+    "use": "TRACE: применение",
+    "category": "Заклинания",
+    "duration": 1.245,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "spell-trace-reveal",
+    "use": "TRACE: обнаружение пути",
+    "category": "Заклинания",
+    "duration": 1.238,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookFlip2",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "spell-trace-expire",
+    "use": "TRACE: окончание действия",
+    "category": "Заклинания",
+    "duration": 1.231,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "spell-ward-cast",
+    "use": "WARD: применение",
+    "category": "Заклинания",
+    "duration": 1.829,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "spell-ward-absorb",
+    "use": "WARD: поглощение удара",
+    "category": "Заклинания",
+    "duration": 1.875,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "spell-ward-repel",
+    "use": "WARD: отталкивание",
+    "category": "Заклинания",
+    "duration": 1.818,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot2",
+      "knifeSlice",
+      "chop"
+    ]
+  },
+  {
+    "name": "spell-ward-expire",
+    "use": "WARD: окончание действия",
+    "category": "Заклинания",
+    "duration": 1.815,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "spell-decoy-cast",
+    "use": "DECOY: применение",
+    "category": "Заклинания",
+    "duration": 1.472,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt",
+      "creak3"
+    ]
+  },
+  {
+    "name": "spell-decoy-spawn",
+    "use": "DECOY: появление приманки",
+    "category": "Заклинания",
+    "duration": 1.42,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt",
+      "creak3",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "spell-decoy-lure",
+    "use": "DECOY: привлечение врага",
+    "category": "Заклинания",
+    "duration": 1.469,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt",
+      "creak3"
+    ]
+  },
+  {
+    "name": "spell-decoy-destroy",
+    "use": "DECOY: разрушение приманки",
+    "category": "Заклинания",
+    "duration": 1.522,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt",
+      "creak3",
+      "knifeSlice",
+      "chop"
+    ]
+  },
+  {
+    "name": "spell-decoy-expire",
+    "use": "DECOY: окончание действия",
+    "category": "Заклинания",
+    "duration": 1.423,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt",
+      "creak3"
+    ]
+  },
+  {
+    "name": "spell-recall-anchor",
+    "use": "RECALL: установка якоря",
+    "category": "Заклинания",
+    "duration": 2.006,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot3 reversed",
+      "cloth1",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "spell-recall-ready",
+    "use": "RECALL: якорь готов",
+    "category": "Заклинания",
+    "duration": 2.088,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot3 reversed",
+      "cloth1"
+    ]
+  },
+  {
+    "name": "spell-recall-return",
+    "use": "RECALL: возвращение",
+    "category": "Заклинания",
+    "duration": 1.95,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot3 reversed",
+      "cloth1",
+      "knifeSlice",
+      "chop"
+    ]
+  },
+  {
+    "name": "spell-recall-expire",
+    "use": "RECALL: окончание действия",
+    "category": "Заклинания",
+    "duration": 1.97,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot3 reversed",
+      "cloth1"
+    ]
+  },
+  {
+    "name": "ui-hover",
+    "use": "Наведение",
+    "category": "Интерфейс",
+    "duration": 0.66,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "ui-click",
+    "use": "Нажатие кнопки",
+    "category": "Интерфейс",
+    "duration": 0.859,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-confirm",
+    "use": "Подтверждение",
+    "category": "Интерфейс",
+    "duration": 0.804,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-back",
+    "use": "Назад",
+    "category": "Интерфейс",
+    "duration": 0.777,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-open",
+    "use": "Открытие панели",
+    "category": "Интерфейс",
+    "duration": 0.593,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookOpen"
+    ]
+  },
+  {
+    "name": "ui-close",
+    "use": "Закрытие панели",
+    "category": "Интерфейс",
+    "duration": 0.698,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookClose"
+    ]
+  },
+  {
+    "name": "ui-tab",
+    "use": "Смена вкладки",
+    "category": "Интерфейс",
+    "duration": 0.67,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookFlip3"
+    ]
+  },
+  {
+    "name": "ui-toggle-on",
+    "use": "Включение настройки",
+    "category": "Интерфейс",
+    "duration": 0.665,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "ui-toggle-off",
+    "use": "Выключение настройки",
+    "category": "Интерфейс",
+    "duration": 0.644,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "ui-slider",
+    "use": "Изменение громкости",
+    "category": "Интерфейс",
+    "duration": 0.836,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-pause",
+    "use": "Пауза",
+    "category": "Интерфейс",
+    "duration": 0.83,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-resume",
+    "use": "Продолжение",
+    "category": "Интерфейс",
+    "duration": 0.781,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-error",
+    "use": "Недоступное действие",
+    "category": "Интерфейс",
+    "duration": 0.767,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-save",
+    "use": "Сохранение",
+    "category": "Интерфейс",
+    "duration": 0.858,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-load",
+    "use": "Загрузка",
+    "category": "Интерфейс",
+    "duration": 0.819,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-start",
+    "use": "Начало забега",
+    "category": "Интерфейс",
+    "duration": 0.78,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick"
+    ]
+  },
+  {
+    "name": "ui-inventory",
+    "use": "Инвентарь",
+    "category": "Интерфейс",
+    "duration": 0.631,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookFlip3"
+    ]
+  },
+  {
+    "name": "ui-relic-select",
+    "use": "Выбор реликвии",
+    "category": "Интерфейс",
+    "duration": 0.696,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "bookFlip3"
+    ]
+  },
+  {
+    "name": "critical-hit",
+    "use": "Критический удар",
+    "category": "Бой",
+    "duration": 0.924,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "shield-block",
+    "use": "Блок щитом",
+    "category": "Бой",
+    "duration": 1.914,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot1",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "shield-parry",
+    "use": "Парирование",
+    "category": "Бой",
+    "duration": 1.717,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot1",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "shield-break",
+    "use": "Пробитие защиты",
+    "category": "Бой",
+    "duration": 2.275,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot1",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "wall-hit",
+    "use": "Удар в стену",
+    "category": "Бой",
+    "duration": 0.937,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "bow-release",
+    "use": "Выстрел из лука",
+    "category": "Бой",
+    "duration": 0.864,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "drawKnife2",
+      "beltHandle2"
+    ]
+  },
+  {
+    "name": "arrow-impact",
+    "use": "Попадание стрелы",
+    "category": "Бой",
+    "duration": 1.636,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot1",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "arrow-wall",
+    "use": "Стрела в стене",
+    "category": "Бой",
+    "duration": 2.408,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalPot1",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "player-land",
+    "use": "Приземление",
+    "category": "Бой",
+    "duration": 0.921,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "stun",
+    "use": "Оглушение",
+    "category": "Бой",
+    "duration": 0.927,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "player-roll",
+    "use": "Перекат",
+    "category": "Действия",
+    "duration": 0.855,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "cloth4",
+      "beltHandle2"
+    ]
+  },
+  {
+    "name": "bow-draw",
+    "use": "Натяжение тетивы",
+    "category": "Действия",
+    "duration": 0.886,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "drawKnife2",
+      "beltHandle2"
+    ]
+  },
+  {
+    "name": "arrow-fly",
+    "use": "Пролёт стрелы",
+    "category": "Действия",
+    "duration": 0.86,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "drawKnife2",
+      "beltHandle2"
+    ]
+  },
+  {
+    "name": "weapon-equip",
+    "use": "Смена оружия",
+    "category": "Действия",
+    "duration": 0.851,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "drawKnife2",
+      "beltHandle2"
+    ]
+  },
+  {
+    "name": "spell-cooldown",
+    "use": "Заклинание перезаряжается",
+    "category": "Сигналы",
+    "duration": 0.692,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "spell-no-mana",
+    "use": "Недостаточно маны",
+    "category": "Сигналы",
+    "duration": 0.752,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "spell-unavailable",
+    "use": "Заклинание недоступно",
+    "category": "Сигналы",
+    "duration": 0.864,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "spell-no-space",
+    "use": "Нет места для возврата",
+    "category": "Сигналы",
+    "duration": 0.691,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "spell-ready",
+    "use": "Перезарядка завершена",
+    "category": "Сигналы",
+    "duration": 0.749,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "health-low",
+    "use": "Мало здоровья",
+    "category": "Сигналы",
+    "duration": 0.855,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "mana-low",
+    "use": "Мало маны",
+    "category": "Сигналы",
+    "duration": 0.695,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "voice-listen",
+    "use": "Начало голосового ввода",
+    "category": "Сигналы",
+    "duration": 0.742,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "voice-recognized",
+    "use": "Команда распознана",
+    "category": "Сигналы",
+    "duration": 0.834,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "voice-failed",
+    "use": "Команда не распознана",
+    "category": "Сигналы",
+    "duration": 0.702,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "gesture-recognized",
+    "use": "Жест распознан",
+    "category": "Сигналы",
+    "duration": 0.747,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalClick",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "door-open",
+    "use": "Открытие двери",
+    "category": "Мир",
+    "duration": 1.849,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "doorOpen_2",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "door-close",
+    "use": "Закрытие двери",
+    "category": "Мир",
+    "duration": 1.253,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "doorClose_2",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "chest-locked",
+    "use": "Закрытый сундук",
+    "category": "Мир",
+    "duration": 0.987,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak2",
+      "metalLatch",
+      "metalLatch",
+      "beltHandle1"
+    ]
+  },
+  {
+    "name": "crate-break",
+    "use": "Разрушение ящика",
+    "category": "Мир",
+    "duration": 1.036,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "doorOpen_2",
+      "metalLatch",
+      "chop",
+      "creak3",
+      "bookPlace3"
+    ]
+  },
+  {
+    "name": "stone-shift",
+    "use": "Движение камня",
+    "category": "Мир",
+    "duration": 2.311,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "doorOpen_2",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "coin-flip",
+    "use": "Бросок монеты судьбы",
+    "category": "Награды",
+    "duration": 1.255,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleCoins",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "coin-land",
+    "use": "Падение монеты",
+    "category": "Награды",
+    "duration": 1.126,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleCoins",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "coin-heads",
+    "use": "Благоприятный исход",
+    "category": "Награды",
+    "duration": 1.295,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleCoins",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "coin-tails",
+    "use": "Неблагоприятный исход",
+    "category": "Награды",
+    "duration": 1.246,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleCoins",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "loot-relic",
+    "use": "Получение реликвии",
+    "category": "Награды",
+    "duration": 0.888,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "loot-potion",
+    "use": "Подбор зелья",
+    "category": "Награды",
+    "duration": 1.174,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather2"
+    ]
+  },
+  {
+    "name": "loot-key",
+    "use": "Подбор ключа",
+    "category": "Награды",
+    "duration": 1.185,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleCoins",
+      "metalClick"
+    ]
+  },
+  {
+    "name": "chest-reveal",
+    "use": "Появление награды",
+    "category": "Награды",
+    "duration": 1.349,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak2",
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "floor-clear",
+    "use": "Этаж пройден",
+    "category": "Переходы",
+    "duration": 2.398,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather"
+    ]
+  },
+  {
+    "name": "victory",
+    "use": "Победа",
+    "category": "Переходы",
+    "duration": 2.598,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather"
+    ]
+  },
+  {
+    "name": "run-start",
+    "use": "Вход в подземелье",
+    "category": "Переходы",
+    "duration": 2.389,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather"
+    ]
+  },
+  {
+    "name": "checkpoint",
+    "use": "Контрольная точка",
+    "category": "Переходы",
+    "duration": 2.453,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather"
+    ]
+  },
+  {
+    "name": "warden-alert",
+    "use": "warden: заметил игрока",
+    "category": "Враги",
+    "duration": 0.867,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "warden-windup",
+    "use": "warden: подготовка атаки",
+    "category": "Враги",
+    "duration": 0.987,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "drawKnife1"
+    ]
+  },
+  {
+    "name": "warden-attack",
+    "use": "warden: атака",
+    "category": "Враги",
+    "duration": 1.064,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "warden-hit",
+    "use": "warden: ранение",
+    "category": "Враги",
+    "duration": 1.057,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "warden-death",
+    "use": "warden: смерть",
+    "category": "Враги",
+    "duration": 1.595,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "arbalist-alert",
+    "use": "arbalist: заметил игрока",
+    "category": "Враги",
+    "duration": 0.851,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "arbalist-windup",
+    "use": "arbalist: подготовка атаки",
+    "category": "Враги",
+    "duration": 1.013,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "drawKnife1"
+    ]
+  },
+  {
+    "name": "arbalist-attack",
+    "use": "arbalist: атака",
+    "category": "Враги",
+    "duration": 1.078,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "arbalist-hit",
+    "use": "arbalist: ранение",
+    "category": "Враги",
+    "duration": 1.081,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "arbalist-death",
+    "use": "arbalist: смерть",
+    "category": "Враги",
+    "duration": 1.55,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "cultist-alert",
+    "use": "cultist: заметил игрока",
+    "category": "Враги",
+    "duration": 0.879,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "cultist-windup",
+    "use": "cultist: подготовка атаки",
+    "category": "Враги",
+    "duration": 1.375,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "cultist-attack",
+    "use": "cultist: атака",
+    "category": "Враги",
+    "duration": 1.079,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "cultist-hit",
+    "use": "cultist: ранение",
+    "category": "Враги",
+    "duration": 1.061,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "cultist-death",
+    "use": "cultist: смерть",
+    "category": "Враги",
+    "duration": 1.755,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "ghoul-alert",
+    "use": "ghoul: заметил игрока",
+    "category": "Враги",
+    "duration": 0.853,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "ghoul-windup",
+    "use": "ghoul: подготовка атаки",
+    "category": "Враги",
+    "duration": 1.384,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "ghoul-attack",
+    "use": "ghoul: атака",
+    "category": "Враги",
+    "duration": 1.033,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "ghoul-hit",
+    "use": "ghoul: ранение",
+    "category": "Враги",
+    "duration": 1.045,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "chop",
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "ghoul-death",
+    "use": "ghoul: смерть",
+    "category": "Враги",
+    "duration": 1.995,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "creak1"
+    ]
+  },
+  {
+    "name": "footstep-stone-01",
+    "use": "Шаги: stone, вариант 1",
+    "category": "Шаги",
+    "duration": 0.795,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep01"
+    ]
+  },
+  {
+    "name": "footstep-stone-02",
+    "use": "Шаги: stone, вариант 2",
+    "category": "Шаги",
+    "duration": 0.767,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep02"
+    ]
+  },
+  {
+    "name": "footstep-stone-03",
+    "use": "Шаги: stone, вариант 3",
+    "category": "Шаги",
+    "duration": 0.778,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep03"
+    ]
+  },
+  {
+    "name": "footstep-stone-04",
+    "use": "Шаги: stone, вариант 4",
+    "category": "Шаги",
+    "duration": 0.81,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep04"
+    ]
+  },
+  {
+    "name": "footstep-wet-01",
+    "use": "Шаги: wet, вариант 1",
+    "category": "Шаги",
+    "duration": 0.8,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep05"
+    ]
+  },
+  {
+    "name": "footstep-wet-02",
+    "use": "Шаги: wet, вариант 2",
+    "category": "Шаги",
+    "duration": 0.765,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep06"
+    ]
+  },
+  {
+    "name": "footstep-wet-03",
+    "use": "Шаги: wet, вариант 3",
+    "category": "Шаги",
+    "duration": 0.756,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep07"
+    ]
+  },
+  {
+    "name": "footstep-wet-04",
+    "use": "Шаги: wet, вариант 4",
+    "category": "Шаги",
+    "duration": 0.743,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep08"
+    ]
+  },
+  {
+    "name": "footstep-gravel-01",
+    "use": "Шаги: gravel, вариант 1",
+    "category": "Шаги",
+    "duration": 1.172,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep01",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "footstep-gravel-02",
+    "use": "Шаги: gravel, вариант 2",
+    "category": "Шаги",
+    "duration": 1.155,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep02",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "footstep-gravel-03",
+    "use": "Шаги: gravel, вариант 3",
+    "category": "Шаги",
+    "duration": 1.134,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep03",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "footstep-gravel-04",
+    "use": "Шаги: gravel, вариант 4",
+    "category": "Шаги",
+    "duration": 1.144,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "footstep04",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "ambient-event-1",
+    "use": "Далёкая капля",
+    "category": "Атмосфера",
+    "duration": 1.12,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather2"
+    ]
+  },
+  {
+    "name": "ambient-event-2",
+    "use": "Камешек в темноте",
+    "category": "Атмосфера",
+    "duration": 1.121,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "clothBelt2"
+    ]
+  },
+  {
+    "name": "ambient-event-3",
+    "use": "Далёкий стон",
+    "category": "Атмосфера",
+    "duration": 0.855,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "metalLatch"
+    ]
+  },
+  {
+    "name": "ambient-event-4",
+    "use": "Порыв сквозняка",
+    "category": "Атмосфера",
+    "duration": 0.945,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "dropLeather"
+    ]
+  },
+  {
+    "name": "relic-01_amber_heart",
+    "use": "Получение реликвии: Янтарное сердце",
+    "category": "Реликвии",
+    "duration": 1.509,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-02_saints_tooth",
+    "use": "Получение реликвии: Зуб святого",
+    "category": "Реликвии",
+    "duration": 1.778,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "relic-03_execution_ash",
+    "use": "Получение реликвии: Пепел казни",
+    "category": "Реликвии",
+    "duration": 1.71,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "relic-04_night_owl_feather",
+    "use": "Получение реликвии: Перо ночной совы",
+    "category": "Реликвии",
+    "duration": 1.261,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "relic-05_hangmans_knot",
+    "use": "Получение реликвии: Узел палача",
+    "category": "Реликвии",
+    "duration": 1.755,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "relic-06_martyrs_eye",
+    "use": "Получение реликвии: Око мученика",
+    "category": "Реликвии",
+    "duration": 1.573,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-07_blind_kings_coin",
+    "use": "Получение реликвии: Монета слепого короля",
+    "category": "Реликвии",
+    "duration": 1.911,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "relic-08_wax_doll",
+    "use": "Получение реликвии: Восковая кукла",
+    "category": "Реликвии",
+    "duration": 1.483,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "relic-09_black_bile",
+    "use": "Получение реликвии: Чёрная желчь",
+    "category": "Реликвии",
+    "duration": 1.409,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "relic-10_stone_tomb_seal",
+    "use": "Получение реликвии: Печать каменной гробницы",
+    "category": "Реликвии",
+    "duration": 1.673,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "relic-11_dead_mans_hourglass",
+    "use": "Получение реликвии: Песочные часы мертвеца",
+    "category": "Реликвии",
+    "duration": 2.03,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-12_tongueless_bell",
+    "use": "Получение реликвии: Безъязыкий колокол",
+    "category": "Реликвии",
+    "duration": 1.21,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "relic-13_ark_of_the_unborn",
+    "use": "Получение реликвии: Ковчег нерождённого",
+    "category": "Реликвии",
+    "duration": 1.419,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "relic-14_amber_beast_fang",
+    "use": "Получение реликвии: Клык янтарного зверя",
+    "category": "Реликвии",
+    "duration": 1.723,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "relic-15_fever_rosary",
+    "use": "Получение реликвии: Чётки лихорадки",
+    "category": "Реликвии",
+    "duration": 1.665,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "relic-16_fugitive_dead_brand",
+    "use": "Получение реликвии: Клеймо беглого мертвеца",
+    "category": "Реликвии",
+    "duration": 1.22,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-17_golden_thread_idol",
+    "use": "Получение реликвии: Идол золотой нити",
+    "category": "Реликвии",
+    "duration": 1.551,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "relic-18_bone_dust_vessel",
+    "use": "Получение реликвии: Сосуд костяной пыли",
+    "category": "Реликвии",
+    "duration": 1.503,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "relic-19_stone_giants_tear",
+    "use": "Получение реликвии: Слеза каменного великана",
+    "category": "Реликвии",
+    "duration": 1.889,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "relic-20_ancient_gods_heart",
+    "use": "Получение реликвии: Сердце древнего бога",
+    "category": "Реликвии",
+    "duration": 1.41,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "relic-21_eye_of_eternal_night",
+    "use": "Получение реликвии: Око вечной ночи",
+    "category": "Реликвии",
+    "duration": 1.349,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-22_empty_cradle",
+    "use": "Получение реликвии: Пустая колыбель",
+    "category": "Реликвии",
+    "duration": 1.653,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "relic-23_seal_of_rot",
+    "use": "Получение реликвии: Печать гниения",
+    "category": "Реликвии",
+    "duration": 2.008,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "relic-24_grey_ash",
+    "use": "Получение реликвии: Серый прах",
+    "category": "Реликвии",
+    "duration": 1.148,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "relic-25_lead_anchor",
+    "use": "Получение реликвии: Свинцовый якорь",
+    "category": "Реликвии",
+    "duration": 1.499,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "relic-26_dead_sinew_knot",
+    "use": "Получение реликвии: Узел мёртвых жил",
+    "category": "Реликвии",
+    "duration": 1.803,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-27_blind_mirror_shard",
+    "use": "Получение реликвии: Осколок слепого зеркала",
+    "category": "Реликвии",
+    "duration": 1.791,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "relic-28_debtors_coin",
+    "use": "Получение реликвии: Монета должника",
+    "category": "Реликвии",
+    "duration": 1.258,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "clothBelt"
+    ]
+  },
+  {
+    "name": "relic-29_bloody_wick",
+    "use": "Получение реликвии: Кровавый фитиль",
+    "category": "Реликвии",
+    "duration": 1.572,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "bookFlip2"
+    ]
+  },
+  {
+    "name": "relic-30_fading_clock",
+    "use": "Получение реликвии: Часы угасания",
+    "category": "Реликвии",
+    "duration": 1.597,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "metalPot2"
+    ]
+  },
+  {
+    "name": "relic-31_second_death_shroud",
+    "use": "Получение реликвии: Саван второй смерти",
+    "category": "Реликвии",
+    "duration": 1.948,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "handleCoins2"
+    ]
+  },
+  {
+    "name": "relic-32_abyss_icon",
+    "use": "Получение реликвии: Икона бездны",
+    "category": "Реликвии",
+    "duration": 1.365,
+    "loop": false,
+    "channels": 1,
+    "sources": [
+      "handleSmallLeather",
+      "creak3"
+    ]
+  },
+  {
+    "name": "dungeon-floor-1-ambient",
+    "use": "Этаж 1: Холодные каменные залы",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "dungeon-floor-2-ambient",
+    "use": "Этаж 2: Сырые катакомбы",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "dungeon-floor-3-ambient",
+    "use": "Этаж 3: Глубокое святилище",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "ambient-torch",
+    "use": "Дополнительная атмосфера: torch",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "ambient-water",
+    "use": "Дополнительная атмосфера: water",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "ambient-wind",
+    "use": "Дополнительная атмосфера: wind",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "ambient-menu",
+    "use": "Дополнительная атмосфера: menu",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  },
+  {
+    "name": "ambient-deep-floor",
+    "use": "Дополнительная атмосфера: deep-floor",
+    "category": "Атмосфера",
+    "loop": true,
+    "duration": 48.0,
+    "channels": 2,
+    "sources": [
+      "Kenney distant textures",
+      "original layered stereo ambience"
+    ]
+  }
+]

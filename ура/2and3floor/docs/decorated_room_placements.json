@@ -1,0 +1,654 @@
+{
+  "2": {
+    "objects": [
+      {
+        "asset": "forge_17",
+        "origin_px_top_left": [
+          120,
+          90
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_05",
+        "origin_px_top_left": [
+          238,
+          84
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_20",
+        "origin_px_top_left": [
+          344,
+          90
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_18",
+        "origin_px_top_left": [
+          224,
+          26
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_19",
+        "origin_px_top_left": [
+          176,
+          387
+        ],
+        "wall": "S",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_09",
+        "origin_px_top_left": [
+          58,
+          212
+        ],
+        "wall": "W",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_07",
+        "origin_px_top_left": [
+          60,
+          302
+        ],
+        "wall": "W",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_06",
+        "origin_px_top_left": [
+          421,
+          338
+        ],
+        "wall": "E",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_12",
+        "origin_px_top_left": [
+          61,
+          389
+        ],
+        "wall": "SW",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_10",
+        "origin_px_top_left": [
+          608,
+          155
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_04",
+        "origin_px_top_left": [
+          689,
+          151
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "forge_11",
+        "origin_px_top_left": [
+          690,
+          356
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "forge_14",
+        "origin_px_top_left": [
+          58,
+          144
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "forge_08",
+        "origin_px_top_left": [
+          572,
+          262
+        ],
+        "wall": "W",
+        "layer": "feet_sorted"
+      }
+    ],
+    "count": 14,
+    "plants": 0,
+    "all_ground_colliders_on_floor": true
+  },
+  "3": {
+    "objects": [
+      {
+        "asset": "crypt_17",
+        "origin_px_top_left": [
+          102,
+          91
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_03",
+        "origin_px_top_left": [
+          216,
+          90
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_20",
+        "origin_px_top_left": [
+          344,
+          92
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_11",
+        "origin_px_top_left": [
+          610,
+          156
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_19",
+        "origin_px_top_left": [
+          224,
+          29
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_18",
+        "origin_px_top_left": [
+          338,
+          386
+        ],
+        "wall": "S",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_07",
+        "origin_px_top_left": [
+          60,
+          211
+        ],
+        "wall": "W",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_04",
+        "origin_px_top_left": [
+          61,
+          272
+        ],
+        "wall": "W",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_08",
+        "origin_px_top_left": [
+          421,
+          338
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "crypt_12",
+        "origin_px_top_left": [
+          419,
+          387
+        ],
+        "wall": "SE",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_02",
+        "origin_px_top_left": [
+          671,
+          156
+        ],
+        "wall": "N",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_05",
+        "origin_px_top_left": [
+          708,
+          264
+        ],
+        "wall": "E",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "crypt_14",
+        "origin_px_top_left": [
+          688,
+          357
+        ],
+        "wall": "S",
+        "layer": "feet_sorted"
+      },
+      {
+        "asset": "plants_39",
+        "origin_px_top_left": [
+          63,
+          94
+        ],
+        "wall": "NW",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_40",
+        "origin_px_top_left": [
+          675,
+          157
+        ],
+        "wall": "NE",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_35",
+        "origin_px_top_left": [
+          233,
+          389
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_33",
+        "origin_px_top_left": [
+          60,
+          338
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_34",
+        "origin_px_top_left": [
+          392,
+          154
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_37",
+        "origin_px_top_left": [
+          573,
+          324
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_23",
+        "origin_px_top_left": [
+          60,
+          159
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_24",
+        "origin_px_top_left": [
+          63,
+          384
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_01",
+        "origin_px_top_left": [
+          96,
+          392
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_20",
+        "origin_px_top_left": [
+          129,
+          388
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_20",
+        "origin_px_top_left": [
+          161,
+          388
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_13",
+        "origin_px_top_left": [
+          192,
+          26
+        ],
+        "wall": "N",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_22",
+        "origin_px_top_left": [
+          190,
+          64
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_12",
+        "origin_px_top_left": [
+          194,
+          226
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_11",
+        "origin_px_top_left": [
+          224,
+          199
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_06",
+        "origin_px_top_left": [
+          224,
+          249
+        ],
+        "wall": "N",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_03",
+        "origin_px_top_left": [
+          252,
+          223
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_22",
+        "origin_px_top_left": [
+          291,
+          32
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_05",
+        "origin_px_top_left": [
+          292,
+          64
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_15",
+        "origin_px_top_left": [
+          293,
+          288
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_13",
+        "origin_px_top_left": [
+          291,
+          320
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_01",
+        "origin_px_top_left": [
+          288,
+          392
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_04",
+        "origin_px_top_left": [
+          321,
+          260
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_11",
+        "origin_px_top_left": [
+          320,
+          347
+        ],
+        "wall": "N",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_18",
+        "origin_px_top_left": [
+          352,
+          261
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_24",
+        "origin_px_top_left": [
+          354,
+          347
+        ],
+        "wall": "N",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_17",
+        "origin_px_top_left": [
+          377,
+          318
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_09",
+        "origin_px_top_left": [
+          420,
+          194
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_19",
+        "origin_px_top_left": [
+          449,
+          217
+        ],
+        "wall": "N",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_19",
+        "origin_px_top_left": [
+          513,
+          293
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_21",
+        "origin_px_top_left": [
+          573,
+          352
+        ],
+        "wall": "W",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_18",
+        "origin_px_top_left": [
+          608,
+          357
+        ],
+        "wall": "S",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_21",
+        "origin_px_top_left": [
+          640,
+          154
+        ],
+        "wall": "N",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_11",
+        "origin_px_top_left": [
+          707,
+          225
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_14",
+        "origin_px_top_left": [
+          708,
+          320
+        ],
+        "wall": "E",
+        "layer": "ground_detail"
+      },
+      {
+        "asset": "plants_26",
+        "origin_px_top_left": [
+          96,
+          64
+        ],
+        "wall": "N",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.04"
+      },
+      {
+        "asset": "plants_28",
+        "origin_px_top_left": [
+          448,
+          128
+        ],
+        "wall": "E",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.08"
+      },
+      {
+        "asset": "plants_26",
+        "origin_px_top_left": [
+          608,
+          128
+        ],
+        "wall": "N",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.04"
+      },
+      {
+        "asset": "plants_27",
+        "origin_px_top_left": [
+          32,
+          160
+        ],
+        "wall": "W",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.02"
+      },
+      {
+        "asset": "plants_27",
+        "origin_px_top_left": [
+          544,
+          160
+        ],
+        "wall": "W",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.02"
+      },
+      {
+        "asset": "plants_27",
+        "origin_px_top_left": [
+          32,
+          192
+        ],
+        "wall": "W",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.02"
+      },
+      {
+        "asset": "plants_26",
+        "origin_px_top_left": [
+          224,
+          224
+        ],
+        "wall": "N",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.0F"
+      },
+      {
+        "asset": "plants_27",
+        "origin_px_top_left": [
+          544,
+          352
+        ],
+        "wall": "W",
+        "layer": "wall_overlay",
+        "wall_mask": "wall.02"
+      }
+    ],
+    "count": 56,
+    "plants": 43,
+    "all_ground_colliders_on_floor": true
+  }
+}

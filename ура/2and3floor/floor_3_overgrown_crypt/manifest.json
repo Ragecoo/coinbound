@@ -1,0 +1,1289 @@
+{
+  "test_version": 4,
+  "floor_number": 3,
+  "theme": "Этаж 3 · Заросший склеп",
+  "resource_folder": "DungeonArt_Floor3",
+  "counts": {
+    "all_png": 64,
+    "wall_masks": 47,
+    "floor_variants": 12,
+    "void": 1,
+    "shared_landmarks": 4,
+    "optional_flowering_walls": 15,
+    "all_png_with_optional": 79
+  },
+  "game_tile_pixels": 32,
+  "small_pavers_per_game_tile": [
+    2,
+    2
+  ],
+  "geometry": "original wall masks and structural joins retained",
+  "source": "original DungeonArt PNGs; user-approved forge and overgrown-crypt themes",
+  "sprites": [
+    {
+      "id": "background.void",
+      "file": "DungeonArt_Floor3/background.void.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "fb20a6f5e1f815d93b648069fb8ac1dd452c3534cc86a737fa502a24b032e469"
+    },
+    {
+      "id": "floor.corridor.0",
+      "file": "DungeonArt_Floor3/floor.corridor.0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "5f16765b6a337ef0133054472fdfe2145273eeb9fad2bc2a91905323f6eef176"
+    },
+    {
+      "id": "floor.corridor.1",
+      "file": "DungeonArt_Floor3/floor.corridor.1.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "ea582409bde558ca6fa9ae879c9dce2ad81784aed8ed81c3bfc47b394ccc39d5"
+    },
+    {
+      "id": "floor.corridor.2",
+      "file": "DungeonArt_Floor3/floor.corridor.2.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "804b82f8174b00e2a8358aac0ffc58157c9341a08660269b19607d2af9c358ef"
+    },
+    {
+      "id": "floor.extra.0",
+      "file": "DungeonArt_Floor3/floor.extra.0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "9c0bf0c75ca59fe8659dab4239f1c02deaefa2c1aeaedb95a935d3673b0fc5e9"
+    },
+    {
+      "id": "floor.extra.1",
+      "file": "DungeonArt_Floor3/floor.extra.1.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "29d82d489bfb463086ba72acf58967cd246a808ac19e1763f4c33ccccc523a4b"
+    },
+    {
+      "id": "floor.extra.2",
+      "file": "DungeonArt_Floor3/floor.extra.2.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "7c8b96f3dfea9253e1e2c9f7b19dd48462d52fcfea396bcb05f7fb116206de60"
+    },
+    {
+      "id": "floor.extra.3",
+      "file": "DungeonArt_Floor3/floor.extra.3.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "ec24336e3508fea50c64e25e3f8d3aa489a68ceb026d2b31e9afadb25b52c107"
+    },
+    {
+      "id": "floor.extra.4",
+      "file": "DungeonArt_Floor3/floor.extra.4.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "434a0e6209542bee5af348f52f9d807289d7bb5c3fae4e8951323eb3d97c6c47"
+    },
+    {
+      "id": "floor.extra.5",
+      "file": "DungeonArt_Floor3/floor.extra.5.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "578fdbc5a6817e329ff011a55ed8b4487cb51e9debbff1fad2a1691179a771b7"
+    },
+    {
+      "id": "floor.room.0",
+      "file": "DungeonArt_Floor3/floor.room.0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "5f16765b6a337ef0133054472fdfe2145273eeb9fad2bc2a91905323f6eef176"
+    },
+    {
+      "id": "floor.room.1",
+      "file": "DungeonArt_Floor3/floor.room.1.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "ea582409bde558ca6fa9ae879c9dce2ad81784aed8ed81c3bfc47b394ccc39d5"
+    },
+    {
+      "id": "floor.room.2",
+      "file": "DungeonArt_Floor3/floor.room.2.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "804b82f8174b00e2a8358aac0ffc58157c9341a08660269b19607d2af9c358ef"
+    },
+    {
+      "id": "object.entrance",
+      "file": "DungeonArt_Floor3/object.entrance.png",
+      "width": 144,
+      "height": 144,
+      "ppu": 48,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": true,
+      "source_sha256": "18a74cc52166614621b28d4cc7f60f10ef8a5d3eac90cd7f154a5af31253c5c3"
+    },
+    {
+      "id": "object.exit.closed",
+      "file": "DungeonArt_Floor3/object.exit.closed.png",
+      "width": 96,
+      "height": 96,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": true,
+      "source_sha256": "da16a9aa828ffa7390a90767b35b06d891902012cf5ed4e4741cf9ad8ae46a2a"
+    },
+    {
+      "id": "object.exit.open",
+      "file": "DungeonArt_Floor3/object.exit.open.png",
+      "width": 96,
+      "height": 96,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": true,
+      "source_sha256": "36763423ad9852c5427e7f1b34e25f7fdf6248147ec114880350b129a2e7aca7"
+    },
+    {
+      "id": "object.fountain",
+      "file": "DungeonArt_Floor3/object.fountain.png",
+      "width": 120,
+      "height": 120,
+      "ppu": 40,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": true,
+      "source_sha256": "27afd38c89508a0401027006b1225d5b0b69c5d1a356c4d5448ed5fe4225e5d1"
+    },
+    {
+      "id": "wall.00",
+      "file": "DungeonArt_Floor3/wall.00.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "fb20a6f5e1f815d93b648069fb8ac1dd452c3534cc86a737fa502a24b032e469"
+    },
+    {
+      "id": "wall.01",
+      "file": "DungeonArt_Floor3/wall.01.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "860830d8812cf7cce91a75e4f141264ede3178e936643a67d339472ce267d373"
+    },
+    {
+      "id": "wall.02",
+      "file": "DungeonArt_Floor3/wall.02.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "bf734134fac983c70772d6a012e19900c62467ce9675cd4c9562422b5ebda45f"
+    },
+    {
+      "id": "wall.03",
+      "file": "DungeonArt_Floor3/wall.03.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "6f854d3963159f482a94a39ac2f6bfd25127bf2e64fae72696ea2a3ecc931d9d"
+    },
+    {
+      "id": "wall.04",
+      "file": "DungeonArt_Floor3/wall.04.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "2ae7262c94b0bb233249d26f5a9a794c5069aa466bc463fd1a05f9ecd509292b"
+    },
+    {
+      "id": "wall.05",
+      "file": "DungeonArt_Floor3/wall.05.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "334e71e716473033d57942d67dea383af457098166e7baf1d07b1f0efbbe6763"
+    },
+    {
+      "id": "wall.06",
+      "file": "DungeonArt_Floor3/wall.06.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "7490e4aefc30e2cfc5fbcb91406fca654d535eb684dddf9f0000d1c1a8e1a0a7"
+    },
+    {
+      "id": "wall.07",
+      "file": "DungeonArt_Floor3/wall.07.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "dcd265d51a864ff9106f899d1d770a99121483214e345dbfe5a30e6070729363"
+    },
+    {
+      "id": "wall.08",
+      "file": "DungeonArt_Floor3/wall.08.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "ac7b0ea2294cc8f6f59f38600dc5cd384621819cec485548d56e989b1e830f67"
+    },
+    {
+      "id": "wall.09",
+      "file": "DungeonArt_Floor3/wall.09.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "40c1e5fd05af98658dd36d8dc4fe0a22eda7b79c1367be7f72a8d44930dca4c6"
+    },
+    {
+      "id": "wall.0A",
+      "file": "DungeonArt_Floor3/wall.0A.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "ad08332d6e32448e821661ab451ada77a75fd131b454dbe680f43e2247732a39"
+    },
+    {
+      "id": "wall.0B",
+      "file": "DungeonArt_Floor3/wall.0B.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "092daeb6811e6bc8eb005699d958a6670973190cf20139009184275841f0ff19"
+    },
+    {
+      "id": "wall.0C",
+      "file": "DungeonArt_Floor3/wall.0C.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "40ae30e5289c4507bdb4fde25108ceff8a67cc4f81ffe75507e0a2168466a5af"
+    },
+    {
+      "id": "wall.0D",
+      "file": "DungeonArt_Floor3/wall.0D.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "9d8d5ef868bc60a1f058be29d2bbcef49ca1de2154302dab989e6c209c88a184"
+    },
+    {
+      "id": "wall.0E",
+      "file": "DungeonArt_Floor3/wall.0E.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "e817ed58958f0c5729cbd0385aa2a38f7ec9a30191457167315e7fc8becef5f7"
+    },
+    {
+      "id": "wall.0F",
+      "file": "DungeonArt_Floor3/wall.0F.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "fe05d4cd2a67d53d085ba1972618361ca02c377a41da290f3647712e725a5bf8"
+    },
+    {
+      "id": "wall.10",
+      "file": "DungeonArt_Floor3/wall.10.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "22d48dd5cd96bcafc2b5bcab40a2c899283891f174f72307c7d7ba10dfb1cb71"
+    },
+    {
+      "id": "wall.14",
+      "file": "DungeonArt_Floor3/wall.14.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "83a4c2982c1398d3f87d545615120d95b779f3aa85ca1435a403f71d04791a68"
+    },
+    {
+      "id": "wall.18",
+      "file": "DungeonArt_Floor3/wall.18.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "10b1f02310528a4be69ff28abbd376f6aaadf57a73cecb173b7550f9021de959"
+    },
+    {
+      "id": "wall.1C",
+      "file": "DungeonArt_Floor3/wall.1C.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "c07ab1a3303a684e3bf697f653e11bfd1d876b47406fcfc3a39ecc27962d93cd"
+    },
+    {
+      "id": "wall.20",
+      "file": "DungeonArt_Floor3/wall.20.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "76468d5e4cdc49c5540d75aafe1ccf657bd40eec52e89b5be4d3eee205096e18"
+    },
+    {
+      "id": "wall.21",
+      "file": "DungeonArt_Floor3/wall.21.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "cb3e444b22b52124e19b5cb82c6f1397f893f77668b265379254aa7f5215ae50"
+    },
+    {
+      "id": "wall.28",
+      "file": "DungeonArt_Floor3/wall.28.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "fd6ef300ee188d504602fe9c9a536fef02dadb50cb2e32a09d40b933bb7c2dae"
+    },
+    {
+      "id": "wall.29",
+      "file": "DungeonArt_Floor3/wall.29.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "e8927f7c52ecc4bc0001aea7445a371d42bfd563d1379b5023e2bc864c64dd8b"
+    },
+    {
+      "id": "wall.30",
+      "file": "DungeonArt_Floor3/wall.30.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "36aa90f823b5d045d2af7bb03cb0c43612543ea0d01620216fc24de7b12e674c"
+    },
+    {
+      "id": "wall.38",
+      "file": "DungeonArt_Floor3/wall.38.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "efb8eefdda9de4b20e9187882a40c6fefb20a051f35515621bf1a1f3214185bb"
+    },
+    {
+      "id": "wall.40",
+      "file": "DungeonArt_Floor3/wall.40.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "a255f612055e33980cbd28e73503bf7186c7f0e28148bca4fef5471feb8b332c"
+    },
+    {
+      "id": "wall.41",
+      "file": "DungeonArt_Floor3/wall.41.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "e58ce935a656a52b7baae3fad56f220f983dbb3b342bcce4e6c05bb1f73ef224"
+    },
+    {
+      "id": "wall.42",
+      "file": "DungeonArt_Floor3/wall.42.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "49ba13e67d9db1b859c7390d299a8342682bbb257b7bc4b0e6d218f1d58391c2"
+    },
+    {
+      "id": "wall.43",
+      "file": "DungeonArt_Floor3/wall.43.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "bdde69ef30659e51753bdb562941fc1325b5ef8201c01431fb5c416810961c43"
+    },
+    {
+      "id": "wall.50",
+      "file": "DungeonArt_Floor3/wall.50.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "91d63126a82b6e0b14d5f081b2ab7baa294484532ee5c93b7be700530b996c53"
+    },
+    {
+      "id": "wall.60",
+      "file": "DungeonArt_Floor3/wall.60.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "5bfeef22734cd8b0739f1d7988e62048d23e0e336e6de09007ef1b829c4956ef"
+    },
+    {
+      "id": "wall.61",
+      "file": "DungeonArt_Floor3/wall.61.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "ac600283d46b173f772c6276485ab90e93480d351fe452ed0a9030ef0e2e160b"
+    },
+    {
+      "id": "wall.70",
+      "file": "DungeonArt_Floor3/wall.70.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "d400c068fcd28fc4dacf35134496ce3cb8326e50949b61ca749f418b986e07f0"
+    },
+    {
+      "id": "wall.80",
+      "file": "DungeonArt_Floor3/wall.80.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "fd882d592dfa9d600614fcfb60fdb6701600500ea4836836b17853bdc2e50334"
+    },
+    {
+      "id": "wall.82",
+      "file": "DungeonArt_Floor3/wall.82.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "674d1508a6f86ac3a9f584bc8b36f2fa19c88cb263159e50beef718ae4ad1c9b"
+    },
+    {
+      "id": "wall.84",
+      "file": "DungeonArt_Floor3/wall.84.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "9718b354bc8e6026b4808909496744383198a5093bb56287061dafb1b97e53e2"
+    },
+    {
+      "id": "wall.86",
+      "file": "DungeonArt_Floor3/wall.86.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "a869c3963810f2471a9083bc72ea777dd12a6d5ada9f1b842ca9e48d4531df6e"
+    },
+    {
+      "id": "wall.90",
+      "file": "DungeonArt_Floor3/wall.90.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "cdd98d47540670106123fe2df0ee10f802f6abb779b45d8747e061cf87eb9ac3"
+    },
+    {
+      "id": "wall.94",
+      "file": "DungeonArt_Floor3/wall.94.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "791eb9951c5291f2c5edddb48f19611c0ab00d98db4fdde3152ea1dae1b9f65d"
+    },
+    {
+      "id": "wall.A0",
+      "file": "DungeonArt_Floor3/wall.A0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "f3814bb670d443f0448c6372e1a6ea20ad7f1240328b4c2d59bf772c48fc1fed"
+    },
+    {
+      "id": "wall.B0",
+      "file": "DungeonArt_Floor3/wall.B0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "7f65ede4aaf8181c87c796307f23be5c39288207c8e61d26b57f1f9c1dcf6df2"
+    },
+    {
+      "id": "wall.C0",
+      "file": "DungeonArt_Floor3/wall.C0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "7d7580400e6a1de5ab37e433146f22c9c20a8b4d081d4b4d58574e967968d34d"
+    },
+    {
+      "id": "wall.C2",
+      "file": "DungeonArt_Floor3/wall.C2.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "03a5c96796d66ef49aac513d2a18fc4030867984c02153ed38c0e3cc62e0c739"
+    },
+    {
+      "id": "wall.D0",
+      "file": "DungeonArt_Floor3/wall.D0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "b2187072ac82638c7ad213aed56f6e237ce601beb1b0e3000a5c65e91a32d945"
+    },
+    {
+      "id": "wall.E0",
+      "file": "DungeonArt_Floor3/wall.E0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "de9c9a25eafceae21cf6981c54e5a43d02ad49dbaf228272e9362f888819dffa"
+    },
+    {
+      "id": "wall.F0",
+      "file": "DungeonArt_Floor3/wall.F0.png",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "unchanged_shared_landmark": false,
+      "source_sha256": "58387ce7c1defcad726782765aadd84ffcf0db4d297c4f5f353364b54bac3aaa"
+    }
+  ],
+  "runtime_import": "Use individual PNGs with their new unique .meta files OR the separately sliced terrain atlas; not both",
+  "preview": "assembled from these exact exported PNGs; lighting and props are preview-only; not a Unity capture",
+  "optional_variants": {
+    "resource_folder": "DungeonArt_Floor3Flowers",
+    "probability_for_eligible_wall": 0.35,
+    "selection": "stable uint32 cell hash; if h % 100 < 35 select matching-base variant by (h >> 8) % options.length; once during generation",
+    "sprites": [
+      {
+        "id": "wall.01.flower",
+        "file": "OptionalFlowers/wall.01.flower.png",
+        "replaces_only": "wall.01",
+        "neighbor_mask_hex": "01",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 11,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          0,
+          64,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.02.flower",
+        "file": "OptionalFlowers/wall.02.flower.png",
+        "replaces_only": "wall.02",
+        "neighbor_mask_hex": "02",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 9,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          32,
+          0,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          32,
+          64,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.03.flower",
+        "file": "OptionalFlowers/wall.03.flower.png",
+        "replaces_only": "wall.03",
+        "neighbor_mask_hex": "03",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 18,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          64,
+          0,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          64,
+          64,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.04.flower",
+        "file": "OptionalFlowers/wall.04.flower.png",
+        "replaces_only": "wall.04",
+        "neighbor_mask_hex": "04",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 12,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          96,
+          0,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          96,
+          64,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.04.flower2",
+        "file": "OptionalFlowers/wall.04.flower2.png",
+        "replaces_only": "wall.04",
+        "neighbor_mask_hex": "04",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 15,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          128,
+          0,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          128,
+          64,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.05.flower",
+        "file": "OptionalFlowers/wall.05.flower.png",
+        "replaces_only": "wall.05",
+        "neighbor_mask_hex": "05",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 24,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          0,
+          32,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          0,
+          32,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.06.flower",
+        "file": "OptionalFlowers/wall.06.flower.png",
+        "replaces_only": "wall.06",
+        "neighbor_mask_hex": "06",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 13,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          32,
+          32,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.06.flower2",
+        "file": "OptionalFlowers/wall.06.flower2.png",
+        "replaces_only": "wall.06",
+        "neighbor_mask_hex": "06",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 20,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          64,
+          32,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          64,
+          32,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.08.flower",
+        "file": "OptionalFlowers/wall.08.flower.png",
+        "replaces_only": "wall.08",
+        "neighbor_mask_hex": "08",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 11,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          96,
+          32,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          96,
+          32,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.09.flower",
+        "file": "OptionalFlowers/wall.09.flower.png",
+        "replaces_only": "wall.09",
+        "neighbor_mask_hex": "09",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 15,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          128,
+          32,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          128,
+          32,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.0A.flower",
+        "file": "OptionalFlowers/wall.0A.flower.png",
+        "replaces_only": "wall.0A",
+        "neighbor_mask_hex": "0A",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 17,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          0,
+          64,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          0,
+          0,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.0C.flower",
+        "file": "OptionalFlowers/wall.0C.flower.png",
+        "replaces_only": "wall.0C",
+        "neighbor_mask_hex": "0C",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 13,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          32,
+          64,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          32,
+          0,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.0C.flower2",
+        "file": "OptionalFlowers/wall.0C.flower2.png",
+        "replaces_only": "wall.0C",
+        "neighbor_mask_hex": "0C",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 16,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          64,
+          64,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          64,
+          0,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.0F.flower",
+        "file": "OptionalFlowers/wall.0F.flower.png",
+        "replaces_only": "wall.0F",
+        "neighbor_mask_hex": "0F",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 18,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          96,
+          64,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          96,
+          0,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "wall.F0.flower",
+        "file": "OptionalFlowers/wall.F0.flower.png",
+        "replaces_only": "wall.F0",
+        "neighbor_mask_hex": "F0",
+        "width": 32,
+        "height": 32,
+        "ppu": 32,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "new_collision": false,
+        "changed_pixels_from_base": 21,
+        "outer_2px_and_alpha_identical": true,
+        "rect_top_left": [
+          128,
+          64,
+          32,
+          32
+        ],
+        "rect_unity_bottom_left": [
+          128,
+          0,
+          32,
+          32
+        ]
+      }
+    ]
+  },
+  "wall_palette": "neutral gray / subtle olive; original pixel geometry and luminance retained; no blue stone",
+  "floor_palette": "gray olive matching walls; original floor geometry and plants retained; checker contrast reduced",
+  "update_from_v2": "replace files in the same resource folders; retain existing meta GUIDs",
+  "update_from_v3": "replace same named floor files, retain GUIDs; decorations imported separately"
+}

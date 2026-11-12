@@ -1,0 +1,432 @@
+{
+  "size": [
+    160,
+    96
+  ],
+  "ppu": 32,
+  "tile_size": 32,
+  "columns": 5,
+  "rows": 3,
+  "sprites": [
+    {
+      "id": "wall.01.flower",
+      "file": "OptionalFlowers/wall.01.flower.png",
+      "replaces_only": "wall.01",
+      "neighbor_mask_hex": "01",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 11,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.02.flower",
+      "file": "OptionalFlowers/wall.02.flower.png",
+      "replaces_only": "wall.02",
+      "neighbor_mask_hex": "02",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 9,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.03.flower",
+      "file": "OptionalFlowers/wall.03.flower.png",
+      "replaces_only": "wall.03",
+      "neighbor_mask_hex": "03",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 18,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.04.flower",
+      "file": "OptionalFlowers/wall.04.flower.png",
+      "replaces_only": "wall.04",
+      "neighbor_mask_hex": "04",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 12,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.04.flower2",
+      "file": "OptionalFlowers/wall.04.flower2.png",
+      "replaces_only": "wall.04",
+      "neighbor_mask_hex": "04",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 15,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        64,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.05.flower",
+      "file": "OptionalFlowers/wall.05.flower.png",
+      "replaces_only": "wall.05",
+      "neighbor_mask_hex": "05",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 24,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.06.flower",
+      "file": "OptionalFlowers/wall.06.flower.png",
+      "replaces_only": "wall.06",
+      "neighbor_mask_hex": "06",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 13,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.06.flower2",
+      "file": "OptionalFlowers/wall.06.flower2.png",
+      "replaces_only": "wall.06",
+      "neighbor_mask_hex": "06",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 20,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        64,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.08.flower",
+      "file": "OptionalFlowers/wall.08.flower.png",
+      "replaces_only": "wall.08",
+      "neighbor_mask_hex": "08",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 11,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        96,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.09.flower",
+      "file": "OptionalFlowers/wall.09.flower.png",
+      "replaces_only": "wall.09",
+      "neighbor_mask_hex": "09",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 15,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        128,
+        32,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0A.flower",
+      "file": "OptionalFlowers/wall.0A.flower.png",
+      "replaces_only": "wall.0A",
+      "neighbor_mask_hex": "0A",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 17,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0C.flower",
+      "file": "OptionalFlowers/wall.0C.flower.png",
+      "replaces_only": "wall.0C",
+      "neighbor_mask_hex": "0C",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 13,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        32,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        32,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0C.flower2",
+      "file": "OptionalFlowers/wall.0C.flower2.png",
+      "replaces_only": "wall.0C",
+      "neighbor_mask_hex": "0C",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 16,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        64,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        64,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.0F.flower",
+      "file": "OptionalFlowers/wall.0F.flower.png",
+      "replaces_only": "wall.0F",
+      "neighbor_mask_hex": "0F",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 18,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        96,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        96,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "wall.F0.flower",
+      "file": "OptionalFlowers/wall.F0.flower.png",
+      "replaces_only": "wall.F0",
+      "neighbor_mask_hex": "F0",
+      "width": 32,
+      "height": 32,
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "new_collision": false,
+      "changed_pixels_from_base": 21,
+      "outer_2px_and_alpha_identical": true,
+      "rect_top_left": [
+        128,
+        64,
+        32,
+        32
+      ],
+      "rect_unity_bottom_left": [
+        128,
+        0,
+        32,
+        32
+      ]
+    }
+  ]
+}

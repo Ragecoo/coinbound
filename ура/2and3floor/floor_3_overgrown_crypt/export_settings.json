@@ -1,0 +1,16 @@
+{
+  "version": 4,
+  "floor": 3,
+  "rgb_gains": [
+    0.89,
+    0.92,
+    0.92
+  ],
+  "native_tile_size": 32,
+  "protected_border_px": 2,
+  "optional_flower_variants": 15,
+  "source_objects_copied_unchanged": true,
+  "rgb_gains_apply_to": "historical v2 base; use wall_palette_revision.json and floor_palette_revision.json for later revisions",
+  "wall_palette_revision": "wall_palette_revision.json",
+  "floor_palette_revision": "floor_palette_revision.json"
+}

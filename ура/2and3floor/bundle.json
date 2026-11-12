@@ -1,0 +1,19 @@
+{
+  "revision": 4,
+  "themes": {
+    "2": "abandoned forge",
+    "3": "overgrown damp crypt"
+  },
+  "terrain_runtime_png": 143,
+  "new_decoration_runtime_png": 80,
+  "total_runtime_png": 223,
+  "new_placeable_variants": 76,
+  "plant_variants": 40,
+  "terrain_manifests": [
+    "floor_2_abandoned_forge/manifest.json",
+    "floor_3_overgrown_crypt/manifest.json"
+  ],
+  "decor_manifest": "decorations/manifest.json",
+  "instructions": "START_HERE.txt",
+  "not_integrated_in_unity": true
+}

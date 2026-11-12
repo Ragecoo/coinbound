@@ -7,15 +7,15 @@ namespace Coinbound
     public sealed partial class DungeonScreen
     {
         private RectTransform statsPanel;
-        private readonly Text[] statValues = new Text[5];
-        private readonly Text[] statSigns = new Text[5];
+        private readonly Text[] statValues = new Text[6];
+        private readonly Text[] statSigns = new Text[6];
 
         private void BuildStatsHud()
         {
             RectTransform panel = Rect("Player stats", hud.transform, Vector2.zero, new Vector2(110, 160));
             statsPanel = panel;
             Anchor(panel, new Vector2(0, 1), new Vector2(24, -96));
-            string[] icons = { "damage", "movement", "attack-rate", "critical", "luck" };
+            string[] icons = { "damage", "movement", "attack-rate", "critical", "luck", "block" };
             for (int i = 0; i < icons.Length; i++)
             {
                 float y = 64 - i * 32;
@@ -43,7 +43,7 @@ namespace Coinbound
             string Number(float value) => value.ToString("0.00", CultureInfo.InvariantCulture);
             string[] values = { Number(stats.Damage),
                 Number(stats.MoveSpeed), Number(stats.AttackRate), Number(stats.CriticalRate),
-                Number(stats.Luck / 100) };
+                Number(stats.Luck), Number(stats.Defense) };
             for (int i = 0; i < values.Length; i++)
             {
                 bool negative = values[i].StartsWith("-", System.StringComparison.Ordinal);

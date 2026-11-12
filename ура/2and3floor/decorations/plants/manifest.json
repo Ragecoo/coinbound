@@ -1,0 +1,3265 @@
+{
+  "revision": 4,
+  "theme": "plants",
+  "file_paths_relative_to": "decorations/",
+  "assets": [
+    {
+      "id": "plants_01",
+      "label_ru": "Подушка мха",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_01.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        9
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.28125
+      ],
+      "visible_bbox_top_left": [
+        8,
+        11,
+        25,
+        24
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "e9e1c184f41391c32f4309cdbac6aa042e979d81ac861071d21450b5f3eca46b",
+      "atlas_rect_top_left": [
+        290,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_02",
+      "label_ru": "Мох в трещине",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_02.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        9,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "ed953249b3aa0ea0bd1bb30e677163f8bb2e9fd159094a8c55121545e4344d43",
+      "atlas_rect_top_left": [
+        326,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_03",
+      "label_ru": "Малый папоротник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_03.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a36e45be1440f2920b1ca272ba1504347b96ba6e532392223d432ed67860faa0",
+      "atlas_rect_top_left": [
+        362,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_04",
+      "label_ru": "Двойной папоротник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_04.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        5
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        1,
+        4,
+        29,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "c0b11edb37d7abf1e93fee2e41eb9a1bc27bf8f1688a35bc277d9b3e3bb2b8c1",
+      "atlas_rect_top_left": [
+        398,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_05",
+      "label_ru": "Широкие листья",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_05.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        7
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        28,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9ef29ca9cce45f5ff2938548ef6648e9c1ce3f1d8cf17a7856cee346d444a3ee",
+      "atlas_rect_top_left": [
+        434,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        434,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_06",
+      "label_ru": "Почвопокровник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_06.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        28,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "d3815ca3a69e84cdcda62f221ee25e9f1dec407fb7f85b2576cbcf1a89ab6d71",
+      "atlas_rect_top_left": [
+        470,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        470,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_07",
+      "label_ru": "Осока",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_07.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        9
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.28125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        5,
+        25,
+        24
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "964a65435b3142fce0f8ee52ba97fa4565a8abe4525be30fc6ae6adf1e76eb98",
+      "atlas_rect_top_left": [
+        2,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_08",
+      "label_ru": "Сухие побеги",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_08.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        5,
+        28,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "53611c3f9ff41a9239989568b916a46a04f30e43b68f9b455289d118e9027651",
+      "atlas_rect_top_left": [
+        38,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_09",
+      "label_ru": "Колючий куст",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_09.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        4,
+        28,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "80c7819211221dc839a7eef87c7340a28a671f03b9c6e0516a0e1f464daa94a9",
+      "atlas_rect_top_left": [
+        74,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_10",
+      "label_ru": "Куст плюща",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_10.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        4,
+        29,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "4be40514417aafb24296affed46a10917421b83bcbaead8b72d1666558d92f9e",
+      "atlas_rect_top_left": [
+        110,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_11",
+      "label_ru": "Стелющийся терновник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_11.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        29,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "bf2146a6fad950783886431124711ddb5fb66a0eccb0a4d50191734561b899f6",
+      "atlas_rect_top_left": [
+        146,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_12",
+      "label_ru": "Густой куст",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_12.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        5
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        2,
+        1,
+        30,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "1c968b13584a8154099aa775452f527998b0edd3caf62220eeee2b51e0987875",
+      "atlas_rect_top_left": [
+        182,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_13",
+      "label_ru": "Голые корни",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_13.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        29,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "cc90fa4e29fbee261e6e9b658e8f308069edb260074e46642725a129dc884c42",
+      "atlas_rect_top_left": [
+        218,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_14",
+      "label_ru": "Корни во мху",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_14.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        6,
+        28,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "3a5fb8342d9076a347209faab0cc82f676107c6a816e428d7b1d12990c3bed09",
+      "atlas_rect_top_left": [
+        254,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_15",
+      "label_ru": "Опавшие листья",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_15.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        6,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "3763874555e6ef9c92816b15625d89ce4ac6c9bbdac9b85613ff26048941ef0e",
+      "atlas_rect_top_left": [
+        290,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_16",
+      "label_ru": "Угловые заросли NW",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_16.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        4
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        1,
+        2,
+        30,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "bc4ed12bc8ac120742f86dd519a9cb2477f216be1abc7eb325c0ed6cacabf121",
+      "atlas_rect_top_left": [
+        326,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_17",
+      "label_ru": "Розовые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_17.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        7,
+        10,
+        25,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "75d17fe320db0f0818650b8fed4c5f0b9feddd3b29ef7224efa7a8a987090ccb",
+      "atlas_rect_top_left": [
+        362,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_18",
+      "label_ru": "Кремовые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_18.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        9,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9246a9e6633137cfff597958201155f55859e3ae85df80ca621c33fdda98dbbb",
+      "atlas_rect_top_left": [
+        398,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_19",
+      "label_ru": "Сиреневые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_19.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "d62a329b770381a7388eb08f441de7406bf85c0c95e47659e5fa1f0c2a5927c1",
+      "atlas_rect_top_left": [
+        434,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        434,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_20",
+      "label_ru": "Бордовый куст",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_20.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        5
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        2,
+        6,
+        28,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "0463ceccb02a42c9ec5689de6a43513480f0f4a59a044476765f0d0444750e17",
+      "atlas_rect_top_left": [
+        470,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        470,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_21",
+      "label_ru": "Цветочная куртина",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_21.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        6,
+        30,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "789736acd06d4af27a290a61d931520b481d367f37d6f4724808ab610ceabd81",
+      "atlas_rect_top_left": [
+        2,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_22",
+      "label_ru": "Поникающие цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_22.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        4
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        2,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "1262d2b0bb6161d7537b7b531f844afcd4ce48317e703ffd6f60c7649e9593ce",
+      "atlas_rect_top_left": [
+        38,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_23",
+      "label_ru": "Серые грибы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_23.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "515dcbec6ad464f1d5de2994917db6939c2e2c0ba03667b4b16c57cd8328b070",
+      "atlas_rect_top_left": [
+        74,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_24",
+      "label_ru": "Трутовики и ветки",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_24.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        7
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        1,
+        5,
+        28,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "04febe3e5961e0efdcc33f36e4c25f43cac2344d42b50f2480ca8ec67318fb8f",
+      "atlas_rect_top_left": [
+        110,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_25",
+      "label_ru": "Плющ вдоль N",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_25.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        11
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.34375
+      ],
+      "visible_bbox_top_left": [
+        3,
+        9,
+        29,
+        22
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a600ae3a157340fee013543d786304fbab1ff720778ba029eaa41287ef8b7e3d",
+      "atlas_rect_top_left": [
+        146,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_26",
+      "label_ru": "Свисающий плющ N",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_26.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "cc9e62ff957b647a910478a42d1f39088982e2ec1826773972c77d5d9e94c286",
+      "atlas_rect_top_left": [
+        182,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_27",
+      "label_ru": "Плющ на W",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_27.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        12,
+        4
+      ],
+      "pivot_normalized": [
+        0.375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        20,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a0bd44877a17205a806898a3b45da42f2c6eca3986a2ca0e3e41b82cb906f07e",
+      "atlas_rect_top_left": [
+        218,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_28",
+      "label_ru": "Плющ на E",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_28.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        18,
+        5
+      ],
+      "pivot_normalized": [
+        0.5625,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        10,
+        3,
+        27,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "E"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9b0db1a1ce7517560fa0e11f25d80b61cd323627a0f387a93430ddf4bcde4533",
+      "atlas_rect_top_left": [
+        254,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_29",
+      "label_ru": "Цветущий угол NW",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_29.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        3,
+        3,
+        30,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "142e22b15eeb23d5dec2a73ba2b4b521138547ffd45a97feacc97623962f707a",
+      "atlas_rect_top_left": [
+        290,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_30",
+      "label_ru": "Цветущий угол NE",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_30.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        3,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "e1ee389f1abcee439f94318c34dca0855648acfb0237b186db9f104a76026905",
+      "atlas_rect_top_left": [
+        326,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_31",
+      "label_ru": "Цветущий угол SW",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_31.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        3
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        2,
+        3,
+        29,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "83abd652c4a0576a99dfe5850a4ee08c3185337f1f280f403ef12d1a4de0be68",
+      "atlas_rect_top_left": [
+        362,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_32",
+      "label_ru": "Цветущий угол SE",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_32.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        3
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        2,
+        3,
+        29,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "0ef072a7d275640ff7a81c488e9e8006d66cbf23c1f239c46405f58cebb67759",
+      "atlas_rect_top_left": [
+        398,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_33",
+      "label_ru": "Папоротниковая группа",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_33.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        29,
+        5
+      ],
+      "pivot_normalized": [
+        0.453125,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        4,
+        4,
+        55,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_03",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_04",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "962ee495154780c0083e0bdc372bbf3bca69056f780ea72f45e31f15bbcd0cba",
+      "atlas_rect_top_left": [
+        206,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        206,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_34",
+      "label_ru": "Густые кусты",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_34.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        29,
+        5
+      ],
+      "pivot_normalized": [
+        0.453125,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        3,
+        1,
+        56,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_10",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_12",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "6c1d092ccf00b7d18bb0c0ac72348ca5a64f00047a1481f9cf5f3ddb4f34727c",
+      "atlas_rect_top_left": [
+        274,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        274,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_35",
+      "label_ru": "Розовые и кремовые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_35.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        6
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        7,
+        9,
+        55,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_17",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_18",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "8e5e09491af4e7ec316d6a17c2bf16ecf2d3287ba61f83e0eab3895073728843",
+      "atlas_rect_top_left": [
+        342,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        342,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_36",
+      "label_ru": "Сиренево-бордовая группа",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_36.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        29,
+        5
+      ],
+      "pivot_normalized": [
+        0.453125,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        54,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_19",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_20",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "d4455b2337c58aa4ce479fa5d960cf4ea0917f6cf904cb0c0282a271868f5e7f",
+      "atlas_rect_top_left": [
+        410,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        410,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_37",
+      "label_ru": "Корни и трутовики",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_37.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        28,
+        6
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        54,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_14",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_24",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "1058bc91ac423215765df5d3da6a449ebd98a52798eaf4966e837f9fc2caeb4d",
+      "atlas_rect_top_left": [
+        2,
+        106,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        374,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_38",
+      "label_ru": "Мох, папоротник и цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_38.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        8,
+        7,
+        57,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_01",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_03",
+          "offset_px_top_left": [
+            18,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 2,
+          "asset": "plants_17",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "69a94b41743a2d918aa54ed3e713d7aa70a71f479797a540a3a6b9271afa2730",
+      "atlas_rect_top_left": [
+        70,
+        106,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        70,
+        374,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_39",
+      "label_ru": "Заросший угол NW",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_39.png",
+      "native_size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        25,
+        14
+      ],
+      "pivot_normalized": [
+        0.390625,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        1,
+        2,
+        49,
+        51
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_16",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_14",
+          "offset_px_top_left": [
+            0,
+            24
+          ],
+          "own_health": false
+        },
+        {
+          "index": 2,
+          "asset": "plants_17",
+          "offset_px_top_left": [
+            24,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "c3755db7b082345c714fff3069c4124c7a23503530cd16acbf122c8fbcafe753",
+      "atlas_rect_top_left": [
+        2,
+        2,
+        64,
+        64
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        446,
+        64,
+        64
+      ]
+    },
+    {
+      "id": "plants_40",
+      "label_ru": "Цветущий угол NE",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_40.png",
+      "native_size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        15
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.234375
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        61,
+        50
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_18",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_10",
+          "offset_px_top_left": [
+            32,
+            24
+          ],
+          "own_health": false
+        },
+        {
+          "index": 2,
+          "asset": "plants_30",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "44f51f526077a0b1baebe2b851b85ee6a5a81a277ef77e37ad3f31ad8530be9f",
+      "atlas_rect_top_left": [
+        70,
+        2,
+        64,
+        64
+      ],
+      "atlas_rect_unity_bottom_left": [
+        70,
+        446,
+        64,
+        64
+      ]
+    }
+  ]
+}

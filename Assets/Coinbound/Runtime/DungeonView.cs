@@ -25,7 +25,7 @@ namespace Coinbound
             {
                 int count = 0;
                 foreach (DungeonEnemy enemy in enemies)
-                    if (enemy != null && !enemy.IsDead) count++;
+                    if (enemy != null && enemy.gameObject.activeSelf && !enemy.IsDead) count++;
                 return count;
             }
         }
@@ -33,9 +33,10 @@ namespace Coinbound
         public static Vector3 WorldPosition(TilePosition tile) => new Vector3(tile.X + 0.5f, 0.5f - tile.Y, 0);
 
         public IEnumerator<object> Build(DungeonMap map, TileSpriteMap specification, int floorSeed, float entranceScale, float fountainScale,
-            float entranceLift, Action<float> progress)
+            float entranceLift, Action<float> progress,int floorNumber=1)
         {
-            foreach (Sprite sprite in Resources.LoadAll<Sprite>("DungeonArt")) sprites.Add(sprite.name, sprite);
+            foreach (Sprite sprite in Resources.LoadAll<Sprite>(floorNumber==1?"DungeonArt":"DungeonArt_Floor"+floorNumber)) sprites.Add(sprite.name, sprite);
+            if(floorNumber==3)foreach(var flower in Resources.LoadAll<Sprite>("DungeonArt_Floor3Flowers"))sprites[flower.name]=flower;
             Material template = Resources.Load<Material>("DungeonSprite");
             if (template == null) throw new InvalidOperationException("Не найден материал DungeonSprite.");
             // Each floor owns its light textures and material; no global state survives regeneration.
@@ -53,6 +54,11 @@ namespace Coinbound
             {
                 // Hidden solid cells use the pack's seamless void, not an invented wall mask.
                 string id = FloorSpriteId(tile, floorSeed);
+                if(floorNumber==3&&id.StartsWith("wall."))
+                {
+                    uint hash=unchecked((uint)floorSeed^(uint)tile.X*73856093u^(uint)tile.Y*19349663u);
+                    if(hash%100<35){string flower=id+((hash%2==0&&sprites.ContainsKey(id+".flower2"))?".flower2":".flower");if(sprites.ContainsKey(flower))id=flower;}
+                }
                 if (!terrainTiles.TryGetValue(id, out Tile asset))
                 {
                     asset = ScriptableObject.CreateInstance<Tile>();
@@ -69,7 +75,7 @@ namespace Coinbound
                     // object.exit is the algorithm ID; the art provides open/closed variants.
                     string objectId = tile.ObjectSprite == "object.exit" ? "object.exit.open" : tile.ObjectSprite;
                     var landmark = CreateSprite(objectId, FindSprite(objectId), WorldPosition(new TilePosition(tile.X, tile.Y)), 10);
-                    MatchWallStone(landmark, objectId);
+                    MatchWallStone(landmark, objectId,floorNumber);
                     if (objectId == "object.entrance") landmark.transform.position += Vector3.up * entranceLift;
                     if (objectId == "object.entrance" || objectId == "object.fountain")
                     {
@@ -125,20 +131,14 @@ namespace Coinbound
                 item.AddComponent<DungeonDepthSort>().Initialize(visual, item.transform, 0, true);
                 solidLandmarks.Add(visual);
             }
-            Color32[] colors = {
-                new Color32(239, 106, 106, 255), new Color32(236, 148, 81, 255),
-                new Color32(202, 111, 220, 255), new Color32(166, 130, 236, 255)
-            };
-            var enemySprites = new Sprite[colors.Length];
-            for (int i = 0; i < colors.Length; i++)
-                enemySprites[i] = CreatePlaceholder($"Enemy {i + 1:000} placeholder", colors[i], false);
             int count = 0;
             foreach (EnemySpawn spawn in plan.Enemies)
             {
                 int type = int.Parse(spawn.EnemyId) - 1;
-                var enemy = CreateSprite($"Enemy {spawn.EnemyId} / group {spawn.GroupId}", enemySprites[type], WorldPosition(spawn.Position), 30);
-                enemy.AddComponent<DungeonDepthSort>().Initialize(enemy.GetComponent<SpriteRenderer>(), enemy.transform, 0, true);
-                enemies.Add(enemy.AddComponent<DungeonEnemy>());
+                var enemy = CreateSprite($"Enemy {spawn.EnemyId} / group {spawn.GroupId}", null, WorldPosition(spawn.Position), 30);
+                var actor = enemy.AddComponent<DungeonEnemy>();
+                actor.Configure((DungeonEnemyKind)type, spawn.GroupId);
+                enemies.Add(actor);
                 if (++count % 24 == 0) yield return null;
             }
         }
@@ -172,10 +172,10 @@ namespace Coinbound
             return player;
         }
 
-        public void ActivateEnemies(DungeonPlayer target, DungeonMap map)
+        public void ActivateEnemies(DungeonPlayer target, DungeonMap map,float strength=1)
         {
             foreach (DungeonEnemy enemy in enemies)
-                if (enemy != null) enemy.Initialize(target, map);
+                if (enemy != null) {var stats=enemy.Definition.Stats;enemy.Initialize(target,map,new EnemyStats(stats.MaxHealth*strength,stats.Defense,stats.Damage*strength,stats.MoveSpeed,stats.ScoreDrop));}
         }
 
         public void AddEffectLights(DungeonMap map, DungeonPlayer player)
@@ -183,7 +183,7 @@ namespace Coinbound
             DungeonEffectLights.Create(map, player, material);
         }
 
-        private static void MatchWallStone(GameObject landmark, string objectId)
+        private static void MatchWallStone(GameObject landmark, string objectId,int floorNumber)
         {
             // Match the pack's representative stone midtones to wall.01 / wall.04.
             // The shader keeps saturated fountain water out of this stone-only correction.
@@ -196,7 +196,7 @@ namespace Coinbound
                 case "object.exit.closed": source = new Color32(53, 60, 83, 255); break;
                 default: return;
             }
-            Color wall = new Color32(37, 41, 64, 255);
+            Color wall = floorNumber==2?new Color32(32,30,33,255):floorNumber==3?new Color32(39,39,33,255):new Color32(37,41,64,255);
             if (QualitySettings.activeColorSpace == ColorSpace.Linear)
             {
                 source = source.linear;

@@ -13,6 +13,10 @@ namespace Coinbound.Tests
         [TestCase(typeof(DungeonUiDecoration))]
         [TestCase(typeof(DungeonHudGlyph))]
         [TestCase(typeof(DungeonDamageBorder))]
+        [TestCase(typeof(DungeonMenuAtmosphere))]
+        [TestCase(typeof(DungeonMenuWater))]
+        [TestCase(typeof(DungeonMenuDust))]
+        [TestCase(typeof(DungeonMenuLogo))]
         public void RuntimeGraphicsHaveRendererBeforeFirstCanvasPass(System.Type graphicType)
         {
             var root = new GameObject("Inactive UI fixture", typeof(RectTransform));
@@ -67,6 +71,14 @@ namespace Coinbound.Tests
             JsonUtility.FromJsonOverwrite("{\"randomSeed\":false,\"seed\":42,\"minimumStatusSeconds\":0}", game);
             Assert.That(screen.CurrentPage, Is.EqualTo("Start screen"));
             GameObject.Find("Start").GetComponent<Button>().onClick.Invoke();
+            Assert.That(screen.CurrentPage, Is.EqualTo("Story intro"));
+            Assert.That(GameObject.Find("Story hints").GetComponent<CanvasGroup>().alpha, Is.Zero);
+            Assert.That(GameObject.Find("Story text").GetComponent<Text>().text, Does.Contain("…"));
+            foreach (var icon in GameObject.Find("Story hints").GetComponentsInChildren<RawImage>())
+                Assert.That(icon.texture, Is.Not.Null, icon.name);
+            Assert.That(screen.HandleBack(), Is.True);
+            float introTimeout = Time.realtimeSinceStartup + 3;
+            while (screen.CurrentPage == "Story intro" && Time.realtimeSinceStartup < introTimeout) yield return null;
             Assert.That(screen.CurrentPage, Is.EqualTo("Hero selection screen"));
             GameObject.Find("Hero 1").GetComponent<Button>().onClick.Invoke();
             GameObject.Find("Create dungeon").GetComponent<Button>().onClick.Invoke();
@@ -85,7 +97,7 @@ namespace Coinbound.Tests
             Assert.That(GameObject.Find("Mana track").GetComponent<RawImage>().texture, Is.Not.Null);
             Assert.That(GameObject.Find("Stat value health"), Is.Null);
             Assert.That(GameObject.Find("Stat value mana"), Is.Null);
-            Assert.That(GameObject.Find("Player stats").GetComponentsInChildren<RawImage>().Length, Is.EqualTo(5));
+            Assert.That(GameObject.Find("Player stats").GetComponentsInChildren<RawImage>().Length, Is.EqualTo(6));
             Assert.That(GameObject.Find("Stat value critical").GetComponent<Text>().text, Is.EqualTo("0.05"));
             foreach (RawImage icon in GameObject.Find("Player stats").GetComponentsInChildren<RawImage>())
             {
@@ -117,10 +129,10 @@ namespace Coinbound.Tests
             Assert.That(screen.HandleBack(), Is.True);
             Assert.That(screen.CurrentPage, Is.EqualTo("Pause screen"));
             Assert.That(Time.timeScale, Is.Zero);
-            game.ReturnToTitle();
-            Assert.That(GameObject.Find("Resume"), Is.Not.Null);
+            // New-game confirmation from pause keeps the current run until confirmed.
             screen.RequestNewJourney();
             Assert.That(screen.IsModalOpen, Is.True);
+            Assert.That(GameObject.Find("Confirm").GetComponentInChildren<Text>().text, Is.EqualTo("Я знаю что делаю"));
             Assert.That(screen.HandleBack(), Is.True);
             Assert.That(game.IsReady, Is.True, "Cancel must preserve the existing run.");
             game.Resume();

@@ -309,6 +309,7 @@ namespace Coinbound
         private void DrawSlash(Vector2 feet, Vector2 center, float t)
         {
             Color slashColor = DungeonFxSettings.Current.slashColor;
+            slashColor.a *= .5f;
             Color32 core = slashColor;
             Color32 outerEdge = Shade(slashColor, 0.85f);
             Color32 innerEdge = Shade(slashColor, 0.58f);

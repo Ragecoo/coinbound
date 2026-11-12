@@ -18,6 +18,7 @@ namespace Coinbound
         private Vector2 lastMove = Vector2.down;
         private Vector2 aimDirection = Vector2.down;
         private Vector2 attackDirection;
+        private bool aimAtPoint;
         private Vector2 rollDirection;
         private Vector2 knockbackVelocity;
         private bool inputEnabled;
@@ -31,6 +32,9 @@ namespace Coinbound
         private float hitStopRemaining;
         private Vector2 lastStepPosition;
         private float stepDistance;
+        private float slowRemaining;
+        private float slowMultiplier = 1;
+        public const float ManaRegenerationPerSecond = 2.5f;
         private float rollDustDistance;
         private int stepSequence;
         private bool hasStepPosition;
@@ -38,14 +42,23 @@ namespace Coinbound
         private DungeonCombatFx guardVisual;
 
         public DungeonHero Hero { get; private set; } = DungeonHero.First;
-        public PlayerStats Stats => Hero.Stats;
-        public float MoveSpeed => Stats.MoveSpeed;
+        public DungeonRelicInventory Relics { get; } = new DungeonRelicInventory();
+        public PlayerStats Stats => Relics.CurrentStats ?? Hero.Stats;
+        public void ReceiveRelic(DungeonRelic relic)
+        {
+            if (relic == null || IsDead) return;
+            float previousMax = MaxHealth;
+            Relics.Add(relic, Hero.Stats);
+            // Health increases fill the new capacity; curses clamp rather than kill on pickup.
+            Health = Mathf.Clamp(Health + Mathf.Max(0, MaxHealth - previousMax), 1, MaxHealth);
+        }
+        public float MoveSpeed => Stats.MoveSpeed * (slowRemaining > 0 ? slowMultiplier : 1);
         public DungeonChest InteractionTarget => DungeonChest.FindTarget(this);
         public Vector2 InteractionFacing => Velocity.sqrMagnitude > .01f ? Velocity.normalized : AimDirection;
         public bool TryInteract()
         {
             DungeonChest target = InteractionTarget;
-            return target != null && target.TryOpen(this);
+            return target != null ? target.TryOpen(this) : DungeonExit.Find(this)!=null?DungeonExit.Find(this).TryUse(this):DungeonFountain.TryUse(this);
         }
         public Vector2 AimDirection => aimDirection;
         public Vector2 AimPosition { get; private set; }
@@ -63,21 +76,33 @@ namespace Coinbound
         public float HitFlash => Mathf.Clamp01(hitFlashRemaining / 0.18f);
         public float AttackProgress => IsAttacking ? 1 - attackRemaining / attackDuration : 0;
         public float RollProgress => IsRolling ? 1 - rollRemaining / RollDuration : 0;
-        public int Health { get; private set; } = DungeonHero.First.StartingHealth;
-        public int MaxHealth => Stats.MaxHealth;
+        public float Health { get; private set; } = DungeonHero.First.StartingHealth;
+        public const float HealthRecoveryDelay=8f;
+        public float HealthRecoveryPerSecond=>Mathf.Clamp(MaxHealth*.01f,.75f,1.5f);
+        private float healthRecoveryWait=HealthRecoveryDelay;
+        private void AdvanceHealthRecovery(float dt)
+        {
+            if(!CanAct||Time.timeScale<=0||dt<=0)return;
+            float healingTime=Mathf.Max(0,dt-healthRecoveryWait);
+            healthRecoveryWait=Mathf.Max(0,healthRecoveryWait-dt);
+            if(healingTime>0&&Health<MaxHealth)Health=Mathf.Min(MaxHealth,Health+healingTime*HealthRecoveryPerSecond);
+        }
+        public float MaxHealth => Stats.MaxHealth;
         public DungeonSpellcaster Spells { get; private set; }
-        public int Mana { get; private set; } = 100;
-        public int MaxMana => Stats.MaxMana;
-        public bool TrySpendMana(int amount)
+        public float Mana { get; private set; } = 100;
+        public float MaxMana => Stats.MaxMana;
+        public bool TrySpendMana(float amount)
         {
             if (amount < 0 || Mana < amount) return false;
             Mana -= amount;
             return true;
         }
-        public int Score { get; private set; }
-        public void AwardScore(int points)
+        internal void RestoreCheckpoint(float hp,float mana,float score,Vector2 position,float roll,float block)
+        { healthRecoveryWait=HealthRecoveryDelay;Health=Mathf.Clamp(hp,1,MaxHealth);Mana=Mathf.Clamp(mana,0,MaxMana);Score=Mathf.Clamp(score,0,999999999);TeleportTo(position);RollCooldownRemaining=roll;BlockCooldownRemaining=block; }
+        public float Score { get; private set; }
+        public void AwardScore(float points)
         {
-            if (points > 0) Score = (int)Math.Min(999999999L, (long)Score + points);
+            if (points > 0) Score = Math.Min(999999999f, Score + points);
         }
         public float RollCooldownRemaining { get; private set; }
         public float BlockCooldownRemaining { get; private set; }
@@ -109,16 +134,20 @@ namespace Coinbound
         {
             body = GetComponent<Rigidbody2D>();
             Health = MaxHealth;
+            healthRecoveryWait=HealthRecoveryDelay;
         }
 
         public void Initialize(DungeonHero hero)
         {
             Hero = hero ?? DungeonHero.First;
+            Relics.Clear();
             Mana = MaxMana;
+            slowRemaining = 0;
             Score = 0;
             rollCooldown = Hero.RollRecovery;
             blockCooldown = Hero.BlockRecovery;
             Health = MaxHealth;
+            healthRecoveryWait=HealthRecoveryDelay;
             AimPosition = (Vector2)transform.position + aimDirection;
             aimCamera = Camera.main;
             Spells = GetComponent<DungeonSpellcaster>();
@@ -134,6 +163,18 @@ namespace Coinbound
             if (body != null) body.linearVelocity = Vector2.zero;
         }
 
+        internal void TeleportTo(Vector2 position)
+        {
+            body.position = position;
+            transform.position = new Vector3(position.x, position.y, transform.position.z);
+            body.linearVelocity = Vector2.zero;
+            knockbackVelocity = Vector2.zero;
+            rollRemaining = 0;
+            hasStepPosition = false;
+            stepDistance = rollDustDistance = 0;
+            Physics2D.SyncTransforms();
+        }
+
         private void Update()
         {
             if (!CanAct)
@@ -145,18 +186,31 @@ namespace Coinbound
             }
 
             float dt = Time.deltaTime;
+            Keyboard earlyKeys=Keyboard.current;
+            bool dash=earlyKeys?.leftShiftKey.wasPressedThisFrame==true || Gamepad.current?.buttonSouth.wasPressedThisFrame==true;
+            if(dash)
+            {
+                Vector2 dashMove=Vector2.zero;
+                if(earlyKeys!=null){if(earlyKeys.aKey.isPressed||earlyKeys.leftArrowKey.isPressed)dashMove.x--;if(earlyKeys.dKey.isPressed||earlyKeys.rightArrowKey.isPressed)dashMove.x++;if(earlyKeys.wKey.isPressed||earlyKeys.upArrowKey.isPressed)dashMove.y++;if(earlyKeys.sKey.isPressed||earlyKeys.downArrowKey.isPressed)dashMove.y--;}
+                if(Gamepad.current!=null)dashMove+=Gamepad.current.leftStick.ReadValue();
+                TryRoll(dashMove.sqrMagnitude>.01f?dashMove:lastMove);
+            }
             if (IsHitStopped)
             {
                 hitStopRemaining = Mathf.Max(0, hitStopRemaining - dt);
                 body.linearVelocity = Vector2.zero;
                 return;
             }
+            AdvanceHealthRecovery(dt);
+            Mana = Mathf.Min(MaxMana, Mana + dt * ManaRegenerationPerSecond);
+            slowRemaining = Mathf.Max(0, slowRemaining - dt);
             RollCooldownRemaining = Mathf.Max(0, RollCooldownRemaining - dt);
             BlockCooldownRemaining = Mathf.Max(0, BlockCooldownRemaining - dt);
             hurtInvulnerability = Mathf.Max(0, hurtInvulnerability - dt);
             hitFlashRemaining = Mathf.Max(0, hitFlashRemaining - dt);
             knockbackVelocity = Vector2.MoveTowards(knockbackVelocity, Vector2.zero, 24 * dt);
             rollRemaining = Mathf.Max(0, rollRemaining - dt);
+            UpdateAim();
             AdvanceAttack(dt);
 
             movement = Vector2.zero;
@@ -173,6 +227,14 @@ namespace Coinbound
             if (movement.sqrMagnitude > 0.01f) lastMove = movement.normalized;
             UpdateAim();
             if (keys?.eKey.wasPressedThisFrame == true) TryInteract();
+            if(keys!=null)
+                for(int i=0;i<5;i++)
+                    if(keys[(Key)((int)Key.Digit1+i)].wasPressedThisFrame || keys[(Key)((int)Key.Numpad1+i)].wasPressedThisFrame)
+                    { Spells.Recognized((DungeonSpell)i); break; }
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(keys?.f2Key.wasPressedThisFrame==true)SpawnDebugChest();
+#endif
 
             bool pointerOnUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
             SetBlocking(!pointerOnUI && Mouse.current?.rightButton.isPressed == true);
@@ -185,6 +247,23 @@ namespace Coinbound
             if (guardVisual != null) guardVisual.SetVisible(IsBlocking);
         }
 
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        private void SpawnDebugChest()
+        {
+            for(int ring=1;ring<=3;ring++)for(int i=0;i<16;i++)
+            {
+                float angle=Mathf.Atan2(aimDirection.y,aimDirection.x)+i*Mathf.PI/8;Vector2 point=body.position+new Vector2(Mathf.Cos(angle),Mathf.Sin(angle))*(.7f+ring*.5f);
+                point=new Vector2(Mathf.Floor(point.x)+.5f,Mathf.Floor(point.y)+.5f);
+                if(!DungeonCombatPhysics.FreeFeet(point,.45f)||!DungeonCombatPhysics.ClearLine(body.position,point,.2f))continue;
+                var obj=new GameObject("Debug chest",typeof(SpriteRenderer));obj.transform.SetParent(transform.parent);obj.transform.position=point;
+                obj.AddComponent<DungeonChest>().Initialize("s");
+                var visual=obj.GetComponent<SpriteRenderer>();if(EffectMaterial!=null)visual.sharedMaterial=EffectMaterial;
+                obj.AddComponent<DungeonDepthSort>().Initialize(visual,obj.transform,0,true);
+                Physics2D.SyncTransforms();return;
+            }
+        }
+#endif
+
         private void UpdateAim()
         {
             if (aimCamera == null) aimCamera = Camera.main;
@@ -192,7 +271,7 @@ namespace Coinbound
             {
                 Vector2 pointer = Mouse.current.position.ReadValue();
                 Vector3 world = aimCamera.ScreenToWorldPoint(new Vector3(pointer.x, pointer.y, -aimCamera.transform.position.z));
-                AimPosition = world;
+                AimPosition = world;aimAtPoint=true;
                 Vector2 delta = (Vector2)world - (Vector2)transform.position;
                 if (delta.sqrMagnitude > 0.01f) aimDirection = delta.normalized;
             }
@@ -201,7 +280,7 @@ namespace Coinbound
                 Vector2 stick = Gamepad.current.rightStick.ReadValue();
                 if (stick.sqrMagnitude > 0.16f)
                 {
-                    aimDirection = stick.normalized;
+                    aimAtPoint=false;aimDirection = stick.normalized;
                     AimPosition = (Vector2)transform.position + aimDirection * 6;
                 }
             }
@@ -220,7 +299,7 @@ namespace Coinbound
         public void SetAimDirection(Vector2 direction)
         {
             if (direction.sqrMagnitude < 0.001f) return;
-            aimDirection = direction.normalized;
+            aimAtPoint=false;aimDirection = direction.normalized;
             AimPosition = (Vector2)transform.position + aimDirection * 6;
         }
 
@@ -233,6 +312,9 @@ namespace Coinbound
             attackReleased = true;
             if (Hero.IsArcher)
             {
+                Vector2 releaseOrigin=body.position+Vector2.up*DungeonHeroAnimator.HandHeight;
+                Vector2 shot=AimPosition-releaseOrigin;
+                if(aimAtPoint)attackDirection=shot.sqrMagnitude>.0001f?shot.normalized:aimDirection;
                 DungeonArrow.Launch(this, attackDirection);
                 BowShotSequence++;
             }
@@ -241,6 +323,7 @@ namespace Coinbound
                 DungeonCombatFx.Slash(this, attackDirection);
                 Vector2 origin = body.position;
                 float damage = Stats.RollDamage(UnityEngine.Random.value);
+                DungeonProps.Current?.Melee(origin,attackDirection,damage);
                 foreach (DungeonEnemy enemy in new System.Collections.Generic.List<DungeonEnemy>(DungeonEnemy.Active))
                 {
                     if (enemy == null || enemy.IsDead) continue;
@@ -248,7 +331,7 @@ namespace Coinbound
                     if (offset.sqrMagnitude > 1.65f * 1.65f || offset.sqrMagnitude < 0.001f) continue;
                     if (Vector2.Dot(offset.normalized, attackDirection) < 0.52f) continue;
                     if (!DungeonCombatPhysics.ClearLine(origin, enemy.transform.position)) continue;
-                    enemy.ReceiveHit(damage, offset.normalized, 5);
+                    enemy.ReceiveHit(damage, offset.normalized, 2.5f, false, damage > Stats.Damage);
                     ApplyHitStop(0.04f);
                     enemy.ApplyHitStop(0.04f);
                 }
@@ -257,7 +340,8 @@ namespace Coinbound
 
         public bool TryRoll(Vector2 direction)
         {
-            if (!CanAct || IsHitStopped || IsRolling || RollCooldownRemaining > 0 || direction.sqrMagnitude < 0.001f) return false;
+            if (!CanAct || IsRolling || IsBlocking || RollCooldownRemaining > 0 || direction.sqrMagnitude < 0.001f) return false;
+            hitStopRemaining=0;attackReleased=true;
             rollDirection = direction.normalized;
             rollRemaining = RollDuration;
             rollDustDistance = 0;
@@ -269,10 +353,17 @@ namespace Coinbound
             return true;
         }
 
-        public void SetBlocking(bool value) => blockRequested = value;
+        public void ApplySlow(float multiplier, float seconds)
+        { slowMultiplier = Mathf.Clamp01(multiplier); slowRemaining = Mathf.Max(0, seconds); }
+
+        public void SetBlocking(bool value)
+        {
+            blockRequested = value;
+            if (IsBlocking && body != null) body.linearVelocity = Vector2.zero;
+        }
 
         /// <returns>True only when health actually changed; a roll, block or damage grace period returns false.</returns>
-        public bool TakeDamage(int damage, Vector2 sourcePosition, DungeonEnemy attacker = null)
+        public bool TakeDamage(float damage, Vector2 sourcePosition, DungeonEnemy attacker = null)
         {
             if (!CanAct || damage <= 0) return false;
             if (Spells != null && Spells.AbsorbHit()) return false;
@@ -288,15 +379,18 @@ namespace Coinbound
                     if (offset.sqrMagnitude > 1.8f * 1.8f || offset.sqrMagnitude < .0001f ||
                         Vector2.Dot(offset.normalized, aimDirection) < .42f ||
                         !DungeonCombatPhysics.ClearLine(body.position, enemy.transform.position)) continue;
-                    enemy.Stun(.6f, offset.normalized * 5);
+                    enemy.Stun(1.2f, offset.normalized * 5);
                     enemy.ApplyHitStop(.04f);
                 }
                 DungeonCombatFx.Parry(this, body.position, fromAttack.normalized);
                 ApplyHitStop(0.04f);
-                if (attacker != null) attacker.ApplyHitStop(0.04f);
+                if (attacker != null) { if(attacker.StunRemaining<1.2f)attacker.Stun(1.2f);attacker.ApplyHitStop(0.04f); }
                 return false;
             }
-            Health = Mathf.Max(0, Health - damage);
+            healthRecoveryWait=HealthRecoveryDelay;
+            float healthBefore = Health;
+            Health = Mathf.Max(0, Health - Mathf.Max(damage*.30f, damage - Stats.Defense));
+            DungeonDamageNumber.Create(this, transform.position, healthBefore - Health, true, false);
             hurtInvulnerability = 0.65f;
             hitFlashRemaining = 0.18f;
             knockbackVelocity = fromAttack.sqrMagnitude > 0.001f ? -fromAttack.normalized * 4 : Vector2.zero;
@@ -318,7 +412,8 @@ namespace Coinbound
         {
             if (!CanAct || IsHitStopped) { body.linearVelocity = Vector2.zero; return; }
             if (IsRolling) body.linearVelocity = rollDirection * Mathf.Lerp(12, 8, RollProgress);
-            else body.linearVelocity = movement * MoveSpeed * (IsBlocking ? 0.45f : IsAttacking ? 0.55f : 1) + knockbackVelocity;
+            else if (IsBlocking) body.linearVelocity = Vector2.zero;
+            else body.linearVelocity = movement * MoveSpeed * (IsAttacking ? .4f : 1f) + knockbackVelocity;
         }
 
         internal void ApplyHitStop(float seconds)

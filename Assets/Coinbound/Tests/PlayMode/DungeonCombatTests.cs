@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
@@ -77,6 +78,26 @@ namespace Coinbound.Tests
             yield return null; // Destroy also unregisters enemies and removes every child projectile/effect.
         }
 
+        [TestCase(false)] [TestCase(true)]
+        public void HealthRecoveryWaitsResetsAndRespectsPauseAndDeath(bool archer)
+        {
+            var player=Player(archer?DungeonHero.Second:DungeonHero.First);
+            var advance=typeof(DungeonPlayer).GetMethod("AdvanceHealthRecovery",BindingFlags.Instance|BindingFlags.NonPublic);
+            var immunity=typeof(DungeonPlayer).GetField("hurtInvulnerability",BindingFlags.Instance|BindingFlags.NonPublic);
+            System.Action<float> step=dt=>advance.Invoke(player,new object[]{dt});
+            Assert.That(player.TakeDamage(20,Origin+Vector2.right),Is.True);
+            float damaged=player.Health;
+            step(7.9f);Assert.That(player.Health,Is.EqualTo(damaged));
+            step(.6f);Assert.That(player.Health,Is.EqualTo(damaged+.5f*player.HealthRecoveryPerSecond).Within(.001f));
+            Time.timeScale=0;float before=player.Health;step(10);Assert.That(player.Health,Is.EqualTo(before));Time.timeScale=1;
+            player.SetInputEnabled(false);step(10);Assert.That(player.Health,Is.EqualTo(before));player.SetInputEnabled(true);
+            immunity.SetValue(player,0f);Assert.That(player.TakeDamage(5,Origin+Vector2.right),Is.True);
+            before=player.Health;step(8);Assert.That(player.Health,Is.EqualTo(before));
+            step(1000);Assert.That(player.Health,Is.EqualTo(player.MaxHealth));
+            immunity.SetValue(player,0f);player.TakeDamage(9999,Origin+Vector2.right);
+            Assert.That(player.IsDead,Is.True);step(1000);Assert.That(player.Health,Is.Zero);
+        }
+
         private DungeonPlayer Player(DungeonHero hero)
         {
             var obj = new GameObject("Combat player", typeof(Rigidbody2D), typeof(BoxCollider2D));
@@ -133,6 +154,49 @@ namespace Coinbound.Tests
         }
 
         [Test]
+        public void IndigoChestFramesKeepNativeSizePivotAndFacing()
+        {
+            var chest=Chest(Vector2.right);var collider=chest.GetComponent<BoxCollider2D>();
+            var position=chest.transform.position;var offset=collider.offset;
+            foreach(string face in new[]{"s","n","e","w"})
+            {
+                chest.SetFacing(face);var sprite=chest.GetComponent<SpriteRenderer>().sprite;
+                Assert.That(sprite.rect.size,Is.EqualTo(new Vector2(32,48)));
+                Assert.That(sprite.pivot,Is.EqualTo(new Vector2(16,8)));
+                Assert.That(sprite.pixelsPerUnit,Is.EqualTo(32));Assert.That(sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                Assert.That(chest.transform.position,Is.EqualTo(position));Assert.That(collider.offset,Is.EqualTo(offset));
+                Assert.That(chest.FrameIndex,Is.Zero);Assert.That(chest.Facing,Is.EqualTo(face));
+            }
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public void AttacksAllowMovementButGuardStopsMovement(bool archer)
+        {
+            var player = Player(archer ? DungeonHero.Second : DungeonHero.First);
+            var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+            typeof(DungeonPlayer).GetField("movement", flags).SetValue(player, Vector2.right);
+            player.SendMessage("FixedUpdate");
+            Assert.That(player.Velocity.x, Is.GreaterThan(0));
+            Assert.That(player.TryAttack(Vector2.up), Is.True);
+            player.SendMessage("FixedUpdate");
+            Assert.That(player.Velocity.x, Is.EqualTo(player.MoveSpeed*.4f).Within(.001f));
+            Assert.That(player.TryRoll(Vector2.right), Is.True);
+            Assert.That(player.IsAttacking,Is.False);
+            typeof(DungeonPlayer).GetField("rollRemaining", flags).SetValue(player, 0f);
+            player.SendMessage("FixedUpdate");
+            Assert.That(player.Velocity.x, Is.GreaterThan(0));
+            if (archer) return;
+            player.SetBlocking(true);
+            player.SendMessage("FixedUpdate");
+            Assert.That(player.Velocity, Is.EqualTo(Vector2.zero));
+            Assert.That(player.TryRoll(Vector2.right), Is.False);
+            player.SetBlocking(false);
+            player.SendMessage("FixedUpdate");
+            Assert.That(player.Velocity.x, Is.GreaterThan(0));
+        }
+
+        [Test]
         public void ChestRequiresFacingDistanceAndUnobstructedLine()
         {
             DungeonPlayer player = Player(DungeonHero.First);
@@ -169,10 +233,10 @@ namespace Coinbound.Tests
             Time.timeScale = 1;
             yield return new WaitForSeconds(.65f);
             Assert.That(chest.State, Is.EqualTo(DungeonChest.ChestState.Open));
-            Assert.That(chest.FrameIndex, Is.EqualTo(8));
+            Assert.That(chest.FrameIndex, Is.EqualTo(4));
             Assert.That(opened, Is.EqualTo(1));
             yield return new WaitForSeconds(.15f);
-            Assert.That(chest.FrameIndex, Is.EqualTo(8));
+            Assert.That(chest.FrameIndex, Is.EqualTo(4));
             Assert.That(opened, Is.EqualTo(1));
         }
 
@@ -198,6 +262,23 @@ namespace Coinbound.Tests
             Assert.That(behindWall.Health, Is.EqualTo(behindWall.MaxHealth), "A melee arc cannot pass through a solid wall.");
         }
 
+        [Test]
+        public void BowReleaseTargetsCursorFromVisibleHandAndDashCancelsWindup()
+        {
+            var player=Player(DungeonHero.Second);
+            var flags=System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic;
+            Assert.That(player.TryAttack(Vector2.right),Is.True);
+            Vector2 point=Origin+new Vector2(3,2);
+            typeof(DungeonPlayer).GetProperty("AimPosition").SetValue(player,point);
+            typeof(DungeonPlayer).GetField("aimAtPoint",flags).SetValue(player,true);
+            typeof(DungeonPlayer).GetMethod("AdvanceAttack",flags).Invoke(player,new object[]{.15f});
+            var arrow=fixture.GetComponentInChildren<DungeonArrow>();
+            Vector2 expected=(point-Origin-Vector2.up*DungeonHeroAnimator.HandHeight).normalized;
+            Assert.That(Vector2.Dot(arrow.Direction,expected),Is.GreaterThan(.99999f));
+            Assert.That(player.TryRoll(Vector2.up),Is.True);
+            Assert.That(player.IsAttacking,Is.False);
+        }
+
         [UnityTest]
         public IEnumerator ArrowTravelsAtArbitraryAngleAndDamagesEnemy()
         {
@@ -211,7 +292,7 @@ namespace Coinbound.Tests
             Assert.That(arrow, Is.Not.Null, "The bow must create an actual travelling projectile.");
             Assert.That(Vector2.Dot(arrow.Direction, aim), Is.GreaterThan(0.9999f), "Arrow aim must not snap to four or eight directions.");
             yield return new WaitForSeconds(0.5f);
-            Assert.That(enemy.Health, Is.InRange(enemy.MaxHealth - 1.5f, enemy.MaxHealth - 1f));
+            Assert.That(enemy.Health, Is.InRange(enemy.MaxHealth - 2.25f, enemy.MaxHealth - 1.5f));
             Assert.That(fixture.GetComponentsInChildren<DungeonArrow>(), Is.Empty, "The projectile is consumed by the hit.");
         }
 
@@ -330,7 +411,7 @@ namespace Coinbound.Tests
             Assert.That(player.TakeDamage(1, attacker.transform.position, attacker), Is.False);
             Assert.That(player.Health, Is.EqualTo(player.MaxHealth));
             Assert.That(player.BlockCooldownRemaining, Is.EqualTo(2).Within(0.001));
-            Assert.That(attacker.StunRemaining, Is.EqualTo(0.6f).Within(0.001));
+            Assert.That(attacker.StunRemaining, Is.EqualTo(1.2f).Within(0.001));
             Assert.That(player.IsBlocking, Is.False, "The first blocked hit consumes the guard even while RMB remains held.");
             DungeonCombatFx[] blockedEffects = fixture.GetComponentsInChildren<DungeonCombatFx>();
             Assert.That(System.Array.Exists(blockedEffects, fx => fx.EffectKind == "Parry" && fx.ActivePixelCount > 0), Is.True,

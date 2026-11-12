@@ -1,0 +1,221 @@
+{
+  "revision": "composed-v5",
+  "base24_byte_identical": true,
+  "standalone45_to48_byte_identical": true,
+  "exact_compositions": [
+    {
+      "id": 25,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 26,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 27,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": 28,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        5,
+        13
+      ]
+    },
+    {
+      "id": 29,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        1,
+        13
+      ]
+    },
+    {
+      "id": 30,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "id": 31,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        3,
+        6
+      ]
+    },
+    {
+      "id": 32,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": 33,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        22,
+        7
+      ]
+    },
+    {
+      "id": 34,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        12,
+        20
+      ]
+    },
+    {
+      "id": 35,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        15
+      ]
+    },
+    {
+      "id": 36,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        18,
+        23
+      ]
+    },
+    {
+      "id": 37,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": 38,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 39,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        10
+      ]
+    },
+    {
+      "id": 40,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        11
+      ]
+    },
+    {
+      "id": 41,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        1,
+        11
+      ]
+    },
+    {
+      "id": 42,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": 43,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        5,
+        15
+      ]
+    },
+    {
+      "id": 44,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        21
+      ]
+    },
+    {
+      "id": 49,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        4,
+        1,
+        13
+      ]
+    },
+    {
+      "id": 50,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        17,
+        8,
+        15
+      ]
+    },
+    {
+      "id": 51,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        20,
+        12,
+        22
+      ]
+    },
+    {
+      "id": 52,
+      "verified_rgba_exact": true,
+      "source_ids": [
+        7,
+        13,
+        2
+      ]
+    }
+  ],
+  "counts": {
+    "placeable_variants": 52,
+    "unchanged_base_variants": 24,
+    "exact_compositions": 24,
+    "unchanged_standalone_variants": 4,
+    "breakable_variants": 25,
+    "debris_textures": 4
+  },
+  "atlas_native_match": true,
+  "alpha_binary": true,
+  "wall_contacts_recomputed": true,
+  "preview_wall_gap_screen_px": 0,
+  "not_run": [
+    "Unity integration",
+    "Physics/navigation playtests",
+    "FPS profiling"
+  ]
+}

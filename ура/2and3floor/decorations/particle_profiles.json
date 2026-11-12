@@ -1,0 +1,140 @@
+{
+  "global_active_particle_cap": 96,
+  "per_break_cap": 12,
+  "shared_pool": true,
+  "no_particle_colliders": true,
+  "no_dynamic_lights": true,
+  "update_in_one_shared_manager": true,
+  "profiles": {
+    "wood": {
+      "count": 8,
+      "duration_seconds": [
+        0.25,
+        0.45
+      ],
+      "colors": [
+        "#44352d",
+        "#695348",
+        "#302b28"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ],
+      "behavior": "short outward arc, no rigidbody, stop on floor"
+    },
+    "wood_leather": {
+      "count": 8,
+      "duration_seconds": [
+        0.25,
+        0.45
+      ],
+      "colors": [
+        "#44352d",
+        "#695348",
+        "#302b28"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ]
+    },
+    "wood_coal": {
+      "count": 10,
+      "duration_seconds": [
+        0.25,
+        0.45
+      ],
+      "colors": [
+        "#44352d",
+        "#252525",
+        "#54483b"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ]
+    },
+    "wood_metal": {
+      "count": 9,
+      "duration_seconds": [
+        0.2,
+        0.45
+      ],
+      "colors": [
+        "#44352d",
+        "#695348",
+        "#525055"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ]
+    },
+    "wood_water": {
+      "count": 10,
+      "duration_seconds": [
+        0.2,
+        0.4
+      ],
+      "colors": [
+        "#44352d",
+        "#35443d",
+        "#515955"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ],
+      "no_persistent_water_texture": true
+    },
+    "rotten_wood": {
+      "count": 8,
+      "duration_seconds": [
+        0.25,
+        0.45
+      ],
+      "colors": [
+        "#3b382a",
+        "#5d5241",
+        "#414a2d"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ]
+    },
+    "ceramic": {
+      "count": 7,
+      "duration_seconds": [
+        0.2,
+        0.35
+      ],
+      "colors": [
+        "#554b3c",
+        "#77705b",
+        "#373b2b"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ]
+    },
+    "dry_leaves": {
+      "count": 6,
+      "duration_seconds": [
+        0.2,
+        0.4
+      ],
+      "colors": [
+        "#3c422b",
+        "#6d5b4a",
+        "#78656f"
+      ],
+      "pieces_px": [
+        1,
+        2
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+Artifacts and the coin chest
+============================
+Original art/names: ура/items/DESC.txt. Current tuning and the full before/after changelog:
+BALANCE_CHANGES.txt in the project root (also copied beside the Windows executable).
+32 relics: positive tiers 12 / 7 / 2, negative tiers 6 / 3 / 2.
+Damage, speed and attack rate modifiers are additive fractions of the hero's base stats.
+Enemy aura modifiers are percentages; all auras remain invisible, radius 5 tiles.
+HP, defense and luck are flat additions. Critical chance additions are percentage points.
+Inventory bounds prevent impossible runs; exact values and probability formulas are in the changelog.
+The coin remains fair (50/50), with luck affecting rarity only. No reroll on closing.
+Duplicates stack and each occurrence has its own 48x48 HUD icon, four per row.
+
+Camera
+------
+After the cards finish revealing, the camera starts automatically. The tracker process
+starts on a worker thread. Frames remain in memory and use a local anonymous pipe.
+Only the blue pixel hand skeleton is displayed; no video recording.
+Sequence (restored 2026-11-09): fist for 0.30 seconds, then thumbs-up for 0.12 seconds,
+within 5 seconds. At least three fingers curled; small thumb extension is accepted.
+Tracking gaps up to 0.8 seconds are tolerated. No wrist lift is required.
+A human camera sequence still needs live validation; automated tests use synthetic landmarks.
+F2 spawns a nearby debug chest; F3 opens the paged relic grant menu in development/editor builds.
+
+Bundled dependencies
+--------------------
+Python 3.12.10 embedded, Windows x64, Python Software Foundation license:
+https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip
+MediaPipe 0.10.32, Apache 2.0; individual dependency licenses are in their dist-info folders:
+https://pypi.org/project/mediapipe/0.10.32/
+Hand model:
+https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/latest/hand_landmarker.task
+API reference: https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker
+
+Verification: DungeonRelicTests, DungeonCoinGestureTests, the normal combat suite,
+and -coinbound-capture <dir> -coinbound-loot-capture for the standalone UI path.

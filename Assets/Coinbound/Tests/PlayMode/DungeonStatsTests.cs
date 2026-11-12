@@ -53,8 +53,8 @@ namespace Coinbound.Tests
             Assert.That(stats.RollGoodDrop(.46f), Is.False);
             Assert.That(stats.GoodDropChance(.02f), Is.Zero);
             Assert.That(stats.RollGoodDrop(0, .02f), Is.False);
-            Assert.That(DungeonHero.First.Stats.Luck / 100, Is.EqualTo(-.05f));
-            Assert.That(DungeonHero.Second.Stats.Luck / 100, Is.EqualTo(-.05f));
+            Assert.That(DungeonHero.First.Stats.Luck, Is.Zero);
+            Assert.That(DungeonHero.Second.Stats.Luck, Is.Zero);
         }
 
         [Test]

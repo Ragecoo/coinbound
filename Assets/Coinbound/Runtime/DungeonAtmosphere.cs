@@ -100,6 +100,7 @@ namespace Coinbound
             foreach (SpriteRenderer visual in owner.transform.parent.GetComponentsInChildren<SpriteRenderer>())
                 if (visual.name == "object.fountain") { fountain = visual; break; }
             PlanDressing(spawns);
+            if(DungeonProps.Current!=null)decorations.RemoveAll(item=>!item.floor);
             for (int i = 0; i < slots.Length; i++)
             {
                 var obj = new GameObject("Dressing " + i, typeof(SpriteRenderer));
@@ -284,7 +285,14 @@ namespace Coinbound
 
         private void Update()
         {
-            if (player == null || map == null || !player.CanAct || player.IsHitStopped) return;
+            if(player==null||map==null)return;
+            if(!player.CanAct)
+            {
+                if(fountain!=null && fountain.TryGetComponent<DungeonFountain>(out var checkpoint) && checkpoint.IsOffering)
+                {clock+=Time.unscaledDeltaTime;DrawFountain(DungeonFxSettings.Current,1);}
+                return;
+            }
+            if(player.IsHitStopped)return;
             float dt = Time.deltaTime;
             clock += dt; refresh -= dt; drawTime -= dt;
             flameTime -= dt;
@@ -416,22 +424,17 @@ namespace Coinbound
             if (fountain == null) { water.Hide(); return; }
             Vector2 center = fountain.transform.position;
             water.Begin(fountain.sortingOrder + 1, center);
-            if (density > 0 && settings.fountainRipples && Vector2.Distance(player.transform.position, center) < 11)
+            var checkpoint=fountain.GetComponent<DungeonFountain>();
+            float splash=checkpoint!=null?Time.unscaledTime-checkpoint.SplashAt:100;
+            if(splash<2)
             {
-                float scale = fountain.transform.lossyScale.x;
-                Vector2 bowl = center + Vector2.down * 0.17f * scale;
-                for (int ring = 0; ring < 2; ring++)
+                for(int i=0;i<14;i++)
                 {
-                    float progress = Mathf.Repeat(clock * 0.55f + ring * 0.5f, 1);
-                    water.Ellipse(bowl, Mathf.RoundToInt((5 + progress * 17) * scale), Mathf.RoundToInt((2 + progress * 7) * scale),
-                        new Color32(113, 153, 190, (byte)(85 * (1 - progress))));
+                    float angle=i*Mathf.PI*2/14;
+                    var point=center+new Vector2(Mathf.Cos(angle)*splash*.8f,Mathf.Sin(angle)*splash*.35f+splash*.7f-splash*splash*.6f);
+                    water.Pixel(point,new Color(0.5f,.85f,1,Mathf.Clamp01(1-splash/1.2f)),1,2);
                 }
-                for (int i = 0; i < 4; i++)
-                {
-                    float age = Mathf.Repeat(clock * 1.1f + i * 0.25f, 1);
-                    Vector2 point = center + new Vector2((i % 2 == 0 ? -1 : 1) * 0.12f * age, 0.47f - age * 0.62f) * scale;
-                    water.Pixel(point, new Color32(140, 179, 209, (byte)(115 * Mathf.Sin(age * Mathf.PI))), 1, 2);
-                }
+                water.Ellipse(center,Mathf.RoundToInt(8+splash*22),Mathf.RoundToInt(3+splash*9),new Color(.45f,.8f,1,Mathf.Clamp01(1-splash/2)));
             }
             water.End();
         }
@@ -464,6 +467,8 @@ namespace Coinbound
             }
         }
 
+        private void OnEnable(){if(map!=null)current=this;}
+        private void OnDisable(){if(current==this)current=null;}
         private void OnDestroy()
         {
             if (current == this) current = null;

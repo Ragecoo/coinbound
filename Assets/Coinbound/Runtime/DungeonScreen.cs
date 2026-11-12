@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,7 +36,8 @@ namespace Coinbound
         private DungeonHero selectedHero = DungeonHero.First;
         private DungeonPlayer gameplayPlayer;
         private Func<int> aliveEnemies;
-        private int hudSeed, hudChests, initialEnemies, previousHealth;
+        private int hudSeed, hudChests, initialEnemies;
+        private float previousHealth;
         private float runSeconds, loadingProgress, targetProgress;
         private DungeonDamageBorder damageBorder;
         private Text voiceStatus;
@@ -52,7 +53,7 @@ namespace Coinbound
 
         public string CurrentPage => settings != null && settings.activeSelf ? "Settings" : current != null ? current.name : "None";
         public bool IsTransitioning => transition != null;
-        public bool IsModalOpen => settings != null && settings.activeSelf || confirmation != null && confirmation.activeSelf;
+        public bool IsModalOpen => IsDebugRelicsOpen || settings != null && settings.activeSelf || confirmation != null && confirmation.activeSelf;
 
         public void Initialize(Action start, Action resume, Action openMenu, Action cancel, Action<DungeonHero> startHero, Action title = null)
         {
@@ -77,7 +78,7 @@ namespace Coinbound
                 events.transform.SetParent(transform, false);
                 events.GetComponent<InputSystemUIInputModule>().AssignDefaultActions();
             }
-            BuildMenu(); BuildHeroes(); BuildLoading(); BuildHud(); BuildPause(); BuildDeath(); BuildSettings(); BuildConfirmation();
+            BuildMenu(); BuildHeroes(); BuildIntro(); BuildLoading(); BuildHud(); BuildPause(); BuildDeath(); BuildSettings(); BuildConfirmation(); BuildLoot();
             var cover = Layer("Transition", Color.clear);
             cover.SetActive(true);
             curtain = cover.AddComponent<CanvasGroup>();
@@ -98,7 +99,7 @@ namespace Coinbound
         }
         public void ShowPause()
         {
-            pauseStats.text = $"{selectedHero.DisplayName}   ·   {TimeText(runSeconds)}\nОчки: {(gameplayPlayer != null ? gameplayPlayer.Score : 0):D9}";
+            pauseStats.text = $"{selectedHero.DisplayName}   ·   {TimeText(runSeconds)}\nОчки: {(gameplayPlayer != null ? gameplayPlayer.Score : 0):000000000}";
             Switch(pause, pauseResumeButton);
         }
         public void ShowHeroSelection(DungeonHero hero)
@@ -130,6 +131,7 @@ namespace Coinbound
         public void BindPlayer(DungeonPlayer player, Func<int> enemyCount = null)
         {
             gameplayPlayer = player; aliveEnemies = enemyCount;
+            spellHud.Bind(player != null ? player.Spells : null);
             previousHealth = player != null ? player.Health : 0;
             runSeconds = 0;
             displayedScore = 0;
@@ -141,24 +143,30 @@ namespace Coinbound
             mpArt.SetFraction(player.MaxMana > 0 ? player.Mana / (float)player.MaxMana : 0);
             RefreshStats(player.Stats);
             selectedHero = player.Hero;
-            controlLegend.text = "WASD";
+            controlLegend.text = "pulse · trace · ward · decoy · recall";
             RefreshHud();
         }
         public void ShowDeath()
         {
-            deathStats.text = $"Время: {TimeText(runSeconds)}\n\nОчки: {(gameplayPlayer != null ? gameplayPlayer.Score : 0):D9}";
+            DungeonEventAudio.Play(DungeonEventAudio.Cue.Death);
+            deathStats.text = $"Время: {TimeText(runSeconds)}\n\nОчки: {(gameplayPlayer != null ? gameplayPlayer.Score : 0):000000000}";
             Switch(death, deathRetryButton);
         }
         public void ShowError(string message) { ShowMenu(false); menuNote.text = message; }
         public void RequestNewJourney()
         {
             if (gameplayPlayer != null && !gameplayPlayer.IsDead)
-                Confirm("НАЧАТЬ ЗАНОВО?", "Текущее подземелье будет потеряно при новом спуске.", startAction, "Выбрать героя");
+                Confirm("НАЧАТЬ ЗАНОВО?", "Текущее подземелье будет потеряно при новом спуске.", startAction, "Я знаю что делаю");
             else startAction();
         }
         public bool HandleBack()
         {
+            if (IsDebugRelicsOpen) { CloseDebugRelics();return true; }
+            if (IsLootOpen) { if(tossRoutine==null)CloseLoot(true); return true; }
+            if (current == intro) { introFinishRequested = true; return true; }
+            if (introExitFrame == Time.frameCount) return true;
             if (confirmation.activeSelf) { CloseConfirmation(); return true; }
+            if (current==leaderboard && leaderboard!=null) {titleAction();return true;}
             if (settings.activeSelf) { CloseSettings(); return true; }
             return false;
         }
@@ -166,7 +174,7 @@ namespace Coinbound
         private void Switch(GameObject target, Selectable focus)
         {
             CloseSettings(false); CloseConfirmation(false);
-            foreach (GameObject page in new[] { menu, heroSelection, loading, hud, pause, death }) page.SetActive(page == target);
+            foreach (GameObject page in new[] { menu, heroSelection, intro, loading, hud, pause, death, victory, leaderboard }) if(page!=null)page.SetActive(page == target);
             bool wasVisible = current != null;
             current = target;
             Select(focus);
@@ -209,6 +217,9 @@ namespace Coinbound
         private static string TimeText(float value) => $"{(int)value / 60:00}:{(int)value % 60:00}";
         private void LateUpdate()
         {
+            UpdateDebugRelics();
+            UpdateLoot();
+            if (current == intro) UpdateIntro();
             if (gameplayPlayer != null && gameplayPlayer.CanAct) runSeconds += Time.deltaTime;
             if (hud.activeSelf) RefreshHud();
             if (loading.activeSelf)
@@ -223,13 +234,18 @@ namespace Coinbound
         private void RefreshHud()
         {
             if (gameplayPlayer == null) return;
-            interactionPrompt.gameObject.SetActive(gameplayPlayer.InteractionTarget != null);
+            bool chestNearby=gameplayPlayer.InteractionTarget!=null;
+            interactionPrompt.text=chestNearby?"E — Открыть сундук":"E — Сохраниться у фонтана";
+            interactionPrompt.gameObject.SetActive(chestNearby || DungeonFountain.Find(gameplayPlayer)!=null);
+            var stairs=DungeonExit.Find(gameplayPlayer);
+            if(!chestNearby&&stairs!=null){interactionPrompt.text=stairs.Prompt;interactionPrompt.gameObject.SetActive(true);}
             RefreshAuthoredHud();
             displayedScore = Mathf.MoveTowards(displayedScore, gameplayPlayer.Score,
                 Mathf.Max(30, (gameplayPlayer.Score - displayedScore) * 5) * Time.unscaledDeltaTime);
             hudLabel.text = Mathf.FloorToInt(displayedScore).ToString("D9");
             if (gameplayPlayer.Health < previousHealth && DungeonSettings.DamageFlash) damageBorder.Pulse();
-            if (gameplayPlayer.Health > previousHealth && DungeonSettings.DamageFlash) damageBorder.Heal();
+            // Passive fractional recovery is communicated by HUD motes, not a permanent full-screen flash.
+            if (gameplayPlayer.Health - previousHealth > .5f && DungeonSettings.DamageFlash) damageBorder.Heal();
             previousHealth = gameplayPlayer.Health;
 
         }
@@ -240,6 +256,7 @@ namespace Coinbound
         }
         private void SetupSound()
         {
+            BuildLootSounds();
             uiAudio = gameObject.AddComponent<AudioSource>(); uiAudio.playOnAwake = false; uiAudio.ignoreListenerPause = true;
             const int count = 2205;
             var samples = new float[count];
@@ -258,10 +275,14 @@ namespace Coinbound
         }
         private void OnDestroy()
         {
+            DungeonChest.RewardRequested -= ShowChestReward;
+            if(coinCamera!=null)coinCamera.StopCamera();
             Font.textureRebuilt -= KeepFontPixels;
             DungeonSettings.Changed -= ApplyPreferences;
             DungeonSettings.Save();
+            DisposeLootSounds();
             if (uiClick != null) Destroy(uiClick);
+            if (introTick != null) Destroy(introTick);
             if (displayFont != null && displayFont != font) Destroy(displayFont);
         }
 

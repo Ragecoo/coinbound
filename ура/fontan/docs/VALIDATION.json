@@ -1,0 +1,51 @@
+{
+  "frames": 24,
+  "native_size": [
+    120,
+    120
+  ],
+  "periodic_endpoint_equals_frame_zero": true,
+  "alpha_identical": true,
+  "all_colors_from_original": true,
+  "unchanged_pixels_outside_water_mask": 11699,
+  "animated_water_pixels": 2701,
+  "mean_adjacent_frame_rgb_delta": 6.7077,
+  "seam_last_to_first_rgb_delta": 6.02,
+  "max_adjacent_frame_rgb_delta": 7.0666,
+  "seam_to_mean_ratio": 0.8975,
+  "all_frame_differences": [
+    6.413,
+    7.007,
+    6.819,
+    7.004,
+    7.039,
+    6.869,
+    6.544,
+    5.985,
+    6.425,
+    7.012,
+    6.838,
+    6.984,
+    6.964,
+    6.831,
+    6.547,
+    6.048,
+    6.464,
+    7.067,
+    6.823,
+    6.96,
+    6.97,
+    6.839,
+    6.514,
+    6.02
+  ],
+  "project_original_modified": false,
+  "not_run": [
+    "Unity playback and performance tests"
+  ],
+  "unique_frames": 24,
+  "apng_matches_all_native_frames": true,
+  "gif_duration_ms": 2000,
+  "gif_static_region_does_not_flicker": true,
+  "original_source_sha256": "27afd38c89508a0401027006b1225d5b0b69c5d1a356c4d5448ed5fe4225e5d1"
+}

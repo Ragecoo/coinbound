@@ -1,0 +1,349 @@
+{
+  "revision": "composed-v5",
+  "coordinates": "tangent_cell advances right for N/S, down for E/W; NEVER rotate sprite",
+  "all_initial_members_flush_to_wall": true,
+  "recipes": [
+    {
+      "id": "store_wall",
+      "theme": "storage",
+      "allowed_walls": [
+        "N",
+        "S"
+      ],
+      "members": [
+        {
+          "asset_id": 26,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Бочка и ящик"
+        },
+        {
+          "asset_id": 14,
+          "tangent_cell": 3,
+          "normal_gap_px": 0,
+          "label_ru": "Три мешка"
+        },
+        {
+          "asset_id": 22,
+          "tangent_cell": 4,
+          "normal_gap_px": 0,
+          "label_ru": "Доски"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "barrel_niche",
+      "theme": "storage",
+      "allowed_walls": [
+        "N",
+        "S"
+      ],
+      "members": [
+        {
+          "asset_id": 25,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Две бочки"
+        },
+        {
+          "asset_id": 7,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Один мешок"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "crate_workbench",
+      "theme": "storage",
+      "allowed_walls": [
+        "N"
+      ],
+      "members": [
+        {
+          "asset_id": 43,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Горшки на ящике"
+        },
+        {
+          "asset_id": 21,
+          "tangent_cell": 1,
+          "normal_gap_px": 0,
+          "label_ru": "Ведро с инструментами"
+        },
+        {
+          "asset_id": 23,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Книги и свитки"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "crypt_shrine",
+      "theme": "crypt",
+      "allowed_walls": [
+        "N"
+      ],
+      "members": [
+        {
+          "asset_id": 45,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Гроб"
+        },
+        {
+          "asset_id": 18,
+          "tangent_cell": 1,
+          "normal_gap_px": 0,
+          "label_ru": "Череп и свечи"
+        },
+        {
+          "asset_id": 32,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Горшок и кости"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "skull_crates",
+      "theme": "crypt",
+      "allowed_walls": [
+        "N"
+      ],
+      "members": [
+        {
+          "asset_id": 39,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Череп на ящике"
+        },
+        {
+          "asset_id": 17,
+          "tangent_cell": 1,
+          "normal_gap_px": 0,
+          "label_ru": "Куча костей"
+        },
+        {
+          "asset_id": 40,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Свечи на ящике"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "damp_jars",
+      "theme": "damp",
+      "allowed_walls": [
+        "N",
+        "S"
+      ],
+      "members": [
+        {
+          "asset_id": 30,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Три горшка"
+        },
+        {
+          "asset_id": 20,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Грибы"
+        },
+        {
+          "asset_id": 34,
+          "tangent_cell": 3,
+          "normal_gap_px": 0,
+          "label_ru": "Камни и грибы"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "abandoned_camp",
+      "theme": "camp",
+      "allowed_walls": [
+        "N",
+        "S"
+      ],
+      "members": [
+        {
+          "asset_id": 33,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Доски и мешок"
+        },
+        {
+          "asset_id": 24,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Потухший костёр"
+        },
+        {
+          "asset_id": 21,
+          "tangent_cell": 3,
+          "normal_gap_px": 0,
+          "label_ru": "Ведро с инструментами"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "sanctuary",
+      "theme": "sanctuary",
+      "allowed_walls": [
+        "N"
+      ],
+      "members": [
+        {
+          "asset_id": 46,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Разбитая статуя"
+        },
+        {
+          "asset_id": 36,
+          "tangent_cell": 1,
+          "normal_gap_px": 0,
+          "label_ru": "Свечи, череп и книги"
+        },
+        {
+          "asset_id": 47,
+          "tangent_cell": 3,
+          "normal_gap_px": 0,
+          "label_ru": "Жаровня"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "west_storage",
+      "theme": "storage",
+      "allowed_walls": [
+        "W"
+      ],
+      "members": [
+        {
+          "asset_id": 1,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Бочка"
+        },
+        {
+          "asset_id": 7,
+          "tangent_cell": 1,
+          "normal_gap_px": 0,
+          "label_ru": "Один мешок"
+        },
+        {
+          "asset_id": 4,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Ящик"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "east_crypt",
+      "theme": "crypt",
+      "allowed_walls": [
+        "E"
+      ],
+      "members": [
+        {
+          "asset_id": 8,
+          "tangent_cell": 0,
+          "normal_gap_px": 0,
+          "label_ru": "Горшок"
+        },
+        {
+          "asset_id": 10,
+          "tangent_cell": 1,
+          "normal_gap_px": 0,
+          "label_ru": "Череп и кости"
+        },
+        {
+          "asset_id": 18,
+          "tangent_cell": 2,
+          "normal_gap_px": 0,
+          "label_ru": "Череп и свечи"
+        }
+      ],
+      "placement": "snap each member independently to the same measured wall; offsets along wall only; reserve final transformed bounds; reject overlap/door/path failures"
+    },
+    {
+      "id": "corner_nw",
+      "theme": "storage",
+      "requires_wall_pair": [
+        "N",
+        "W"
+      ],
+      "members": [
+        {
+          "asset_id": 49,
+          "normal_gap_px": 0,
+          "label_ru": "Завал: северо-запад"
+        }
+      ],
+      "placement": "solve X and Y contact simultaneously, at the matching real room corner; no corridors"
+    },
+    {
+      "id": "corner_ne",
+      "theme": "crypt",
+      "requires_wall_pair": [
+        "N",
+        "E"
+      ],
+      "members": [
+        {
+          "asset_id": 50,
+          "normal_gap_px": 0,
+          "label_ru": "Завал: северо-восток"
+        }
+      ],
+      "placement": "solve X and Y contact simultaneously, at the matching real room corner; no corridors"
+    },
+    {
+      "id": "corner_sw",
+      "theme": "damp",
+      "requires_wall_pair": [
+        "S",
+        "W"
+      ],
+      "members": [
+        {
+          "asset_id": 51,
+          "normal_gap_px": 0,
+          "label_ru": "Завал: юго-запад"
+        }
+      ],
+      "placement": "solve X and Y contact simultaneously, at the matching real room corner; no corridors"
+    },
+    {
+      "id": "corner_se",
+      "theme": "camp",
+      "requires_wall_pair": [
+        "S",
+        "E"
+      ],
+      "members": [
+        {
+          "asset_id": 52,
+          "normal_gap_px": 0,
+          "label_ru": "Завал: юго-восток"
+        }
+      ],
+      "placement": "solve X and Y contact simultaneously, at the matching real room corner; no corridors"
+    }
+  ]
+}

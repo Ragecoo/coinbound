@@ -1,0 +1,1981 @@
+{
+  "revision": 4,
+  "theme": "forge",
+  "file_paths_relative_to": "decorations/",
+  "assets": [
+    {
+      "id": "forge_01",
+      "label_ru": "Наковальня",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_01.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        6
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        12,
+        28,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            20,
+            18,
+            6
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            18,
+            6
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 8,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "401514ea5bd9cdc5a31d3729bfec836d57b3dc8728f6507c863cf3c27bc9f163",
+      "atlas_rect_top_left": [
+        218,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_02",
+      "label_ru": "Остывший горн",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_02.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        29,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            18,
+            21,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            3,
+            21,
+            11
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "ee97fbceacd430bdd1c63b00244f920e0eccedd1334647d1e0f7dc6a91af0cd5",
+      "atlas_rect_top_left": [
+        254,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_03",
+      "label_ru": "Кузнечные меха",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_03.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        5,
+        8,
+        28,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            14,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            3,
+            19,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          14,
+          19,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1.5,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_leather",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "0b0e31d04b7cccc9f275e9d1820cb9fed6d1bd36d12b24056d0242f0d49229ee",
+      "atlas_rect_top_left": [
+        290,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_04",
+      "label_ru": "Ящик с углём",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_04.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        4
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        5,
+        9,
+        25,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            19,
+            16,
+            9
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            4,
+            16,
+            9
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          19,
+          16,
+          9
+        ]
+      ],
+      "visual_above_collider_px": 10,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_coal",
+        "debris_ids": [
+          "forge_15",
+          "forge_16"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "7fc73973ee00437da8ee37d7cbb2ced4694480096040f78ea103c52b57c3503c",
+      "atlas_rect_top_left": [
+        326,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_05",
+      "label_ru": "Стойка инструментов",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_05.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        9
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.28125
+      ],
+      "visible_bbox_top_left": [
+        5,
+        12,
+        30,
+        24
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            18,
+            21,
+            5
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            9,
+            21,
+            5
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          18,
+          21,
+          5
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_metal",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [
+          "forge_14"
+        ],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "a4160d2963fe385879ae2a1df5fd4f692225f7535eed5000bce98a44b41570da",
+      "atlas_rect_top_left": [
+        362,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_06",
+      "label_ru": "Железные слитки",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_06.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        6,
+        10,
+        27,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            14,
+            17,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            8,
+            17,
+            10
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 4,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "56ec9c84a0ee60ec64178cbb8724216a8ccbc36c930faea72362ede602fe8264",
+      "atlas_rect_top_left": [
+        398,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_07",
+      "label_ru": "Закалочная кадка",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_07.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        4
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        25,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            18,
+            17,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            4,
+            17,
+            10
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          18,
+          17,
+          10
+        ]
+      ],
+      "visual_above_collider_px": 11,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_water",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "4b7a969339ecec3b5f97626cddbf577110aaa035fe0a750f62f533a4ee2b05ac",
+      "atlas_rect_top_left": [
+        434,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        434,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_08",
+      "label_ru": "Точильный станок",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_08.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        11,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            19,
+            19,
+            6
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            7,
+            19,
+            6
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 8,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "1262f30f64c360f6505961f766ae4bd63283b7368d83f3ec69efb904b0fd4be4",
+      "atlas_rect_top_left": [
+        470,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        470,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_09",
+      "label_ru": "Сломанная тележка",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_09.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        6
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        6,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            11,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            19,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          8,
+          11,
+          19,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 5,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "cb76ad189bf893729bab24d4c604328d65810336a7e55b83d3b3f657ef0e0c6c",
+      "atlas_rect_top_left": [
+        2,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_10",
+      "label_ru": "Ящик с рудой",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_10.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        27,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            11,
+            17,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            17,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          8,
+          11,
+          17,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_metal",
+        "debris_ids": [
+          "forge_15",
+          "forge_16"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "4e48aa769db52bc8a7a0c23e8b3a3526543165a5bc23b75e168b9e94847c6006",
+      "atlas_rect_top_left": [
+        38,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_11",
+      "label_ru": "Цепь с крюком",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_11.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        5
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        3,
+        7,
+        26,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9616eca738317071dc1e22d99c22c3bcd06d692d58f06754ff65fac01d2a1672",
+      "atlas_rect_top_left": [
+        74,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_12",
+      "label_ru": "Угловой металлолом",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_12.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        3,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            5,
+            15,
+            22,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            5,
+            6,
+            22,
+            11
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "e49ef2449f3d2eefd37d42135a62199f0d334fd6527cb81545b588cbf366a071",
+      "atlas_rect_top_left": [
+        110,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_13",
+      "label_ru": "Верстак",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_13.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        8
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        29,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            11,
+            20,
+            13
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            8,
+            20,
+            13
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          11,
+          20,
+          13
+        ]
+      ],
+      "visual_above_collider_px": 5,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 3,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_metal",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [
+          "forge_14"
+        ],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "7eb907b7365e312684bcb74c36a1bf2db0859c0fd4b5b2e0112860db2cebb229",
+      "atlas_rect_top_left": [
+        146,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_14",
+      "label_ru": "Молот и щипцы",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_14.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        6,
+        25,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "53086e865e680e31531a8a45289b0f57b58c5b050957c1e244bb7bc4188dccb3",
+      "atlas_rect_top_left": [
+        182,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_15",
+      "label_ru": "Щепки и гвозди",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "debris",
+      "file": "forge/debris/forge_15.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        26,
+        24
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "128920113e7a82c189bc95236a01d67b603e8a23b433a174a613b5adaf2ff298",
+      "atlas_rect_top_left": [
+        218,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_16",
+      "label_ru": "Уголь и железная полоса",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "debris",
+      "file": "forge/debris/forge_16.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        4,
+        8,
+        27,
+        22
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "4d1be7d62e72749368fe2eac6ec0a727e34edbc2ccffc2b1244ef2a3bab378b4",
+      "atlas_rect_top_left": [
+        254,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_17",
+      "label_ru": "Горн и меха",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_17.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        60,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            18,
+            21,
+            11
+          ],
+          [
+            39,
+            14,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            3,
+            21,
+            11
+          ],
+          [
+            39,
+            3,
+            19,
+            15
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          39,
+          14,
+          19,
+          15
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_02",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "forge_03",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": true
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "de3e1db3422d41e6a720afd7ae7502710bd62b56cad8d47cd7a1ac314dd6e65a",
+      "atlas_rect_top_left": [
+        410,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        410,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "forge_18",
+      "label_ru": "Наковальня и инструменты",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_18.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        6
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        6,
+        57,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            20,
+            18,
+            6
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            18,
+            6
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_01",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "forge_14",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "7eefb3cf2a79d4b1c8b775cb0ef940d4d3f7abda57a9b9b1891ecca81bf54fd5",
+      "atlas_rect_top_left": [
+        2,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "forge_19",
+      "label_ru": "Руда и уголь",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_19.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        4
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        57,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            11,
+            17,
+            15
+          ],
+          [
+            39,
+            19,
+            16,
+            9
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            17,
+            15
+          ],
+          [
+            39,
+            4,
+            16,
+            9
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          8,
+          11,
+          17,
+          15
+        ],
+        [
+          39,
+          19,
+          16,
+          9
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_10",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "forge_04",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": true
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "c104cdad0a63e31c4d8d0d0b4c5c015fe3944c19ac1b10a687f1240d79b921ce",
+      "atlas_rect_top_left": [
+        70,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        70,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "forge_20",
+      "label_ru": "Верстак и слитки",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_20.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        59,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            11,
+            20,
+            13
+          ],
+          [
+            40,
+            14,
+            17,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            8,
+            20,
+            13
+          ],
+          [
+            40,
+            8,
+            17,
+            10
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          11,
+          20,
+          13
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_13",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "forge_06",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "21c906a84c9b3686dbde21125d82b857ba56b049b926aaf823a23a1344c29831",
+      "atlas_rect_top_left": [
+        138,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        138,
+        410,
+        64,
+        32
+      ]
+    }
+  ]
+}

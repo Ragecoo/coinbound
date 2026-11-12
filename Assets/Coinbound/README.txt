@@ -287,11 +287,22 @@ leave combat RNG untouched. Binding/reset and healing do not emit loss particles
 Reduced Motion suppresses HUD resource particles. Existing rollDust/footDust settings
 remain available and are enabled in DungeonEffects.asset.
 
-Chests: authored 32x40 sprites at 32 PPU, shared pivot (16,34) from top-left.
-Tools/Import-ChestArt.ps1 copies the four directional sets unchanged. ChestArtImporter
-sets point filtering and the shared pivot. Frames 00..08 play once at 65ms/frame.
-E opens the nearest closed chest within 1.4 tiles in the player's forward cone.
-While moving, facing follows movement like the hero sprite; at rest it follows aim.
-Walls block interaction. Rolling, attacking, guarding, hit stop and pause prevent opening.
-No loot has been added: the final open-empty frame is held. Opened fires once for future loot.
-Chests have a feet collider and projected player-light shadow, including animated lid silhouettes.
+Chests: Indigo 32x48 sprites at 32 PPU, shared base-center pivot (16,40) from top-left.
+Source: ура/chest/README.md; Resources/ChestArtIndigo. Tile placement uses its center in every animation frame.
+All four directions use their authored frames without mirroring. Point filtering, no mipmaps.
+Opening: 00 -> 01 -> 02 -> 03 at 120 ms per frame, then hold 04. Closing frames 05..07
+are available in the source but are not played by this one-shot loot chest.
+E opens the nearest available chest within 1.4 tiles in the player's forward cone.
+While moving, facing follows movement; at rest it follows aim. Walls block interaction.
+Rolling, attacking, guarding, hit stop and pause prevent opening.
+The static base collider never changes with lid animation. Depth sorting uses the ground anchor.
+RewardRequested opens the coin interface; re-opening an unclaimed offer never rerolls it.
+
+Fountain checkpoints (09.11.2026): E beside the basin opens a coin offering.
+A recognized hand gesture or Space throws the coin INTO the water; landing always saves.
+Continue restores the most recent fountain checkpoint after restarting the application.
+Leaving the game or beginning another run never writes a checkpoint automatically.
+The file is fountain-save.json in Application.persistentDataPath, atomically replaced with a backup.
+Map seed/settings, hero, HP/MP, score, relic duplicates, cooldowns, surviving enemies and all chest states are restored.
+Transient combat animations/projectiles are not resumed from mid-flight.
+Keyboard spells: 1 pulse, 2 trace, 3 ward, 4 decoy, 5 recall; numpad supported.

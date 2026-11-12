@@ -1,0 +1,1252 @@
+{
+  "revision": "composed-v5",
+  "method": "exact opaque-pixel copies; no image generation, recoloring, scaling, rotation or smoothing",
+  "unchanged_base_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "unchanged_standalone_ids": [
+    45,
+    46,
+    47,
+    48
+  ],
+  "source_pack": "wall-v4",
+  "recipes": [
+    {
+      "id": 25,
+      "name": "barrels_pair",
+      "label_ru": "Две бочки",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/25_barrels_pair.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            4,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            28,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "barrel_crate",
+      "label_ru": "Бочка и ящик",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/26_barrel_crate.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            5,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            28,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "crates_pair",
+      "label_ru": "Два ящика",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/27_crates_pair.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            5,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            27,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "crate_sacks",
+      "label_ru": "Ящик и мешки",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/28_crate_sacks.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 5,
+          "offset_px_top_left": [
+            2,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 13,
+          "offset_px_top_left": [
+            27,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "barrel_sacks",
+      "label_ru": "Бочка и мешки",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/29_barrel_sacks.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            2,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 13,
+          "offset_px_top_left": [
+            28,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "jars_triple",
+      "label_ru": "Три горшка",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/30_jars_triple.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 8,
+          "offset_px_top_left": [
+            -4,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 8,
+          "offset_px_top_left": [
+            16,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 8,
+          "offset_px_top_left": [
+            36,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "broken_storage",
+      "label_ru": "Разбитый склад",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/31_broken_storage.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 3,
+          "offset_px_top_left": [
+            5,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 6,
+          "offset_px_top_left": [
+            30,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "jar_skull",
+      "label_ru": "Горшок и кости",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/32_jar_skull.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 8,
+          "offset_px_top_left": [
+            4,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 10,
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "planks_sack",
+      "label_ru": "Доски и мешок",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/33_planks_sack.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 22,
+          "offset_px_top_left": [
+            5,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 7,
+          "offset_px_top_left": [
+            30,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "rubble_mushrooms",
+      "label_ru": "Камни и грибы",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/34_rubble_mushrooms.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 12,
+          "offset_px_top_left": [
+            2,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 20,
+          "offset_px_top_left": [
+            29,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "crate_jars",
+      "label_ru": "Ящик и горшки",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/35_crate_jars.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            2,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 15,
+          "offset_px_top_left": [
+            27,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "ritual_books",
+      "label_ru": "Свечи, череп и книги",
+      "canvas_px": [
+        64,
+        32
+      ],
+      "file": "sprites/36_ritual_books.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 18,
+          "offset_px_top_left": [
+            2,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 23,
+          "offset_px_top_left": [
+            29,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "crates_stacked",
+      "label_ru": "Стопка ящиков",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/37_crates_stacked.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            0,
+            12
+          ],
+          "role": "stacked_visual",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "barrels_stacked",
+      "label_ru": "Стопка бочек",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/38_barrels_stacked.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            0,
+            12
+          ],
+          "role": "stacked_visual",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "crate_skull",
+      "label_ru": "Череп на ящике",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/39_crate_skull.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 10,
+          "offset_px_top_left": [
+            0,
+            20
+          ],
+          "role": "mounted",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "crate_candles",
+      "label_ru": "Свечи на ящике",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/40_crate_candles.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 11,
+          "offset_px_top_left": [
+            0,
+            18
+          ],
+          "role": "mounted",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "barrel_candles",
+      "label_ru": "Свечи на бочке",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/41_barrel_candles.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 11,
+          "offset_px_top_left": [
+            0,
+            16
+          ],
+          "role": "mounted",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "crate_sack",
+      "label_ru": "Мешок на ящике",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/42_crate_sack.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 7,
+          "offset_px_top_left": [
+            0,
+            18
+          ],
+          "role": "mounted",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "crate_jars_stacked",
+      "label_ru": "Горшки на ящике",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/43_crate_jars_stacked.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 5,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 15,
+          "offset_px_top_left": [
+            0,
+            18
+          ],
+          "role": "mounted",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "crate_tools",
+      "label_ru": "Инструменты на ящике",
+      "canvas_px": [
+        32,
+        64
+      ],
+      "file": "sprites/44_crate_tools.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 21,
+          "offset_px_top_left": [
+            0,
+            18
+          ],
+          "role": "mounted",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "corner_nw_composed",
+      "label_ru": "Завал: северо-запад",
+      "canvas_px": [
+        64,
+        64
+      ],
+      "file": "sprites/49_corner_nw_composed.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 4,
+          "offset_px_top_left": [
+            -2,
+            -2
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 1,
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 13,
+          "offset_px_top_left": [
+            1,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "corner_ne_composed",
+      "label_ru": "Завал: северо-восток",
+      "canvas_px": [
+        64,
+        64
+      ],
+      "file": "sprites/50_corner_ne_composed.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 17,
+          "offset_px_top_left": [
+            0,
+            -2
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 8,
+          "offset_px_top_left": [
+            35,
+            -2
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 15,
+          "offset_px_top_left": [
+            31,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "corner_sw_composed",
+      "label_ru": "Завал: юго-запад",
+      "canvas_px": [
+        64,
+        64
+      ],
+      "file": "sprites/51_corner_sw_composed.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 20,
+          "offset_px_top_left": [
+            1,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 12,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 22,
+          "offset_px_top_left": [
+            32,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "corner_se_composed",
+      "label_ru": "Завал: юго-восток",
+      "canvas_px": [
+        64,
+        64
+      ],
+      "file": "sprites/52_corner_se_composed.png",
+      "layer_order": "array order; later opaque pixels cover earlier pixels",
+      "components": [
+        {
+          "source_id": 7,
+          "offset_px_top_left": [
+            34,
+            0
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 13,
+          "offset_px_top_left": [
+            0,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_id": 2,
+          "offset_px_top_left": [
+            33,
+            32
+          ],
+          "role": "ground",
+          "scale": 1,
+          "rotation": 0,
+          "flip_x": false,
+          "flip_y": false,
+          "rgb_multiplier": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

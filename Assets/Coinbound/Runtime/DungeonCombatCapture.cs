@@ -89,7 +89,7 @@ namespace Coinbound
             public Vector2 frameCell;
             public Vector4 groundLight;
             public int sortingOrder;
-            public int health;
+            public float health;
             public List<string> visibleEffects;
             public int effectPixels;
             public int projectiles;
@@ -469,7 +469,7 @@ namespace Coinbound
                 QueueMouse(Vector2.right, true);
                 yield return Settle(2);
                 if (!player.IsBlocking) throw new InvalidOperationException("RMB did not activate block for the parry capture.");
-                int health = player.Health;
+                float health = player.Health;
                 enemy = StageEnemy(arena + Vector2.right * 0.95f);
                 // The real enemy windup/strike drives the actual directional block, sparks and stun.
                 yield return CaptureClip(prefix + "parry", 32, "Parry", false);

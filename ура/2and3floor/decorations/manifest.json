@@ -1,0 +1,7171 @@
+{
+  "revision": 4,
+  "tile_pixels": 32,
+  "ppu": 32,
+  "coordinates": {
+    "sprite": "top-left, X right, Y down",
+    "collider_bottom_left": "Y up, pixels before pivot subtraction",
+    "map": "X right, Y down"
+  },
+  "counts": {
+    "forge_placeables": 18,
+    "crypt_placeables": 18,
+    "plant_placeables": 40,
+    "total_placeables": 76,
+    "original_base_sprites": 60,
+    "exact_compositions": 16,
+    "shared_debris": 4,
+    "all_runtime_png": 80,
+    "breakable_placeables": 18
+  },
+  "atlas": "runtime_atlas_512.png",
+  "atlas_size": [
+    512,
+    512
+  ],
+  "atlas_padding_px": 2,
+  "pixel_art": {
+    "base_native_size": [
+      32,
+      32
+    ],
+    "base_opaque_colors_max": 24,
+    "binary_alpha": true,
+    "filter": "Point",
+    "mipmaps": false,
+    "compression": "None"
+  },
+  "assets": [
+    {
+      "id": "forge_01",
+      "label_ru": "Наковальня",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_01.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        6
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        12,
+        28,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            20,
+            18,
+            6
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            18,
+            6
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 8,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "401514ea5bd9cdc5a31d3729bfec836d57b3dc8728f6507c863cf3c27bc9f163",
+      "atlas_rect_top_left": [
+        218,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_02",
+      "label_ru": "Остывший горн",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_02.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        29,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            18,
+            21,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            3,
+            21,
+            11
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "ee97fbceacd430bdd1c63b00244f920e0eccedd1334647d1e0f7dc6a91af0cd5",
+      "atlas_rect_top_left": [
+        254,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_03",
+      "label_ru": "Кузнечные меха",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_03.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        5,
+        8,
+        28,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            14,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            3,
+            19,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          14,
+          19,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1.5,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_leather",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "0b0e31d04b7cccc9f275e9d1820cb9fed6d1bd36d12b24056d0242f0d49229ee",
+      "atlas_rect_top_left": [
+        290,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_04",
+      "label_ru": "Ящик с углём",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_04.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        4
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        5,
+        9,
+        25,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            19,
+            16,
+            9
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            4,
+            16,
+            9
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          19,
+          16,
+          9
+        ]
+      ],
+      "visual_above_collider_px": 10,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_coal",
+        "debris_ids": [
+          "forge_15",
+          "forge_16"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "7fc73973ee00437da8ee37d7cbb2ced4694480096040f78ea103c52b57c3503c",
+      "atlas_rect_top_left": [
+        326,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_05",
+      "label_ru": "Стойка инструментов",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_05.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        9
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.28125
+      ],
+      "visible_bbox_top_left": [
+        5,
+        12,
+        30,
+        24
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            18,
+            21,
+            5
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            9,
+            21,
+            5
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          18,
+          21,
+          5
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_metal",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [
+          "forge_14"
+        ],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "a4160d2963fe385879ae2a1df5fd4f692225f7535eed5000bce98a44b41570da",
+      "atlas_rect_top_left": [
+        362,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_06",
+      "label_ru": "Железные слитки",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_06.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        6,
+        10,
+        27,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            14,
+            17,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            8,
+            17,
+            10
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 4,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "56ec9c84a0ee60ec64178cbb8724216a8ccbc36c930faea72362ede602fe8264",
+      "atlas_rect_top_left": [
+        398,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_07",
+      "label_ru": "Закалочная кадка",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_07.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        4
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        25,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            18,
+            17,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            4,
+            17,
+            10
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          18,
+          17,
+          10
+        ]
+      ],
+      "visual_above_collider_px": 11,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_water",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "4b7a969339ecec3b5f97626cddbf577110aaa035fe0a750f62f533a4ee2b05ac",
+      "atlas_rect_top_left": [
+        434,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        434,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_08",
+      "label_ru": "Точильный станок",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_08.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        11,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            19,
+            19,
+            6
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            7,
+            19,
+            6
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 8,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "1262f30f64c360f6505961f766ae4bd63283b7368d83f3ec69efb904b0fd4be4",
+      "atlas_rect_top_left": [
+        470,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        470,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_09",
+      "label_ru": "Сломанная тележка",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_09.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        6
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        6,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            11,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            19,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          8,
+          11,
+          19,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 5,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "cb76ad189bf893729bab24d4c604328d65810336a7e55b83d3b3f657ef0e0c6c",
+      "atlas_rect_top_left": [
+        2,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_10",
+      "label_ru": "Ящик с рудой",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_10.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        27,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            11,
+            17,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            17,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          8,
+          11,
+          17,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_metal",
+        "debris_ids": [
+          "forge_15",
+          "forge_16"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "4e48aa769db52bc8a7a0c23e8b3a3526543165a5bc23b75e168b9e94847c6006",
+      "atlas_rect_top_left": [
+        38,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_11",
+      "label_ru": "Цепь с крюком",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_11.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        5
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        3,
+        7,
+        26,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9616eca738317071dc1e22d99c22c3bcd06d692d58f06754ff65fac01d2a1672",
+      "atlas_rect_top_left": [
+        74,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_12",
+      "label_ru": "Угловой металлолом",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_12.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        3,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            5,
+            15,
+            22,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            5,
+            6,
+            22,
+            11
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "e49ef2449f3d2eefd37d42135a62199f0d334fd6527cb81545b588cbf366a071",
+      "atlas_rect_top_left": [
+        110,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_13",
+      "label_ru": "Верстак",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_13.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        8
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        29,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            11,
+            20,
+            13
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            8,
+            20,
+            13
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          11,
+          20,
+          13
+        ]
+      ],
+      "visual_above_collider_px": 5,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 3,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "wood_metal",
+        "debris_ids": [
+          "forge_15"
+        ],
+        "survivor_ids": [
+          "forge_14"
+        ],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "7eb907b7365e312684bcb74c36a1bf2db0859c0fd4b5b2e0112860db2cebb229",
+      "atlas_rect_top_left": [
+        146,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_14",
+      "label_ru": "Молот и щипцы",
+      "theme": "forge",
+      "floor_number": 2,
+      "file": "forge/sprites/forge_14.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        6,
+        25,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "53086e865e680e31531a8a45289b0f57b58c5b050957c1e244bb7bc4188dccb3",
+      "atlas_rect_top_left": [
+        182,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_01",
+      "label_ru": "Надгробие",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_01.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        3
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        6,
+        7,
+        28,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            19,
+            18,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            3,
+            18,
+            10
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "8a793f67ee4c31e281133058fff336339efde25861804855a5d8d79a2e8c571b",
+      "atlas_rect_top_left": [
+        138,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        138,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_02",
+      "label_ru": "Каменный саркофаг",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_02.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        3
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        7,
+        4,
+        27,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            9,
+            10,
+            16,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            9,
+            3,
+            16,
+            19
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "7a900d1ee25b1f6d435417e7951c873a5a56891242ebedc366f1921ebc72a575",
+      "atlas_rect_top_left": [
+        174,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        174,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_03",
+      "label_ru": "Погребальная урна",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_03.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        27,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            18,
+            18,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            3,
+            18,
+            11
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          18,
+          18,
+          11
+        ]
+      ],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "ceramic",
+        "debris_ids": [
+          "crypt_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "2a8c50ae3bd4d8f8f1f9643e466b79e6692d8b66fae168619bbcddd0ad7dcd67",
+      "atlas_rect_top_left": [
+        210,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        210,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_04",
+      "label_ru": "Разбитая урна",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_04.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        2
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.0625
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        27,
+        31
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            5,
+            14,
+            20,
+            16
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            5,
+            2,
+            20,
+            16
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          5,
+          14,
+          20,
+          16
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "ceramic",
+        "debris_ids": [
+          "crypt_15"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "c6eaf7ed459c276b21786cf49455435798449c03e9ff26b66b50ae1e596722ab",
+      "atlas_rect_top_left": [
+        246,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        246,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_05",
+      "label_ru": "Свечи на камне",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_05.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        5,
+        4,
+        28,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            16,
+            19,
+            12
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            4,
+            19,
+            12
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 12,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "118f8d88b3360c8f4571b32d5aa6d7f07b87fd51829fbdfb5cdfe91f82ce4078",
+      "atlas_rect_top_left": [
+        282,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        282,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_06",
+      "label_ru": "Цветущие корни",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_06.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a96162fea8d5b41fa54f466a3d4f0fbc8d93e9384c2ea2f61977e470a1bbdf00",
+      "atlas_rect_top_left": [
+        318,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        318,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_07",
+      "label_ru": "Чаша с водой",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_07.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            17,
+            18,
+            9
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            6,
+            18,
+            9
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 10,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9347841d69b9f2690b3ba2b6690ac2c84d0733814106c43d4d0be2b0e6851fa2",
+      "atlas_rect_top_left": [
+        354,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        354,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_08",
+      "label_ru": "Кости во мху",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_08.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        27,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a11724af84942a1991e5438ff59de85aa1bd962558cacea21ba34d309cc5bf60",
+      "atlas_rect_top_left": [
+        390,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        390,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_09",
+      "label_ru": "Сломанный гроб",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_09.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            9,
+            21,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            4,
+            21,
+            19
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          9,
+          21,
+          19
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 2,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "rotten_wood",
+        "debris_ids": [
+          "crypt_16"
+        ],
+        "survivor_ids": [
+          "crypt_08"
+        ],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "8c12777a49a9ee654e21af8ab2930974dbde5c5d654436ab615b6ffcd8817231",
+      "atlas_rect_top_left": [
+        426,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        426,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_10",
+      "label_ru": "Ящик молитвенников",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_10.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        5
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        28,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            12,
+            20,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            5,
+            20,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          12,
+          20,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1.5,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "rotten_wood",
+        "debris_ids": [
+          "crypt_16"
+        ],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "f618082a1b91cd362dfe4394257f2a8b9a257eed21d10ab65519b125eea8c765",
+      "atlas_rect_top_left": [
+        462,
+        106,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        462,
+        374,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_11",
+      "label_ru": "Обломок статуи",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_11.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        5
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        2,
+        4,
+        27,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            4,
+            10,
+            21,
+            17
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            4,
+            5,
+            21,
+            17
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "ad6a4c5271fab62fe4631d7dae68cf068270f5e5c37227c13b597383187b800c",
+      "atlas_rect_top_left": [
+        2,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_12",
+      "label_ru": "Угловые руины",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_12.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        4
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        0,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            2,
+            9,
+            25,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            2,
+            4,
+            25,
+            19
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 6,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a488f52f0daf5423182289b0bd05062feb5897f504280d705f362165d77f51dd",
+      "atlas_rect_top_left": [
+        38,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_13",
+      "label_ru": "Грибы",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_13.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "082b0cb477b9d67eef36daa5a761894f552ee640444d29a162c4c7eb417aab5c",
+      "atlas_rect_top_left": [
+        74,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_14",
+      "label_ru": "Корзина подношений",
+      "theme": "crypt",
+      "floor_number": 3,
+      "file": "crypt/sprites/crypt_14.png",
+      "kind": "prop",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        27,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            11,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            6,
+            19,
+            15
+          ]
+        ],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          11,
+          19,
+          15
+        ]
+      ],
+      "visual_above_collider_px": 5,
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "loot": false,
+        "persistent_state": true,
+        "hp_base_melee_multiplier": 1,
+        "baseline": "unbuffed melee damage captured at run start",
+        "particle_profile": "dry_leaves",
+        "debris_ids": [],
+        "survivor_ids": [],
+        "disable_collision_on_lethal_hit": true,
+        "disable_damage_receiver_on_lethal_hit": true,
+        "events_only_no_update": true
+      },
+      "sha256": "77550d05207cc4550be470efd4404805e1c43660bc7cca2e2bfdfe327b55a851",
+      "atlas_rect_top_left": [
+        110,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_01",
+      "label_ru": "Подушка мха",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_01.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        9
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.28125
+      ],
+      "visible_bbox_top_left": [
+        8,
+        11,
+        25,
+        24
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "e9e1c184f41391c32f4309cdbac6aa042e979d81ac861071d21450b5f3eca46b",
+      "atlas_rect_top_left": [
+        290,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_02",
+      "label_ru": "Мох в трещине",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_02.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        9,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "ed953249b3aa0ea0bd1bb30e677163f8bb2e9fd159094a8c55121545e4344d43",
+      "atlas_rect_top_left": [
+        326,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_03",
+      "label_ru": "Малый папоротник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_03.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a36e45be1440f2920b1ca272ba1504347b96ba6e532392223d432ed67860faa0",
+      "atlas_rect_top_left": [
+        362,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_04",
+      "label_ru": "Двойной папоротник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_04.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        5
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        1,
+        4,
+        29,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "c0b11edb37d7abf1e93fee2e41eb9a1bc27bf8f1688a35bc277d9b3e3bb2b8c1",
+      "atlas_rect_top_left": [
+        398,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_05",
+      "label_ru": "Широкие листья",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_05.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        17,
+        7
+      ],
+      "pivot_normalized": [
+        0.53125,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        28,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9ef29ca9cce45f5ff2938548ef6648e9c1ce3f1d8cf17a7856cee346d444a3ee",
+      "atlas_rect_top_left": [
+        434,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        434,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_06",
+      "label_ru": "Почвопокровник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_06.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        28,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "d3815ca3a69e84cdcda62f221ee25e9f1dec407fb7f85b2576cbcf1a89ab6d71",
+      "atlas_rect_top_left": [
+        470,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        470,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_07",
+      "label_ru": "Осока",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_07.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        9
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.28125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        5,
+        25,
+        24
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "964a65435b3142fce0f8ee52ba97fa4565a8abe4525be30fc6ae6adf1e76eb98",
+      "atlas_rect_top_left": [
+        2,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_08",
+      "label_ru": "Сухие побеги",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_08.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        5,
+        28,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "53611c3f9ff41a9239989568b916a46a04f30e43b68f9b455289d118e9027651",
+      "atlas_rect_top_left": [
+        38,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_09",
+      "label_ru": "Колючий куст",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_09.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        4,
+        28,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "80c7819211221dc839a7eef87c7340a28a671f03b9c6e0516a0e1f464daa94a9",
+      "atlas_rect_top_left": [
+        74,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_10",
+      "label_ru": "Куст плюща",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_10.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        4,
+        29,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "4be40514417aafb24296affed46a10917421b83bcbaead8b72d1666558d92f9e",
+      "atlas_rect_top_left": [
+        110,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_11",
+      "label_ru": "Стелющийся терновник",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_11.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        29,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "bf2146a6fad950783886431124711ddb5fb66a0eccb0a4d50191734561b899f6",
+      "atlas_rect_top_left": [
+        146,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_12",
+      "label_ru": "Густой куст",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_12.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        5
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        2,
+        1,
+        30,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "1c968b13584a8154099aa775452f527998b0edd3caf62220eeee2b51e0987875",
+      "atlas_rect_top_left": [
+        182,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_13",
+      "label_ru": "Голые корни",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_13.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        29,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "cc90fa4e29fbee261e6e9b658e8f308069edb260074e46642725a129dc884c42",
+      "atlas_rect_top_left": [
+        218,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_14",
+      "label_ru": "Корни во мху",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_14.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        6,
+        28,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "3a5fb8342d9076a347209faab0cc82f676107c6a816e428d7b1d12990c3bed09",
+      "atlas_rect_top_left": [
+        254,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_15",
+      "label_ru": "Опавшие листья",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_15.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        7
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        6,
+        27,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "3763874555e6ef9c92816b15625d89ce4ac6c9bbdac9b85613ff26048941ef0e",
+      "atlas_rect_top_left": [
+        290,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_16",
+      "label_ru": "Угловые заросли NW",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_16.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        4
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        1,
+        2,
+        30,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "bc4ed12bc8ac120742f86dd519a9cb2477f216be1abc7eb325c0ed6cacabf121",
+      "atlas_rect_top_left": [
+        326,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_17",
+      "label_ru": "Розовые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_17.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        7,
+        10,
+        25,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "75d17fe320db0f0818650b8fed4c5f0b9feddd3b29ef7224efa7a8a987090ccb",
+      "atlas_rect_top_left": [
+        362,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_18",
+      "label_ru": "Кремовые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_18.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        9,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9246a9e6633137cfff597958201155f55859e3ae85df80ca621c33fdda98dbbb",
+      "atlas_rect_top_left": [
+        398,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_19",
+      "label_ru": "Сиреневые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_19.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "d62a329b770381a7388eb08f441de7406bf85c0c95e47659e5fa1f0c2a5927c1",
+      "atlas_rect_top_left": [
+        434,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        434,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_20",
+      "label_ru": "Бордовый куст",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_20.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        5
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        2,
+        6,
+        28,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "0463ceccb02a42c9ec5689de6a43513480f0f4a59a044476765f0d0444750e17",
+      "atlas_rect_top_left": [
+        470,
+        214,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        470,
+        266,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_21",
+      "label_ru": "Цветочная куртина",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_21.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        7
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        6,
+        30,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "789736acd06d4af27a290a61d931520b481d367f37d6f4724808ab610ceabd81",
+      "atlas_rect_top_left": [
+        2,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_22",
+      "label_ru": "Поникающие цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_22.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        4
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        2,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "1262d2b0bb6161d7537b7b531f844afcd4ce48317e703ffd6f60c7649e9593ce",
+      "atlas_rect_top_left": [
+        38,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        38,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_23",
+      "label_ru": "Серые грибы",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_23.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        6
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        4,
+        7,
+        26,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "515dcbec6ad464f1d5de2994917db6939c2e2c0ba03667b4b16c57cd8328b070",
+      "atlas_rect_top_left": [
+        74,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        74,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_24",
+      "label_ru": "Трутовики и ветки",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_24.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        14,
+        7
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        1,
+        5,
+        28,
+        26
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "04febe3e5961e0efdcc33f36e4c25f43cac2344d42b50f2480ca8ec67318fb8f",
+      "atlas_rect_top_left": [
+        110,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        110,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_25",
+      "label_ru": "Плющ вдоль N",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_25.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        11
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.34375
+      ],
+      "visible_bbox_top_left": [
+        3,
+        9,
+        29,
+        22
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a600ae3a157340fee013543d786304fbab1ff720778ba029eaa41287ef8b7e3d",
+      "atlas_rect_top_left": [
+        146,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_26",
+      "label_ru": "Свисающий плющ N",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_26.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        29,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "cc9e62ff957b647a910478a42d1f39088982e2ec1826773972c77d5d9e94c286",
+      "atlas_rect_top_left": [
+        182,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_27",
+      "label_ru": "Плющ на W",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_27.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        12,
+        4
+      ],
+      "pivot_normalized": [
+        0.375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        20,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "a0bd44877a17205a806898a3b45da42f2c6eca3986a2ca0e3e41b82cb906f07e",
+      "atlas_rect_top_left": [
+        218,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_28",
+      "label_ru": "Плющ на E",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_28.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        18,
+        5
+      ],
+      "pivot_normalized": [
+        0.5625,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        10,
+        3,
+        27,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "E"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "9b0db1a1ce7517560fa0e11f25d80b61cd323627a0f387a93430ddf4bcde4533",
+      "atlas_rect_top_left": [
+        254,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_29",
+      "label_ru": "Цветущий угол NW",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_29.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        3,
+        3,
+        30,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "142e22b15eeb23d5dec2a73ba2b4b521138547ffd45a97feacc97623962f707a",
+      "atlas_rect_top_left": [
+        290,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        290,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_30",
+      "label_ru": "Цветущий угол NE",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_30.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        3,
+        3,
+        29,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "e1ee389f1abcee439f94318c34dca0855648acfb0237b186db9f104a76026905",
+      "atlas_rect_top_left": [
+        326,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        326,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_31",
+      "label_ru": "Цветущий угол SW",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_31.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        3
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        2,
+        3,
+        29,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "83abd652c4a0576a99dfe5850a4ee08c3185337f1f280f403ef12d1a4de0be68",
+      "atlas_rect_top_left": [
+        362,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        362,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "plants_32",
+      "label_ru": "Цветущий угол SE",
+      "theme": "plants",
+      "floor_number": 3,
+      "file": "plants/sprites/plants_32.png",
+      "kind": "plant",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        15,
+        3
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        2,
+        3,
+        29,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "coordinates": "relative to full sprite rectangle before pivot; do not shift twice"
+      },
+      "damage_hitboxes_px_top_left": [],
+      "visual_above_collider_px": 0,
+      "upper_texture_has_collider": false,
+      "render_layer": "wall_overlay",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "SE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": true,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "sha256": "0ef072a7d275640ff7a81c488e9e8006d66cbf23c1f239c46405f58cebb67759",
+      "atlas_rect_top_left": [
+        398,
+        250,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        398,
+        230,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_15",
+      "label_ru": "Щепки и гвозди",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "debris",
+      "file": "forge/debris/forge_15.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        26,
+        24
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "128920113e7a82c189bc95236a01d67b603e8a23b433a174a613b5adaf2ff298",
+      "atlas_rect_top_left": [
+        218,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        218,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_16",
+      "label_ru": "Уголь и железная полоса",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "debris",
+      "file": "forge/debris/forge_16.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        4,
+        8,
+        27,
+        22
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "4d1be7d62e72749368fe2eac6ec0a727e34edbc2ccffc2b1244ef2a3bab378b4",
+      "atlas_rect_top_left": [
+        254,
+        178,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        254,
+        302,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_15",
+      "label_ru": "Черепки и мох",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "debris",
+      "file": "crypt/debris/crypt_15.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        27,
+        24
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "1e8f814a1d484d47c065ecfdbb5fa5bd03e0280f587829f92cebf8546ef86215",
+      "atlas_rect_top_left": [
+        146,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        146,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "crypt_16",
+      "label_ru": "Гнилые доски",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "debris",
+      "file": "crypt/debris/crypt_16.png",
+      "native_size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        16,
+        16
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "visible_bbox_top_left": [
+        3,
+        8,
+        26,
+        24
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": []
+      },
+      "render_layer": "ground_detail",
+      "destruction": {
+        "enabled": false
+      },
+      "placement": {
+        "auto_spawn": false
+      },
+      "sha256": "6deb6f8e45718cf501d529fb907ab77f29d816f74af2afd17a8c178068b36ec4",
+      "atlas_rect_top_left": [
+        182,
+        142,
+        32,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        182,
+        338,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "forge_17",
+      "label_ru": "Горн и меха",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_17.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        3
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        60,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            18,
+            21,
+            11
+          ],
+          [
+            39,
+            14,
+            19,
+            15
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            3,
+            21,
+            11
+          ],
+          [
+            39,
+            3,
+            19,
+            15
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          39,
+          14,
+          19,
+          15
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_02",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "forge_03",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": true
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "de3e1db3422d41e6a720afd7ae7502710bd62b56cad8d47cd7a1ac314dd6e65a",
+      "atlas_rect_top_left": [
+        410,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        410,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "forge_18",
+      "label_ru": "Наковальня и инструменты",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_18.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        6
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        6,
+        6,
+        57,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            20,
+            18,
+            6
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            18,
+            6
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_01",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "forge_14",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "7eefb3cf2a79d4b1c8b775cb0ef940d4d3f7abda57a9b9b1891ecca81bf54fd5",
+      "atlas_rect_top_left": [
+        2,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "forge_19",
+      "label_ru": "Руда и уголь",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_19.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        4
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        57,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            11,
+            17,
+            15
+          ],
+          [
+            39,
+            19,
+            16,
+            9
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            6,
+            17,
+            15
+          ],
+          [
+            39,
+            4,
+            16,
+            9
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          8,
+          11,
+          17,
+          15
+        ],
+        [
+          39,
+          19,
+          16,
+          9
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_10",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "forge_04",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": true
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "c104cdad0a63e31c4d8d0d0b4c5c015fe3944c19ac1b10a687f1240d79b921ce",
+      "atlas_rect_top_left": [
+        70,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        70,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "forge_20",
+      "label_ru": "Верстак и слитки",
+      "theme": "forge",
+      "floor_number": 2,
+      "kind": "composition",
+      "file": "forge/sprites/forge_20.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        8
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.25
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        59,
+        25
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            11,
+            20,
+            13
+          ],
+          [
+            40,
+            14,
+            17,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            8,
+            20,
+            13
+          ],
+          [
+            40,
+            8,
+            17,
+            10
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          11,
+          20,
+          13
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "forge_13",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "forge_06",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "21c906a84c9b3686dbde21125d82b857ba56b049b926aaf823a23a1344c29831",
+      "atlas_rect_top_left": [
+        138,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        138,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_17",
+      "label_ru": "Надгробие и корни",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_17.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        33,
+        3
+      ],
+      "pivot_normalized": [
+        0.515625,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        6,
+        5,
+        61,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            8,
+            19,
+            18,
+            10
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            8,
+            3,
+            18,
+            10
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_01",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "crypt_06",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "c57d6d2ba953101bf7001adb55bd360ae6d520aa38ea9daf110a989b7044b95a",
+      "atlas_rect_top_left": [
+        138,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        138,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_18",
+      "label_ru": "Две погребальные урны",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_18.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        30,
+        3
+      ],
+      "pivot_normalized": [
+        0.46875,
+        0.09375
+      ],
+      "visible_bbox_top_left": [
+        5,
+        6,
+        55,
+        30
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            7,
+            18,
+            18,
+            11
+          ],
+          [
+            35,
+            18,
+            18,
+            11
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            7,
+            3,
+            18,
+            11
+          ],
+          [
+            35,
+            3,
+            18,
+            11
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          7,
+          18,
+          18,
+          11
+        ],
+        [
+          35,
+          18,
+          18,
+          11
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_03",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "crypt_03",
+          "offset_px_top_left": [
+            28,
+            0
+          ],
+          "own_health": true
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "156178bd2fd380d56d011affcf26be98bd4ac0f2d228202edad13c4dbb80bc90",
+      "atlas_rect_top_left": [
+        206,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        206,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_19",
+      "label_ru": "Гроб и кости",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_19.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        4
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        59,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            9,
+            21,
+            19
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            4,
+            21,
+            19
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          9,
+          21,
+          19
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_09",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "crypt_08",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "72d7d48d94ad046dcb9e11438ed0e958d6926e071fb8e9cb63808a8a848c0a24",
+      "atlas_rect_top_left": [
+        274,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        274,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "crypt_20",
+      "label_ru": "Молитвенники и свечи",
+      "theme": "crypt",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "crypt/sprites/crypt_20.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        4
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "visible_bbox_top_left": [
+        4,
+        4,
+        60,
+        29
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": true,
+        "rects_px_top_left": [
+          [
+            6,
+            12,
+            20,
+            15
+          ],
+          [
+            39,
+            16,
+            19,
+            12
+          ]
+        ],
+        "rects_px_bottom_left": [
+          [
+            6,
+            5,
+            20,
+            15
+          ],
+          [
+            39,
+            4,
+            19,
+            12
+          ]
+        ],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [
+        [
+          6,
+          12,
+          20,
+          15
+        ]
+      ],
+      "upper_texture_has_collider": false,
+      "render_layer": "feet_sorted",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": true,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": true,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "crypt_10",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": true
+        },
+        {
+          "index": 1,
+          "asset": "crypt_05",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "2a4d413dd3bbec004a2f550e1ba42e5ba34c147ad8b9d221da3a455bbd7179b2",
+      "atlas_rect_top_left": [
+        342,
+        2,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        342,
+        478,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_33",
+      "label_ru": "Папоротниковая группа",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_33.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        29,
+        5
+      ],
+      "pivot_normalized": [
+        0.453125,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        4,
+        4,
+        55,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_03",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_04",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "962ee495154780c0083e0bdc372bbf3bca69056f780ea72f45e31f15bbcd0cba",
+      "atlas_rect_top_left": [
+        206,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        206,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_34",
+      "label_ru": "Густые кусты",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_34.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        29,
+        5
+      ],
+      "pivot_normalized": [
+        0.453125,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        3,
+        1,
+        56,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_10",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_12",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "6c1d092ccf00b7d18bb0c0ac72348ca5a64f00047a1481f9cf5f3ddb4f34727c",
+      "atlas_rect_top_left": [
+        274,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        274,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_35",
+      "label_ru": "Розовые и кремовые цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_35.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        31,
+        6
+      ],
+      "pivot_normalized": [
+        0.484375,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        7,
+        9,
+        55,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_17",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_18",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "8e5e09491af4e7ec316d6a17c2bf16ecf2d3287ba61f83e0eab3895073728843",
+      "atlas_rect_top_left": [
+        342,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        342,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_36",
+      "label_ru": "Сиренево-бордовая группа",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_36.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        29,
+        5
+      ],
+      "pivot_normalized": [
+        0.453125,
+        0.15625
+      ],
+      "visible_bbox_top_left": [
+        4,
+        6,
+        54,
+        28
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_19",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_20",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "d4455b2337c58aa4ce479fa5d960cf4ea0917f6cf904cb0c0282a271868f5e7f",
+      "atlas_rect_top_left": [
+        410,
+        70,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        410,
+        410,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_37",
+      "label_ru": "Корни и трутовики",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_37.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        28,
+        6
+      ],
+      "pivot_normalized": [
+        0.4375,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        3,
+        5,
+        54,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_14",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_24",
+          "offset_px_top_left": [
+            26,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "1058bc91ac423215765df5d3da6a449ebd98a52798eaf4966e837f9fc2caeb4d",
+      "atlas_rect_top_left": [
+        2,
+        106,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        374,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_38",
+      "label_ru": "Мох, папоротник и цветы",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_38.png",
+      "native_size": [
+        64,
+        32
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        6
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.1875
+      ],
+      "visible_bbox_top_left": [
+        8,
+        7,
+        57,
+        27
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": false,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_01",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_03",
+          "offset_px_top_left": [
+            18,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 2,
+          "asset": "plants_17",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "69a94b41743a2d918aa54ed3e713d7aa70a71f479797a540a3a6b9271afa2730",
+      "atlas_rect_top_left": [
+        70,
+        106,
+        64,
+        32
+      ],
+      "atlas_rect_unity_bottom_left": [
+        70,
+        374,
+        64,
+        32
+      ]
+    },
+    {
+      "id": "plants_39",
+      "label_ru": "Заросший угол NW",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_39.png",
+      "native_size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        25,
+        14
+      ],
+      "pivot_normalized": [
+        0.390625,
+        0.21875
+      ],
+      "visible_bbox_top_left": [
+        1,
+        2,
+        49,
+        51
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NW"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_16",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_14",
+          "offset_px_top_left": [
+            0,
+            24
+          ],
+          "own_health": false
+        },
+        {
+          "index": 2,
+          "asset": "plants_17",
+          "offset_px_top_left": [
+            24,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "c3755db7b082345c714fff3069c4124c7a23503530cd16acbf122c8fbcafe753",
+      "atlas_rect_top_left": [
+        2,
+        2,
+        64,
+        64
+      ],
+      "atlas_rect_unity_bottom_left": [
+        2,
+        446,
+        64,
+        64
+      ]
+    },
+    {
+      "id": "plants_40",
+      "label_ru": "Цветущий угол NE",
+      "theme": "plants",
+      "floor_number": 3,
+      "kind": "composition",
+      "file": "plants/sprites/plants_40.png",
+      "native_size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot_px_bottom_left": [
+        32,
+        15
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.234375
+      ],
+      "visible_bbox_top_left": [
+        4,
+        3,
+        61,
+        50
+      ],
+      "placement_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "collision": {
+        "enabled": false,
+        "rects_px_top_left": [],
+        "rects_px_bottom_left": [],
+        "components_not_union_rectangle": true
+      },
+      "damage_hitboxes_px_top_left": [],
+      "upper_texture_has_collider": false,
+      "render_layer": "ground_detail",
+      "placement": {
+        "walls_relative_to_floor_prop": [
+          "NE"
+        ],
+        "target_visible_gap_px": 0,
+        "corner_only": true,
+        "wall_overlay": false,
+        "reject_wrong_wall": true,
+        "allow_random_flip": false,
+        "allow_rotation": false,
+        "random_center_spawn": false
+      },
+      "destruction": {
+        "enabled": false,
+        "mode": "per_component",
+        "component_states": "destroy only struck component; retain other components exactly",
+        "instantiate_component_renderers_for_breakable_compositions": false,
+        "loot": false,
+        "persistent_state": true
+      },
+      "components": [
+        {
+          "index": 0,
+          "asset": "plants_18",
+          "offset_px_top_left": [
+            0,
+            0
+          ],
+          "own_health": false
+        },
+        {
+          "index": 1,
+          "asset": "plants_10",
+          "offset_px_top_left": [
+            32,
+            24
+          ],
+          "own_health": false
+        },
+        {
+          "index": 2,
+          "asset": "plants_30",
+          "offset_px_top_left": [
+            32,
+            0
+          ],
+          "own_health": false
+        }
+      ],
+      "exact_pixel_composition": true,
+      "sha256": "44f51f526077a0b1baebe2b851b85ee6a5a81a277ef77e37ad3f31ad8530be9f",
+      "atlas_rect_top_left": [
+        70,
+        2,
+        64,
+        64
+      ],
+      "atlas_rect_unity_bottom_left": [
+        70,
+        446,
+        64,
+        64
+      ]
+    }
+  ]
+}

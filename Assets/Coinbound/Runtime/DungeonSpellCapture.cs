@@ -50,6 +50,19 @@ namespace Coinbound
             yield return new WaitForSeconds(.25f);yield return Capture("02-trace-ward-decoy");
             player.Spells.Recognized(DungeonSpell.Ward);
             yield return new WaitForSeconds(.25f);yield return Capture("03-failed-word");
+            player.Initialize(player.Hero);
+            player.Spells.Recognized(DungeonSpell.Recall);
+            yield return new WaitForSeconds(.4f);yield return Capture("06-recall-rune");
+            Vector2 runePosition = player.transform.position;
+            for (int i=0;i<8;i++)
+            {
+                float angle=i*Mathf.PI/4;
+                Vector2 destination=runePosition+new Vector2(Mathf.Cos(angle),Mathf.Sin(angle))*2;
+                if (!DungeonCombatPhysics.FreeFeet(destination,.35f))continue;
+                player.TeleportTo(destination);break;
+            }
+            player.Spells.Recognized(DungeonSpell.Recall);
+            yield return null;yield return Capture("07-recall-return");
             game.ShowMenu();FindAnyObjectByType<DungeonScreen>().ShowSettings();
             yield return new WaitForSecondsRealtime(.2f);yield return Capture("04-settings");
             FindAnyObjectByType<DungeonVoiceInput>().ToggleDebug();
@@ -59,7 +72,8 @@ namespace Coinbound
             yield return Capture("05-voice-debug");
             Application.Quit(0);
         }
-        private IEnumerator Capture(string name)
+        private IEnumerator Capture(string name) => CaptureFrame(output,name);
+        internal static IEnumerator CaptureFrame(string output,string name)
         {
             Camera camera=Camera.main;
             RenderTexture previous=camera.targetTexture,active=RenderTexture.active;

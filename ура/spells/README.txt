@@ -1,0 +1,1 @@
+55x55 per sprite. Sheet columns: Pulse, Trace, Ward, Decoy, Recall. Rows: small inactive, small active, large inactive, large active. Use large for the center. Active state and cooldown are independent. Cooldown masks overlay matching sizes; keep mana text above the mask. Point filtering.

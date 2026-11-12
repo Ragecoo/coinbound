@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,19 +11,30 @@ namespace Coinbound
             menu = Layer("Start screen", new Color32(3, 5, 11, 255));
             var scene = Rect("Menu environment", menu.transform, new Vector2(0, 36), new Vector2(1280, 720)).gameObject.AddComponent<DungeonVignetteImage>();
             scene.texture = Resources.Load<Texture2D>("InterfaceArt/menu-crypt"); scene.raycastTarget = false;
-            var logo = Raw("Coinbound logo", menu.transform, new Vector2(-325, 178), new Vector2(320, 240));
+            var water = Rect("Menu water reflections", scene.transform, Vector2.zero, new Vector2(1280, 720))
+                .gameObject.AddComponent<DungeonMenuWater>();
+            water.texture = scene.texture; water.raycastTarget = false;
+            var atmosphere = Rect("Menu candlelight and dust", scene.transform, Vector2.zero, new Vector2(1280, 720))
+                .gameObject.AddComponent<DungeonMenuAtmosphere>();
+            atmosphere.raycastTarget = false;
+            gameObject.AddComponent<DungeonMenuAmbience>().Initialize(menu);
+            var dust = Rect("Menu drifting dust", menu.transform, Vector2.zero, Vector2.zero).gameObject.AddComponent<DungeonMenuDust>();
+            Stretch(dust.rectTransform); dust.raycastTarget = false;
+            var logo = Rect("Coinbound logo", menu.transform, new Vector2(0, 100), new Vector2(640, 480)).gameObject.AddComponent<RawImage>();
+            logo.raycastTarget = false;
             logo.texture = Resources.Load<Texture2D>("InterfaceArt/coinbound-logo");
             logo.color = new Color(.78f, .78f, .8f, 1);
             resumeButton = TextButton("Resume", menu.transform, "ПРОДОЛЖИТЬ", new Vector2(0, -156), new Vector2(280, 32), resumeAction);
             startButton = TextButton("Start", menu.transform, "НОВАЯ ИГРА", new Vector2(0, -194), new Vector2(280, 32), RequestNewJourney);
             TextButton("Settings", menu.transform, "НАСТРОЙКИ", new Vector2(0, -232), new Vector2(280, 32), ShowSettings);
-            TextButton("Quit", menu.transform, "ВЫХОД", new Vector2(0, -270), new Vector2(280, 32), RequestQuit);
-            menuNote = Label("Error message", menu.transform, "", 14, new Vector2(0, -326), new Vector2(1000, 30), Red);
+            TextButton("Results", menu.transform, "РЕЗУЛЬТАТЫ", new Vector2(0, -270), new Vector2(280, 32), ShowLeaderboard);
+            TextButton("Quit", menu.transform, "ВЫХОД", new Vector2(0, -308), new Vector2(280, 32), RequestQuit);
+            menuNote = Label("Error message", menu.transform, "", 14, new Vector2(0, -344), new Vector2(1000, 30), Red);
         }
 
         private void BuildHeroes()
         {
-            heroSelection = Layer("Hero selection screen", new Color32(5, 7, 13, 255));
+            heroSelection = Layer("Hero selection screen", new Color32(21, 21, 35, 255));
             Label("Title", heroSelection.transform, "ВЫБОР ПЕРСОНАЖА", 24, new Vector2(0, 309), new Vector2(900, 38), Pale);
             Solid("Center divider", heroSelection.transform, new Vector2(0, 8), new Vector2(1, 510), new Color(.25f, .29f, .34f, .6f));
             for (int i = 0; i < DungeonHero.All.Count; i++)
@@ -92,7 +103,8 @@ namespace Coinbound
             Anchor(hudLabel.rectTransform, Vector2.one, new Vector2(-27, -18)); hudLabel.alignment = TextAnchor.MiddleRight;
             hudLabel.gameObject.AddComponent<Outline>().effectColor = Color.black;
             BuildStatsHud();
-            controlLegend = Label("Controls", hud.transform, "WASD", 11, Vector2.zero, new Vector2(100, 24), Muted);
+            controlLegend = Label("Controls", hud.transform, "pulse · trace · ward · decoy · recall", 11, Vector2.zero, new Vector2(520, 24), Muted);
+            controlLegend.alignment = TextAnchor.MiddleLeft;
             Anchor(controlLegend.rectTransform, new Vector2(0, 0), new Vector2(24, 18));
             interactionPrompt = Label("Chest interaction", hud.transform, "E — Открыть сундук", 12,
                 Vector2.zero, new Vector2(320, 28), Pale);
@@ -213,6 +225,7 @@ namespace Coinbound
             };
             if (!string.IsNullOrEmpty(text)) Label("Label", r, text, 18, Vector2.zero, size - new Vector2(24, 4), Pale, true);
             b.onClick.AddListener(() => { Click(); action?.Invoke(); });
+            b.gameObject.AddComponent<DungeonHoverSound>();
             return b;
         }
         private RawImage Raw(string name, Transform parent, Vector2 pos, Vector2 size)
@@ -241,6 +254,7 @@ namespace Coinbound
             Text marker = Label("Marker", r, ">", 15, new Vector2(-size.x * .5f + 18, 0), new Vector2(28, 34), Pale);
             var item = r.gameObject.AddComponent<DungeonMenuItem>(); item.caption = caption; item.marker = marker; item.Refresh();
             b.onClick.AddListener(() => { Click(); action?.Invoke(); });
+            b.gameObject.AddComponent<DungeonHoverSound>();
             return b;
         }
         private DungeonHudGlyph Glyph(string name, Transform parent, Vector2 pos, Vector2 size, DungeonHudGlyph.Symbol symbol, Color color)

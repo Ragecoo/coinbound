@@ -1,0 +1,15 @@
+Use case: precise-object-edit.
+Asset type: BACKGROUND-ONLY layer to be composited underneath an existing 32px fantasy inventory sprite atlas.
+
+INPUT ROLES: Image 1 is the existing atlas: it defines the exact square grid, category colors, pixel scale and visual language. Images 2, 3 and 4 are background-lighting references only: imitate their attractive colored backlighting, deep corners, curved atmospheric streaks and rich material-like shading, but do NOT copy their round icon shapes, frames or weapons.
+
+Produce ONLY the 32 empty SQUARE atmospheric background tiles for the atlas. The existing foreground item pixels will be restored separately without any changes. Do NOT draw any items, silhouettes of items, symbols, stars, labels, text, borders, frames, ornaments or other foreground objects in this background-only layer.
+
+LAYOUT: exact 8 columns by 4 rows of equal edge-to-edge SQUARE tiles, no gutters, no outside margin, a wide 2:1 canvas, ideally 2048x1024 output pixels. Each tile represents a native 32x32 pixel background, enlarged with nearest-neighbor. Entire square filled with colored background, all four corners opaque. No circles, rounded corners, discs, badges, circular borders, raised bevel frames or black spaces between tiles.
+
+CATEGORY MAP: row 1 all 8 tiles dark BLUE; row 2 all 8 tiles dark BLUE; row 3 first 5 tiles dark BLUE, last 3 tiles dark BURGUNDY; row 4 all 8 tiles dark BURGUNDY. Exactly 21 blue and 11 burgundy backgrounds.
+Blue family: very dark navy corners #080D1B, navy #101A32, muted indigo, cold medium blue with restrained #365681 highlights. Burgundy family: nearly black wine corners #190B13, burgundy #30121E, dried-blood red and muted plum, highlights restrained around #7B3447. Keep consistent tonal balance and the same limited palette within each category, with subtle individual variation in pattern.
+
+ART DIRECTION: Like the references, backgrounds have depth and luminous color behind the inventory objects. Broad off-center pools of colored light, very dark angular corners and edges, a few subtle sweeping angular wisps / diagonal light bands. These are full square atmospheric backplates. Light fades through 6-10 discrete pixel-art shade bands, with no sharp concentric rings. Broad smooth-looking forms made out of intentional hard-edged pixel clusters. A dark but visible lit center / upper-side backdrop will separate the original dark silhouettes. Subtle texture, never busy, no tiny noise or checkerboard dithering. Match classic 32px game pixel art. All pixels must form a uniform grid: think native 32x32 tiles enlarged exactly 8x. No high-resolution painted detail, no antialiasing, no blurring, no grain. Retain rich contrasting colors similar to the three reference icons while supporting, never overpowering, the inventory objects to be composited on top.
+
+Remember this is an intermediate background layer: 32 empty square backgrounds ONLY, no inventory objects anywhere.

@@ -145,7 +145,7 @@ Shader "Coinbound/Torchlit Sprite"
                 return _PixelUVRect.xy + localUV * _PixelUVRect.zw;
             }
 
-            half3 EffectLighting(float2 world, float wall)
+            half3 EffectLighting(float2 world, float wall, float visibility)
             {
                 half3 light = 0;
                 [loop]
@@ -157,14 +157,22 @@ Shader "Coinbound/Torchlit Sprite"
                     float falloff = saturate(1 - distance * distance / max(source.z * source.z, 0.01));
                     if (falloff <= 0) continue;
                     float angle = frac(atan2(delta.y, delta.x) * 0.15915494309);
-                    float sampleIndex = angle * 64 - 0.5;
-                    float first = (floor(sampleIndex) + 0.5) / 64;
+                    float sampleIndex = angle * 256 - 0.5;
+                    float first = (floor(sampleIndex) + 0.5) / 256;
                     float row = (i + 0.5) / 8;
                     float a = SAMPLE_TEXTURE2D(_EffectLightShadows, sampler_EffectLightShadows, float2(frac(first), row)).r;
-                    float b = SAMPLE_TEXTURE2D(_EffectLightShadows, sampler_EffectLightShadows, float2(frac(first + 1.0 / 64), row)).r;
+                    float b = SAMPLE_TEXTURE2D(_EffectLightShadows, sampler_EffectLightShadows, float2(frac(first + 1.0 / 256), row)).r;
+                    float hit = lerp(a, b, frac(sampleIndex));
                     float block = min(a, b) + wall * 0.65;
                     float clear = 1 - smoothstep(block - 0.07, block + 0.02, distance);
-                    light += _EffectLightColors[i].rgb * (source.w * falloff * falloff * clear);
+                    // Mounted lights fade gently into the wall instead of drawing a hard inflated halo.
+                    if (_EffectLightColors[i].a > 0.5 && wall > 0.5)
+                        clear = 1 - smoothstep(hit + 0.06, hit + 0.95, distance);
+                    float visible = visibility;
+                    // A directly visible flame gently reveals its mounting wall, never hidden floor.
+                    if (_EffectLightColors[i].a > 1.5 && wall > 0.5)
+                        visible = max(visible, 0.45 * (1 - smoothstep(0.55, 1.05, distance)));
+                    light += _EffectLightColors[i].rgb * (source.w * falloff * falloff * clear * visible);
                 }
                 return light;
             }
@@ -259,7 +267,7 @@ Shader "Coinbound/Torchlit Sprite"
                 float wallBoost = lerp(1, _LightTuning.z, max(wall, stone)) * lerp(1, _LightTuning.w, upperWall);
                 half3 lighting = _TorchColor.rgb * (_TorchSettings.y * _TorchFlicker * textureVariation
                     * wallBoost * radial * visibility);
-                lighting += EffectLighting(groundWorld, wall) * visibility * min(wallBoost, 2.3);
+                lighting += EffectLighting(groundWorld, wall, visibility) * min(wallBoost, 2.3);
                 // A white slash stays white even though its light on the dungeon is amber.
                 if (_EffectIgnoreOcclusion > 0.5)
                     lighting = dot(lighting, half3(0.2126, 0.7152, 0.0722)).xxx;

@@ -60,6 +60,25 @@ public sealed partial class SpawnPlanner
             remaining.RemoveAll(candidate => DistanceSquared(candidate.Tile, selected.Tile) < (long)minimumDistance * minimumDistance);
 
         }
+        // Room rewards are additional to the doubled corridor chest budget.
+        foreach (var room in Map.Rooms.Where(r => r.Kind != RoomKind.Entrance && r.Width * r.Height >= _settings.LargeRoomArea))
+        {
+            var tiles = new List<TilePosition>();
+            for (int y = room.TileTop + 1; y < room.TileTop + room.TileHeight - 1; y++)
+                for (int x = room.TileLeft + 1; x < room.TileLeft + room.TileWidth - 1; x++)
+                {
+                    var tile = new TilePosition(x, y);
+                    if (Map.GetTile(tile) == TileKind.RoomFloor && tile != Map.ExitTile && tile != Map.EntranceTile)
+                        tiles.Add(tile);
+                }
+            if (tiles.Count > 0)
+            {
+                var preferred = tiles.Where(t => !route.Contains(t)).ToArray();
+                var choices = preferred.Length > 0 ? preferred : tiles.ToArray();
+                var tile = choices[_random.Next(choices.Length)];
+                chests.Add(new ChestSpawn(tile, "s"));
+            }
+        }
         return chests;
     }
 }

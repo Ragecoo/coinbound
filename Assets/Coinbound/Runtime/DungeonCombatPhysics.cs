@@ -17,7 +17,7 @@ namespace Coinbound
         internal static bool IsObstacle(Collider2D collider) => collider != null && !collider.isTrigger &&
             collider.GetComponentInParent<DungeonPlayer>() == null && collider.GetComponentInParent<DungeonEnemy>() == null;
 
-        internal static bool ClearLine(Vector2 from, Vector2 to, float radius = 0, Collider2D ignored = null)
+        internal static bool ClearLine(Vector2 from, Vector2 to, float radius = 0, Collider2D ignored = null, Transform ignoredOwner = null)
         {
             Vector2 delta = to - from;
             if (delta.sqrMagnitude < 0.0001f) return true;
@@ -27,7 +27,7 @@ namespace Coinbound
                 ? Physics2D.CircleCast(from, radius, delta.normalized, SolidFilter, CastHits, delta.magnitude)
                 : Physics2D.Raycast(from, delta.normalized, SolidFilter, CastHits, delta.magnitude);
             for (int i = 0; i < count; i++)
-                if (CastHits[i].collider != ignored && IsObstacle(CastHits[i].collider)) return false;
+                if (CastHits[i].collider != ignored && (ignoredOwner == null || !CastHits[i].collider.transform.IsChildOf(ignoredOwner)) && IsObstacle(CastHits[i].collider)) return false;
             return true;
         }
 

@@ -25,6 +25,8 @@ namespace Coinbound.Tests
                 fill.rectTransform.sizeDelta = new Vector2(20, 2);
                 fill.Initialize(texture);
                 int lost = 0;
+                int restored = 0;
+                fill.PixelRestored += (point, tint) => restored++;
                 var detached = new System.Collections.Generic.HashSet<Vector2>();
                 fill.PixelDetached += (point, tint) => {
                     Assert.That(tint, Is.EqualTo((Color32)Color.white));
@@ -35,13 +37,17 @@ namespace Coinbound.Tests
                 fill.PixelsLost += (point, count) => lost += count;
                 fill.SetFraction(.5f);
                 Assert.That(lost, Is.Zero, "Binding a run must not spray particles.");
+                Assert.That(restored, Is.Zero);
                 fill.AnimateTo(1);
                 yield return new WaitForSeconds(.3f);
                 Assert.That(lost, Is.Zero, "Restoring a resource must not look like damage.");
+                Assert.That(restored, Is.GreaterThan(0));
+                int previousRestored = restored;
                 fill.AnimateTo(.5f);
                 yield return new WaitForSeconds(.3f);
                 Assert.That(lost, Is.EqualTo(10), "Each removed source column is emitted exactly once.");
                 Assert.That(detached.Count, Is.EqualTo(20), "Both rows must detach at their original coordinates.");
+                Assert.That(restored, Is.EqualTo(previousRestored));
                 yield return new WaitForSeconds(.1f);
                 Assert.That(lost, Is.EqualTo(10), "A stable resource must not emit again.");
             }

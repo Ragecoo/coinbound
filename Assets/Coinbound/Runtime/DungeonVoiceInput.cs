@@ -69,7 +69,7 @@ namespace Coinbound
                 if (microphone==null) { Status="Не удалось включить микрофон"; return; }
                 if (microphone.frequency!=Rate) { StopMicrophone(); Status="Микрофон не поддерживает 16000 Гц"; return; }
                 input=new float[Block*microphone.channels]; readPosition=0; session++;
-                worker.Clear(session); Status="Голос: pulse · trace · ward · decoy";
+                worker.Clear(session); Status="Голос: pulse · trace · ward · decoy · recall";
             }
             if (!Microphone.IsRecording(device)) { StopMicrophone(); Status="Микрофон отключён"; return; }
             int position=Microphone.GetPosition(device);
@@ -119,6 +119,7 @@ namespace Coinbound
                 case "trace": case "трейс": case "трей с":spell=DungeonSpell.Trace;return true;
                 case "ward": case "вард":spell=DungeonSpell.Ward;return true;
                 case "decoy": case "декой": case "де кой":spell=DungeonSpell.Decoy;return true;
+                case "recall": case "рекол": case "реколл": case "ре кол":spell=DungeonSpell.Recall;return true;
                 default:spell=default;return false;
             }
         }
@@ -171,10 +172,10 @@ namespace Coinbound
                     Native.vosk_set_log_level(-1);
                     en=Native.vosk_model_new(Path.Combine(root,"en"));ru=Native.vosk_model_new(Path.Combine(root,"ru"));
                     if(en==IntPtr.Zero || ru==IntPtr.Zero)throw new InvalidOperationException("Не найдены языковые модели");
-                    enRec=Native.vosk_recognizer_new_grm(en,Rate,"[\"pulse\",\"trace\",\"ward\",\"decoy\",\"[unk]\"]");
+                    enRec=Native.vosk_recognizer_new_grm(en,Rate,"[\"pulse\",\"trace\",\"ward\",\"decoy\",\"recall\",\"[unk]\"]");
                     // Russian model lacks the loanwords as single tokens; these dictionary-backed
                     // phonetic phrases decode the same spoken sounds without editing the model.
-                    ruRec=Native.vosk_recognizer_new_grm(ru,Rate,"[\"пульс\",\"трей с\",\"вард\",\"де кой\",\"[unk]\"]");
+                    ruRec=Native.vosk_recognizer_new_grm(ru,Rate,"[\"пульс\",\"трей с\",\"вард\",\"де кой\",\"ре кол\",\"[unk]\"]");
                     if(enRec==IntPtr.Zero || ruRec==IntPtr.Zero)throw new InvalidOperationException("Не удалось создать распознавание");
                     Native.vosk_recognizer_set_words(enRec,1);Native.vosk_recognizer_set_words(ruRec,1);
                     int currentSession=-1,currentReset=-1;string enPartial="",ruPartial="";Ready=true;

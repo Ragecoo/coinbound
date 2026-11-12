@@ -8,13 +8,13 @@ namespace ProceduralGeneration
 
 public sealed record SpawnSettings
 {
-    public int Chests { get; init; } = 3;
+    public int Chests { get; init; } = 6;
     public int? ChestDistance { get; init; }
     public int SafeRadius { get; init; } = 15;
-    public int RoomMin { get; init; } = 5;
-    public int RoomMax { get; init; } = 6;
+    public int RoomMin { get; init; } = 3;
+    public int RoomMax { get; init; } = 4;
     public int CorridorMin { get; init; } = 2;
-    public int CorridorMax { get; init; } = 4;
+    public int CorridorMax { get; init; } = 3;
     public int RoomPacks { get; init; } = 1;
     public int LargeRoomPacks { get; init; } = 2;
     public int LargestRoomPacks { get; init; } = 3;

@@ -1,0 +1,659 @@
+{
+  "image": "dark-fantasy-sprites-32.png",
+  "size": {
+    "width": 274,
+    "height": 138
+  },
+  "tileSize": {
+    "width": 32,
+    "height": 32
+  },
+  "columns": 8,
+  "rows": 4,
+  "spacing": 2,
+  "margin": 2,
+  "categoryBackgrounds": {
+    "positive": {
+      "style": "Square blue atmospheric backlight with dark corners",
+      "palette": [
+        "#030916",
+        "#070F21",
+        "#0C1930",
+        "#12243F",
+        "#1B3150",
+        "#243E62",
+        "#2E4D76",
+        "#3B5E8A",
+        "#49709C",
+        "#5884AE"
+      ]
+    },
+    "negative": {
+      "style": "Square burgundy atmospheric backlight with dark corners",
+      "palette": [
+        "#130810",
+        "#200A16",
+        "#300E1D",
+        "#401222",
+        "#53192D",
+        "#662237",
+        "#7A2B40",
+        "#8D354B",
+        "#A04357",
+        "#B45163"
+      ]
+    }
+  },
+  "palette": [
+    "#030916",
+    "#070F21",
+    "#0C1930",
+    "#12243F",
+    "#1B3150",
+    "#243E62",
+    "#08090E",
+    "#FFE18B",
+    "#C66C1B",
+    "#9C471A",
+    "#E89327",
+    "#FFBD47",
+    "#703219",
+    "#FFF0CE",
+    "#50131F",
+    "#AA2530",
+    "#2E4D76",
+    "#E9EEF0",
+    "#DFC9A5",
+    "#958065",
+    "#3B5E8A",
+    "#D59B6C",
+    "#514337",
+    "#49709C",
+    "#24232C",
+    "#73604B",
+    "#B9A185",
+    "#A36A4B",
+    "#422118",
+    "#5884AE",
+    "#D83D38",
+    "#4A4A54",
+    "#292339",
+    "#858B96",
+    "#626571",
+    "#B2BBC4",
+    "#35343E",
+    "#15151D",
+    "#30121E",
+    "#744131",
+    "#235D7B",
+    "#10273F",
+    "#3987A3",
+    "#5BB5CE",
+    "#173E5B",
+    "#8CDAED",
+    "#C7F3FA",
+    "#482A26",
+    "#7B1924",
+    "#130810",
+    "#200A16",
+    "#300E1D",
+    "#401222",
+    "#53192D",
+    "#662237",
+    "#7A2B40",
+    "#A04357",
+    "#8D354B",
+    "#1E3027",
+    "#94A258",
+    "#5C6D3B"
+  ],
+  "frames": {
+    "amber_heart": {
+      "name": "Янтарное сердце",
+      "category": "positive",
+      "file": "sprites/01_amber_heart.png",
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "saints_tooth": {
+      "name": "Зуб святого",
+      "category": "positive",
+      "file": "sprites/02_saints_tooth.png",
+      "frame": {
+        "x": 36,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "execution_ash": {
+      "name": "Пепел казни",
+      "category": "positive",
+      "file": "sprites/03_execution_ash.png",
+      "frame": {
+        "x": 70,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "night_owl_feather": {
+      "name": "Перо ночной совы",
+      "category": "positive",
+      "file": "sprites/04_night_owl_feather.png",
+      "frame": {
+        "x": 104,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "hangmans_knot": {
+      "name": "Узел палача",
+      "category": "positive",
+      "file": "sprites/05_hangmans_knot.png",
+      "frame": {
+        "x": 138,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "martyrs_eye": {
+      "name": "Око мученика",
+      "category": "positive",
+      "file": "sprites/06_martyrs_eye.png",
+      "frame": {
+        "x": 172,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "blind_kings_coin": {
+      "name": "Монета слепого короля",
+      "category": "positive",
+      "file": "sprites/07_blind_kings_coin.png",
+      "frame": {
+        "x": 206,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "wax_doll": {
+      "name": "Восковая кукла",
+      "category": "positive",
+      "file": "sprites/08_wax_doll.png",
+      "frame": {
+        "x": 240,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "black_bile": {
+      "name": "Чёрная желчь",
+      "category": "positive",
+      "file": "sprites/09_black_bile.png",
+      "frame": {
+        "x": 2,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "stone_tomb_seal": {
+      "name": "Печать каменной гробницы",
+      "category": "positive",
+      "file": "sprites/10_stone_tomb_seal.png",
+      "frame": {
+        "x": 36,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "dead_mans_hourglass": {
+      "name": "Песочные часы мертвеца",
+      "category": "positive",
+      "file": "sprites/11_dead_mans_hourglass.png",
+      "frame": {
+        "x": 70,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "tongueless_bell": {
+      "name": "Безъязыкий колокол",
+      "category": "positive",
+      "file": "sprites/12_tongueless_bell.png",
+      "frame": {
+        "x": 104,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ark_of_the_unborn": {
+      "name": "Ковчег нерождённого",
+      "category": "positive",
+      "file": "sprites/13_ark_of_the_unborn.png",
+      "frame": {
+        "x": 138,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "amber_beast_fang": {
+      "name": "Клык янтарного зверя",
+      "category": "positive",
+      "file": "sprites/14_amber_beast_fang.png",
+      "frame": {
+        "x": 172,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "fever_rosary": {
+      "name": "Чётки лихорадки",
+      "category": "positive",
+      "file": "sprites/15_fever_rosary.png",
+      "frame": {
+        "x": 206,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "fugitive_dead_brand": {
+      "name": "Клеймо беглого мертвеца",
+      "category": "positive",
+      "file": "sprites/16_fugitive_dead_brand.png",
+      "frame": {
+        "x": 240,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "golden_thread_idol": {
+      "name": "Идол золотой нити",
+      "category": "positive",
+      "file": "sprites/17_golden_thread_idol.png",
+      "frame": {
+        "x": 2,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "bone_dust_vessel": {
+      "name": "Сосуд костяной пыли",
+      "category": "positive",
+      "file": "sprites/18_bone_dust_vessel.png",
+      "frame": {
+        "x": 36,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "stone_giants_tear": {
+      "name": "Слеза каменного великана",
+      "category": "positive",
+      "file": "sprites/19_stone_giants_tear.png",
+      "frame": {
+        "x": 70,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ancient_gods_heart": {
+      "name": "Сердце древнего бога",
+      "category": "positive",
+      "file": "sprites/20_ancient_gods_heart.png",
+      "frame": {
+        "x": 104,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "eye_of_eternal_night": {
+      "name": "Око вечной ночи",
+      "category": "positive",
+      "file": "sprites/21_eye_of_eternal_night.png",
+      "frame": {
+        "x": 138,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "empty_cradle": {
+      "name": "Пустая колыбель",
+      "category": "negative",
+      "file": "sprites/22_empty_cradle.png",
+      "frame": {
+        "x": 172,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "seal_of_rot": {
+      "name": "Печать гниения",
+      "category": "negative",
+      "file": "sprites/23_seal_of_rot.png",
+      "frame": {
+        "x": 206,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "grey_ash": {
+      "name": "Серый прах",
+      "category": "negative",
+      "file": "sprites/24_grey_ash.png",
+      "frame": {
+        "x": 240,
+        "y": 70,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "lead_anchor": {
+      "name": "Свинцовый якорь",
+      "category": "negative",
+      "file": "sprites/25_lead_anchor.png",
+      "frame": {
+        "x": 2,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "dead_sinew_knot": {
+      "name": "Узел мёртвых жил",
+      "category": "negative",
+      "file": "sprites/26_dead_sinew_knot.png",
+      "frame": {
+        "x": 36,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "blind_mirror_shard": {
+      "name": "Осколок слепого зеркала",
+      "category": "negative",
+      "file": "sprites/27_blind_mirror_shard.png",
+      "frame": {
+        "x": 70,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "debtors_coin": {
+      "name": "Монета должника",
+      "category": "negative",
+      "file": "sprites/28_debtors_coin.png",
+      "frame": {
+        "x": 104,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "bloody_wick": {
+      "name": "Кровавый фитиль",
+      "category": "negative",
+      "file": "sprites/29_bloody_wick.png",
+      "frame": {
+        "x": 138,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "fading_clock": {
+      "name": "Часы угасания",
+      "category": "negative",
+      "file": "sprites/30_fading_clock.png",
+      "frame": {
+        "x": 172,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "second_death_shroud": {
+      "name": "Саван второй смерти",
+      "category": "negative",
+      "file": "sprites/31_second_death_shroud.png",
+      "frame": {
+        "x": 206,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "abyss_icon": {
+      "name": "Икона бездны",
+      "category": "negative",
+      "file": "sprites/32_abyss_icon.png",
+      "frame": {
+        "x": 240,
+        "y": 104,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    }
+  },
+  "version": 3,
+  "backgroundLayerUnchanged": true,
+  "foregroundStyle": "Cleaner connected pixel clusters; at most 10 colors per item"
+}

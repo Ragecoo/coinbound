@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,7 +9,7 @@ namespace Coinbound
     public sealed partial class DungeonScreen
     {
         private Slider volumeSlider, brightnessSlider;
-        private Text volumeValue, brightnessValue;
+        private Text volumeValue, brightnessValue, frameLimitValue;
         private Button settingsBack;
         private readonly Dictionary<string, Text> preferenceLabels = new Dictionary<string, Text>();
         private readonly Dictionary<string, Func<bool>> preferenceReads = new Dictionary<string, Func<bool>>();
@@ -25,13 +25,17 @@ namespace Coinbound
             volumeSlider = SettingSlider(card, "Громкость интерфейса", 131, 0, 1, DungeonSettings.SetVolume, out volumeValue);
             brightnessSlider = SettingSlider(card, "Яркость подземелья", 62, .7f, 1.35f, DungeonSettings.SetBrightness, out brightnessValue);
             Preference(card, "Fullscreen", "Полный экран", 0, () => DungeonSettings.Fullscreen);
-            Preference(card, "VSync", "Вертикальная синхронизация", -35, () => DungeonSettings.VSync);
-            Preference(card, "ReducedMotion", "Меньше анимации", -70, () => DungeonSettings.ReducedMotion);
-            Preference(card, "ShowHints", "Подсказки управления", -105, () => DungeonSettings.ShowHints);
-            Preference(card, "DamageFlash", "Индикация урона", -140, () => DungeonSettings.DamageFlash);
-            Preference(card, "VoiceInput", "Голосовые заклинания", -175, () => DungeonSettings.VoiceInput);
-            string[] keys = { "W A S D / ↑ ← ↓ →", "ЛКМ", "ПКМ", "SHIFT", "E", "CTRL + КОЛЁСИКО", "ESC", "ENTER / СТРЕЛКИ" };
-            string[] actions = { "Движение", "Удар / выстрел", "Блок мечника", "Перекат", "Открыть сундук", "Масштаб камеры", "Пауза / назад", "Навигация в меню" };
+            Label("Frame limit label",card,"Ограничение FPS",14,new Vector2(-245,-30),new Vector2(330,28),Muted).alignment=TextAnchor.MiddleLeft;
+            var fpsButton=MakeButton("Frame limit",card,"",new Vector2(-30,-30),new Vector2(77,29),()=>{
+                int[] limits={60,120,144,165,240,-1};
+                DungeonSettings.SetFrameLimit(limits[(Array.IndexOf(limits,DungeonSettings.FrameLimit)+1)%limits.Length]);RefreshSettingValues();
+            });
+            frameLimitValue=Label("Value",fpsButton.transform,"",11,Vector2.zero,new Vector2(72,26),Pale);
+            Preference(card, "VoiceInput", "Голосовые заклинания", -60, () => DungeonSettings.VoiceInput);
+            Preference(card, "EnemyDamageNumbers", "Цифры урона по врагам", -90, () => DungeonSettings.EnemyDamageNumbers);
+            Preference(card, "PlayerDamageNumbers", "Цифры урона по себе", -120, () => DungeonSettings.PlayerDamageNumbers);
+            string[] keys = { "W A S D", "ЛКМ", "ПКМ", "SHIFT", "E", "CTRL + КОЛЁСИКО", "ESC", "1 2 3 4 5" };
+            string[] actions = { "Движение", "Удар / выстрел", "Блок мечника", "Перекат", "Сундук / фонтан", "Масштаб камеры", "Пауза / назад", "Заклинания" };
             for (int i = 0; i < keys.Length; i++)
             {
                 float y = 131 - i * 37;
@@ -95,6 +99,7 @@ namespace Coinbound
         }
         private void RefreshSettingValues()
         {
+            frameLimitValue.text = DungeonSettings.FrameLimit < 0 ? "НЕТ" : DungeonSettings.FrameLimit.ToString();
             volumeValue.text = Mathf.RoundToInt(DungeonSettings.Volume * 100) + "%";
             brightnessValue.text = Mathf.RoundToInt(DungeonSettings.Brightness * 100) + "%";
             foreach (var pair in preferenceLabels)
@@ -106,23 +111,24 @@ namespace Coinbound
         private void BuildConfirmation()
         {
             confirmation = Layer("Confirmation", new Color(0, 0, 0, .88f));
-            RectTransform card = Framed("Confirmation panel", confirmation.transform, Vector2.zero, new Vector2(570, 300));
+            RectTransform card = Framed("Confirmation panel", confirmation.transform, Vector2.zero, new Vector2(650, 300));
             confirmTitle = Label("Title", card, "", 28, new Vector2(0, 88), new Vector2(530, 45), Pale, true);
             Rule(card, 49, 480);
             confirmMessage = Label("Message", card, "", 16, new Vector2(0, -2), new Vector2(500, 72), Muted);
-            confirmButton = MakeButton("Confirm", card, "Подтвердить", new Vector2(128, -97), new Vector2(235, 42), () =>
+            confirmButton = MakeButton("Confirm", card, "Подтвердить", new Vector2(150, -97), new Vector2(280, 42), () =>
             {
                 Action action = confirmAction; CloseConfirmation(false); action?.Invoke();
             });
-            confirmCancel = MakeButton("Keep playing", card, "Отмена", new Vector2(-128, -97), new Vector2(235, 42), () => CloseConfirmation());
+            confirmCancel = MakeButton("Keep playing", card, "Отмена", new Vector2(-150, -97), new Vector2(280, 42), () => CloseConfirmation());
         }
         private void Confirm(string title, string message, Action action, string label, bool confirmOnLeft = false)
         {
             confirmReturnFocus = EventSystem.current?.currentSelectedGameObject?.GetComponent<Selectable>();
             confirmTitle.text = title; confirmMessage.text = message; confirmAction = action;
             confirmButton.GetComponentInChildren<Text>().text = label;
-            ((RectTransform)confirmButton.transform).anchoredPosition = new Vector2(confirmOnLeft ? -128 : 128, -97);
-            ((RectTransform)confirmCancel.transform).anchoredPosition = new Vector2(confirmOnLeft ? 128 : -128, -97);
+            ((RectTransform)confirmButton.transform).anchoredPosition = new Vector2(confirmOnLeft ? -150 : 150, -97);
+            ((RectTransform)confirmCancel.transform).anchoredPosition = new Vector2(confirmOnLeft ? 150 : -150, -97);
+            confirmation.transform.SetAsLastSibling();
             confirmation.SetActive(true);
             CanvasGroup group = current.GetComponent<CanvasGroup>();
             if (group == null) group = current.AddComponent<CanvasGroup>();
@@ -136,7 +142,7 @@ namespace Coinbound
             if (current != null && current.TryGetComponent(out CanvasGroup group)) { group.interactable = true; group.blocksRaycasts = true; }
             if (restoreFocus) Select(confirmReturnFocus);
         }
-        private void RequestQuit() => Confirm("ВЫЙТИ ИЗ ИГРЫ?", "Текущий забег не сохраняется после выхода из игры.", () =>
+        private void RequestQuit() => Confirm("ВЫЙТИ ИЗ ИГРЫ?", "Прогресс после последнего сохранения у фонтана будет потерян.", () =>
         {
             DungeonSettings.Save();
 #if UNITY_EDITOR

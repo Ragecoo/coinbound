@@ -172,9 +172,12 @@ namespace Coinbound.Tests
                 AssertFootAnchor(player, visual, feet, footSize);
 
                 InputSystem.QueueStateEvent(pad, new GamepadState { leftStick = Vector2.right, rightStick = Vector2.up });
+                InputSystem.Update();
                 yield return new WaitForFixedUpdate();
-                yield return null;
-                yield return null;
+                // Wait for measured physics displacement, not a particular render/fixed-update ordering.
+                float movementDeadline = Time.realtimeSinceStartup + .5f;
+                while (!visual.sprite.name.StartsWith("01/right/Run/") && Time.realtimeSinceStartup < movementDeadline)
+                    yield return null;
                 AssertPose(visual, "right", 1);
                 Sprite runStart = visual.sprite;
                 yield return new WaitForSeconds(0.16f);
@@ -202,6 +205,8 @@ namespace Coinbound.Tests
                 AssertFootAnchor(player, visual, feet, footSize);
 
                 player.SetInputEnabled(true);
+                Assert.That(player.TryRoll(Vector2.up), Is.False, "An attack must finish before movement actions resume.");
+                while (player.IsAttacking) yield return null;
                 Assert.That(player.TryRoll(Vector2.up), Is.True);
                 InputSystem.QueueStateEvent(pad, new GamepadState { rightStick = Vector2.left });
                 yield return null;

@@ -15,7 +15,7 @@ namespace Coinbound
         private string english="", russian="", previousStatus="";
         private int previousWidth,previousHeight;
         private bool visible;
-        private static readonly Regex Commands = new Regex(@"\b(pulse|trace|ward|decoy|пульс|трейс|трей\s+с|вард|декой|де\s+кой)\b",RegexOptions.IgnoreCase|RegexOptions.CultureInvariant);
+        private static readonly Regex Commands = new Regex(@"\b(pulse|trace|ward|decoy|recall|пульс|трейс|трей\s+с|вард|декой|де\s+кой|реколл?|ре\s+кол)\b",RegexOptions.IgnoreCase|RegexOptions.CultureInvariant);
 
         public void Initialize(DungeonVoiceInput input)
         {

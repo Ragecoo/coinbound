@@ -8,11 +8,12 @@ namespace Coinbound
     {
         private readonly UIVertex[] quad = new UIVertex[4];
         public int ExtraPixelSteps = 1;
+        public float GlyphScale = 1;
         public float MeasureHeight(float width)
         {
             if (font == null) return 0;
             float screenScale = canvas != null ? Mathf.Max(.01f, canvas.scaleFactor) : 1;
-            float zoom = (Mathf.Max(1, Mathf.Round(fontSize * screenScale / 16)) + ExtraPixelSteps) / screenScale;
+            float zoom = (Mathf.Max(1, Mathf.Round(fontSize * screenScale / 16)) + ExtraPixelSteps) / screenScale * GlyphScale;
             var settings = GetGenerationSettings(new Vector2(width / zoom, 0));
             settings.fontSize = 16; settings.fontStyle = FontStyle.Normal; settings.scaleFactor = 1;
             settings.resizeTextForBestFit = false; settings.verticalOverflow = VerticalWrapMode.Overflow;
@@ -25,7 +26,7 @@ namespace Coinbound
             const int nativeSize = 16;
             float screenScale = canvas != null ? Mathf.Max(.01f, canvas.scaleFactor) : 1;
             // One additional whole-pixel step makes every label larger without filtering.
-            float zoom = (Mathf.Max(1, Mathf.Round(fontSize * screenScale / nativeSize)) + ExtraPixelSteps) / screenScale;
+            float zoom = (Mathf.Max(1, Mathf.Round(fontSize * screenScale / nativeSize)) + ExtraPixelSteps) / screenScale * GlyphScale;
             var settings = GetGenerationSettings(rectTransform.rect.size / zoom);
             settings.fontSize = nativeSize;
             settings.fontStyle = FontStyle.Normal;
@@ -47,6 +48,7 @@ namespace Coinbound
                     int corner = i & 3;
                     quad[corner] = vertices[i];
                     quad[corner].position = vertices[i].position * zoom + (Vector3)offset;
+                    if (GlyphScale != 1) quad[corner].position = new Vector3(Mathf.Round(quad[corner].position.x),Mathf.Round(quad[corner].position.y),quad[corner].position.z);
                     if (corner == 3) mesh.AddUIVertexQuad(quad);
                 }
             }

@@ -17,8 +17,8 @@ namespace Coinbound
         public string ArtFolder { get; }
         public bool IsArcher { get; }
         public PlayerStats Stats { get; }
-        public int StartingHealth => Stats.MaxHealth;
-        public int AttackDamage => Stats.Damage;
+        public float StartingHealth => Stats.MaxHealth;
+        public float AttackDamage => Stats.Damage;
         public float AttackSeconds => Stats.AttackSeconds;
         public float RollRecovery => 1.5f;
         public float BlockRecovery => 2;
@@ -31,8 +31,8 @@ namespace Coinbound
             Color = color;
             ArtFolder = artFolder;
             IsArcher = isArcher;
-            Stats = new PlayerStats(100, 100, isArcher ? 1 : 2, isArcher ? 3.5f : 3,
-                1 / (isArcher ? 0.38f : 0.42f), 0.05f, -5);
+            Stats = new PlayerStats(100, 100, isArcher ? 1.5f : 2, isArcher ? 3.5f : 3,
+                1 / (isArcher ? 0.38f : 0.42f), 0.05f, 0);
         }
     }
 }

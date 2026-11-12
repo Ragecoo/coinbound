@@ -11,6 +11,26 @@ namespace Coinbound.Tests
 {
     public sealed class DungeonLightingTests
     {
+        [UnityTest]
+        public IEnumerator TraceKeepsItsRenderWorkBoundedOnARealDungeon()
+        {
+            yield return SceneManager.LoadSceneAsync("SampleScene");
+            var game = Object.FindAnyObjectByType<DungeonGame>();
+            JsonUtility.FromJsonOverwrite("{\"randomSeed\":false,\"seed\":42,\"minimumStatusSeconds\":0}", game);
+            game.StartNewDungeon();
+            float timeout = Time.realtimeSinceStartup + 30;
+            while (!game.IsReady && Time.realtimeSinceStartup < timeout) yield return null;
+            Assert.That(game.IsReady, Is.True);
+            var player = Object.FindAnyObjectByType<DungeonPlayer>();
+            Assert.That(player.Spells.TryCast(DungeonSpell.Trace), Is.EqualTo(SpellCastResult.Success));
+            var trace = Object.FindAnyObjectByType<DungeonTrace>();
+            yield return new WaitForSeconds(2.4f);
+            Assert.That(trace, Is.Not.Null);
+            Assert.That(trace.MeasuredFrames, Is.GreaterThan(1));
+            Assert.That(trace.GetComponent<MeshFilter>().sharedMesh.vertexCount, Is.LessThanOrEqualTo(960),
+                "Trace must not render particles across the entire dungeon.");
+            Debug.Log($"TRACE_PERFORMANCE frames={trace.MeasuredFrames} mean_ms={trace.TotalUpdateMilliseconds/trace.MeasuredFrames:F3} max_ms={trace.MaximumUpdateMilliseconds:F3}");
+        }
         [Test]
         public void RaysStopAtWallsAndDoNotSeeTheRoomBehindThem()
         {

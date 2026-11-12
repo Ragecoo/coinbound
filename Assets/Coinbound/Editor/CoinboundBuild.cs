@@ -25,7 +25,8 @@ namespace Coinbound.Editor
                     scenes = new[] { "Assets/Scenes/SampleScene.unity" },
                     locationPathName = "Builds/Coinbound/Coinbound.exe",
                     target = BuildTarget.StandaloneWindows64,
-                    options = BuildOptions.Development
+                    // Recreate serialized player data instead of reusing incremental resource files.
+                    options = BuildOptions.Development | BuildOptions.CleanBuildCache
                 });
                 if (report.summary.result != BuildResult.Succeeded)
                     throw new InvalidOperationException($"Build failed: {report.summary.result}");

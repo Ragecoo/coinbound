@@ -1,0 +1,1 @@
+Use the matching 55x55 mask. Update each render frame. progress = clamp(1 - remaining / duration, 0, 1). edge = -2 + 59 * progress. For each pixel row y (0 at top), multiply the PNG alpha by clamp((y + 0.5 - edge + 2) / 4, 0, 1). Keep MP text above the mask. At zero remaining, hide the overlay.

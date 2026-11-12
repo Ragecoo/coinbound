@@ -7,13 +7,14 @@ namespace Coinbound.Editor
     {
         private void OnPreprocessTexture()
         {
-            if (!assetPath.StartsWith("Assets/Coinbound/Resources/ChestArt/")) return;
+            bool indigo=assetPath.StartsWith("Assets/Coinbound/Resources/ChestArtIndigo/");
+            if (!indigo && !assetPath.StartsWith("Assets/Coinbound/Resources/ChestArt/")) return;
             var importer = (TextureImporter)assetImporter;
             importer.textureType = TextureImporterType.Sprite;
             importer.spriteImportMode = SpriteImportMode.Single;
             importer.spritePixelsPerUnit = 32;
-            // Source pivot (16,34) is measured from the top of the 32x40 frame.
-            importer.spritePivot = new Vector2(.5f, 6f / 40);
+            // Indigo base center is (16,40) from the top, identical in every 32x48 frame.
+            importer.spritePivot = indigo ? new Vector2(.5f,8f/48) : new Vector2(.5f, 6f / 40);
             importer.filterMode = FilterMode.Point;
             importer.mipmapEnabled = false;
             importer.npotScale = TextureImporterNPOTScale.None;

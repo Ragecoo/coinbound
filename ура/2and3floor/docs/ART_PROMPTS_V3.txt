@@ -1,0 +1,14 @@
+COINBOUND V3 — BUILT-IN IMAGEGEN EDITS
+
+STONE PALETTE EDIT
+
+Use case: precise-object-edit. Asset: palette-only revision of a native pixel-art dungeon wall tile sheet. Image 1 is the exact edit target, a 4 by 4 grid of 32x32 native pixel tiles displayed at 8x nearest-neighbor scale (1024x1024 total). Change ONLY the blue/indigo/violet masonry color to dark neutral warm-gray stone with a very slight desaturated olive undertone, harmonizing with the green moss. No blue or purple remains in masonry. Damp aged limestone, dark charcoal mortar, muted gray-olive midtones; not vivid green stone, not brown wood, not brighter overall. Preserve EXACTLY the 16-cell layout, stone shapes, pixel clusters, outlines, tile seams, top-down viewing angle and brightness hierarchy. Preserve the moss, leaves, trailing ivy and small flowers in their exact original colors and positions. Preserve all nearly-black voids. Absolutely strict chunky 32x32 pixel art: solid square pixels, each original logical pixel remains one 8x8 flat block, no new fine detail, no smoothing, no gradients, no blur, no anti-aliasing, no text, no padding, no extra objects. This is a restrained hue replacement of the existing stone only, never a redraw.
+
+FLOWER VARIANTS EDIT
+
+Use case: precise-object-edit. Image 1 is the exact pixel-art wall sprite sheet to edit, four columns by four rows. Keep the warm neutral gray-olive stone hue: no blue masonry. Keep all geometry, crop, 4x4 cell layout, perspective, shapes, stone pattern and moss. Add small but clearly readable flower clusters growing among the existing moss on ALL different wall orientations in this sheet: vertical side walls, horizontal walls, straight fronts, top ledges, inside and outside corners and small pillars. The user wants noticeably more flowers and varied locations, not just three repeated flowering tiles. Place 2 or 3 small separated flower clusters per 32x32 logical tile, varying their position: near top edges, on trailing vines, along side faces and at corners. Use primarily dusty muted mauve/pink petals with occasional muted bone-ivory petals, tiny dull golden centers; preserve the dark atmospheric dungeon palette. Flowers should be compact pixel clusters of about 3-6 native pixels each, more numerous but not oversized, no glowing flowers. Green moss and ivy remain dominant with ordinary gray stone clearly visible beneath. Keep original gaps between tiles and original almost-black voids completely free of new flowers. Strict square-pixel art at the exact original native logical pixel density, no anti-aliasing, no blur, no new high-resolution detail, no text or labels, no outlines around the sheet. Do not redesign walls; only add flower clusters in the existing green moss.
+
+EXPORT
+
+Generated art was used as a gray-olive palette source and flower-cluster source. Native 32x32 wall pixel geometry and original moss were retained. Individual game PNGs are separate from enlarged previews.
+

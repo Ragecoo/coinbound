@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Coinbound
 {
-    /// <summary>Quiet, locally synthesized dungeon Foley; owns its clips and six reusable voices.</summary>
+    /// <summary>Quiet, locally synthesized dungeon Foley; owns its clips and twelve reusable voices.</summary>
     public sealed class DungeonAudio : MonoBehaviour
     {
         private const int SampleRate = 22050;
-        private const int VoiceCount = 6;
+        private const int VoiceCount = 12;
         private enum Family { Footsteps, Ambient, Combat }
         private enum Tone { Step, WetStep, Sword, Bow, Block, Hurt, Drop, Creak, Draft, Water }
 
@@ -40,7 +40,7 @@ namespace Coinbound
         private Transform fountain;
         private System.Random random;
         private Vector2 previousPosition;
-        private int previousHealth;
+        private float previousHealth;
         private int previousBowShot;
         private float previousAttackProgress;
         private float previousBlockCooldown;
@@ -50,6 +50,7 @@ namespace Coinbound
         private float stepDistance;
         private float ambientCountdown;
         private float clock;
+        private float activityGain;
         private float fountainFade;
         private int lastStep = -1;
 
@@ -58,7 +59,7 @@ namespace Coinbound
             if (map == null) throw new ArgumentNullException(nameof(map));
             if (player == null) throw new ArgumentNullException(nameof(player));
             var root = new GameObject("Dungeon audio");
-            root.transform.SetParent(player.transform.parent, false);
+            root.transform.SetParent(player.transform.parent!=null?player.transform.parent.parent:null, false);
             var audio = root.AddComponent<DungeonAudio>();
             audio.Initialize(map, player, seed);
             return audio;
@@ -92,7 +93,7 @@ namespace Coinbound
             drop = MakeSound(Tone.Drop, 0.34f, synthesis);
             creak = MakeSound(Tone.Creak, 0.85f, synthesis);
             draft = MakeSound(Tone.Draft, 1.65f, synthesis);
-            voices[0].source.clip = MakeClip("Fountain water", Synthesize(Tone.Water, 4.8f, synthesis, 0), false);
+            voices[0].source.clip = MakeClip("Fountain water", SeamlessWater(Synthesize(Tone.Water, 5.3f, synthesis, 0)), false);
             voices[0].source.loop = true;
             voices[0].family = Family.Ambient;
             voices[0].gain = 0.065f;
@@ -108,14 +109,17 @@ namespace Coinbound
 
         private void LateUpdate()
         {
-            if (player == null) { SetPaused(true); return; }
-            if (!player.CanAct || Time.timeScale <= 0)
+            bool audible=player!=null&&player.gameObject.activeInHierarchy&&player.CanAct&&Time.timeScale>0;
+            activityGain=Mathf.MoveTowards(activityGain,audible?1:0,Time.unscaledDeltaTime*5);
+            for(int i=0;i<voices.Length;i++)
+                if(voices[i]?.source!=null&&voices[i].active&&player!=null)PositionVoice(voices[i],DungeonFxSettings.Current.soundVolume*(i==0?fountainFade:1));
+            if(!audible)
             {
-                SetPaused(true);
-                RememberPlayerState();
+                if(activityGain==0&&voices[0]?.source!=null){voices[0].source.Pause();voices[0].active=false;}
+                if(player==null){foreach(var voice in voices)if(voice?.source!=null)voice.source.volume=Mathf.MoveTowards(voice.source.volume,0,Time.unscaledDeltaTime);if(activityGain==0)Destroy(gameObject);}
+                else RememberPlayerState();
                 return;
             }
-            SetPaused(false);
             float delta = Time.deltaTime;
             if (delta <= 0) return;
             clock += delta;
@@ -219,9 +223,7 @@ namespace Coinbound
             {
                 Voice voice = voices[i];
                 if (!voice.active || !voice.source.isPlaying) { selected = voice; break; }
-                if (voice.priority > priority) continue;
-                if (selected == null || voice.priority < selected.priority
-                    || voice.priority == selected.priority && voice.started < selected.started) selected = voice;
+
             }
             if (selected == null) return;
             selected.source.Stop();
@@ -246,7 +248,7 @@ namespace Coinbound
             attenuation *= 1 - Mathf.SmoothStep(0, 1, Mathf.InverseLerp(7, 12, distance));
             if (distance > 2 && AcrossWall(listener, voice.position)) attenuation *= 0.4f;
             voice.source.panStereo = Mathf.Clamp(offset.x / 8, -0.65f, 0.65f);
-            voice.source.volume = Mathf.Clamp01(master * voice.gain * attenuation);
+            voice.source.volume = Mathf.Clamp01(master * voice.gain * attenuation * activityGain);
         }
 
         private bool AcrossWall(Vector2 from, Vector2 to)
@@ -412,8 +414,8 @@ namespace Coinbound
                 }
                 // Gentle endpoints remove discontinuities; the long water loop has a
                 // natural brief lull instead of a repeated seam or constant loud hiss.
-                float fade = tone == Tone.Water ? 0.16f : 0.004f;
-                value *= Mathf.Clamp01(t / fade) * Mathf.Clamp01((seconds - t) / fade);
+                float fade = tone == Tone.Water ? 0 : 0.004f;
+                if(fade>0)value *= Mathf.Clamp01(t / fade) * Mathf.Clamp01((seconds - t) / fade);
                 samples[i] = value;
                 peak = Mathf.Max(peak, Mathf.Abs(value));
             }
@@ -422,6 +424,18 @@ namespace Coinbound
             return samples;
         }
 
+        public static float[] SeamlessWater(float[] source)
+        {
+            int overlap=Mathf.Min(11025,source.Length/4),length=source.Length-overlap;
+            var result=new float[length];Array.Copy(source,result,length);
+            // Equal-power overlap continues into the original head without a silent dip.
+            for(int i=0;i<overlap;i++)
+            {
+                float t=i/(float)(overlap-1);
+                result[i]=source[length+i]*Mathf.Cos(t*Mathf.PI*.5f)+source[i]*Mathf.Sin(t*Mathf.PI*.5f);
+            }
+            return result;
+        }
         private void OnDisable() => SetPaused(true);
 
         private void OnDestroy()

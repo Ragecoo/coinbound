@@ -1,0 +1,842 @@
+[
+  {
+    "id": 1,
+    "name": "barrel_closed",
+    "file": "sprites/01_barrel_closed.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      0,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 2,
+    "name": "barrel_open",
+    "file": "sprites/02_barrel_open.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      32,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 3,
+    "name": "barrel_broken",
+    "file": "sprites/03_barrel_broken.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      64,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 4,
+    "name": "crate_closed",
+    "file": "sprites/04_crate_closed.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      96,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 5,
+    "name": "crate_reinforced",
+    "file": "sprites/05_crate_reinforced.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      0,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 6,
+    "name": "crate_broken",
+    "file": "sprites/06_crate_broken.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      32,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 7,
+    "name": "sack_single",
+    "file": "sprites/07_sack_single.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      64,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 8,
+    "name": "jar",
+    "file": "sprites/08_jar.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      96,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 9,
+    "name": "jar_broken",
+    "file": "sprites/09_jar_broken.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      0,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 10,
+    "name": "skull_bones",
+    "file": "sprites/10_skull_bones.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      32,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 11,
+    "name": "candles_floor",
+    "file": "sprites/11_candles_floor.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      64,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 12,
+    "name": "rubble",
+    "file": "sprites/12_rubble.png",
+    "width": 32,
+    "height": 32,
+    "group": "a_single",
+    "atlas": "atlases/a_single.png",
+    "atlas_rect_top_left": [
+      96,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 13,
+    "name": "sacks_pair",
+    "file": "sprites/13_sacks_pair.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      0,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 14,
+    "name": "sacks_triple",
+    "file": "sprites/14_sacks_triple.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      32,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 15,
+    "name": "jars_pair",
+    "file": "sprites/15_jars_pair.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      64,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 16,
+    "name": "bottles_cluster",
+    "file": "sprites/16_bottles_cluster.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      96,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 17,
+    "name": "bones_pile",
+    "file": "sprites/17_bones_pile.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      0,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 18,
+    "name": "skull_candles",
+    "file": "sprites/18_skull_candles.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      32,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 19,
+    "name": "chain_shackle",
+    "file": "sprites/19_chain_shackle.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      64,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 20,
+    "name": "mushrooms",
+    "file": "sprites/20_mushrooms.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      96,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 21,
+    "name": "bucket_tools",
+    "file": "sprites/21_bucket_tools.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      0,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 22,
+    "name": "broken_planks",
+    "file": "sprites/22_broken_planks.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      32,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 23,
+    "name": "books_scrolls",
+    "file": "sprites/23_books_scrolls.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      64,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 24,
+    "name": "campfire_cold",
+    "file": "sprites/24_campfire_cold.png",
+    "width": 32,
+    "height": 32,
+    "group": "b_compact",
+    "atlas": "atlases/b_compact.png",
+    "atlas_rect_top_left": [
+      96,
+      64,
+      32,
+      32
+    ]
+  },
+  {
+    "id": 25,
+    "name": "barrels_pair",
+    "file": "sprites/25_barrels_pair.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      0,
+      0,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 26,
+    "name": "barrel_crate",
+    "file": "sprites/26_barrel_crate.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      64,
+      0,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 27,
+    "name": "crates_pair",
+    "file": "sprites/27_crates_pair.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      128,
+      0,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 28,
+    "name": "crate_sacks",
+    "file": "sprites/28_crate_sacks.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      0,
+      32,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 29,
+    "name": "barrel_sacks",
+    "file": "sprites/29_barrel_sacks.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      64,
+      32,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 30,
+    "name": "jars_triple",
+    "file": "sprites/30_jars_triple.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      128,
+      32,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 31,
+    "name": "broken_storage",
+    "file": "sprites/31_broken_storage.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      0,
+      64,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 32,
+    "name": "jar_skull",
+    "file": "sprites/32_jar_skull.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      64,
+      64,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 33,
+    "name": "planks_sack",
+    "file": "sprites/33_planks_sack.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      128,
+      64,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 34,
+    "name": "rubble_mushrooms",
+    "file": "sprites/34_rubble_mushrooms.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      0,
+      96,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 35,
+    "name": "crate_jars",
+    "file": "sprites/35_crate_jars.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      64,
+      96,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 36,
+    "name": "ritual_books",
+    "file": "sprites/36_ritual_books.png",
+    "width": 64,
+    "height": 32,
+    "group": "c_wide",
+    "atlas": "atlases/c_wide.png",
+    "atlas_rect_top_left": [
+      128,
+      96,
+      64,
+      32
+    ]
+  },
+  {
+    "id": 37,
+    "name": "crates_stacked",
+    "file": "sprites/37_crates_stacked.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      0,
+      0,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 38,
+    "name": "barrels_stacked",
+    "file": "sprites/38_barrels_stacked.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      32,
+      0,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 39,
+    "name": "crate_skull",
+    "file": "sprites/39_crate_skull.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      64,
+      0,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 40,
+    "name": "crate_candles",
+    "file": "sprites/40_crate_candles.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      96,
+      0,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 41,
+    "name": "barrel_candles",
+    "file": "sprites/41_barrel_candles.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      0,
+      64,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 42,
+    "name": "crate_sack",
+    "file": "sprites/42_crate_sack.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      32,
+      64,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 43,
+    "name": "crate_jars_stacked",
+    "file": "sprites/43_crate_jars_stacked.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      64,
+      64,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 44,
+    "name": "crate_tools",
+    "file": "sprites/44_crate_tools.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      96,
+      64,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 45,
+    "name": "coffin_upright",
+    "file": "sprites/45_coffin_upright.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      0,
+      128,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 46,
+    "name": "statue_broken",
+    "file": "sprites/46_statue_broken.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      32,
+      128,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 47,
+    "name": "brazier_tall",
+    "file": "sprites/47_brazier_tall.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      64,
+      128,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 48,
+    "name": "banner_stand",
+    "file": "sprites/48_banner_stand.png",
+    "width": 32,
+    "height": 64,
+    "group": "d_tall",
+    "atlas": "atlases/d_tall.png",
+    "atlas_rect_top_left": [
+      96,
+      128,
+      32,
+      64
+    ]
+  },
+  {
+    "id": 49,
+    "name": "corner_nw_composed",
+    "file": "sprites/49_corner_nw_composed.png",
+    "width": 64,
+    "height": 64,
+    "group": "e_corners",
+    "atlas": "atlases/e_corners.png",
+    "atlas_rect_top_left": [
+      0,
+      0,
+      64,
+      64
+    ]
+  },
+  {
+    "id": 50,
+    "name": "corner_ne_composed",
+    "file": "sprites/50_corner_ne_composed.png",
+    "width": 64,
+    "height": 64,
+    "group": "e_corners",
+    "atlas": "atlases/e_corners.png",
+    "atlas_rect_top_left": [
+      64,
+      0,
+      64,
+      64
+    ]
+  },
+  {
+    "id": 51,
+    "name": "corner_sw_composed",
+    "file": "sprites/51_corner_sw_composed.png",
+    "width": 64,
+    "height": 64,
+    "group": "e_corners",
+    "atlas": "atlases/e_corners.png",
+    "atlas_rect_top_left": [
+      0,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "id": 52,
+    "name": "corner_se_composed",
+    "file": "sprites/52_corner_se_composed.png",
+    "width": 64,
+    "height": 64,
+    "group": "e_corners",
+    "atlas": "atlases/e_corners.png",
+    "atlas_rect_top_left": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "id": "debris_crate",
+    "name": "debris_crate",
+    "file": "debris/debris_crate.png",
+    "width": 32,
+    "height": 32,
+    "group": "f_debris",
+    "atlas": "atlases/f_debris.png",
+    "atlas_rect_top_left": [
+      0,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": "debris_barrel",
+    "name": "debris_barrel",
+    "file": "debris/debris_barrel.png",
+    "width": 32,
+    "height": 32,
+    "group": "f_debris",
+    "atlas": "atlases/f_debris.png",
+    "atlas_rect_top_left": [
+      32,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "id": "debris_longwood",
+    "name": "debris_longwood",
+    "file": "debris/debris_longwood.png",
+    "width": 32,
+    "height": 32,
+    "group": "f_debris",
+    "atlas": "atlases/f_debris.png",
+    "atlas_rect_top_left": [
+      0,
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "id": "debris_pottery",
+    "name": "debris_pottery",
+    "file": "debris/debris_pottery.png",
+    "width": 32,
+    "height": 32,
+    "group": "f_debris",
+    "atlas": "atlases/f_debris.png",
+    "atlas_rect_top_left": [
+      32,
+      32,
+      32,
+      32
+    ]
+  }
+]

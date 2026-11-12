@@ -1,0 +1,2407 @@
+{
+  "width": 25,
+  "height": 16,
+  "tile_pixels": 32,
+  "tiles": [
+    {
+      "x": 0,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "sprite": "wall.20",
+      "floor": false
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "sprite": "wall.40",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 13,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 14,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 0,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 1,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "sprite": "wall.20",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "sprite": "wall.06",
+      "floor": false
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "sprite": "wall.0C",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 13,
+      "y": 2,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 14,
+      "y": 2,
+      "sprite": "wall.40",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 2,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 3,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 3,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 3,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 4,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 4,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 4,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 4,
+      "sprite": "wall.20",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 4,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 4,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 4,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 4,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 4,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 4,
+      "sprite": "wall.40",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 4,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 5,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 5,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 5,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 5,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 5,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 5,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 5,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 5,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 5,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 5,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "sprite": "wall.0C",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 6,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 6,
+      "sprite": "wall.04",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 6,
+      "sprite": "wall.06",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 6,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 6,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 6,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 6,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 6,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 6,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "sprite": "wall.0F",
+      "floor": false
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 15,
+      "y": 7,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 16,
+      "y": 7,
+      "sprite": "floor.corridor.2",
+      "floor": true
+    },
+    {
+      "x": 17,
+      "y": 7,
+      "sprite": "floor.corridor.1",
+      "floor": true
+    },
+    {
+      "x": 18,
+      "y": 7,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 7,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 7,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 7,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 7,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 7,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 7,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 8,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 8,
+      "sprite": "floor.corridor.0",
+      "floor": true
+    },
+    {
+      "x": 15,
+      "y": 8,
+      "sprite": "floor.corridor.2",
+      "floor": true
+    },
+    {
+      "x": 16,
+      "y": 8,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 18,
+      "y": 8,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 8,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 8,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 8,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 8,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 8,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "sprite": "wall.09",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "sprite": "wall.03",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "sprite": "floor.corridor.1",
+      "floor": true
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "sprite": "floor.corridor.0",
+      "floor": true
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "sprite": "floor.corridor.2",
+      "floor": true
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 9,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 9,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 9,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 9,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 9,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 9,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "sprite": "wall.0C",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "sprite": "wall.06",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "sprite": "wall.09",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "sprite": "wall.03",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 10,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 10,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 10,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 10,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 10,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 10,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 10,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 11,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 11,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "sprite": "floor.extra.4",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "sprite": "floor.extra.3",
+      "floor": true
+    },
+    {
+      "x": 19,
+      "y": 11,
+      "sprite": "floor.extra.1",
+      "floor": true
+    },
+    {
+      "x": 20,
+      "y": 11,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 21,
+      "y": 11,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 22,
+      "y": 11,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 23,
+      "y": 11,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 11,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "sprite": "wall.02",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 12,
+      "sprite": "floor.extra.2",
+      "floor": true
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "sprite": "floor.room.0",
+      "floor": true
+    },
+    {
+      "x": 5,
+      "y": 12,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "sprite": "floor.extra.5",
+      "floor": true
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "sprite": "floor.room.1",
+      "floor": true
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "sprite": "floor.room.2",
+      "floor": true
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "sprite": "floor.extra.0",
+      "floor": true
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "sprite": "wall.08",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "sprite": "wall.10",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 12,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 12,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 12,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 12,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 12,
+      "sprite": "wall.80",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 12,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 13,
+      "sprite": "wall.10",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 3,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "sprite": "wall.01",
+      "floor": false
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "sprite": "wall.80",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 13,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 3,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 14,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 0,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 1,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 2,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 4,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 5,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 18,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 19,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 20,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "sprite": "background.void",
+      "floor": false
+    }
+  ]
+}

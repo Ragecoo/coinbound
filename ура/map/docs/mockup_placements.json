@@ -1,0 +1,422 @@
+[
+  {
+    "screenshot": "04_ingame_corridor.png",
+    "asset_id": 1,
+    "wall_inner_edges_screen_px": {
+      "W": 693
+    },
+    "contact_gap_screen_px": {
+      "W": 0
+    },
+    "screen_feet_px": [
+      719.0,
+      319.0
+    ],
+    "screen_png_top_left": [
+      681,
+      262
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.742,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "04_ingame_corridor.png",
+    "asset_id": 20,
+    "wall_inner_edges_screen_px": {
+      "W": 693
+    },
+    "contact_gap_screen_px": {
+      "W": 0
+    },
+    "screen_feet_px": [
+      724.0,
+      481.0
+    ],
+    "screen_png_top_left": [
+      686,
+      424
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.811,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "04_ingame_corridor.png",
+    "asset_id": 14,
+    "wall_inner_edges_screen_px": {
+      "S": 641
+    },
+    "contact_gap_screen_px": {
+      "S": 0
+    },
+    "screen_feet_px": [
+      820.0,
+      632.0
+    ],
+    "screen_png_top_left": [
+      782,
+      575
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.73,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "04_ingame_corridor.png",
+    "asset_id": 26,
+    "wall_inner_edges_screen_px": {
+      "N": 409
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      1072.0,
+      457.0
+    ],
+    "screen_png_top_left": [
+      1034,
+      400
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.959,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "04_ingame_corridor.png",
+    "asset_id": 40,
+    "wall_inner_edges_screen_px": {
+      "N": 409
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      1280.0,
+      440.0
+    ],
+    "screen_png_top_left": [
+      1242,
+      307
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.678,
+    "north_contact_kind": "ground_base_collider_back_edge",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "04_ingame_corridor.png",
+    "asset_id": 10,
+    "wall_inner_edges_screen_px": {
+      "S": 641
+    },
+    "contact_gap_screen_px": {
+      "S": 0
+    },
+    "screen_feet_px": [
+      1180.0,
+      632.0
+    ],
+    "screen_png_top_left": [
+      1142,
+      575
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.722,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "05_ingame_junction.png",
+    "asset_id": 40,
+    "wall_inner_edges_screen_px": {
+      "N": 374
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      1020.0,
+      405.0
+    ],
+    "screen_png_top_left": [
+      982,
+      272
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.895,
+    "north_contact_kind": "ground_base_collider_back_edge",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "05_ingame_junction.png",
+    "asset_id": 25,
+    "wall_inner_edges_screen_px": {
+      "N": 374
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      1162.0,
+      422.0
+    ],
+    "screen_png_top_left": [
+      1124,
+      365
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.821,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "05_ingame_junction.png",
+    "asset_id": 14,
+    "wall_inner_edges_screen_px": {
+      "S": 608
+    },
+    "contact_gap_screen_px": {
+      "S": 0
+    },
+    "screen_feet_px": [
+      1140.0,
+      599.0
+    ],
+    "screen_png_top_left": [
+      1102,
+      542
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.746,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "05_ingame_junction.png",
+    "asset_id": 19,
+    "wall_inner_edges_screen_px": {
+      "W": 654
+    },
+    "contact_gap_screen_px": {
+      "W": 0
+    },
+    "screen_feet_px": [
+      685.0,
+      461.0
+    ],
+    "screen_png_top_left": [
+      647,
+      404
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.824,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "05_ingame_junction.png",
+    "asset_id": 7,
+    "wall_inner_edges_screen_px": {
+      "W": 654
+    },
+    "contact_gap_screen_px": {
+      "W": 0
+    },
+    "screen_feet_px": [
+      678.0,
+      551.0
+    ],
+    "screen_png_top_left": [
+      640,
+      494
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.802,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "05_ingame_junction.png",
+    "asset_id": 20,
+    "wall_inner_edges_screen_px": {
+      "N": 144
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      712.0,
+      184.0
+    ],
+    "screen_png_top_left": [
+      674,
+      127
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.542,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 49,
+    "wall_inner_edges_screen_px": {
+      "N": 211,
+      "W": 372
+    },
+    "contact_gap_screen_px": {
+      "N": 0,
+      "W": 0
+    },
+    "screen_feet_px": [
+      401.0,
+      316.0
+    ],
+    "screen_png_top_left": [
+      363,
+      202
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.313,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 43,
+    "wall_inner_edges_screen_px": {
+      "N": 211
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      610.0,
+      242.0
+    ],
+    "screen_png_top_left": [
+      572,
+      109
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.498,
+    "north_contact_kind": "ground_base_collider_back_edge",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 40,
+    "wall_inner_edges_screen_px": {
+      "N": 211
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      850.0,
+      242.0
+    ],
+    "screen_png_top_left": [
+      812,
+      109
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.73,
+    "north_contact_kind": "ground_base_collider_back_edge",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 26,
+    "wall_inner_edges_screen_px": {
+      "N": 211
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      1022.0,
+      259.0
+    ],
+    "screen_png_top_left": [
+      984,
+      202
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.774,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 33,
+    "wall_inner_edges_screen_px": {
+      "N": 211
+    },
+    "contact_gap_screen_px": {
+      "N": 0
+    },
+    "screen_feet_px": [
+      1212.0,
+      256.0
+    ],
+    "screen_png_top_left": [
+      1174,
+      199
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.594,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 20,
+    "wall_inner_edges_screen_px": {
+      "W": 372
+    },
+    "contact_gap_screen_px": {
+      "W": 0
+    },
+    "screen_feet_px": [
+      403.0,
+      565.0
+    ],
+    "screen_png_top_left": [
+      365,
+      508
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.351,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  },
+  {
+    "screenshot": "06_ingame_room.png",
+    "asset_id": 1,
+    "wall_inner_edges_screen_px": {
+      "W": 372
+    },
+    "contact_gap_screen_px": {
+      "W": 0
+    },
+    "screen_feet_px": [
+      398.0,
+      749.0
+    ],
+    "screen_png_top_left": [
+      360,
+      692
+    ],
+    "screen_tile_pixels": 76,
+    "ambient_multiplier": 0.314,
+    "north_contact_kind": "opaque_sprite_bounds",
+    "is_gameplay_capture": false
+  }
+]

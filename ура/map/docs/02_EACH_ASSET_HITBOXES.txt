@@ -1,0 +1,472 @@
+ХИТБОКСЫ И РАЗРУШЕНИЕ КАЖДОГО ОБЪЕКТА — V5
+Нижний левый угол PNG, X вправо, Y вверх, native pixels.
+Box offset=((x+w/2-pivotX)/32,(y+h/2-pivotY)/32); size=(w/32,h/32).
+У composited PNG коллизии пересчитаны из ground-компонентов. Верхние mounted/stacked_visual части не блокируют верхнюю клетку.
+
+01. Бочка — sprites/01_barrel_closed.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 28, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_barrel", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+02. Открытая бочка — sprites/02_barrel_open.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 28, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_barrel", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+03. Разбитая бочка — sprites/03_barrel_broken.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 29, 'S': 4, 'W': 3, 'E': 28}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+04. Ящик — sprites/04_crate_closed.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 26, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_crate", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+05. Усиленный ящик — sprites/05_crate_reinforced.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 26, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 3, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_crate", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+06. Разбитый ящик — sprites/06_crate_broken.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 25, 'S': 4, 'W': 5, 'E': 26}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+07. Один мешок — sprites/07_sack_single.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 8, 'y': 5, 'w': 16, 'h': 12}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 25, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая декорация"}
+
+08. Горшок — sprites/08_jar.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 8, 'y': 5, 'w': 16, 'h': 12}]
+  Hitbox урона: [{'x': 8, 'y': 5, 'w': 16, 'h': 12}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 26, 'S': 4, 'W': 7, 'E': 25}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "ceramic", "hp_base_damage_multiplier": 1, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_pottery", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "pottery_shards", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+09. Разбитый горшок — sprites/09_jar_broken.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 26, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+10. Череп и кости — sprites/10_skull_bones.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 22, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+11. Свечи — sprites/11_candles_floor.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 24, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+12. Камни — sprites/12_rubble.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 22, 'S': 4, 'W': 4, 'E': 28}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+13. Два мешка — sprites/13_sacks_pair.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 5, 'y': 5, 'w': 22, 'h': 12}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 29, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая декорация"}
+
+14. Три мешка — sprites/14_sacks_triple.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 5, 'y': 5, 'w': 22, 'h': 12}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 29, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая декорация"}
+
+15. Два горшка — sprites/15_jars_pair.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 4, 'y': 5, 'w': 12, 'h': 11}, {'x': 17, 'y': 5, 'w': 11, 'h': 11}]
+  Hitbox урона: [{'x': 4, 'y': 5, 'w': 12, 'h': 11}, {'x': 17, 'y': 5, 'w': 11, 'h': 11}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 27, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "ceramic", "hp_base_damage_multiplier": 1, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_pottery", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "pottery_shards", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+16. Бутылки — sprites/16_bottles_cluster.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 26, 'S': 4, 'W': 4, 'E': 27}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+17. Куча костей — sprites/17_bones_pile.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 26, 'S': 4, 'W': 3, 'E': 28}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+18. Череп и свечи — sprites/18_skull_candles.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 25, 'S': 4, 'W': 4, 'E': 28}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+19. Цепь и кандалы — sprites/19_chain_shackle.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 27, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+20. Грибы — sprites/20_mushrooms.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 25, 'S': 4, 'W': 3, 'E': 28}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+21. Ведро с инструментами — sprites/21_bucket_tools.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 8, 'y': 5, 'w': 16, 'h': 12}]
+  Hitbox урона: [{'x': 8, 'y': 5, 'w': 16, 'h': 12}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 27, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_longwood", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "iron_specks", "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+22. Доски — sprites/22_broken_planks.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 27, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+23. Книги и свитки — sprites/23_books_scrolls.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 29, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+24. Потухший костёр — sprites/24_campfire_cold.png
+  Размер=32×32; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, E, S, W; контакты={'N': 27, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Уже обломки / низкий декор"}
+
+25. Две бочки — sprites/25_barrels_pair.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 10, 'y': 5, 'w': 20, 'h': 16}, {'x': 34, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 10, 'y': 5, 'w': 20, 'h': 16}, {'x': 34, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 28, 'S': 4, 'W': 9, 'E': 55}
+  Сборка: [{"source_id": 1, "offset_px_top_left": [4, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 1, "offset_px_top_left": [28, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 3, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_barrel", "offset_px": [4, 0], "source_component_id": 1}, {"asset": "debris_barrel", "offset_px": [28, 0], "source_component_id": 1}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+26. Бочка и ящик — sprites/26_barrel_crate.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 11, 'y': 5, 'w': 20, 'h': 16}, {'x': 34, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 11, 'y': 5, 'w': 20, 'h': 16}, {'x': 34, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 28, 'S': 4, 'W': 10, 'E': 54}
+  Сборка: [{"source_id": 1, "offset_px_top_left": [5, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 4, "offset_px_top_left": [28, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 3, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_barrel", "offset_px": [5, 0], "source_component_id": 1}, {"asset": "debris_crate", "offset_px": [28, 0], "source_component_id": 4}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+27. Два ящика — sprites/27_crates_pair.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 11, 'y': 5, 'w': 20, 'h': 16}, {'x': 33, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 11, 'y': 5, 'w': 20, 'h': 16}, {'x': 33, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 26, 'S': 4, 'W': 11, 'E': 53}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [5, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 4, "offset_px_top_left": [27, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 3, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [5, 0], "source_component_id": 4}, {"asset": "debris_crate", "offset_px": [27, 0], "source_component_id": 4}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+28. Ящик и мешки — sprites/28_crate_sacks.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 8, 'y': 5, 'w': 20, 'h': 16}, {'x': 32, 'y': 5, 'w': 22, 'h': 12}]
+  Hitbox урона: [{'x': 8, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 29, 'S': 4, 'W': 8, 'E': 56}
+  Сборка: [{"source_id": 5, "offset_px_top_left": [2, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 13, "offset_px_top_left": [27, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [2, 0], "source_component_id": 5}], "survivors": [{"asset_id": 13, "offset_px": [27, 0], "keep_collision": true, "source_component_role": "ground", "fall_to_base": false}], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+29. Бочка и мешки — sprites/29_barrel_sacks.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 8, 'y': 5, 'w': 20, 'h': 16}, {'x': 33, 'y': 5, 'w': 22, 'h': 12}]
+  Hitbox урона: [{'x': 8, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 29, 'S': 4, 'W': 7, 'E': 57}
+  Сборка: [{"source_id": 1, "offset_px_top_left": [2, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 13, "offset_px_top_left": [28, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_barrel", "offset_px": [2, 0], "source_component_id": 1}], "survivors": [{"asset_id": 13, "offset_px": [28, 0], "keep_collision": true, "source_component_role": "ground", "fall_to_base": false}], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+30. Три горшка — sprites/30_jars_triple.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 4, 'y': 5, 'w': 16, 'h': 12}, {'x': 24, 'y': 5, 'w': 16, 'h': 12}, {'x': 44, 'y': 5, 'w': 16, 'h': 12}]
+  Hitbox урона: [{'x': 4, 'y': 5, 'w': 16, 'h': 12}, {'x': 24, 'y': 5, 'w': 16, 'h': 12}, {'x': 44, 'y': 5, 'w': 16, 'h': 12}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 26, 'S': 4, 'W': 3, 'E': 61}
+  Сборка: [{"source_id": 8, "offset_px_top_left": [-4, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 8, "offset_px_top_left": [16, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 8, "offset_px_top_left": [36, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "ceramic", "hp_base_damage_multiplier": 1, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_pottery", "offset_px": [-4, 0], "source_component_id": 8}, {"asset": "debris_pottery", "offset_px": [36, 0], "source_component_id": 8}], "survivors": [], "particle_profile": "pottery_shards", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+31. Разбитый склад — sprites/31_broken_storage.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 29, 'S': 4, 'W': 8, 'E': 56}
+  Сборка: [{"source_id": 3, "offset_px_top_left": [5, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 6, "offset_px_top_left": [30, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемые или уже разбитые базовые предметы"}
+
+32. Горшок и кости — sprites/32_jar_skull.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 12, 'y': 5, 'w': 16, 'h': 12}]
+  Hitbox урона: [{'x': 12, 'y': 5, 'w': 16, 'h': 12}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 26, 'S': 4, 'W': 11, 'E': 53}
+  Сборка: [{"source_id": 8, "offset_px_top_left": [4, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 10, "offset_px_top_left": [26, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "ceramic", "hp_base_damage_multiplier": 1, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_pottery", "offset_px": [4, 0], "source_component_id": 8}], "survivors": [{"asset_id": 10, "offset_px": [26, 0], "keep_collision": false, "source_component_role": "ground", "fall_to_base": false}], "particle_profile": "pottery_shards", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+33. Доски и мешок — sprites/33_planks_sack.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 38, 'y': 5, 'w': 16, 'h': 12}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 27, 'S': 4, 'W': 8, 'E': 56}
+  Сборка: [{"source_id": 22, "offset_px_top_left": [5, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 7, "offset_px_top_left": [30, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемые или уже разбитые базовые предметы"}
+
+34. Камни и грибы — sprites/34_rubble_mushrooms.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 25, 'S': 4, 'W': 6, 'E': 57}
+  Сборка: [{"source_id": 12, "offset_px_top_left": [2, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 20, "offset_px_top_left": [29, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемые или уже разбитые базовые предметы"}
+
+35. Ящик и горшки — sprites/35_crate_jars.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: [{'x': 8, 'y': 5, 'w': 20, 'h': 16}, {'x': 31, 'y': 5, 'w': 12, 'h': 11}, {'x': 44, 'y': 5, 'w': 11, 'h': 11}]
+  Hitbox урона: [{'x': 8, 'y': 5, 'w': 20, 'h': 16}, {'x': 31, 'y': 5, 'w': 12, 'h': 11}, {'x': 44, 'y': 5, 'w': 11, 'h': 11}]
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 27, 'S': 4, 'W': 8, 'E': 56}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [2, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 15, "offset_px_top_left": [27, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 3, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [2, 0], "source_component_id": 4}, {"asset": "debris_pottery", "offset_px": [27, 0], "source_component_id": 15}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "ceramic_specks", "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+36. Свечи, череп и книги — sprites/36_ritual_books.png
+  Размер=64×32; pivot=[16, 8]; footprint=[[0, 0], [1, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=N, S; контакты={'N': 29, 'S': 4, 'W': 6, 'E': 58}
+  Сборка: [{"source_id": 18, "offset_px_top_left": [2, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 23, "offset_px_top_left": [29, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемые или уже разбитые базовые предметы"}
+
+37. Стопка ящиков — sprites/37_crates_stacked.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [0, 12], "role": "stacked_visual", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 4, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 4, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [0, 0], "source_component_id": 4}, {"asset": "debris_crate", "offset_px": [4, 3], "source_component_id": 4}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+38. Стопка бочек — sprites/38_barrels_stacked.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: [{"source_id": 1, "offset_px_top_left": [0, 12], "role": "stacked_visual", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 1, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 4, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_barrel", "offset_px": [0, 0], "source_component_id": 1}, {"asset": "debris_barrel", "offset_px": [4, 3], "source_component_id": 1}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+39. Череп на ящике — sprites/39_crate_skull.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 10, "offset_px_top_left": [0, 20], "role": "mounted", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [0, 0], "source_component_id": 4}], "survivors": [{"asset_id": 10, "offset_px": [0, 0], "keep_collision": false, "source_component_role": "mounted", "fall_to_base": true}], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+40. Свечи на ящике — sprites/40_crate_candles.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 11, "offset_px_top_left": [0, 18], "role": "mounted", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [0, 0], "source_component_id": 4}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "wax_crumbs", "loot": false, "disable_flames_on_break": true, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+41. Свечи на бочке — sprites/41_barrel_candles.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 5, 'E': 27}
+  Сборка: [{"source_id": 1, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 11, "offset_px_top_left": [0, 16], "role": "mounted", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_barrel", "offset_px": [0, 0], "source_component_id": 1}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "wax_crumbs", "loot": false, "disable_flames_on_break": true, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+42. Мешок на ящике — sprites/42_crate_sack.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 6, 'E': 26}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 7, "offset_px_top_left": [0, 18], "role": "mounted", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [0, 0], "source_component_id": 4}], "survivors": [{"asset_id": 7, "offset_px": [0, 0], "keep_collision": true, "source_component_role": "mounted", "fall_to_base": true}], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+43. Горшки на ящике — sprites/43_crate_jars_stacked.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: [{"source_id": 5, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 15, "offset_px_top_left": [0, 18], "role": "mounted", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 3, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [0, 0], "source_component_id": 5}, {"asset": "debris_pottery", "offset_px": [4, 3], "source_component_id": 15}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "ceramic_specks", "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+44. Инструменты на ящике — sprites/44_crate_tools.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: [{'x': 6, 'y': 5, 'w': 20, 'h': 16}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 21, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 21, "offset_px_top_left": [0, 18], "role": "mounted", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start", "debris": [{"asset": "debris_crate", "offset_px": [0, 0], "source_component_id": 4}, {"asset": "debris_longwood", "offset_px": [4, 3], "source_component_id": 21}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "iron_specks", "loot": false, "disable_flames_on_break": false, "persistent_state": true, "effects_palette": "same unchanged base palette; no additional v4 darkening"}
+
+45. Гроб — sprites/45_coffin_upright.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 7, 'y': 5, 'w': 18, 'h': 12}]
+  Hitbox урона: [{'x': 7, 'y': 5, 'w': 18, 'h': 12}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 17, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_longwood", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": null, "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+46. Разбитая статуя — sprites/46_statue_broken.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 7, 'y': 5, 'w': 18, 'h': 12}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 17, 'S': 4, 'W': 3, 'E': 28}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая декорация"}
+
+47. Жаровня — sprites/47_brazier_tall.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 10, 'y': 5, 'w': 12, 'h': 10}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 15, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая декорация"}
+
+48. Знамя на стойке — sprites/48_banner_stand.png
+  Размер=32×64; pivot=[16, 8]; footprint=[[0, 0]]
+  Коллизии: [{'x': 10, 'y': 5, 'w': 12, 'h': 10}]
+  Hitbox урона: [{'x': 10, 'y': 5, 'w': 12, 'h': 10}]
+  Слой=feet_sorted; верхний выступ без коллизии=True
+  Стены=N; контакты={'N': 15, 'S': 4, 'W': 3, 'E': 29}
+  Сборка: []
+  Разрушение: {"enabled": true, "mode": "whole_composition_one_hp_pool", "material": "wood", "hp_base_damage_multiplier": 2, "baseline_damage_reference": "base melee damage captured at run start, not current buffed damage", "debris": [{"asset": "debris_longwood", "offset_px": [0, 0]}], "survivors": [], "particle_profile": "wood_splinters", "extra_particles": "cloth_fibres", "loot": false, "disable_flames_on_break": false, "persistent_state": true}
+
+49. Завал: северо-запад — sprites/49_corner_nw_composed.png
+  Размер=64×64; pivot=[16, 16]; footprint=[[0, -1], [1, -1], [0, 0]]
+  Коллизии: [{'x': 4, 'y': 39, 'w': 20, 'h': 16}, {'x': 38, 'y': 37, 'w': 20, 'h': 16}, {'x': 6, 'y': 5, 'w': 22, 'h': 12}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N + W одновременно; контакты={'N': 60, 'S': 4, 'W': 4, 'E': 59}
+  Сборка: [{"source_id": 4, "offset_px_top_left": [-2, -2], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 1, "offset_px_top_left": [32, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 13, "offset_px_top_left": [1, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая угловая композиция"}
+
+50. Завал: северо-восток — sprites/50_corner_ne_composed.png
+  Размер=64×64; pivot=[16, 16]; footprint=[[0, -1], [1, -1], [1, 0]]
+  Коллизии: [{'x': 43, 'y': 39, 'w': 16, 'h': 12}, {'x': 35, 'y': 5, 'w': 12, 'h': 11}, {'x': 48, 'y': 5, 'w': 11, 'h': 11}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=N + E одновременно; контакты={'N': 60, 'S': 4, 'W': 3, 'E': 60}
+  Сборка: [{"source_id": 17, "offset_px_top_left": [0, -2], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 8, "offset_px_top_left": [35, -2], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 15, "offset_px_top_left": [31, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая угловая композиция"}
+
+51. Завал: юго-запад — sprites/51_corner_sw_composed.png
+  Размер=64×64; pivot=[16, 16]; footprint=[[0, -1], [0, 0], [1, 0]]
+  Коллизии: нет
+  Hitbox урона: нет
+  Слой=ground; верхний выступ без коллизии=False
+  Стены=S + W одновременно; контакты={'N': 57, 'S': 4, 'W': 4, 'E': 61}
+  Сборка: [{"source_id": 20, "offset_px_top_left": [1, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 12, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 22, "offset_px_top_left": [32, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая угловая композиция"}
+
+52. Завал: юго-восток — sprites/52_corner_se_composed.png
+  Размер=64×64; pivot=[16, 16]; footprint=[[1, -1], [0, 0], [1, 0]]
+  Коллизии: [{'x': 42, 'y': 37, 'w': 16, 'h': 12}, {'x': 5, 'y': 5, 'w': 22, 'h': 12}, {'x': 39, 'y': 5, 'w': 20, 'h': 16}]
+  Hitbox урона: нет
+  Слой=feet_sorted; верхний выступ без коллизии=False
+  Стены=S + E одновременно; контакты={'N': 57, 'S': 4, 'W': 3, 'E': 60}
+  Сборка: [{"source_id": 7, "offset_px_top_left": [34, 0], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 13, "offset_px_top_left": [0, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}, {"source_id": 2, "offset_px_top_left": [33, 32], "role": "ground", "scale": 1, "rotation": 0, "flip_x": false, "flip_y": false, "rgb_multiplier": [1, 1, 1]}]
+  Разрушение: {"enabled": false, "reason": "Неразрушаемая угловая композиция"}

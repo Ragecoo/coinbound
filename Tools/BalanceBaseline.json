@@ -1,0 +1,312 @@
+[
+  {
+    "id": "01_amber_heart",
+    "name": "Янтарное сердце",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "hp": 15.0
+    }
+  },
+  {
+    "id": "02_saints_tooth",
+    "name": "Зуб святого",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "defense": 1.0
+    }
+  },
+  {
+    "id": "03_execution_ash",
+    "name": "Пепел казни",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "damage": 0.2
+    }
+  },
+  {
+    "id": "04_night_owl_feather",
+    "name": "Перо ночной совы",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "speed": 0.1
+    }
+  },
+  {
+    "id": "05_hangmans_knot",
+    "name": "Узел палача",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "rate": 0.12
+    }
+  },
+  {
+    "id": "06_martyrs_eye",
+    "name": "Око мученика",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "critical": 0.07
+    }
+  },
+  {
+    "id": "07_blind_kings_coin",
+    "name": "Монета слепого короля",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "luck": 1.0
+    }
+  },
+  {
+    "id": "08_wax_doll",
+    "name": "Восковая кукла",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "hp": 20.0,
+      "speed": -0.2
+    }
+  },
+  {
+    "id": "09_black_bile",
+    "name": "Чёрная желчь",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "damage": 0.3,
+      "rate": -0.25
+    }
+  },
+  {
+    "id": "10_stone_tomb_seal",
+    "name": "Печать каменной гробницы",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "defense": 2.0,
+      "speed": -0.1
+    }
+  },
+  {
+    "id": "11_dead_mans_hourglass",
+    "name": "Песочные часы мертвеца",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "enemySpeed": -0.1
+    }
+  },
+  {
+    "id": "12_tongueless_bell",
+    "name": "Безъязыкий колокол",
+    "tier": 1,
+    "good": true,
+    "values": {
+      "enemyDamage": -0.1
+    }
+  },
+  {
+    "id": "13_ark_of_the_unborn",
+    "name": "Ковчег нерождённого",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "hp": 30.0,
+      "defense": 1.0,
+      "speed": -0.2
+    }
+  },
+  {
+    "id": "14_amber_beast_fang",
+    "name": "Клык янтарного зверя",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "damage": 0.5,
+      "rate": -0.15
+    }
+  },
+  {
+    "id": "15_fever_rosary",
+    "name": "Чётки лихорадки",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "hp": -25.0,
+      "rate": 0.2,
+      "critical": 0.1
+    }
+  },
+  {
+    "id": "16_fugitive_dead_brand",
+    "name": "Клеймо беглого мертвеца",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "speed": 0.2,
+      "luck": 2.0,
+      "defense": -1.0
+    }
+  },
+  {
+    "id": "17_golden_thread_idol",
+    "name": "Идол золотой нити",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "luck": 2.0,
+      "critical": 0.1
+    }
+  },
+  {
+    "id": "18_bone_dust_vessel",
+    "name": "Сосуд костяной пыли",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "enemyDefense": -0.25
+    }
+  },
+  {
+    "id": "19_stone_giants_tear",
+    "name": "Слеза каменного великана",
+    "tier": 2,
+    "good": true,
+    "values": {
+      "defense": 3.0,
+      "hp": 20.0,
+      "rate": -0.3
+    }
+  },
+  {
+    "id": "20_ancient_gods_heart",
+    "name": "Сердце древнего бога",
+    "tier": 3,
+    "good": true,
+    "values": {
+      "hp": 70.0,
+      "defense": 4.0,
+      "speed": -0.1
+    }
+  },
+  {
+    "id": "21_eye_of_eternal_night",
+    "name": "Око вечной ночи",
+    "tier": 3,
+    "good": true,
+    "values": {
+      "damage": 0.9,
+      "critical": 0.12,
+      "hp": -25.0,
+      "rate": -0.15
+    }
+  },
+  {
+    "id": "22_empty_cradle",
+    "name": "Пустая колыбель",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "hp": -15.0
+    }
+  },
+  {
+    "id": "23_seal_of_rot",
+    "name": "Печать гниения",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "defense": -1.0
+    }
+  },
+  {
+    "id": "24_grey_ash",
+    "name": "Серый прах",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "damage": -0.15
+    }
+  },
+  {
+    "id": "25_lead_anchor",
+    "name": "Свинцовый якорь",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "speed": -0.1
+    }
+  },
+  {
+    "id": "26_dead_sinew_knot",
+    "name": "Узел мёртвых жил",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "rate": -0.12
+    }
+  },
+  {
+    "id": "27_blind_mirror_shard",
+    "name": "Осколок слепого зеркала",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "critical": -0.05
+    }
+  },
+  {
+    "id": "28_debtors_coin",
+    "name": "Монета должника",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "luck": -1.0
+    }
+  },
+  {
+    "id": "29_bloody_wick",
+    "name": "Кровавый фитиль",
+    "tier": 1,
+    "good": false,
+    "values": {
+      "enemyDamage": 0.1
+    }
+  },
+  {
+    "id": "30_fading_clock",
+    "name": "Часы угасания",
+    "tier": 2,
+    "good": false,
+    "values": {
+      "damage": -0.25,
+      "rate": -0.15
+    }
+  },
+  {
+    "id": "31_second_death_shroud",
+    "name": "Саван второй смерти",
+    "tier": 3,
+    "good": false,
+    "values": {
+      "hp": -40.0,
+      "defense": -3.0,
+      "speed": -0.1
+    }
+  },
+  {
+    "id": "32_abyss_icon",
+    "name": "Икона бездны",
+    "tier": 3,
+    "good": false,
+    "values": {
+      "enemyDamage": 0.3,
+      "enemyDefense": 0.3
+    }
+  }
+]

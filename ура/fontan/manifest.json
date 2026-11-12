@@ -1,0 +1,435 @@
+{
+  "asset": "Coinbound fountain pixel loop",
+  "source_file": "Assets/Coinbound/Resources/DungeonArt/object.fountain.png",
+  "native_frame_size": [
+    120,
+    120
+  ],
+  "frame_count": 24,
+  "fps": 12,
+  "duration_seconds": 2,
+  "loop": true,
+  "first_frame": 0,
+  "last_frame": 23,
+  "duplicate_endpoint_in_animation": false,
+  "sprite_pixels_per_unit": 40,
+  "pivot_normalized": [
+    0.5,
+    0.5
+  ],
+  "pivot_pixels_bottom_left": [
+    60,
+    60
+  ],
+  "filter": "Point",
+  "mipmaps": false,
+  "compression": "None",
+  "mesh_type": "FullRect",
+  "do_not_trim_frames": true,
+  "color_palette": "RGBA colors from original sprite only",
+  "stone_outside_water_mask": "unchanged pixel for pixel",
+  "alpha_mask": "identical in all frames and identical to original",
+  "sheet": {
+    "file": "fountain_spritesheet.png",
+    "size": [
+      720,
+      480
+    ],
+    "columns": 6,
+    "rows": 4,
+    "order": "left to right, top to bottom"
+  },
+  "frames": [
+    {
+      "index": 0,
+      "file": "frames/fountain_00.png",
+      "rect_top_left": [
+        0,
+        0,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        360,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 1,
+      "file": "frames/fountain_01.png",
+      "rect_top_left": [
+        120,
+        0,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        120,
+        360,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 2,
+      "file": "frames/fountain_02.png",
+      "rect_top_left": [
+        240,
+        0,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        240,
+        360,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 3,
+      "file": "frames/fountain_03.png",
+      "rect_top_left": [
+        360,
+        0,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        360,
+        360,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 4,
+      "file": "frames/fountain_04.png",
+      "rect_top_left": [
+        480,
+        0,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        480,
+        360,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 5,
+      "file": "frames/fountain_05.png",
+      "rect_top_left": [
+        600,
+        0,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        600,
+        360,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 6,
+      "file": "frames/fountain_06.png",
+      "rect_top_left": [
+        0,
+        120,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        240,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 7,
+      "file": "frames/fountain_07.png",
+      "rect_top_left": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        120,
+        240,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 8,
+      "file": "frames/fountain_08.png",
+      "rect_top_left": [
+        240,
+        120,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        240,
+        240,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 9,
+      "file": "frames/fountain_09.png",
+      "rect_top_left": [
+        360,
+        120,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        360,
+        240,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 10,
+      "file": "frames/fountain_10.png",
+      "rect_top_left": [
+        480,
+        120,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        480,
+        240,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 11,
+      "file": "frames/fountain_11.png",
+      "rect_top_left": [
+        600,
+        120,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        600,
+        240,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 12,
+      "file": "frames/fountain_12.png",
+      "rect_top_left": [
+        0,
+        240,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 13,
+      "file": "frames/fountain_13.png",
+      "rect_top_left": [
+        120,
+        240,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 14,
+      "file": "frames/fountain_14.png",
+      "rect_top_left": [
+        240,
+        240,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        240,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 15,
+      "file": "frames/fountain_15.png",
+      "rect_top_left": [
+        360,
+        240,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        360,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 16,
+      "file": "frames/fountain_16.png",
+      "rect_top_left": [
+        480,
+        240,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        480,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 17,
+      "file": "frames/fountain_17.png",
+      "rect_top_left": [
+        600,
+        240,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        600,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 18,
+      "file": "frames/fountain_18.png",
+      "rect_top_left": [
+        0,
+        360,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        0,
+        0,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 19,
+      "file": "frames/fountain_19.png",
+      "rect_top_left": [
+        120,
+        360,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        120,
+        0,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 20,
+      "file": "frames/fountain_20.png",
+      "rect_top_left": [
+        240,
+        360,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        240,
+        0,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 21,
+      "file": "frames/fountain_21.png",
+      "rect_top_left": [
+        360,
+        360,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        360,
+        0,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 22,
+      "file": "frames/fountain_22.png",
+      "rect_top_left": [
+        480,
+        360,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        480,
+        0,
+        120,
+        120
+      ]
+    },
+    {
+      "index": 23,
+      "file": "frames/fountain_23.png",
+      "rect_top_left": [
+        600,
+        360,
+        120,
+        120
+      ],
+      "rect_unity_bottom_left": [
+        600,
+        0,
+        120,
+        120
+      ]
+    }
+  ],
+  "motion": {
+    "loop_periodic": true,
+    "jet": "three brightness-flow cycles per loop",
+    "ripples": "three expanding elliptical wavefronts, fade in/out inside basin",
+    "droplets": "periodic, fade at birth/death; only existing water pixels change"
+  },
+  "integration": "replace SpriteRenderer.sprite on existing object; preserve scale, collider, depth sorting, material and property block"
+}

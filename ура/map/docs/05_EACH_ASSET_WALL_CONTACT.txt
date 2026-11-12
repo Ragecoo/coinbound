@@ -1,0 +1,211 @@
+СТЕНЫ И КОНТАКТЫ КАЖДОГО ОБЪЕКТА — V5
+N: сверху; S: снизу; W: слева; E: справа. Зазор везде 0 px.
+Контакты от левого нижнего угла PNG; применить формулы из 04_WALL_FLUSH_PLACEMENT.txt.
+
+01. Бочка — N, E, S, W
+  Contact={'N': 28, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+02. Открытая бочка — N, E, S, W
+  Contact={'N': 28, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+03. Разбитая бочка — N, E, S, W
+  Contact={'N': 29, 'S': 4, 'W': 3, 'E': 28}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+04. Ящик — N, E, S, W
+  Contact={'N': 26, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+05. Усиленный ящик — N, E, S, W
+  Contact={'N': 26, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+06. Разбитый ящик — N, E, S, W
+  Contact={'N': 25, 'S': 4, 'W': 5, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+07. Один мешок — N, E, S, W
+  Contact={'N': 25, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+08. Горшок — N, E, S, W
+  Contact={'N': 26, 'S': 4, 'W': 7, 'E': 25}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+09. Разбитый горшок — N, E, S, W
+  Contact={'N': 26, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+10. Череп и кости — N, E, S, W
+  Contact={'N': 22, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+11. Свечи — N, E, S, W
+  Contact={'N': 24, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+12. Камни — N, E, S, W
+  Contact={'N': 22, 'S': 4, 'W': 4, 'E': 28}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+13. Два мешка — N, E, S, W
+  Contact={'N': 29, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+14. Три мешка — N, E, S, W
+  Contact={'N': 29, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+15. Два горшка — N, E, S, W
+  Contact={'N': 27, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+16. Бутылки — N, E, S, W
+  Contact={'N': 26, 'S': 4, 'W': 4, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+17. Куча костей — N, E, S, W
+  Contact={'N': 26, 'S': 4, 'W': 3, 'E': 28}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+18. Череп и свечи — N, E, S, W
+  Contact={'N': 25, 'S': 4, 'W': 4, 'E': 28}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+19. Цепь и кандалы — N, E, S, W
+  Contact={'N': 27, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+20. Грибы — N, E, S, W
+  Contact={'N': 25, 'S': 4, 'W': 3, 'E': 28}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+21. Ведро с инструментами — N, E, S, W
+  Contact={'N': 27, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+22. Доски — N, E, S, W
+  Contact={'N': 27, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+23. Книги и свитки — N, E, S, W
+  Contact={'N': 29, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+24. Потухший костёр — N, E, S, W
+  Contact={'N': 27, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+25. Две бочки — N, S
+  Contact={'N': 28, 'S': 4, 'W': 9, 'E': 55}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+26. Бочка и ящик — N, S
+  Contact={'N': 28, 'S': 4, 'W': 10, 'E': 54}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+27. Два ящика — N, S
+  Contact={'N': 26, 'S': 4, 'W': 11, 'E': 53}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+28. Ящик и мешки — N, S
+  Contact={'N': 29, 'S': 4, 'W': 8, 'E': 56}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+29. Бочка и мешки — N, S
+  Contact={'N': 29, 'S': 4, 'W': 7, 'E': 57}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+30. Три горшка — N, S
+  Contact={'N': 26, 'S': 4, 'W': 3, 'E': 61}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+31. Разбитый склад — N, S
+  Contact={'N': 29, 'S': 4, 'W': 8, 'E': 56}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+32. Горшок и кости — N, S
+  Contact={'N': 26, 'S': 4, 'W': 11, 'E': 53}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+33. Доски и мешок — N, S
+  Contact={'N': 27, 'S': 4, 'W': 8, 'E': 56}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+34. Камни и грибы — N, S
+  Contact={'N': 25, 'S': 4, 'W': 6, 'E': 57}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+35. Ящик и горшки — N, S
+  Contact={'N': 27, 'S': 4, 'W': 8, 'E': 56}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+36. Свечи, череп и книги — N, S
+  Contact={'N': 29, 'S': 4, 'W': 6, 'E': 58}; pivot=[16, 8]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+37. Стопка ящиков — N
+  Contact={'N': 21, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+38. Стопка бочек — N
+  Contact={'N': 21, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+39. Череп на ящике — N
+  Contact={'N': 21, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+40. Свечи на ящике — N
+  Contact={'N': 21, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+41. Свечи на бочке — N
+  Contact={'N': 21, 'S': 4, 'W': 5, 'E': 27}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+42. Мешок на ящике — N
+  Contact={'N': 21, 'S': 4, 'W': 6, 'E': 26}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+43. Горшки на ящике — N
+  Contact={'N': 21, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+44. Инструменты на ящике — N
+  Contact={'N': 21, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+45. Гроб — N
+  Contact={'N': 17, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+46. Разбитая статуя — N
+  Contact={'N': 17, 'S': 4, 'W': 3, 'E': 28}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+47. Жаровня — N
+  Contact={'N': 15, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+48. Знамя на стойке — N
+  Contact={'N': 15, 'S': 4, 'W': 3, 'E': 29}; pivot=[16, 8]; gap=0.
+  Север: ground_base_collider_back_edge; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+49. Завал: северо-запад — N + W одновременно
+  Contact={'N': 60, 'S': 4, 'W': 4, 'E': 59}; pivot=[16, 16]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+50. Завал: северо-восток — N + E одновременно
+  Contact={'N': 60, 'S': 4, 'W': 3, 'E': 60}; pivot=[16, 16]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+51. Завал: юго-запад — S + W одновременно
+  Contact={'N': 57, 'S': 4, 'W': 4, 'E': 61}; pivot=[16, 16]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.
+
+52. Завал: юго-восток — S + E одновременно
+  Contact={'N': 57, 'S': 4, 'W': 3, 'E': 60}; pivot=[16, 16]; gap=0.
+  Север: opaque_sprite_bounds; остальные стороны: opaque bounds. Поворот и зеркалирование запрещены.

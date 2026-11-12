@@ -43,7 +43,9 @@ namespace Coinbound.Tests
             Assert.That(game.Map.TileWidth, Is.EqualTo(117));
             Assert.That(game.Map.TileHeight, Is.EqualTo(57));
             Assert.That(game.Spawns.Enemies.Count, Is.GreaterThan(0));
-            Assert.That(game.Spawns.Chests.Count, Is.EqualTo(3));
+            Assert.That(game.Spawns.Chests.Count, Is.GreaterThanOrEqualTo(6));
+            foreach(var room in game.Map.Rooms.Where(r=>r.Kind!=RoomKind.Entrance && r.Width*r.Height>=game.Spawns.Settings.LargeRoomArea))
+                Assert.That(game.Spawns.Chests.Count(c=>room.Contains(game.Map.SectionAt(c.Position))),Is.EqualTo(1));
             Assert.That(GameObject.Find("Game HUD"), Is.Not.Null);
             Assert.That(Object.FindAnyObjectByType<DungeonAtmosphere>(), Is.Null,
                 "The rejected atmosphere/decor bundle must not be created when a dungeon starts.");
